@@ -114,3 +114,14 @@ Dataspecer still does not support some features and has some known bugs In the m
      </xs:annotation>
    </xs:element>
    ```
+
+## HTML structure view
+
+The HTML structure view is a web page for fast and convenient browsing of the CCMM metadata model structure. The tree is generated directly from CCMM data using the [generate_html_tree.py](https://github.com/FZU-AV-CR/pyCCMM/blob/master/tools/generate_html_tree.py) tool from the pyCCMM library. The output is published at: https://fzu-av-cr.github.io/pyCCMM/xsd_dataset_full.html.
+
+This view allows interactive expansion and navigation of XSD elements (elements, attributes, groups, occurrences, etc.) and serves as a convenient tool when working with CCMM.
+
+## pyCCMM library
+
+[pyCCMM](https://github.com/FZU-AV-CR/pyCCMM) is a Python module/library that helps to programmatically generate CCMM metadata XML files and work with them (e.g., gradual metadata filling, validation, saving to file). The library is developed by the Institute of Physics of the Czech Academy of Sciences and is available in a separate repository: https://github.com/FZU-AV-CR/pyCCMM.
+
