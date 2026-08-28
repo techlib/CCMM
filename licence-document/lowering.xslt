@@ -48,9 +48,9 @@
     </xsl:if>
     <xsl:for-each-group select="//sp:result[sp:binding[@name=$subj]/*[$id_test = c:id-key(.)] and sp:binding[@name=$pred]/sp:uri/text()=&#34;http://purl.org/dc/terms/title&#34;]" group-by="c:id-key(sp:binding[@name=$obj]/*[1])">
       <xsl:for-each select="current-group()[1]">
-        <ccmm:label>
+        <ccmm:title>
           <xsl:apply-templates select="sp:binding[@name=$obj]/sp:literal"/>
-        </ccmm:label>
+        </ccmm:title>
       </xsl:for-each>
     </xsl:for-each-group>
   </xsl:template>

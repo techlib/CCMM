@@ -25,8 +25,8 @@
         }
       ]
     },
-    "label": {
-      "title": "label",
+    "title": {
+      "title": "title",
       "description": "Title of the licence document.",
       "type": "array",
       "items": {

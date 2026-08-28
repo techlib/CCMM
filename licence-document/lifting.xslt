@@ -55,7 +55,7 @@
       <xsl:copy-of select="$id//@*"/>
       <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
       <xsl:copy-of select="$arc"/>
-      <xsl:for-each select="ccmm:label">
+      <xsl:for-each select="ccmm:title">
         <ns0:title>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>

@@ -1793,9 +1793,9 @@
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
 
-<https://model.ccmm.cz/research-data/LicenceDocument.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
+<https://model.ccmm.cz/research-data/LicenceDocument.title> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
-    skos:prefLabel "label"@en;
+    skos:prefLabel "title"@en;
     skos:definition "Title of the licence document."@en;
     dsv:property dct:title;
     dsv:domain :LicenceDocument;

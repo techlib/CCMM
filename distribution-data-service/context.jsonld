@@ -505,7 +505,7 @@
           "@id": "http://purl.org/dc/terms/license",
           "@type": "@id",
           "@context": {
-            "label": {
+            "title": {
               "@id": "http://purl.org/dc/terms/title",
               "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
             },
@@ -567,7 +567,7 @@
       "@id": "http://purl.org/dc/terms/license",
       "@type": "@id",
       "@context": {
-        "label": {
+        "title": {
           "@id": "http://purl.org/dc/terms/title",
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },

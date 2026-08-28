@@ -10,10 +10,10 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" sawsdl:modelReference="http://purl.org/dc/terms/title">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="title" sawsdl:modelReference="http://purl.org/dc/terms/title">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            label - Title of the licence document.
+            title - Title of the licence document.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>
