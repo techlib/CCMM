@@ -1,6 +1,6 @@
 CHANGELOG
 ---------------------------------------
-### 2026-07-07 - Profiling CCMM to DCAT-AP
+### 2026-08-28 - Profiling CCMM to DCAT-AP
 * profiling properties through DCAT-AP (instead of final resources)
 * respecting cardinalities of DCAT-AP
 * dividing subjects to subjects (from controlled vocabulary) and keyword (plain string)
@@ -14,6 +14,7 @@ CHANGELOG
 * added provenance activity to describe origin of dataset, removed provenance statement
 * datacite was reprofiled to official datacite linked data representation
 * added JSON schema and JSON-LD contexts
+* added abstract and introduction into the specification
 
 ### 2026-02-27 - minor changes
 * added SHACL file

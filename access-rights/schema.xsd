@@ -5,7 +5,10 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Access rights - A statement about the access rights to the resource.
-        Use IRI identifier from the register http://purl.org/coar/access_right/.
+        Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:
+        embargoed access, metadata only access - :NON_PUBLIC,
+        open access - :PUBLIC,
+        restricted access - :RESTRICTED.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>

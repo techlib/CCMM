@@ -26,7 +26,7 @@
     kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
     kv:dataPsmHumanDescription "null";
     kv:dataPsmHumanLabel "null";
-    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/LicenceDocument.label\"";
-    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/LicenceDocument.title\"";
+    kv:dataPsmTechnicalLabel "\"title\"";
     kv:iri "\"https://model.ccmm.cz/research-data/licence-document/attribute-1785943123882-4abc-53f6-b611\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

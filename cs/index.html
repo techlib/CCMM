@@ -1863,12 +1863,37 @@
     <p class="copyright"></p>
     <section id="abstract">
       <p>
-      Tento soubor dokumentuje
-      <strong>Czech Core Metadata Model</strong> (@en).</p>
+      Czech Core Metadat Model (CCMM) je metadatový model pro popis výzkumných dat, určený pro jejich objevování, porozumění a sdílení napříč evropskými datovými katalogy. Model byl vyvinut a spravován skupinou pro metadata Národní technické knihovny v rámci projektu Czech Academic and Research Discovery Services (CARDS).
+      </p><p>
+      CCMM definuje základní metadatové prvky pro popis datových sad a poskytuje společný referenční metadatový rámec napříč repozitáři a doménami.
+      </p><p>
+      Jmenný prostor CCMM je <a href="https://model.ccmm.cz/vocabulary/ccmm#">https://model.ccmm.cz/vocabulary/ccmm#</a>.
+      </p><p>
+      Navrhovaný prefix pro jmenný prostor CCMM je ccmm.
+      
+      </p>
     </section>
     <section>
       <h2>Úvod</h2>
-      <p>Toto je úvod</p>
+      <p>
+        Czech Core Metadata Model (CCMM) je metadatový profil pro výzkumná data založený na principech FAIR (Findable, Accessible, Interoperable, Reusable) a profilu DCAT-AP, podporující otevřenou vědu. Nejnovější verze CCMM, 2.0.0, je spravována v repozitáři na Githubu <a href="https://github.com/techlib/CCMM/tree/2.0.0">https://github.com/techlib/CCMM/tree/2.0.0</a>. Model byl vytvořen a je spravován v nástroji Dataspecer, vyvinutém na Univerzitě Karlově a dostupném na <a href="https://dataspecer.com/">https://dataspecer.com/</a>.
+      </p><p>
+        Principy FAIR jsou důležité pro zvýšení srozumitelnosti dat, zlepšení jejich vyhledatelnosti, podporu perzistentních identifikátorů (PID) a zavedení efektivnějšího monitorování výzkumných dat. 
+      </p><p>
+        V kontextu českého Národního Metadatového Adresáře (NMA) je většina záznamů zaznamenávána primárně v češtině, sekundárně v angličtině, volba jazyka je však na na výzkumné komunitě. CCMM podporuje libovolnou kombinaci jazyků.
+      </p><p>
+        Protokol Open Archives Initiative for Metadataq Harvesting (OAI-PMH) je komunikační protokol pro sdílení metadat digitálních repozitářů. Pro přenos metadat zaznamenaných v CCMM prostřednictvím protokolu OAI-PMH použijte jmenný prostor <a href="https://model.ccmm.cz/research-data">https://model.ccmm.cz/research-data</a> a nejnovější verzi schématu datové sady, např. <a href="https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd">https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd</a>. Doporučený prefix pro přenos OAI-PMH je ccmm-xml.
+      </p><p>
+        CCMM používá k identifikaci externích zdrojů perzistentní identifikátory (PID). Přestože volba identifikátorů závisí na správci metadat, pro osoby je doporučeným schématem ORCID (<a href="https://orcid.org/">https://orcid.org/</a>) a pro organizace ROR (<a href="https://ror.org/">https://ror.org/</a>).
+      </p><p>
+        Jako podpora pro CCMM je vyžadována nebo doporučena celá řada řízených slovníků. Pro oborově specifickou terminologii je vhodné použít slovníky, které jsou v dané komunitě zavedené, ale přímo do CCMM je zabudováno několik povinných řízených slovníků. Některé byly znovu použity z existujících registrů, jiné jsou spravovány v nově vytvořeném registru řízených slovníků, který je k dispozici na adrese <a href="https://www.ccmm.cz/en/controlled-vocabularies/">https://www.ccmm.cz/en/controlled-vocabularies/</a>.
+      </p><p>
+        CCMM byl vytvořen jako RDF graf, který se skládá z tříd, jejich atributů a vztahů mezi třídami. V kontextu popisu metadat je základním stavebním kamenem prvek Dataset. Entity jsou rozděleny na hlavní a podpůrné, přičemž hlavní jsou nezbytnými částmi modelu, zatímco podpůrné poskytují doplňující informace. Částečně to pokrývá rozdělení v DCAT-AP, ale důležitost některých tříd je v kontextu CCMM odlišná. 
+      </p><p>
+        Hlavním výstupem CCMM je konceptuální model ve formě RDF grafu, serializovaného ve formátu Turtle (soubor dsv.ttl). Technická reprezentace ve strukturovaných formátech je poskytována v souborech XSD, JSON schématech a také ve formě grafu prostřednictvím souborů Turtle a JSON-LD context. Pro technickou reprezentaci použijte jako kořenový element Dataset.
+      </p><p>
+        Podrobný úvod do CCMM v češtině je zde: <a href="https://doi.org/10.48813/7825-md51">https://doi.org/10.48813/7825-md51</a>.
+      </p>
       </section>
     <section>
       <h2>Přehled</h2>
@@ -1918,13 +1943,13 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Rightsstatement"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#RightsStatement">dcat-ap:RightsStatement</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Rightsstatement">Rights Statement (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#RightsStatement">dcat-ap:RightsStatement</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#RightsStatement"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#RightsStatement">dcat-dap:RightsStatement</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#RightsStatement">Rights Statement (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#RightsStatement">dcat-dap:RightsStatement</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -1948,7 +1973,10 @@
           
               <tr>
                 <td>Popis použití v profilu</td>
-                <td>Use IRI identifier from the register http://purl.org/coar/access_right/. (@en)</td>
+                <td>Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:
+          embargoed access, metadata only access - :NON_PUBLIC,
+          open access - :PUBLIC,
+          restricted access - :RESTRICTED. (@en)</td>
               </tr>
             </table>
           
@@ -2834,7 +2862,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent">Agent (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -3439,14 +3467,14 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Standard"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Standard">dcat-ap:Standard</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Standard">Standard (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Standard">dcat-ap:Standard</a>)
                   <br />Definice: <i>A standard or other specification to which a resource conforms.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Standard"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Standard">dcat-dap:Standard</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Standard">Standard (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Standard">dcat-dap:Standard</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -3581,7 +3609,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Role"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Role">dcat-dap:Role</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Role">Role</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Role">dcat-dap:Role</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -5019,14 +5047,14 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Dataset">dcat-ap:Dataset</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset">Datová sada</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Dataset">dcat-ap:Dataset</a>)
                   <br />Definice: <i>Kolekce dat poskytovaná či řízená jedním zdrojem, která je k dispozici pro přístup či stažení v jednom či více formátech.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset">dcat-dap:Dataset</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Datová sada</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset">dcat-dap:Dataset</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -5119,7 +5147,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -5244,6 +5272,11 @@
                       </td>
                     </tr>
               
+                  <tr>
+                    <td>Popis použití v profilu</td>
+                    <td>Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:
+              embargoed access, metadata only access - :NON_PUBLIC, (@en)</td>
+                  </tr>
                 </table>
               </section>    <section id="Dataset.hasDescription">
                 <h4>has description (@en)</h4>
@@ -5613,7 +5646,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>This property can be repeated if there are multiple languages in the Dataset. (@en)</td>
+                    <td>Use language IRI identifier from the register http://publications.europa.eu/resource/authority/language. This property can be repeated if there are multiple other languages in the Dataset. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="Dataset.hasPrimaryLanguage">
@@ -5689,7 +5722,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>This property can be repeated if there are multiple languages in the Dataset. (@en)</td>
+                    <td>Use language IRI identifier from the register http://publications.europa.eu/resource/authority/language. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="Dataset.hasRelatedResource">
@@ -6802,13 +6835,13 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution">Distribuce</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Distribuce</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -7392,9 +7425,9 @@
                   <tr>
                     <td>Obor hodnot</td>
                     <td>
-                      <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+                      <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a>
               
-                          [1..1]
+                          [1..*]
               
                   </td>
                   </tr>
@@ -7440,7 +7473,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>This property can be repeated for parallel language versions of the description. (@en)</td>
+                    <td>This property can be repeated for parallel language versions of the description. The main title of a distribution is the one in the primary language of the dataset. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -7502,13 +7535,13 @@
                                   profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution">Distribuce</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Distribuce</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -7683,13 +7716,13 @@
                                   profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution">Distribuce</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Distribuce</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -8148,7 +8181,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td> (@en)</td>
+                    <td>This property refers to the instance of format represented by IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable codelist representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri&#x3D;http://publications.europa.eu/resource/authority/file-type. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="Distribution-DownloadableFile.mediaType">
@@ -8372,7 +8405,7 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Document"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Document">dcat-ap:Document</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Document">Document (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Document">dcat-ap:Document</a>)
                   <br />Definice: <i>A textual resource intended for human consumption that contains information, e.g. a web page about a Dataset.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -8505,7 +8538,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -8637,13 +8670,13 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#MediaTypeorExtent"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#MediaTypeOrExtent">dcat-ap:MediaTypeOrExtent</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#MediaTypeorExtent">Media Type or Extent (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#MediaTypeOrExtent">dcat-ap:MediaTypeOrExtent</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#MediaTypeOrExtent"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#MediaTypeOrExtent">dcat-dap:MediaTypeOrExtent</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#MediaTypeOrExtent">Media Type or Extent (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#MediaTypeOrExtent">dcat-dap:MediaTypeOrExtent</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -9082,13 +9115,13 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Geometry"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Geometry">dcat-ap:Geometry</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Geometry">Geometry (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Geometry">dcat-ap:Geometry</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Geometry"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Geometry">dcat-dap:Geometry</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Geometry">Geometry (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Geometry">dcat-dap:Geometry</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -9337,7 +9370,7 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Identifier"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Identifier">dcat-ap:Identifier</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Identifier">Identifier (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Identifier">dcat-ap:Identifier</a>)
                   <br />Definice: <i>This is based on the UN/CEFACT Identifier class.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -9739,7 +9772,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Catalog">dcat-dap:Catalog</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">Katalog</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Catalog">dcat-dap:Catalog</a>)
                   <br />Definice: <i>Řízená kolekce metadat o datových sadách a datových službách</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -9776,7 +9809,7 @@
                                   specializuje
                 
                 profil
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset">dcat-dap:Dataset</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Datová sada</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset">dcat-dap:Dataset</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -10057,7 +10090,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog_Record"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#CatalogRecord">dcat-dap:CatalogRecord</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog_Record">Katalogizační záznam</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#CatalogRecord">dcat-dap:CatalogRecord</a>)
                   <br />Definice: <i>Záznam v datovém katalogu popisující jednu datovou sadu či datovou službu.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -10795,14 +10828,14 @@
                                     profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-ap/#LinguisticSystem"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#LinguisticSystem">dcat-ap:LinguisticSystem</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-ap/#LinguisticSystem">Linguistic System (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#LinguisticSystem">dcat-ap:LinguisticSystem</a>)
                   <br />Definice: <i>A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#LinguisticSystem"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#LinguisticSystem">dcat-dap:LinguisticSystem</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#LinguisticSystem">Linguistic System (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#LinguisticSystem">dcat-dap:LinguisticSystem</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -10945,7 +10978,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#LicenseDocument"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#LicenseDocument">dcat-dap:LicenseDocument</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#LicenseDocument">License Document (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#LicenseDocument">dcat-dap:LicenseDocument</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -10984,7 +11017,7 @@
             </table>
           
               <p><strong>Vlastnosti</strong></p>
-              <p>Pro tento profil třídy jsou definovány následující vlastnosti: <a href="#LicenceDocument.label">label (@en)</a>.</p>
+              <p>Pro tento profil třídy jsou definovány následující vlastnosti: <a href="#LicenceDocument.title">title (@en)</a>.</p>
           
               <p><strong>Zpětné asociace</strong></p>
               <ul>
@@ -10992,28 +11025,28 @@
                   <li>z domény <a href="#DataService"></a> → <a href="#DataService.hasLicence"></a></li>
               </ul>
           
-              <section id="LicenceDocument.label">
-                <h4>label (@en)</h4>
+              <section id="LicenceDocument.title">
+                <h4>title (@en)</h4>
               
                 <table class="def">
                   <tr>
                     <td>IRI profilovaných vztahů</td>
                     <td>
                         
-                        <a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>
+                        <a href="http://purl.org/dc/terms/title">dcterms:title</a>
                     </td>
                   </tr>
                   <tr>
                     <td>IRI</td>
-                    <td><a href="https://model.ccmm.cz/research-data/LicenceDocument.label">https://model.ccmm.cz/research-data/LicenceDocument.label</a></td>
+                    <td><a href="https://model.ccmm.cz/research-data/LicenceDocument.title">https://model.ccmm.cz/research-data/LicenceDocument.title</a></td>
                   </tr>
                   <tr>
                     <td>Název</td>
-                    <td>label (@en)</td>
+                    <td>title (@en)</td>
                   </tr>
                   <tr>
                     <td>Definice</td>
-                    <td>Label of the licence document. (@en)</td>
+                    <td>Title of the licence document. (@en)</td>
                   </tr>
                   <tr>
                     <td>Definiční obor</td>
@@ -11043,8 +11076,8 @@
                                         profiluje
                     vlastnost
                     
-                    <a href="http://www.w3.org/2000/01/rdf-schema#label">label (@en)</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
-                      <br />Definice: <i>A human-readable name for the subject.</i>
+                    <a href="http://purl.org/dc/terms/title">Title (@en)</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
+                      <br />Definice: <i>A name given to the resource.</i>
                       <ul style="list-style-type: disclosure-closed;">
                       </ul>
               
@@ -11087,13 +11120,13 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Location"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Location">dcat-ap:Location</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Location">Location (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Location">dcat-ap:Location</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Location"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Location">dcat-dap:Location</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Location">Location (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Location">dcat-dap:Location</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -11658,13 +11691,13 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#MediaType"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#MediaType">dcat-ap:MediaType</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#MediaType">Media Type (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#MediaType">dcat-ap:MediaType</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#MediaType"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#MediaType">dcat-dap:MediaType</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#MediaType">Media Type (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#MediaType">dcat-dap:MediaType</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -11841,7 +11874,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent">Agent (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -12007,7 +12040,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent">Agent (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -12262,7 +12295,7 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Activity"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Activity">dcat-ap:Activity</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Activity">Activity (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Activity">dcat-ap:Activity</a>)
                   <br />Definice: <i>An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -12527,7 +12560,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -12563,7 +12596,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -12777,7 +12810,7 @@
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -13359,14 +13392,14 @@
                                     profiluje
                 
                 profil
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Attribution"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Attribution">dcat-ap:Attribution</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Attribution">Attribution (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Attribution">dcat-ap:Attribution</a>)
                   <br />Definice: <i>Attribution is the ascribing of an entity to an agent.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
                 
                 profil
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Attribution"><i>beze jména</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Attribution">dcat-dap:Attribution</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Attribution">Attribution (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Attribution">dcat-dap:Attribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiluje
@@ -18523,12 +18556,24 @@
 
                 
   
+      pole hodnot <code>{1..*}</code> typu       
+  
   
     řetězec
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+  
+  
   
   
   
@@ -18826,8 +18871,8 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -19963,12 +20008,24 @@
 
                 
   
+      pole hodnot <code>{1..*}</code> typu       
+  
   
     řetězec
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+  
+  
   
   
   
@@ -20223,8 +20280,8 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -20843,8 +20900,8 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -52323,12 +52380,24 @@
 
                 
   
+      pole hodnot <code>{1..*}</code> typu       
+  
   
     řetězec
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+  
+  
   
   
   
@@ -52626,8 +52695,8 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -53763,12 +53832,24 @@
 
                 
   
+      pole hodnot <code>{1..*}</code> typu       
+  
   
     řetězec
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+  
+  
   
   
   
@@ -54023,8 +54104,8 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -54643,8 +54724,8 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -88176,8 +88257,8 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -101743,12 +101824,24 @@
 
                 
   
+      pole hodnot <code>{1..*}</code> typu       
+  
   
     řetězec
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+  
+  
   
   
   
@@ -102003,8 +102096,8 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -102623,8 +102716,8 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -107596,7 +107689,7 @@
           element <a href="#element-ccmm:distribution_data_service-ccmm:iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-ccmm:distribution_data_service-ccmm:title"><code>&lt;title&gt;</code></a> [1..1]
+          element <a href="#element-ccmm:distribution_data_service-ccmm:title"><code>&lt;title&gt;</code></a> [1..*]
       </li>
       <li>
           element <a href="#element-ccmm:distribution_data_service-ccmm:access_service"><code>&lt;access_service&gt;</code></a> [0..*]
@@ -107682,7 +107775,7 @@
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>1..1</dd>
+      <dd>1..*</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-ccmm:distribution_data_service"></a></dd>
 
@@ -110780,12 +110873,24 @@
 
                 
   
+      pole hodnot <code>{1..*}</code> typu       
+  
   
     řetězec
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+  
+  
   
   
   
@@ -111083,8 +111188,8 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -112327,7 +112432,7 @@
           element <a href="#element-ccmm:distribution_downloadable_file-ccmm:iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-ccmm:distribution_downloadable_file-ccmm:title"><code>&lt;title&gt;</code></a> [1..1]
+          element <a href="#element-ccmm:distribution_downloadable_file-ccmm:title"><code>&lt;title&gt;</code></a> [1..*]
       </li>
       <li>
           element <a href="#element-ccmm:distribution_downloadable_file-ccmm:access_url"><code>&lt;access_url&gt;</code></a> [1..*]
@@ -112431,7 +112536,7 @@
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>1..1</dd>
+      <dd>1..*</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-ccmm:distribution_downloadable_file"></a></dd>
 
@@ -126143,8 +126248,8 @@
 
         </li>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           nepovinná
           položka typu
 
@@ -126333,7 +126438,7 @@
           element <a href="#element-ccmm:licence_document-ccmm:iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-ccmm:licence_document-ccmm:label"><code>&lt;label&gt;</code></a> [0..*]
+          element <a href="#element-ccmm:licence_document-ccmm:title"><code>&lt;title&gt;</code></a> [0..*]
       </li>
   </ul>
 
@@ -126371,8 +126476,8 @@
     
   </dl>
 </section>
-<section id="element-ccmm:licence_document-ccmm:label">
-  <h4>Element <code>&lt;label&gt;</code></h4>
+<section id="element-ccmm:licence_document-ccmm:title">
+  <h4>Element <code>&lt;title&gt;</code></h4>
 
   <dl>
     <dt>Význam</dt>
@@ -126384,8 +126489,8 @@
           
         </i>
 
-          <a href="#LicenceDocument.label"><strong>label</strong></a>
-          (Label of the licence document.)
+          <a href="#LicenceDocument.title"><strong>title</strong></a>
+          (Title of the licence document.)
 
     </dd>
 

@@ -120,7 +120,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has primary language - A primary language of the Dataset.
-            This property can be repeated if there are multiple languages in the Dataset.
+            Use language IRI identifier from the register http://publications.europa.eu/resource/authority/language.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -128,7 +128,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has other language - Any other languages of the Dataset.
-            This property can be repeated if there are multiple languages in the Dataset.
+            Use language IRI identifier from the register http://publications.europa.eu/resource/authority/language. This property can be repeated if there are multiple other languages in the Dataset.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -136,6 +136,8 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has access rights - Information that declares the access status of a Dataset.
+            Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:
+            embargoed access, metadata only access - :NON_PUBLIC,
           </xs:documentation>
         </xs:annotation>
       </xs:element>

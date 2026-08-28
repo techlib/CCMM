@@ -1273,9 +1273,9 @@
       "description": "A licence under which the Data service is made available.",
       "type": "object",
       "properties": {
-        "label": {
-          "title": "label",
-          "description": "Label of the licence document.",
+        "title": {
+          "title": "title",
+          "description": "Title of the licence document.",
           "type": "array",
           "items": {
             "title": "Language tagged string",

@@ -1863,13 +1863,37 @@
     <p class="copyright"></p>
     <section id="abstract">
       <p>
-      This file documents
-      <strong>Czech Core Metadata Model</strong>.</p>
+      Czech Core Metadata Model for Research Data (CCMM) is a metadata model for description of research data designed for their discovery, understanding and sharing accross European data catalogues. The model was developed and is maintained by the metadata group of the National Library of Technology as a part of the project Czech Academic and Research Discovery Services (CARDS).
+      </p><p>
+      CCMM establishes basic elements for describing datasets and provides a common metadata reference across repositories and domains.
+      </p><p>
+      The namespace of the CCMM is <a href="https://model.ccmm.cz/vocabulary/ccmm#">https://model.ccmm.cz/vocabulary/ccmm#</a>.
+      </p><p>
+      The suggested prefix for the CCMM namespace is ccmm.
+      </p>
     </section>
     <section>
       
       <h2>Introduction</h2>
-      <p>This is introduction</p>
+      <p>
+        Czech Core Metadata Model (CCMM) is a metadata profile for research data based on the FAIR pronciples (Findable, Accessible, Interoperable, Reusable) and DCAT-AP profile, supporting open science. The most recent CCMM version, 2.0.0, is managed in the GitHub repository <a href="https://github.com/techlib/CCMM/tree/2.0.0">https://github.com/techlib/CCMM/tree/2.0.0</a>. The model was created and is maintained in the tool Dataspecer, developed at Charles University and available from <a href="https://dataspecer.com/">https://dataspecer.com/</a>.
+      </p><p>
+        FAIR prinicples are important to increase data understandability, improve its discoverability, support standard persistent identifiers (PIDs), and establish more efficient monitoring of research data.
+      </p><p>
+        In the context of Czech National Metadata Directory (NMA), most of the records are recorded primarily in Czech and secondarily in English, anyway, the language choice depends on a research community. CCMM supports any combination of languages.
+      </p><p>
+        Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) is a communication protocol for sharing digital repository metadata. To transfer the metadata recorded in CCMM through OAI-PMH protocol, use the namespace <a href="https://model.ccmm.cz/research-data">https://model.ccmm.cz/research-data</a> and the most recent version of the Dataset schema, e.g., <a href="https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd">https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd</a>. The recommended prefix for OAI-PMH transfer is ccmm-xml.
+      </p><p>
+        CCMM uses Peristent Identifiers (PIDs) to identify external resources. Although the final choices are up to metadata administrators, the recommended PIDs for persons is ORCID (<a href="https://orcid.org/">https://orcid.org/</a>) and for organizations it is ROR (<a href="https://ror.org/">https://ror.org/</a>). 
+      </p><p>
+        As a support for CCMM, a wide set of controlled vocabularies is required or recommended. For the domain-specific subject terminologies, any vocabulary is free to use, but there are several required controlled vocabularies embedded in CCMM. Some were reused form existing registries, but some are managed in the newly created controlled vocabulary registry available at <a href="https://www.ccmm.cz/en/controlled-vocabularies/">https://www.ccmm.cz/en/controlled-vocabularies/</a>. 
+        </p><p>
+        CCMM has been developed as an RDF graph that consists of classes, their attributes, and relationships between the classes. The first class citizen in the context of metadata description is the element Dataset. Entities are divided into main and supportive, with main are essential parts of the model, while supportive provides additional information. It partly coverrts the division in DCAT-AP, but the importance of some classes is different in the context of CCMM.
+      </p><p>
+        The main representation of CCMM is the conceptual model in the form of RDF Graph, serialized in turtle format (the file dsv.ttl). The technical representation in strucutred formats is provided in XSD files, JSON schemas and also in graphs supported by Turtle and JSON-LD context files. For the technical representation, use Dataset as the root element.
+      </p><p>
+        A detailed introduction to CCMM, in Czech, is here: <a href="https://doi.org/10.48813/7825-md51">https://doi.org/10.48813/7825-md51</a>.
+      </p>
     </section>
     <section>
       <h2>Overview</h2>
@@ -1919,13 +1943,13 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Rightsstatement"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#RightsStatement">dcat-ap:RightsStatement</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Rightsstatement">Rights Statement</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#RightsStatement">dcat-ap:RightsStatement</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#RightsStatement"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#RightsStatement">dcat-dap:RightsStatement</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#RightsStatement">Rights Statement</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#RightsStatement">dcat-dap:RightsStatement</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -1949,7 +1973,10 @@
           
               <tr>
                 <td>Usage note</td>
-                <td>Use IRI identifier from the register http://purl.org/coar/access_right/.</td>
+                <td>Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:
+          embargoed access, metadata only access - :NON_PUBLIC,
+          open access - :PUBLIC,
+          restricted access - :RESTRICTED.</td>
               </tr>
             </table>
           
@@ -2835,7 +2862,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent">Agent</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -3440,14 +3467,14 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Standard"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Standard">dcat-ap:Standard</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Standard">Standard</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Standard">dcat-ap:Standard</a>)
                   <br />Definition: <i>A standard or other specification to which a resource conforms.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Standard"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Standard">dcat-dap:Standard</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Standard">Standard</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Standard">dcat-dap:Standard</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -3582,7 +3609,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Role"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Role">dcat-dap:Role</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Role">Role</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Role">dcat-dap:Role</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -4901,14 +4928,14 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Dataset">dcat-ap:Dataset</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Dataset">Dataset</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Dataset">dcat-ap:Dataset</a>)
                   <br />Definition: <i>A conceptual entity that represents the information published.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset">dcat-dap:Dataset</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset">dcat-dap:Dataset</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -5001,7 +5028,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -5126,6 +5153,11 @@
                       </td>
                     </tr>
               
+                  <tr>
+                    <td>Usage note</td>
+                    <td>Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:
+              embargoed access, metadata only access - :NON_PUBLIC,</td>
+                  </tr>
                 </table>
               </section>    <section id="Dataset.hasDescription">
                 <h4>has description</h4>
@@ -5495,7 +5527,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>This property can be repeated if there are multiple languages in the Dataset.</td>
+                    <td>Use language IRI identifier from the register http://publications.europa.eu/resource/authority/language. This property can be repeated if there are multiple other languages in the Dataset.</td>
                   </tr>
                 </table>
               </section>    <section id="Dataset.hasPrimaryLanguage">
@@ -5571,7 +5603,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>This property can be repeated if there are multiple languages in the Dataset.</td>
+                    <td>Use language IRI identifier from the register http://publications.europa.eu/resource/authority/language.</td>
                   </tr>
                 </table>
               </section>    <section id="Dataset.hasRelatedResource">
@@ -6803,13 +6835,13 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution">Distribution</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Distribution</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -7393,9 +7425,9 @@
                   <tr>
                     <td>Range</td>
                     <td>
-                      <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+                      <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a>
               
-                          [1..1]
+                          [1..*]
               
                   </td>
                   </tr>
@@ -7441,7 +7473,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>This property can be repeated for parallel language versions of the description.</td>
+                    <td>This property can be repeated for parallel language versions of the description. The main title of a distribution is the one in the primary language of the dataset.</td>
                   </tr>
                 </table>
               </section>
@@ -7503,13 +7535,13 @@
                                   profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution">Distribution</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Distribution</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -7684,13 +7716,13 @@
                                   profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Distribution">Distribution</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Distribution">dcat-ap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Distribution</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -8149,7 +8181,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td></td>
+                    <td>This property refers to the instance of format represented by IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable codelist representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri&#x3D;http://publications.europa.eu/resource/authority/file-type.</td>
                   </tr>
                 </table>
               </section>    <section id="Distribution-DownloadableFile.mediaType">
@@ -8373,7 +8405,7 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Document"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Document">dcat-ap:Document</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Document">Document</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Document">dcat-ap:Document</a>)
                   <br />Definition: <i>A textual resource intended for human consumption that contains information, e.g. a web page about a Dataset.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -8506,7 +8538,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -8638,13 +8670,13 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#MediaTypeorExtent"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#MediaTypeOrExtent">dcat-ap:MediaTypeOrExtent</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#MediaTypeorExtent">Media Type or Extent</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#MediaTypeOrExtent">dcat-ap:MediaTypeOrExtent</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#MediaTypeOrExtent"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#MediaTypeOrExtent">dcat-dap:MediaTypeOrExtent</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#MediaTypeOrExtent">Media Type or Extent</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#MediaTypeOrExtent">dcat-dap:MediaTypeOrExtent</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -9083,13 +9115,13 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Geometry"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Geometry">dcat-ap:Geometry</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Geometry">Geometry</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Geometry">dcat-ap:Geometry</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Geometry"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Geometry">dcat-dap:Geometry</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Geometry">Geometry</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Geometry">dcat-dap:Geometry</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -9338,7 +9370,7 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Identifier"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Identifier">dcat-ap:Identifier</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Identifier">Identifier</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Identifier">dcat-ap:Identifier</a>)
                   <br />Definition: <i>This is based on the UN/CEFACT Identifier class.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -9733,14 +9765,14 @@
                                     profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-ap/#LinguisticSystem"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#LinguisticSystem">dcat-ap:LinguisticSystem</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-ap/#LinguisticSystem">Linguistic System</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#LinguisticSystem">dcat-ap:LinguisticSystem</a>)
                   <br />Definition: <i>A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#LinguisticSystem"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#LinguisticSystem">dcat-dap:LinguisticSystem</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#LinguisticSystem">Linguistic System</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#LinguisticSystem">dcat-dap:LinguisticSystem</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -9883,7 +9915,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#LicenseDocument"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#LicenseDocument">dcat-dap:LicenseDocument</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#LicenseDocument">License Document</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#LicenseDocument">dcat-dap:LicenseDocument</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -9922,7 +9954,7 @@
             </table>
           
               <p><strong>Properties</strong></p>
-              <p>For this class profile the following properties are defined: <a href="#LicenceDocument.label">label</a>.</p>
+              <p>For this class profile the following properties are defined: <a href="#LicenceDocument.title">title</a>.</p>
           
               <p><strong>Backwards associations</strong></p>
               <ul>
@@ -9930,28 +9962,28 @@
                   <li>from domain <a href="#DataService"></a> → <a href="#DataService.hasLicence"></a></li>
               </ul>
           
-              <section id="LicenceDocument.label">
-                <h4>label</h4>
+              <section id="LicenceDocument.title">
+                <h4>title</h4>
               
                 <table class="def">
                   <tr>
                     <td>Profiled relationship IRI(s)</td>
                     <td>
                         
-                        <a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>
+                        <a href="http://purl.org/dc/terms/title">dcterms:title</a>
                     </td>
                   </tr>
                   <tr>
                     <td>IRI</td>
-                    <td><a href="https://model.ccmm.cz/research-data/LicenceDocument.label">https://model.ccmm.cz/research-data/LicenceDocument.label</a></td>
+                    <td><a href="https://model.ccmm.cz/research-data/LicenceDocument.title">https://model.ccmm.cz/research-data/LicenceDocument.title</a></td>
                   </tr>
                   <tr>
                     <td>Label</td>
-                    <td>label</td>
+                    <td>title</td>
                   </tr>
                   <tr>
                     <td>Definition</td>
-                    <td>Label of the licence document.</td>
+                    <td>Title of the licence document.</td>
                   </tr>
                   <tr>
                     <td>Domain</td>
@@ -9981,8 +10013,8 @@
                                         profiles
                     property
                     
-                    <a href="http://www.w3.org/2000/01/rdf-schema#label">label</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
-                      <br />Definition: <i>A human-readable name for the subject.</i>
+                    <a href="http://purl.org/dc/terms/title">Title</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
+                      <br />Definition: <i>A name given to the resource.</i>
                       <ul style="list-style-type: disclosure-closed;">
                       </ul>
               
@@ -10025,13 +10057,13 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Location"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Location">dcat-ap:Location</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Location">Location</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Location">dcat-ap:Location</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Location"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Location">dcat-dap:Location</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Location">Location</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Location">dcat-dap:Location</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -10596,13 +10628,13 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#MediaType"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#MediaType">dcat-ap:MediaType</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#MediaType">Media Type</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#MediaType">dcat-ap:MediaType</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#MediaType"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#MediaType">dcat-dap:MediaType</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#MediaType">Media Type</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#MediaType">dcat-dap:MediaType</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -10752,7 +10784,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog_Record"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#CatalogRecord">dcat-dap:CatalogRecord</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog_Record">Catalog Record</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#CatalogRecord">dcat-dap:CatalogRecord</a>)
                   <br />Definition: <i>A record in a catalog, describing the registration of a single dcat:Resource.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -11523,7 +11555,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent">Agent</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -11689,7 +11721,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Agent">Agent</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Agent">dcat-dap:Agent</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -11944,7 +11976,7 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Activity"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Activity">dcat-ap:Activity</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Activity">Activity</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Activity">dcat-ap:Activity</a>)
                   <br />Definition: <i>An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -12209,7 +12241,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -12245,7 +12277,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -12459,7 +12491,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Catalog">dcat-dap:Catalog</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">Catalog</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Catalog">dcat-dap:Catalog</a>)
                   <br />Definition: <i>A curated collection of metadata about resources.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
@@ -12496,7 +12528,7 @@
                                   specializes
                 
                 class profile
-                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset">dcat-dap:Dataset</a>)
+                <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset">dcat-dap:Dataset</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -12778,7 +12810,7 @@
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -13360,14 +13392,14 @@
                                     profiles
                 
                 class profile
-                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Attribution"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Attribution">dcat-ap:Attribution</a>)
+                <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/#Attribution">Attribution</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap#Attribution">dcat-ap:Attribution</a>)
                   <br />Definition: <i>Attribution is the ascribing of an entity to an agent.</i>
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
                 
                 class profile
-                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Attribution"><i>without assigned name</i></a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Attribution">dcat-dap:Attribution</a>)
+                <a href="https://mff-uk.github.io/specifications/dcat-dap/#Attribution">Attribution</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Attribution">dcat-dap:Attribution</a>)
                   <ul style="list-style-type: disclosure-closed;">
                       <li>
                                   profiles
@@ -18588,11 +18620,24 @@
                 
   
   
+    array of values <code>{1..*}</code> of type       
+  
+  
     string
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+
+  
   
   
   
@@ -18896,8 +18941,8 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -20043,11 +20088,24 @@
                 
   
   
+    array of values <code>{1..*}</code> of type       
+  
+  
     string
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+
+  
   
   
   
@@ -20308,8 +20366,8 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -20934,8 +20992,8 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -52898,11 +52956,24 @@
                 
   
   
+    array of values <code>{1..*}</code> of type       
+  
+  
     string
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+
+  
   
   
   
@@ -53206,8 +53277,8 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -54353,11 +54424,24 @@
                 
   
   
+    array of values <code>{1..*}</code> of type       
+  
+  
     string
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+
+  
   
   
   
@@ -54618,8 +54702,8 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -55244,8 +55328,8 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -89270,8 +89354,8 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -102992,11 +103076,24 @@
                 
   
   
+    array of values <code>{1..*}</code> of type       
+  
+  
     string
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+
+  
   
   
   
@@ -103257,8 +103354,8 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -103883,8 +103980,8 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -108927,7 +109024,7 @@
           element <a href="#element-ccmm:distribution_data_service-ccmm:iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-ccmm:distribution_data_service-ccmm:title"><code>&lt;title&gt;</code></a> [1..1]
+          element <a href="#element-ccmm:distribution_data_service-ccmm:title"><code>&lt;title&gt;</code></a> [1..*]
       </li>
       <li>
           element <a href="#element-ccmm:distribution_data_service-ccmm:access_service"><code>&lt;access_service&gt;</code></a> [0..*]
@@ -109013,7 +109110,7 @@
     </dd>
 
       <dt>Effective cardinality of the element relative to its parent element</dt>
-      <dd>1..1</dd>
+      <dd>1..*</dd>
       <dt>Parent element</dt>
       <dd><a href="#type-ccmm:distribution_data_service"></a></dd>
 
@@ -112158,11 +112255,24 @@
                 
   
   
+    array of values <code>{1..*}</code> of type       
+  
+  
     string
   
   
 
 
+  
+  
+  
+  
+  
+
+
+          
+
+  
   
   
   
@@ -112466,8 +112576,8 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -113719,7 +113829,7 @@
           element <a href="#element-ccmm:distribution_downloadable_file-ccmm:iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-ccmm:distribution_downloadable_file-ccmm:title"><code>&lt;title&gt;</code></a> [1..1]
+          element <a href="#element-ccmm:distribution_downloadable_file-ccmm:title"><code>&lt;title&gt;</code></a> [1..*]
       </li>
       <li>
           element <a href="#element-ccmm:distribution_downloadable_file-ccmm:access_url"><code>&lt;access_url&gt;</code></a> [1..*]
@@ -113823,7 +113933,7 @@
     </dd>
 
       <dt>Effective cardinality of the element relative to its parent element</dt>
-      <dd>1..1</dd>
+      <dd>1..*</dd>
       <dt>Parent element</dt>
       <dd><a href="#type-ccmm:distribution_downloadable_file"></a></dd>
 
@@ -127700,8 +127810,8 @@
 
         </li>
         <li style="list-style-type: disclosure-closed;">
-          <code>label</code>:
-            (<a href="#LicenceDocument.label" label="Label of the licence document.">label</a>)
+          <code>title</code>:
+            (<a href="#LicenceDocument.title" label="Title of the licence document.">title</a>)
           optional
           item of type
 
@@ -127891,7 +128001,7 @@
           element <a href="#element-ccmm:licence_document-ccmm:iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-ccmm:licence_document-ccmm:label"><code>&lt;label&gt;</code></a> [0..*]
+          element <a href="#element-ccmm:licence_document-ccmm:title"><code>&lt;title&gt;</code></a> [0..*]
       </li>
   </ul>
 
@@ -127929,8 +128039,8 @@
     
   </dl>
 </section>
-<section id="element-ccmm:licence_document-ccmm:label">
-  <h4>Element <code>&lt;label&gt;</code></h4>
+<section id="element-ccmm:licence_document-ccmm:title">
+  <h4>Element <code>&lt;title&gt;</code></h4>
 
   <dl>
     <dt>Meaning</dt>
@@ -127942,8 +128052,8 @@
           
         </i>
 
-          <a href="#LicenceDocument.label"><strong>label</strong></a>
-          (Label of the licence document.)
+          <a href="#LicenceDocument.title"><strong>title</strong></a>
+          (Title of the licence document.)
 
     </dd>
 
