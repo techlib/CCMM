@@ -27,7 +27,7 @@
     },
     "label": {
       "title": "label",
-      "description": "Label of the licence document.",
+      "description": "Title of the licence document.",
       "type": "array",
       "items": {
         "title": "Language tagged string",

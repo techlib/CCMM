@@ -16,11 +16,11 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element name="title" type="xs:string" sawsdl:modelReference="http://purl.org/dc/terms/title">
+      <xs:element maxOccurs="unbounded" name="title" type="xs:string" sawsdl:modelReference="http://purl.org/dc/terms/title">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             title - A name given to the distribution.
-            This property can be repeated for parallel language versions of the description.
+            This property can be repeated for parallel language versions of the description. The main title of a distribution is the one in the primary language of the dataset.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -100,6 +100,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has format - The file format of the distribution.
+            This property refers to the instance of format represented by IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable codelist representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

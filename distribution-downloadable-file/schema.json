@@ -35,7 +35,12 @@
     "title": {
       "title": "title",
       "description": "A name given to the distribution.",
-      "type": "string"
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
     },
     "access_url": {
       "title": "access URL",
@@ -330,7 +335,7 @@
       "properties": {
         "label": {
           "title": "label",
-          "description": "Label of the licence document.",
+          "description": "Title of the licence document.",
           "type": "array",
           "items": {
             "title": "Language tagged string",

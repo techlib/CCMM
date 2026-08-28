@@ -111,7 +111,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/-f1ea2cb> a sh:PropertyShape;
     sh:name "has primary language"@en;
-    sh:description "This property can be repeated if there are multiple languages in the Dataset."@en;
+    sh:description "Use language IRI identifier from the register http://publications.europa.eu/resource/authority/language."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#hasPrimaryLanguage>;
     sh:maxCount 1;
@@ -121,7 +121,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/38eba703> a sh:PropertyShape;
     sh:name "has other language"@en;
-    sh:description "This property can be repeated if there are multiple languages in the Dataset."@en;
+    sh:description "Use language IRI identifier from the register http://publications.europa.eu/resource/authority/language. This property can be repeated if there are multiple other languages in the Dataset."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#hasOtherLanguage>;
     sh:class <http://purl.org/dc/terms/LinguisticSystem>.
@@ -149,6 +149,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/21b612ea> a sh:PropertyShape;
     sh:name "has access rights"@en;
+    sh:description "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:\nembargoed access, metadata only access - :NON_PUBLIC,"@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.org/dc/terms/accessRights>;
     sh:maxCount 1;
@@ -355,15 +356,14 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADistributionShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2219314a>.
 
-<https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-30962495> a sh:PropertyShape;
+<https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2751d42e> a sh:PropertyShape;
     sh:name "title"@en;
-    sh:description "This property can be repeated for parallel language versions of the description."@en;
+    sh:description "This property can be repeated for parallel language versions of the description. The main title of a distribution is the one in the primary language of the dataset."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://purl.org/dc/terms/title>;
-    sh:maxCount 1;
-    sh:datatype xsd:string.
+    sh:datatype rdf:langString.
 
-<https://model.ccmm.cz/research-data/dcat%3ADistributionShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-30962495>.
+<https://model.ccmm.cz/research-data/dcat%3ADistributionShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2751d42e>.
 
 <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/6bd413a6> a sh:PropertyShape;
     sh:name "conforms to"@en;
@@ -823,7 +823,7 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape/3ce68812> a sh:PropertyShape;
     sh:name "has format"@en;
-    sh:description ""@en;
+    sh:description "This property refers to the instance of format represented by IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable codelist representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.org/dc/terms/format>;
     sh:maxCount 1;
@@ -848,7 +848,7 @@
     sh:maxCount 1;
     sh:class <http://purl.org/dc/terms/MediaType>.
 
-<https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape> sh:property <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape/-592ae936>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2219314a>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-30962495>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/6bd413a6>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-13837e7f>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2b2f766a>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-6506d0b0>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/491c4920>.
+<https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape> sh:property <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape/-592ae936>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2219314a>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2751d42e>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/6bd413a6>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-13837e7f>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2b2f766a>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-6506d0b0>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/491c4920>.
 
 <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DataServiceShape> a sh:NodeShape;
     rdfs:seeAlso <https://model.ccmm.cz/research-data/Distribution-DataService>;
@@ -862,7 +862,7 @@
     sh:path <http://www.w3.org/ns/dcat#accessService>;
     sh:class <http://www.w3.org/ns/dcat#DataService>.
 
-<https://model.ccmm.cz/research-data/ccmm%3ADistribution-DataServiceShape> sh:property <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DataServiceShape/2dfa4aa5>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2219314a>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-30962495>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/6bd413a6>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-13837e7f>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2b2f766a>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-6506d0b0>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/491c4920>.
+<https://model.ccmm.cz/research-data/ccmm%3ADistribution-DataServiceShape> sh:property <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DataServiceShape/2dfa4aa5>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2219314a>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2751d42e>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/6bd413a6>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-13837e7f>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-2b2f766a>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/-6506d0b0>, <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/491c4920>.
 
 <https://model.ccmm.cz/research-data/rdfs%3AResourceShape> rdfs:seeAlso <https://model.ccmm.cz/research-data/File>.
 
@@ -1080,13 +1080,13 @@
     sh:closed false;
     sh:targetClass <http://purl.org/dc/terms/LicenseDocument>.
 
-<https://model.ccmm.cz/research-data/dcterms%3ALicenseDocumentShape/5e804c00> a sh:PropertyShape;
+<https://model.ccmm.cz/research-data/dcterms%3ALicenseDocumentShape/-30321db4> a sh:PropertyShape;
     sh:name "label"@en;
     sh:nodeKind sh:Literal;
-    sh:path rdfs:label;
+    sh:path <http://purl.org/dc/terms/title>;
     sh:datatype rdf:langString.
 
-<https://model.ccmm.cz/research-data/dcterms%3ALicenseDocumentShape> sh:property <https://model.ccmm.cz/research-data/dcterms%3ALicenseDocumentShape/5e804c00>.
+<https://model.ccmm.cz/research-data/dcterms%3ALicenseDocumentShape> sh:property <https://model.ccmm.cz/research-data/dcterms%3ALicenseDocumentShape/-30321db4>.
 
 <https://model.ccmm.cz/research-data/skos%3AConceptShape> a sh:NodeShape;
     rdfs:seeAlso <https://model.ccmm.cz/research-data/LocationRelationType>;

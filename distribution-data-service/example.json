@@ -507,7 +507,7 @@
             "@type": "@id",
             "@context": {
               "label": {
-                "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+                "@id": "http://purl.org/dc/terms/title",
                 "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
               },
               "licence_document": {
@@ -569,7 +569,7 @@
         "@type": "@id",
         "@context": {
           "label": {
-            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+            "@id": "http://purl.org/dc/terms/title",
             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
           },
           "licence_document": {
@@ -588,10 +588,12 @@
       }
     }
   },
-  "title": "88rLS",
+  "title": [
+    "8rLSA9CEiz",
+    "jE"
+  ],
   "access_url": [
-    "https://test.org/api/users",
-    "https://example.com/api/users"
+    "https://demo.net/v1"
   ],
   "licence": {}
 }
