@@ -612,8 +612,8 @@
       </rights>
       <licence>
         <iri>https://creativecommons.org/licenses/by/4.0/</iri>
-        <label xml:lang="en">Creative Commons Attribution 4.0 International License</label>
-        <label xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</label>
+        <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+        <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
       </licence>
     </distribution_downloadable_file>
   </distribution>
