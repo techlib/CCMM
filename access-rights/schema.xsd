@@ -13,11 +13,11 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="iri" type="xs:anyURI"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+      <xs:element name="label" maxOccurs="unbounded" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#prefLabel">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            label - Label of the access rights vocabulary value.
-            Short label of the value from register http://purl.org/coar/access_right/. Allowed English values are 'embargoes access', 'metadata only access', 'open access' and 'restricted access'.
+            label - A human-readable name for the subject.
+            Use the label of the value from register http://purl.org/coar/access_right/. Allowed English values are 'embargoes access', 'metadata only access', 'open access' and 'restricted access'. This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

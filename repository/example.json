@@ -282,8 +282,8 @@
             "@type": "@id",
             "@context": {
               "label": {
-                "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                "@container": "@language"
               },
               "attributed_agent_role_type": {
                 "@id": "http://www.w3.org/ns/dcat#Role",
@@ -319,13 +319,17 @@
       "attributed_agent": {
         "name": "mOH"
       },
-      "role": {}
+      "role": {
+        "label": {}
+      }
     },
     {
       "attributed_agent": {
-        "name": "oUjuzpjTJh"
+        "name": "Uj"
       },
-      "role": {}
+      "role": {
+        "label": {}
+      }
     }
   ]
 }

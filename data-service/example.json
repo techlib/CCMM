@@ -62,8 +62,8 @@
                 "@type": "@id",
                 "@context": {
                   "label": {
-                    "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                    "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                    "@container": "@language"
                   },
                   "alternate_title_type": {
                     "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -354,8 +354,8 @@
                 "@type": "@id",
                 "@context": {
                   "label": {
-                    "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                    "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                    "@container": "@language"
                   },
                   "attributed_agent_role_type": {
                     "@id": "http://www.w3.org/ns/dcat#Role",
@@ -436,8 +436,8 @@
                 "@type": "@id",
                 "@context": {
                   "label": {
-                    "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                    "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                    "@container": "@language"
                   },
                   "date_type": {
                     "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -460,8 +460,8 @@
             "@type": "@id",
             "@context": {
               "label": {
-                "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                "@container": "@language"
               },
               "resource_type": {
                 "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -474,8 +474,8 @@
             "@type": "@id",
             "@context": {
               "label": {
-                "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                "@container": "@language"
               },
               "resource_relation_type": {
                 "@id": "http://www.w3.org/2004/02/skos/core#Concept",

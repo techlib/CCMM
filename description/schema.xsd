@@ -30,7 +30,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has description type - Relation to the type of the description.
-            Type of the description from the codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/.
+            Type of the description from the code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

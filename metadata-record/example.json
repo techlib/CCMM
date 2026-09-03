@@ -14,8 +14,8 @@
         "@container": "@set",
         "@context": {
           "label": {
-            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "@container": "@language"
           },
           "language_system": {
             "@id": "http://purl.org/dc/terms/LinguisticSystem",
@@ -296,8 +296,8 @@
             "@type": "@id",
             "@context": {
               "label": {
-                "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                "@container": "@language"
               },
               "attributed_agent_role_type": {
                 "@id": "http://www.w3.org/ns/dcat#Role",
@@ -614,8 +614,8 @@
                 "@type": "@id",
                 "@context": {
                   "label": {
-                    "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                    "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                    "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+                    "@container": "@language"
                   },
                   "attributed_agent_role_type": {
                     "@id": "http://www.w3.org/ns/dcat#Role",
@@ -646,42 +646,54 @@
       "attributed_agent": {
         "name": "A9CEizp"
       },
-      "role": {}
+      "role": {
+        "label": {}
+      }
     },
     {
       "attributed_agent": {
-        "name": ""
+        "name": "KXsm"
       },
-      "role": {}
+      "role": {
+        "label": {}
+      }
     },
     {
       "attributed_agent": {
-        "name": "lSCV9oUj"
+        "name": "Uj"
       },
-      "role": {}
+      "role": {
+        "label": {}
+      }
     }
   ],
-  "date_updated": "2004-09-18",
+  "date_updated": "2022-07-04",
   "conforms_to_standard": [
     {}
   ],
   "original_repository": {
     "label": [
       {
-        "@value": "o9SysP75Q",
-        "@language": "Z5hc1s2F6R"
+        "@value": "9S",
+        "@language": "sP75"
       },
       {
-        "@value": "P",
-        "@language": "i8kyhyuOFG"
+        "@value": "4Z5hc1s",
+        "@language": "F6RkP6i8k"
+      },
+      {
+        "@value": "hyuO",
+        "@language": "GeY0q"
       }
     ],
     "qualified_attribution": [
       {
         "attributed_agent": {
-          "name": "ks3"
+          "name": "iOI"
         },
-        "role": {}
+        "role": {
+          "label": {}
+        }
       }
     ]
   }

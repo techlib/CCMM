@@ -73,7 +73,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has location relation type - Relation of the location to the dataset.
-            Use values from codelist https://vocabs.ccmm.cz/registry/codelist/LocationRelation/.
+            Use values from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
