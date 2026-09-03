@@ -10,11 +10,11 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="iri" type="xs:anyURI"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+      <xs:element name="label" maxOccurs="unbounded" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#prefLabel">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Language label
-            Use language label and/or its 3-letter code from http://publications.europa.eu/resource/authority/language/.
+            Use language label code from http://publications.europa.eu/resource/authority/language/. 
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

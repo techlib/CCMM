@@ -24,10 +24,12 @@
     kv:iri "\"https://model.ccmm.cz/research-data/access-rights/class-1747685414671-e5e1-7f82-b427\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
 :attribute-1747685418726-1d6e-ecd8-ae40 a dsvs:structure-entity;
-    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmCardinality "[1,null]";
+    kv:dataPsmDatatype "\"https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text\"";
     kv:dataPsmHumanDescription "null";
     kv:dataPsmHumanLabel "null";
     kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/AccessRights.label\"";
     kv:dataPsmTechnicalLabel "\"label\"";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"isAttribute\":false}}";
     kv:iri "\"https://model.ccmm.cz/research-data/access-rights/attribute-1747685418726-1d6e-ecd8-ae40\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

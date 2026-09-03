@@ -83,27 +83,26 @@
               "title": "Language system",
               "description": "A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language.",
               "type": "object",
+              "required": [
+                "label"
+              ],
               "properties": {
                 "label": {
                   "title": "label",
                   "description": "Language label",
-                  "type": "array",
-                  "items": {
-                    "title": "Language tagged string",
-                    "type": "object",
-                    "required": [
-                      "@value",
-                      "@language"
-                    ],
-                    "properties": {
-                      "@value": {
-                        "title": "Text v daném jazyce",
-                        "type": "string"
-                      },
-                      "@language": {
-                        "title": "Jazyk textu",
-                        "type": "string"
-                      }
+                  "type": "object",
+                  "additionalProperties": {
+                    "title": "Hodnota v jiném jazyce",
+                    "type": "string"
+                  },
+                  "properties": {
+                    "cs": {
+                      "title": "Hodnota v českém jazyce",
+                      "type": "string"
+                    },
+                    "en": {
+                      "title": "Hodnota v anglickém jazyce",
+                      "type": "string"
                     }
                   }
                 }
@@ -908,27 +907,26 @@
                   "title": "had role",
                   "description": "Role of the agent in the attribution to the resource. ",
                   "type": "object",
+                  "required": [
+                    "label"
+                  ],
                   "properties": {
                     "label": {
                       "title": "label",
                       "description": "Resource agent role type label.",
-                      "type": "array",
-                      "items": {
-                        "title": "Language tagged string",
-                        "type": "object",
-                        "required": [
-                          "@value",
-                          "@language"
-                        ],
-                        "properties": {
-                          "@value": {
-                            "title": "Text v daném jazyce",
-                            "type": "string"
-                          },
-                          "@language": {
-                            "title": "Jazyk textu",
-                            "type": "string"
-                          }
+                      "type": "object",
+                      "additionalProperties": {
+                        "title": "Hodnota v jiném jazyce",
+                        "type": "string"
+                      },
+                      "properties": {
+                        "cs": {
+                          "title": "Hodnota v českém jazyce",
+                          "type": "string"
+                        },
+                        "en": {
+                          "title": "Hodnota v anglickém jazyce",
+                          "type": "string"
                         }
                       }
                     }
@@ -1816,27 +1814,26 @@
                       "title": "had role",
                       "description": "Role of the agent in the attribution to the resource. ",
                       "type": "object",
+                      "required": [
+                        "label"
+                      ],
                       "properties": {
                         "label": {
                           "title": "label",
                           "description": "Resource agent role type label.",
-                          "type": "array",
-                          "items": {
-                            "title": "Language tagged string",
-                            "type": "object",
-                            "required": [
-                              "@value",
-                              "@language"
-                            ],
-                            "properties": {
-                              "@value": {
-                                "title": "Text v daném jazyce",
-                                "type": "string"
-                              },
-                              "@language": {
-                                "title": "Jazyk textu",
-                                "type": "string"
-                              }
+                          "type": "object",
+                          "additionalProperties": {
+                            "title": "Hodnota v jiném jazyce",
+                            "type": "string"
+                          },
+                          "properties": {
+                            "cs": {
+                              "title": "Hodnota v českém jazyce",
+                              "type": "string"
+                            },
+                            "en": {
+                              "title": "Hodnota v anglickém jazyce",
+                              "type": "string"
                             }
                           }
                         }
@@ -1955,27 +1952,26 @@
             "title": "has alternate title type",
             "description": "Type of the alternate name relation.",
             "type": "object",
+            "required": [
+              "label"
+            ],
             "properties": {
               "label": {
                 "title": "label",
                 "description": "Alternate title type label.",
-                "type": "array",
-                "items": {
-                  "title": "Language tagged string",
-                  "type": "object",
-                  "required": [
-                    "@value",
-                    "@language"
-                  ],
-                  "properties": {
-                    "@value": {
-                      "title": "Text v daném jazyce",
-                      "type": "string"
-                    },
-                    "@language": {
-                      "title": "Jazyk textu",
-                      "type": "string"
-                    }
+                "type": "object",
+                "additionalProperties": {
+                  "title": "Hodnota v jiném jazyce",
+                  "type": "string"
+                },
+                "properties": {
+                  "cs": {
+                    "title": "Hodnota v českém jazyce",
+                    "type": "string"
+                  },
+                  "en": {
+                    "title": "Hodnota v anglickém jazyce",
+                    "type": "string"
                   }
                 }
               }
@@ -2782,27 +2778,26 @@
             "title": "had role",
             "description": "Role of the agent in the attribution to the resource. ",
             "type": "object",
+            "required": [
+              "label"
+            ],
             "properties": {
               "label": {
                 "title": "label",
                 "description": "Resource agent role type label.",
-                "type": "array",
-                "items": {
-                  "title": "Language tagged string",
-                  "type": "object",
-                  "required": [
-                    "@value",
-                    "@language"
-                  ],
-                  "properties": {
-                    "@value": {
-                      "title": "Text v daném jazyce",
-                      "type": "string"
-                    },
-                    "@language": {
-                      "title": "Jazyk textu",
-                      "type": "string"
-                    }
+                "type": "object",
+                "additionalProperties": {
+                  "title": "Hodnota v jiném jazyce",
+                  "type": "string"
+                },
+                "properties": {
+                  "cs": {
+                    "title": "Hodnota v českém jazyce",
+                    "type": "string"
+                  },
+                  "en": {
+                    "title": "Hodnota v anglickém jazyce",
+                    "type": "string"
                   }
                 }
               }
@@ -2949,27 +2944,26 @@
             "title": "has date type",
             "description": "Reference to the codelist of date types.",
             "type": "object",
+            "required": [
+              "label"
+            ],
             "properties": {
               "label": {
                 "title": "label",
                 "description": "Date type label.",
-                "type": "array",
-                "items": {
-                  "title": "Language tagged string",
-                  "type": "object",
-                  "required": [
-                    "@value",
-                    "@language"
-                  ],
-                  "properties": {
-                    "@value": {
-                      "title": "Text v daném jazyce",
-                      "type": "string"
-                    },
-                    "@language": {
-                      "title": "Jazyk textu",
-                      "type": "string"
-                    }
+                "type": "object",
+                "additionalProperties": {
+                  "title": "Hodnota v jiném jazyce",
+                  "type": "string"
+                },
+                "properties": {
+                  "cs": {
+                    "title": "Hodnota v českém jazyce",
+                    "type": "string"
+                  },
+                  "en": {
+                    "title": "Hodnota v anglickém jazyce",
+                    "type": "string"
                   }
                 }
               }
@@ -3001,27 +2995,26 @@
       "title": "has resource type",
       "description": "The resource type of the resource.",
       "type": "object",
+      "required": [
+        "label"
+      ],
       "properties": {
         "label": {
           "title": "label",
           "description": "Label of the resource type.",
-          "type": "array",
-          "items": {
-            "title": "Language tagged string",
-            "type": "object",
-            "required": [
-              "@value",
-              "@language"
-            ],
-            "properties": {
-              "@value": {
-                "title": "Text v daném jazyce",
-                "type": "string"
-              },
-              "@language": {
-                "title": "Jazyk textu",
-                "type": "string"
-              }
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
             }
           }
         }
@@ -3031,27 +3024,26 @@
       "title": "has primary language",
       "description": "A primary language of the Dataset.",
       "type": "object",
+      "required": [
+        "label"
+      ],
       "properties": {
         "label": {
           "title": "label",
           "description": "Language label",
-          "type": "array",
-          "items": {
-            "title": "Language tagged string",
-            "type": "object",
-            "required": [
-              "@value",
-              "@language"
-            ],
-            "properties": {
-              "@value": {
-                "title": "Text v daném jazyce",
-                "type": "string"
-              },
-              "@language": {
-                "title": "Jazyk textu",
-                "type": "string"
-              }
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
             }
           }
         }
@@ -3065,27 +3057,26 @@
         "title": "Language system",
         "description": "A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language.",
         "type": "object",
+        "required": [
+          "label"
+        ],
         "properties": {
           "label": {
             "title": "label",
             "description": "Language label",
-            "type": "array",
-            "items": {
-              "title": "Language tagged string",
-              "type": "object",
-              "required": [
-                "@value",
-                "@language"
-              ],
-              "properties": {
-                "@value": {
-                  "title": "Text v daném jazyce",
-                  "type": "string"
-                },
-                "@language": {
-                  "title": "Jazyk textu",
-                  "type": "string"
-                }
+            "type": "object",
+            "additionalProperties": {
+              "title": "Hodnota v jiném jazyce",
+              "type": "string"
+            },
+            "properties": {
+              "cs": {
+                "title": "Hodnota v českém jazyce",
+                "type": "string"
+              },
+              "en": {
+                "title": "Hodnota v anglickém jazyce",
+                "type": "string"
               }
             }
           }
@@ -3096,27 +3087,26 @@
       "title": "has access rights",
       "description": "Information that declares the access status of a Dataset.",
       "type": "object",
+      "required": [
+        "label"
+      ],
       "properties": {
         "label": {
           "title": "label",
-          "description": "Label of the access rights vocabulary value.",
-          "type": "array",
-          "items": {
-            "title": "Language tagged string",
-            "type": "object",
-            "required": [
-              "@value",
-              "@language"
-            ],
-            "properties": {
-              "@value": {
-                "title": "Text v daném jazyce",
-                "type": "string"
-              },
-              "@language": {
-                "title": "Jazyk textu",
-                "type": "string"
-              }
+          "description": "A human-readable name for the subject.",
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
             }
           }
         }
@@ -3281,27 +3271,26 @@
             "title": "has description type",
             "description": "Relation to the type of the description.",
             "type": "object",
+            "required": [
+              "label"
+            ],
             "properties": {
               "label": {
                 "title": "label",
                 "description": "Label of the description type.",
-                "type": "array",
-                "items": {
-                  "title": "Language tagged string",
-                  "type": "object",
-                  "required": [
-                    "@value",
-                    "@language"
-                  ],
-                  "properties": {
-                    "@value": {
-                      "title": "Text v daném jazyce",
-                      "type": "string"
-                    },
-                    "@language": {
-                      "title": "Jazyk textu",
-                      "type": "string"
-                    }
+                "type": "object",
+                "additionalProperties": {
+                  "title": "Hodnota v jiném jazyce",
+                  "type": "string"
+                },
+                "properties": {
+                  "cs": {
+                    "title": "Hodnota v českém jazyce",
+                    "type": "string"
+                  },
+                  "en": {
+                    "title": "Hodnota v anglickém jazyce",
+                    "type": "string"
                   }
                 }
               }
@@ -3499,27 +3488,26 @@
                         "title": "has alternate title type",
                         "description": "Type of the alternate name relation.",
                         "type": "object",
+                        "required": [
+                          "label"
+                        ],
                         "properties": {
                           "label": {
                             "title": "label",
                             "description": "Alternate title type label.",
-                            "type": "array",
-                            "items": {
-                              "title": "Language tagged string",
-                              "type": "object",
-                              "required": [
-                                "@value",
-                                "@language"
-                              ],
-                              "properties": {
-                                "@value": {
-                                  "title": "Text v daném jazyce",
-                                  "type": "string"
-                                },
-                                "@language": {
-                                  "title": "Jazyk textu",
-                                  "type": "string"
-                                }
+                            "type": "object",
+                            "additionalProperties": {
+                              "title": "Hodnota v jiném jazyce",
+                              "type": "string"
+                            },
+                            "properties": {
+                              "cs": {
+                                "title": "Hodnota v českém jazyce",
+                                "type": "string"
+                              },
+                              "en": {
+                                "title": "Hodnota v anglickém jazyce",
+                                "type": "string"
                               }
                             }
                           }
@@ -4331,27 +4319,26 @@
                         "title": "had role",
                         "description": "Role of the agent in the attribution to the resource. ",
                         "type": "object",
+                        "required": [
+                          "label"
+                        ],
                         "properties": {
                           "label": {
                             "title": "label",
                             "description": "Resource agent role type label.",
-                            "type": "array",
-                            "items": {
-                              "title": "Language tagged string",
-                              "type": "object",
-                              "required": [
-                                "@value",
-                                "@language"
-                              ],
-                              "properties": {
-                                "@value": {
-                                  "title": "Text v daném jazyce",
-                                  "type": "string"
-                                },
-                                "@language": {
-                                  "title": "Jazyk textu",
-                                  "type": "string"
-                                }
+                            "type": "object",
+                            "additionalProperties": {
+                              "title": "Hodnota v jiném jazyce",
+                              "type": "string"
+                            },
+                            "properties": {
+                              "cs": {
+                                "title": "Hodnota v českém jazyce",
+                                "type": "string"
+                              },
+                              "en": {
+                                "title": "Hodnota v anglickém jazyce",
+                                "type": "string"
                               }
                             }
                           }
@@ -4492,27 +4479,26 @@
                         "title": "has date type",
                         "description": "Reference to the codelist of date types.",
                         "type": "object",
+                        "required": [
+                          "label"
+                        ],
                         "properties": {
                           "label": {
                             "title": "label",
                             "description": "Date type label.",
-                            "type": "array",
-                            "items": {
-                              "title": "Language tagged string",
-                              "type": "object",
-                              "required": [
-                                "@value",
-                                "@language"
-                              ],
-                              "properties": {
-                                "@value": {
-                                  "title": "Text v daném jazyce",
-                                  "type": "string"
-                                },
-                                "@language": {
-                                  "title": "Jazyk textu",
-                                  "type": "string"
-                                }
+                            "type": "object",
+                            "additionalProperties": {
+                              "title": "Hodnota v jiném jazyce",
+                              "type": "string"
+                            },
+                            "properties": {
+                              "cs": {
+                                "title": "Hodnota v českém jazyce",
+                                "type": "string"
+                              },
+                              "en": {
+                                "title": "Hodnota v anglickém jazyce",
+                                "type": "string"
                               }
                             }
                           }
@@ -4544,27 +4530,26 @@
                   "title": "has resource type",
                   "description": "The resource type of the resource.",
                   "type": "object",
+                  "required": [
+                    "label"
+                  ],
                   "properties": {
                     "label": {
                       "title": "label",
                       "description": "Label of the resource type.",
-                      "type": "array",
-                      "items": {
-                        "title": "Language tagged string",
-                        "type": "object",
-                        "required": [
-                          "@value",
-                          "@language"
-                        ],
-                        "properties": {
-                          "@value": {
-                            "title": "Text v daném jazyce",
-                            "type": "string"
-                          },
-                          "@language": {
-                            "title": "Jazyk textu",
-                            "type": "string"
-                          }
+                      "type": "object",
+                      "additionalProperties": {
+                        "title": "Hodnota v jiném jazyce",
+                        "type": "string"
+                      },
+                      "properties": {
+                        "cs": {
+                          "title": "Hodnota v českém jazyce",
+                          "type": "string"
+                        },
+                        "en": {
+                          "title": "Hodnota v anglickém jazyce",
+                          "type": "string"
                         }
                       }
                     }
@@ -4574,27 +4559,26 @@
                   "title": "has resource relation type",
                   "description": "Relation to the relation type between dataset and resource.",
                   "type": "object",
+                  "required": [
+                    "label"
+                  ],
                   "properties": {
                     "label": {
                       "title": "label",
                       "description": "Label of the relation type.",
-                      "type": "array",
-                      "items": {
-                        "title": "Language tagged string",
-                        "type": "object",
-                        "required": [
-                          "@value",
-                          "@language"
-                        ],
-                        "properties": {
-                          "@value": {
-                            "title": "Text v daném jazyce",
-                            "type": "string"
-                          },
-                          "@language": {
-                            "title": "Jazyk textu",
-                            "type": "string"
-                          }
+                      "type": "object",
+                      "additionalProperties": {
+                        "title": "Hodnota v jiném jazyce",
+                        "type": "string"
+                      },
+                      "properties": {
+                        "cs": {
+                          "title": "Hodnota v českém jazyce",
+                          "type": "string"
+                        },
+                        "en": {
+                          "title": "Hodnota v anglickém jazyce",
+                          "type": "string"
                         }
                       }
                     }
@@ -4607,27 +4591,26 @@
             "title": "has location relation type",
             "description": "Relation of the location to the dataset.",
             "type": "object",
+            "required": [
+              "label"
+            ],
             "properties": {
               "label": {
                 "title": "label",
-                "description": "Label of location relation type.",
-                "type": "array",
-                "items": {
-                  "title": "Language tagged string",
-                  "type": "object",
-                  "required": [
-                    "@value",
-                    "@language"
-                  ],
-                  "properties": {
-                    "@value": {
-                      "title": "Text v daném jazyce",
-                      "type": "string"
-                    },
-                    "@language": {
-                      "title": "Jazyk textu",
-                      "type": "string"
-                    }
+                "description": "Location relation type label.",
+                "type": "object",
+                "additionalProperties": {
+                  "title": "Hodnota v jiném jazyce",
+                  "type": "string"
+                },
+                "properties": {
+                  "cs": {
+                    "title": "Hodnota v českém jazyce",
+                    "type": "string"
+                  },
+                  "en": {
+                    "title": "Hodnota v anglickém jazyce",
+                    "type": "string"
                   }
                 }
               }
@@ -5559,27 +5542,26 @@
                   "title": "has alternate title type",
                   "description": "Type of the alternate name relation.",
                   "type": "object",
+                  "required": [
+                    "label"
+                  ],
                   "properties": {
                     "label": {
                       "title": "label",
                       "description": "Alternate title type label.",
-                      "type": "array",
-                      "items": {
-                        "title": "Language tagged string",
-                        "type": "object",
-                        "required": [
-                          "@value",
-                          "@language"
-                        ],
-                        "properties": {
-                          "@value": {
-                            "title": "Text v daném jazyce",
-                            "type": "string"
-                          },
-                          "@language": {
-                            "title": "Jazyk textu",
-                            "type": "string"
-                          }
+                      "type": "object",
+                      "additionalProperties": {
+                        "title": "Hodnota v jiném jazyce",
+                        "type": "string"
+                      },
+                      "properties": {
+                        "cs": {
+                          "title": "Hodnota v českém jazyce",
+                          "type": "string"
+                        },
+                        "en": {
+                          "title": "Hodnota v anglickém jazyce",
+                          "type": "string"
                         }
                       }
                     }
@@ -6391,27 +6373,26 @@
                   "title": "had role",
                   "description": "Role of the agent in the attribution to the resource. ",
                   "type": "object",
+                  "required": [
+                    "label"
+                  ],
                   "properties": {
                     "label": {
                       "title": "label",
                       "description": "Resource agent role type label.",
-                      "type": "array",
-                      "items": {
-                        "title": "Language tagged string",
-                        "type": "object",
-                        "required": [
-                          "@value",
-                          "@language"
-                        ],
-                        "properties": {
-                          "@value": {
-                            "title": "Text v daném jazyce",
-                            "type": "string"
-                          },
-                          "@language": {
-                            "title": "Jazyk textu",
-                            "type": "string"
-                          }
+                      "type": "object",
+                      "additionalProperties": {
+                        "title": "Hodnota v jiném jazyce",
+                        "type": "string"
+                      },
+                      "properties": {
+                        "cs": {
+                          "title": "Hodnota v českém jazyce",
+                          "type": "string"
+                        },
+                        "en": {
+                          "title": "Hodnota v anglickém jazyce",
+                          "type": "string"
                         }
                       }
                     }
@@ -6552,27 +6533,26 @@
                   "title": "has date type",
                   "description": "Reference to the codelist of date types.",
                   "type": "object",
+                  "required": [
+                    "label"
+                  ],
                   "properties": {
                     "label": {
                       "title": "label",
                       "description": "Date type label.",
-                      "type": "array",
-                      "items": {
-                        "title": "Language tagged string",
-                        "type": "object",
-                        "required": [
-                          "@value",
-                          "@language"
-                        ],
-                        "properties": {
-                          "@value": {
-                            "title": "Text v daném jazyce",
-                            "type": "string"
-                          },
-                          "@language": {
-                            "title": "Jazyk textu",
-                            "type": "string"
-                          }
+                      "type": "object",
+                      "additionalProperties": {
+                        "title": "Hodnota v jiném jazyce",
+                        "type": "string"
+                      },
+                      "properties": {
+                        "cs": {
+                          "title": "Hodnota v českém jazyce",
+                          "type": "string"
+                        },
+                        "en": {
+                          "title": "Hodnota v anglickém jazyce",
+                          "type": "string"
                         }
                       }
                     }
@@ -6604,27 +6584,26 @@
             "title": "has resource type",
             "description": "The resource type of the resource.",
             "type": "object",
+            "required": [
+              "label"
+            ],
             "properties": {
               "label": {
                 "title": "label",
                 "description": "Label of the resource type.",
-                "type": "array",
-                "items": {
-                  "title": "Language tagged string",
-                  "type": "object",
-                  "required": [
-                    "@value",
-                    "@language"
-                  ],
-                  "properties": {
-                    "@value": {
-                      "title": "Text v daném jazyce",
-                      "type": "string"
-                    },
-                    "@language": {
-                      "title": "Jazyk textu",
-                      "type": "string"
-                    }
+                "type": "object",
+                "additionalProperties": {
+                  "title": "Hodnota v jiném jazyce",
+                  "type": "string"
+                },
+                "properties": {
+                  "cs": {
+                    "title": "Hodnota v českém jazyce",
+                    "type": "string"
+                  },
+                  "en": {
+                    "title": "Hodnota v anglickém jazyce",
+                    "type": "string"
                   }
                 }
               }
@@ -6634,27 +6613,26 @@
             "title": "has resource relation type",
             "description": "Relation to the relation type between dataset and resource.",
             "type": "object",
+            "required": [
+              "label"
+            ],
             "properties": {
               "label": {
                 "title": "label",
                 "description": "Label of the relation type.",
-                "type": "array",
-                "items": {
-                  "title": "Language tagged string",
-                  "type": "object",
-                  "required": [
-                    "@value",
-                    "@language"
-                  ],
-                  "properties": {
-                    "@value": {
-                      "title": "Text v daném jazyce",
-                      "type": "string"
-                    },
-                    "@language": {
-                      "title": "Jazyk textu",
-                      "type": "string"
-                    }
+                "type": "object",
+                "additionalProperties": {
+                  "title": "Hodnota v jiném jazyce",
+                  "type": "string"
+                },
+                "properties": {
+                  "cs": {
+                    "title": "Hodnota v českém jazyce",
+                    "type": "string"
+                  },
+                  "en": {
+                    "title": "Hodnota v anglickém jazyce",
+                    "type": "string"
                   }
                 }
               }
@@ -6846,27 +6824,26 @@
                                   "title": "has alternate title type",
                                   "description": "Type of the alternate name relation.",
                                   "type": "object",
+                                  "required": [
+                                    "label"
+                                  ],
                                   "properties": {
                                     "label": {
                                       "title": "label",
                                       "description": "Alternate title type label.",
-                                      "type": "array",
-                                      "items": {
-                                        "title": "Language tagged string",
-                                        "type": "object",
-                                        "required": [
-                                          "@value",
-                                          "@language"
-                                        ],
-                                        "properties": {
-                                          "@value": {
-                                            "title": "Text v daném jazyce",
-                                            "type": "string"
-                                          },
-                                          "@language": {
-                                            "title": "Jazyk textu",
-                                            "type": "string"
-                                          }
+                                      "type": "object",
+                                      "additionalProperties": {
+                                        "title": "Hodnota v jiném jazyce",
+                                        "type": "string"
+                                      },
+                                      "properties": {
+                                        "cs": {
+                                          "title": "Hodnota v českém jazyce",
+                                          "type": "string"
+                                        },
+                                        "en": {
+                                          "title": "Hodnota v anglickém jazyce",
+                                          "type": "string"
                                         }
                                       }
                                     }
@@ -7678,27 +7655,26 @@
                                   "title": "had role",
                                   "description": "Role of the agent in the attribution to the resource. ",
                                   "type": "object",
+                                  "required": [
+                                    "label"
+                                  ],
                                   "properties": {
                                     "label": {
                                       "title": "label",
                                       "description": "Resource agent role type label.",
-                                      "type": "array",
-                                      "items": {
-                                        "title": "Language tagged string",
-                                        "type": "object",
-                                        "required": [
-                                          "@value",
-                                          "@language"
-                                        ],
-                                        "properties": {
-                                          "@value": {
-                                            "title": "Text v daném jazyce",
-                                            "type": "string"
-                                          },
-                                          "@language": {
-                                            "title": "Jazyk textu",
-                                            "type": "string"
-                                          }
+                                      "type": "object",
+                                      "additionalProperties": {
+                                        "title": "Hodnota v jiném jazyce",
+                                        "type": "string"
+                                      },
+                                      "properties": {
+                                        "cs": {
+                                          "title": "Hodnota v českém jazyce",
+                                          "type": "string"
+                                        },
+                                        "en": {
+                                          "title": "Hodnota v anglickém jazyce",
+                                          "type": "string"
                                         }
                                       }
                                     }
@@ -7839,27 +7815,26 @@
                                   "title": "has date type",
                                   "description": "Reference to the codelist of date types.",
                                   "type": "object",
+                                  "required": [
+                                    "label"
+                                  ],
                                   "properties": {
                                     "label": {
                                       "title": "label",
                                       "description": "Date type label.",
-                                      "type": "array",
-                                      "items": {
-                                        "title": "Language tagged string",
-                                        "type": "object",
-                                        "required": [
-                                          "@value",
-                                          "@language"
-                                        ],
-                                        "properties": {
-                                          "@value": {
-                                            "title": "Text v daném jazyce",
-                                            "type": "string"
-                                          },
-                                          "@language": {
-                                            "title": "Jazyk textu",
-                                            "type": "string"
-                                          }
+                                      "type": "object",
+                                      "additionalProperties": {
+                                        "title": "Hodnota v jiném jazyce",
+                                        "type": "string"
+                                      },
+                                      "properties": {
+                                        "cs": {
+                                          "title": "Hodnota v českém jazyce",
+                                          "type": "string"
+                                        },
+                                        "en": {
+                                          "title": "Hodnota v anglickém jazyce",
+                                          "type": "string"
                                         }
                                       }
                                     }
@@ -7891,27 +7866,26 @@
                             "title": "has resource type",
                             "description": "The resource type of the resource.",
                             "type": "object",
+                            "required": [
+                              "label"
+                            ],
                             "properties": {
                               "label": {
                                 "title": "label",
                                 "description": "Label of the resource type.",
-                                "type": "array",
-                                "items": {
-                                  "title": "Language tagged string",
-                                  "type": "object",
-                                  "required": [
-                                    "@value",
-                                    "@language"
-                                  ],
-                                  "properties": {
-                                    "@value": {
-                                      "title": "Text v daném jazyce",
-                                      "type": "string"
-                                    },
-                                    "@language": {
-                                      "title": "Jazyk textu",
-                                      "type": "string"
-                                    }
+                                "type": "object",
+                                "additionalProperties": {
+                                  "title": "Hodnota v jiném jazyce",
+                                  "type": "string"
+                                },
+                                "properties": {
+                                  "cs": {
+                                    "title": "Hodnota v českém jazyce",
+                                    "type": "string"
+                                  },
+                                  "en": {
+                                    "title": "Hodnota v anglickém jazyce",
+                                    "type": "string"
                                   }
                                 }
                               }
@@ -7921,27 +7895,26 @@
                             "title": "has resource relation type",
                             "description": "Relation to the relation type between dataset and resource.",
                             "type": "object",
+                            "required": [
+                              "label"
+                            ],
                             "properties": {
                               "label": {
                                 "title": "label",
                                 "description": "Label of the relation type.",
-                                "type": "array",
-                                "items": {
-                                  "title": "Language tagged string",
-                                  "type": "object",
-                                  "required": [
-                                    "@value",
-                                    "@language"
-                                  ],
-                                  "properties": {
-                                    "@value": {
-                                      "title": "Text v daném jazyce",
-                                      "type": "string"
-                                    },
-                                    "@language": {
-                                      "title": "Jazyk textu",
-                                      "type": "string"
-                                    }
+                                "type": "object",
+                                "additionalProperties": {
+                                  "title": "Hodnota v jiném jazyce",
+                                  "type": "string"
+                                },
+                                "properties": {
+                                  "cs": {
+                                    "title": "Hodnota v českém jazyce",
+                                    "type": "string"
+                                  },
+                                  "en": {
+                                    "title": "Hodnota v anglickém jazyce",
+                                    "type": "string"
                                   }
                                 }
                               }
@@ -8061,27 +8034,26 @@
                   "title": "Access rights",
                   "description": "A statement about the access rights to the resource.",
                   "type": "object",
+                  "required": [
+                    "label"
+                  ],
                   "properties": {
                     "label": {
                       "title": "label",
-                      "description": "Label of the access rights vocabulary value.",
-                      "type": "array",
-                      "items": {
-                        "title": "Language tagged string",
-                        "type": "object",
-                        "required": [
-                          "@value",
-                          "@language"
-                        ],
-                        "properties": {
-                          "@value": {
-                            "title": "Text v daném jazyce",
-                            "type": "string"
-                          },
-                          "@language": {
-                            "title": "Jazyk textu",
-                            "type": "string"
-                          }
+                      "description": "A human-readable name for the subject.",
+                      "type": "object",
+                      "additionalProperties": {
+                        "title": "Hodnota v jiném jazyce",
+                        "type": "string"
+                      },
+                      "properties": {
+                        "cs": {
+                          "title": "Hodnota v českém jazyce",
+                          "type": "string"
+                        },
+                        "en": {
+                          "title": "Hodnota v anglickém jazyce",
+                          "type": "string"
                         }
                       }
                     }
@@ -8249,27 +8221,26 @@
                 "title": "has format",
                 "description": "The file format of the distribution.",
                 "type": "object",
+                "required": [
+                  "label"
+                ],
                 "properties": {
                   "label": {
                     "title": "label",
                     "description": "Label of format value.",
-                    "type": "array",
-                    "items": {
-                      "title": "Language tagged string",
-                      "type": "object",
-                      "required": [
-                        "@value",
-                        "@language"
-                      ],
-                      "properties": {
-                        "@value": {
-                          "title": "Text v daném jazyce",
-                          "type": "string"
-                        },
-                        "@language": {
-                          "title": "Jazyk textu",
-                          "type": "string"
-                        }
+                    "type": "object",
+                    "additionalProperties": {
+                      "title": "Hodnota v jiném jazyce",
+                      "type": "string"
+                    },
+                    "properties": {
+                      "cs": {
+                        "title": "Hodnota v českém jazyce",
+                        "type": "string"
+                      },
+                      "en": {
+                        "title": "Hodnota v anglickém jazyce",
+                        "type": "string"
                       }
                     }
                   }
@@ -8279,27 +8250,26 @@
                 "title": "has media type",
                 "description": "The media type of the Distribution as defined in the official register of media types managed by IANA.",
                 "type": "object",
+                "required": [
+                  "label"
+                ],
                 "properties": {
                   "label": {
                     "title": "label",
                     "description": "Media type label.",
-                    "type": "array",
-                    "items": {
-                      "title": "Language tagged string",
-                      "type": "object",
-                      "required": [
-                        "@value",
-                        "@language"
-                      ],
-                      "properties": {
-                        "@value": {
-                          "title": "Text v daném jazyce",
-                          "type": "string"
-                        },
-                        "@language": {
-                          "title": "Jazyk textu",
-                          "type": "string"
-                        }
+                    "type": "object",
+                    "additionalProperties": {
+                      "title": "Hodnota v jiném jazyce",
+                      "type": "string"
+                    },
+                    "properties": {
+                      "cs": {
+                        "title": "Hodnota v českém jazyce",
+                        "type": "string"
+                      },
+                      "en": {
+                        "title": "Hodnota v anglickém jazyce",
+                        "type": "string"
                       }
                     }
                   }
@@ -8309,27 +8279,26 @@
                 "title": "has packaging format",
                 "description": "The format of the file in which one or more data files are grouped together, e.g., to enable a set of related files to be downloaded together.",
                 "type": "object",
+                "required": [
+                  "label"
+                ],
                 "properties": {
                   "label": {
                     "title": "label",
                     "description": "Media type label.",
-                    "type": "array",
-                    "items": {
-                      "title": "Language tagged string",
-                      "type": "object",
-                      "required": [
-                        "@value",
-                        "@language"
-                      ],
-                      "properties": {
-                        "@value": {
-                          "title": "Text v daném jazyce",
-                          "type": "string"
-                        },
-                        "@language": {
-                          "title": "Jazyk textu",
-                          "type": "string"
-                        }
+                    "type": "object",
+                    "additionalProperties": {
+                      "title": "Hodnota v jiném jazyce",
+                      "type": "string"
+                    },
+                    "properties": {
+                      "cs": {
+                        "title": "Hodnota v českém jazyce",
+                        "type": "string"
+                      },
+                      "en": {
+                        "title": "Hodnota v anglickém jazyce",
+                        "type": "string"
                       }
                     }
                   }
@@ -8339,27 +8308,26 @@
                 "title": "has compression format",
                 "description": "The format of the file in which the data is contained in a compressed form, e.g., to reduce the size of the downloadable file.",
                 "type": "object",
+                "required": [
+                  "label"
+                ],
                 "properties": {
                   "label": {
                     "title": "label",
                     "description": "Media type label.",
-                    "type": "array",
-                    "items": {
-                      "title": "Language tagged string",
-                      "type": "object",
-                      "required": [
-                        "@value",
-                        "@language"
-                      ],
-                      "properties": {
-                        "@value": {
-                          "title": "Text v daném jazyce",
-                          "type": "string"
-                        },
-                        "@language": {
-                          "title": "Jazyk textu",
-                          "type": "string"
-                        }
+                    "type": "object",
+                    "additionalProperties": {
+                      "title": "Hodnota v jiném jazyce",
+                      "type": "string"
+                    },
+                    "properties": {
+                      "cs": {
+                        "title": "Hodnota v českém jazyce",
+                        "type": "string"
+                      },
+                      "en": {
+                        "title": "Hodnota v anglickém jazyce",
+                        "type": "string"
                       }
                     }
                   }
@@ -8424,27 +8392,26 @@
                   "title": "Access rights",
                   "description": "A statement about the access rights to the resource.",
                   "type": "object",
+                  "required": [
+                    "label"
+                  ],
                   "properties": {
                     "label": {
                       "title": "label",
-                      "description": "Label of the access rights vocabulary value.",
-                      "type": "array",
-                      "items": {
-                        "title": "Language tagged string",
-                        "type": "object",
-                        "required": [
-                          "@value",
-                          "@language"
-                        ],
-                        "properties": {
-                          "@value": {
-                            "title": "Text v daném jazyce",
-                            "type": "string"
-                          },
-                          "@language": {
-                            "title": "Jazyk textu",
-                            "type": "string"
-                          }
+                      "description": "A human-readable name for the subject.",
+                      "type": "object",
+                      "additionalProperties": {
+                        "title": "Hodnota v jiném jazyce",
+                        "type": "string"
+                      },
+                      "properties": {
+                        "cs": {
+                          "title": "Hodnota v českém jazyce",
+                          "type": "string"
+                        },
+                        "en": {
+                          "title": "Hodnota v anglickém jazyce",
+                          "type": "string"
                         }
                       }
                     }

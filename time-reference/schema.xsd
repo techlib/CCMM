@@ -22,6 +22,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has date type - Reference to the codelist of date types.
+            References to the value from https://vocabs.ccmm.cz/registry/codelist/TimeReference/.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

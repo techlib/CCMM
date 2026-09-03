@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
-  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
-  <xs:complexType name="date_type" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#Concept">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
+  elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0"
+  xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+    schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+  <xs:complexType name="date_type"
+    sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#Concept">
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Date type - Type of a date in relation to the resource.
@@ -10,10 +15,12 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="iri" type="xs:anyURI"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+      <xs:element name="label" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#prefLabel"
+        maxOccurs="unbounded">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Date type label.
+            Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/TimeReference/. This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

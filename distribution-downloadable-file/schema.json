@@ -126,27 +126,26 @@
       "title": "has format",
       "description": "The file format of the distribution.",
       "type": "object",
+      "required": [
+        "label"
+      ],
       "properties": {
         "label": {
           "title": "label",
           "description": "Label of format value.",
-          "type": "array",
-          "items": {
-            "title": "Language tagged string",
-            "type": "object",
-            "required": [
-              "@value",
-              "@language"
-            ],
-            "properties": {
-              "@value": {
-                "title": "Text v daném jazyce",
-                "type": "string"
-              },
-              "@language": {
-                "title": "Jazyk textu",
-                "type": "string"
-              }
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
             }
           }
         }
@@ -156,27 +155,26 @@
       "title": "has media type",
       "description": "The media type of the Distribution as defined in the official register of media types managed by IANA.",
       "type": "object",
+      "required": [
+        "label"
+      ],
       "properties": {
         "label": {
           "title": "label",
           "description": "Media type label.",
-          "type": "array",
-          "items": {
-            "title": "Language tagged string",
-            "type": "object",
-            "required": [
-              "@value",
-              "@language"
-            ],
-            "properties": {
-              "@value": {
-                "title": "Text v daném jazyce",
-                "type": "string"
-              },
-              "@language": {
-                "title": "Jazyk textu",
-                "type": "string"
-              }
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
             }
           }
         }
@@ -186,27 +184,26 @@
       "title": "has packaging format",
       "description": "The format of the file in which one or more data files are grouped together, e.g., to enable a set of related files to be downloaded together.",
       "type": "object",
+      "required": [
+        "label"
+      ],
       "properties": {
         "label": {
           "title": "label",
           "description": "Media type label.",
-          "type": "array",
-          "items": {
-            "title": "Language tagged string",
-            "type": "object",
-            "required": [
-              "@value",
-              "@language"
-            ],
-            "properties": {
-              "@value": {
-                "title": "Text v daném jazyce",
-                "type": "string"
-              },
-              "@language": {
-                "title": "Jazyk textu",
-                "type": "string"
-              }
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
             }
           }
         }
@@ -216,27 +213,26 @@
       "title": "has compression format",
       "description": "The format of the file in which the data is contained in a compressed form, e.g., to reduce the size of the downloadable file.",
       "type": "object",
+      "required": [
+        "label"
+      ],
       "properties": {
         "label": {
           "title": "label",
           "description": "Media type label.",
-          "type": "array",
-          "items": {
-            "title": "Language tagged string",
-            "type": "object",
-            "required": [
-              "@value",
-              "@language"
-            ],
-            "properties": {
-              "@value": {
-                "title": "Text v daném jazyce",
-                "type": "string"
-              },
-              "@language": {
-                "title": "Jazyk textu",
-                "type": "string"
-              }
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
             }
           }
         }
@@ -301,27 +297,26 @@
         "title": "Access rights",
         "description": "A statement about the access rights to the resource.",
         "type": "object",
+        "required": [
+          "label"
+        ],
         "properties": {
           "label": {
             "title": "label",
-            "description": "Label of the access rights vocabulary value.",
-            "type": "array",
-            "items": {
-              "title": "Language tagged string",
-              "type": "object",
-              "required": [
-                "@value",
-                "@language"
-              ],
-              "properties": {
-                "@value": {
-                  "title": "Text v daném jazyce",
-                  "type": "string"
-                },
-                "@language": {
-                  "title": "Jazyk textu",
-                  "type": "string"
-                }
+            "description": "A human-readable name for the subject.",
+            "type": "object",
+            "additionalProperties": {
+              "title": "Hodnota v jiném jazyce",
+              "type": "string"
+            },
+            "properties": {
+              "cs": {
+                "title": "Hodnota v českém jazyce",
+                "type": "string"
+              },
+              "en": {
+                "title": "Hodnota v anglickém jazyce",
+                "type": "string"
               }
             }
           }

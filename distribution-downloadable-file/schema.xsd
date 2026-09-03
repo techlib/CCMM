@@ -116,7 +116,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has packaging format - The format of the file in which one or more data files are grouped together, e.g., to enable a set of related files to be downloaded together.
-            This property to be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA [[IANA-MEDIA-TYPES]], if available.
+            This property to be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), if available.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -130,7 +130,7 @@
           </xs:documentation>
           <xs:documentation xml:lang="en">
             has compression format - The format of the file in which the data is contained in a compressed form, e.g., to reduce the size of the downloadable file.
-            It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.
+            It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml).
           </xs:documentation>
           <xs:documentation xml:lang="es">
             El formato de la distribución en el que los datos están en forma comprimida, e.g. para reducir el tamaño del archivo a bajar.
@@ -159,6 +159,10 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has rights - A statement that specifies rights associated with the Distribution.
+            Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:
+            embargoed access, metadata only access - :NON_PUBLIC,
+            open access - :PUBLIC,
+            restricted access - :RESTRICTED.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

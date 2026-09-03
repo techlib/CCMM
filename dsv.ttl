@@ -969,7 +969,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has date type"@en;
     skos:definition "Reference to the codelist of date types."@en;
-    skos:scopeNote ""@en;
+    skos:scopeNote "References to the value from https://vocabs.ccmm.cz/registry/codelist/TimeReference/."@en;
     dsv:cardinality cardinality:11;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
     dsv:domain :TimeReference;
@@ -991,7 +991,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has location relation type"@en;
     skos:definition "Relation of the location to the dataset."@en;
-    skos:scopeNote "Use values from codelist https://vocabs.ccmm.cz/registry/codelist/LocationRelation/."@en;
+    skos:scopeNote "Use values from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/."@en;
     dsv:cardinality cardinality:11;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
     dsv:domain :Location;
@@ -1043,7 +1043,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has description type"@en;
     skos:definition "Relation to the type of the description."@en;
-    skos:scopeNote "Type of the description from the codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/."@en;
+    skos:scopeNote "Type of the description from the code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/."@en;
     dsv:cardinality cardinality:01;
     dsv:property <https://w3id.org/tib/datacite/property/descriptionType>;
     dsv:domain :Description;
@@ -1164,13 +1164,8 @@
     a dsv:TermProfile;
     skos:prefLabel "has compression format"@en;
     skos:definition "El formato de la distribución en el que los datos están en forma comprimida, e.g. para reducir el tamaño del archivo a bajar."@es, "Formát komprese souboru, ve kterém jsou data poskytována v komprimované podobě, např. ke snížení velikosti souboru ke stažení."@cs, "Il formato di compressione della distribuzione nel quale i dati sono in forma compressa, ad es. per ridurre le dimensioni del file da scaricare."@it, "The format of the file in which the data is contained in a compressed form, e.g., to reduce the size of the downloadable file."@en, "Kompressionsformatet for distributionen som indeholder data i et komprimeret format, fx for at reducere størrelsen af downloadfilen."@da;
+    skos:scopeNote "It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml)."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Distribution.compressionFormat>;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:scopeNote;
-  dsv:reusedAsProperty skos:scopeNote;
-  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Distribution.compressionFormat>
-];
     dsv:cardinality cardinality:01;
     dsv:domain :Distribution-DownloadableFile;
     a dsv:ObjectPropertyProfile;
@@ -1180,13 +1175,8 @@
     a dsv:TermProfile;
     skos:prefLabel "has packaging format"@en;
     skos:definition "The format of the file in which one or more data files are grouped together, e.g., to enable a set of related files to be downloaded together."@en;
+    skos:scopeNote "This property to be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), if available."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Distribution.packagingFormat>;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:scopeNote;
-  dsv:reusedAsProperty skos:scopeNote;
-  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Distribution.packagingFormat>
-];
     dsv:cardinality cardinality:01;
     dsv:domain :Distribution-DownloadableFile;
     a dsv:ObjectPropertyProfile;
@@ -1230,7 +1220,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has access rights"@en;
     skos:definition "Information that declares the access status of a Dataset."@en;
-    skos:scopeNote "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:\nembargoed access, metadata only access - :NON_PUBLIC,"@en;
+    skos:scopeNote "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:\nembargoed access, metadata only access - :NON_PUBLIC,\nopen access - :PUBLIC,\nrestricted access - :RESTRICTED."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset.accessRights>;
     dsv:cardinality cardinality:11;
     dsv:domain :Dataset;
@@ -1240,16 +1230,12 @@
 <https://model.ccmm.cz/research-data/Distribution.rights> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "has rights"@en;
+    skos:scopeNote "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:\nembargoed access, metadata only access - :NON_PUBLIC,\nopen access - :PUBLIC,\nrestricted access - :RESTRICTED."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Distribution.rights>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
   dsv:reusedAsProperty skos:definition;
-  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Distribution.rights>
-], [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:scopeNote;
-  dsv:reusedAsProperty skos:scopeNote;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Distribution.rights>
 ];
     dsv:cardinality cardinality:0n;
@@ -1594,11 +1580,12 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Media type label."@en;
-    dsv:cardinality cardinality:0n;
-    dsv:property rdfs:label;
+    skos:scopeNote "Use the label of the corresponding value from the used code list (usually IANA: https://www.iana.org/assignments/media-types/media-types.xhtml). This property may be repeated for parallel language versions of the label."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :MediaType;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/File.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
@@ -1654,12 +1641,12 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Resource agent role type label."@en;
-    skos:scopeNote "Use label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
-    dsv:cardinality cardinality:0n;
-    dsv:property rdfs:label;
+    skos:scopeNote "Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. This property may be repeated for parallel language versions of the label."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :AttributedAgentRoleType;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/Resource.resourceURL> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
@@ -1806,40 +1793,45 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Label of format value."@en;
-    skos:scopeNote "Use a label of a codelist value from http://publications.europa.eu/resource/dataset/file-type."@en;
-    dsv:property rdfs:label;
+    skos:scopeNote "Use a label of a corresponding code list value from http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :Format;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/LanguageSystem.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Language label"@en;
-    skos:scopeNote "Use language label and/or its 3-letter code from http://publications.europa.eu/resource/authority/language/."@en;
-    dsv:property rdfs:label;
+    skos:scopeNote "Use language label code from http://publications.europa.eu/resource/authority/language/. "@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :LanguageSystem;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/AccessRights.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
-    skos:definition "Label of the access rights vocabulary value."@en;
-    skos:scopeNote "Short label of the value from register http://purl.org/coar/access_right/. Allowed English values are 'embargoes access', 'metadata only access', 'open access' and 'restricted access'."@en;
-    dsv:property rdfs:label;
+    skos:definition "A human-readable name for the subject."@en;
+    skos:scopeNote "Use the label of the value from register http://purl.org/coar/access_right/. Allowed English values are 'embargoes access', 'metadata only access', 'open access' and 'restricted access'. This property may be repeated for parallel language versions of the label."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :AccessRights;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/ResourceType.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Label of the resource type."@en;
-    dsv:property rdfs:label;
+    skos:scopeNote "Use label of a corresponding value from code list https://vocabularies.coar-repositories.org/resource_types/. This property may be repeated for parallel language versions of the label."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :ResourceType;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/TimeInstant.date> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
@@ -1856,39 +1848,45 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Date type label."@en;
-    dsv:property rdfs:label;
+    skos:scopeNote "Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/TimeReference/. This property may be repeated for parallel language versions of the label."@en;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Concept.preferredLabel>;
+    dsv:cardinality cardinality:11;
     dsv:domain :DateType;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/ResourceRelationType.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Label of the relation type."@en;
-    skos:scopeNote "Use label of corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/RelationType/."@en;
-    dsv:property rdfs:label;
+    skos:scopeNote "Use label of corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/RelationType/. This property may be repeated for parallel language versions of the label."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :ResourceRelationType;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/LocationRelationType.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
-    skos:definition "Label of location relation type."@en;
-    dsv:property rdfs:label;
+    skos:definition "Location relation type label."@en;
+    skos:scopeNote "Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :LocationRelationType;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/AlternateTitleType.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Alternate title type label."@en;
-    skos:scopeNote "Use label of a respective value from https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/."@en;
-    dsv:property rdfs:label;
+    skos:scopeNote "Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/. This property may be repeated for parallel language versions of the label."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :AlternateTitleType;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/IdentifierScheme.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
@@ -1946,10 +1944,12 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Label of the description type."@en;
-    dsv:property rdfs:label;
+    skos:scopeNote "Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. This property may be repeated for parallel language versions of the label."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :DescriptionType;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/ChecksumAlgorithm.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;

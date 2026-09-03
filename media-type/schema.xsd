@@ -10,10 +10,11 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+      <xs:element name="label" maxOccurs="unbounded" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#prefLabel">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Media type label.
+            Use the label of the corresponding value from the used code list (usually IANA: https://www.iana.org/assignments/media-types/media-types.xhtml). This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

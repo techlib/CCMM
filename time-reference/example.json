@@ -68,8 +68,8 @@
         "@type": "@id",
         "@context": {
           "label": {
-            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "@container": "@language"
           },
           "date_type": {
             "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -95,5 +95,7 @@
       "date": "2015-02-12"
     }
   },
-  "date_type": {}
+  "date_type": {
+    "label": {}
+  }
 }
