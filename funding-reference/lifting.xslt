@@ -62,13 +62,13 @@
       <rdf:type rdf:resource="https://w3id.org/tib/datacite/class/FundingReference"/>
       <xsl:copy-of select="$arc"/>
       <xsl:for-each select="ccmm:local_identifier">
-        <ns0:awardNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns0:awardNumber>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns0:awardNumber>
       </xsl:for-each>
       <xsl:for-each select="ccmm:award_title">
-        <ns0:awardTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns0:awardTitle>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns0:awardTitle>

@@ -26,7 +26,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="date_information" sawsdl:modelReference="https://w3id.org/tib/datacite/property/dateInformation">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="date_information" sawsdl:modelReference="https://w3id.org/tib/datacite/property/dateInformation">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             date information - Additional information to the date in text form.
@@ -37,6 +37,7 @@
           <xs:simpleContent>
             <xs:extension base="xs:string">
               <xs:attribute ref="xml:lang" use="required"/>
+              <xs:assert test="@xml:lang != ''"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>

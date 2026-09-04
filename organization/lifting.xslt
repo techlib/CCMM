@@ -65,7 +65,7 @@
         </ns0:identifier>
       </xsl:for-each>
       <xsl:for-each select="ccmm:name">
-        <ns1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:name>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:name>

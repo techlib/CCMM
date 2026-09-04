@@ -66,19 +66,19 @@
         </ns0:identifier>
       </xsl:for-each>
       <xsl:for-each select="ccmm:name">
-        <ns1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:name>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:name>
       </xsl:for-each>
       <xsl:for-each select="ccmm:given_name">
-        <ns2:given-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns2:given-name>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns2:given-name>
       </xsl:for-each>
       <xsl:for-each select="ccmm:family_name">
-        <ns2:family-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns2:family-name>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns2:family-name>

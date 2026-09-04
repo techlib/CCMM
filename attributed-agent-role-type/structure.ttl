@@ -24,7 +24,6 @@
     kv:iri "\"https://model.ccmm.cz/research-data/attributed-agent-role-type/class-1782312422764-790c-7c4c-9803\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
 :attribute-1782312428997-5605-18a9-95a8 a dsvs:structure-entity;
-    kv:dataPsmCardinality "[1,null]";
     kv:dataPsmDatatype "\"https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text\"";
     kv:dataPsmHumanDescription "null";
     kv:dataPsmHumanLabel "null";
