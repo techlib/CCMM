@@ -78,7 +78,7 @@
       <rdf:type rdf:resource="https://model.ccmm.cz/vocabulary/ccmm#Distribution-DataService"/>
       <xsl:copy-of select="$arc"/>
       <xsl:for-each select="ccmm:title">
-        <ns0:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns0:title>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns0:title>

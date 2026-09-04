@@ -19,7 +19,8 @@
     skos:definition "1つのエージェントによって公開またはキュレートされ、1つ以上の形式でアクセスまたはダウンロードできるデータの集合。"@ja, "A conceptual entity that represents the information published."@en, "Konceptuální entita představující publikovaná data."@cs, "Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso o il download in uno o più formati."@it, "Una colección de datos, publicados o conservados por una única fuente, y disponibles para ser accedidos o descargados en uno o más formatos."@es, "Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats."@fr, "Μία συλλογή από δεδομένα, δημοσιευμένη ή επιμελημένη από μία και μόνο πηγή, διαθέσιμη δε προς πρόσβαση ή μεταφόρτωση σε μία ή περισσότερες μορφές."@el, "قائمة بيانات منشورة أو مجموعة من قبل مصدر ما و متاح الوصول إليها أو تحميلها"@ar, "En samling af data, udgivet eller udvalgt og arrangeret af en enkelt kilde og som er til råde for adgang til eller download af i en eller flere repræsentationer."@da;
     dsv:specializes :Resource;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
 :Agent dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Agent>;
@@ -138,7 +139,8 @@
     skos:definition "1つのデータセットを記述したデータ・カタログ内のレコード。"@ja, "Description of the metadata record of the dataset. "@en, "Un record in un catalogo di dati che descrive un singolo dataset o servizio di dati."@it, "Un registre du catalogue ou une entrée du catalogue, décrivant un seul jeu de données."@fr, "Un registro en un catálogo de datos que describe un solo conjunto de datos o un servicio de datos."@es, "Záznam v datovém katalogu popisující jednu datovou sadu či datovou službu."@cs, "Μία καταγραφή ενός καταλόγου, η οποία περιγράφει ένα συγκεκριμένο σύνολο δεδομένων."@el, "En post i et datakatalog der beskriver registreringen af et enkelt datasæt eller en datatjeneste."@da;
     skos:scopeNote "In case metadata is harvested from external catalogue, metadata record IRI shall be the same as IRI of the metadata record in original repository."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#CatalogueRecord>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
 :ApplicationProfile dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Application profile"@en;
@@ -423,7 +425,8 @@
     skos:definition "The class resource, everything."@en;
     skos:scopeNote "In the core model, resource is anything that is described within the metadata record, including dataset itself and all related resources. This class is also reused in domain extension for representing any physical or digital resources specific for the described scientific domain.  "@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#rdfs-Resource>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
 :Identifier dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Identifier"@en;

@@ -88,7 +88,7 @@
         </ns0:label>
       </xsl:for-each>
       <xsl:for-each select="ccmm:gml">
-        <ns1:asGML rdf:datatype="http://www.opengis.net/gml/3.2#GeometryPropertyType">
+        <ns1:asGML rdf:datatype="http://www.opengis.net/ont/geosparql#gmlLiteral">
           <xsl:call-template name="gml-transform-lifting"/>
         </ns1:asGML>
       </xsl:for-each>

@@ -24,7 +24,6 @@
     kv:iri "\"https://model.ccmm.cz/research-data/alternate-title-type/class-1747685369782-00bf-3a68-ae58\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
 :attribute-1747685374451-9e56-3fb3-8eb5 a dsvs:structure-entity;
-    kv:dataPsmCardinality "[1,null]";
     kv:dataPsmDatatype "\"https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text\"";
     kv:dataPsmHumanDescription "null";
     kv:dataPsmHumanLabel "null";

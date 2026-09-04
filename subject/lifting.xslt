@@ -69,7 +69,7 @@
         </ns1:definition>
       </xsl:for-each>
       <xsl:for-each select="ccmm:classification_code">
-        <ns2:classificationCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns2:classificationCode>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns2:classificationCode>

@@ -57,7 +57,7 @@
       <rdf:type rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
       <xsl:copy-of select="$arc"/>
       <xsl:for-each select="ccmm:value">
-        <ns0:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns0:notation>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns0:notation>

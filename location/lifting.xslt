@@ -153,7 +153,7 @@
       <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Envelope"/>
       <xsl:copy-of select="$arc"/>
       <xsl:for-each select="ccmm:gml">
-        <ns4:asGML rdf:datatype="http://www.opengis.net/gml/3.2#BoundingShapeType">
+        <ns4:asGML rdf:datatype="http://www.opengis.net/ont/geosparql#gmlLiteral">
           <xsl:call-template name="gml-transform-lifting"/>
         </ns4:asGML>
       </xsl:for-each>

@@ -62,61 +62,61 @@
         </ns0:label>
       </xsl:for-each>
       <xsl:for-each select="ccmm:full_address">
-        <ns1:fullAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:fullAddress>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:fullAddress>
       </xsl:for-each>
       <xsl:for-each select="ccmm:po_box">
-        <ns1:poBox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:poBox>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:poBox>
       </xsl:for-each>
       <xsl:for-each select="ccmm:thoroughfare">
-        <ns1:thoroughfare rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:thoroughfare>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:thoroughfare>
       </xsl:for-each>
       <xsl:for-each select="ccmm:locator_designator">
-        <ns1:locatorDesignator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:locatorDesignator>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:locatorDesignator>
       </xsl:for-each>
       <xsl:for-each select="ccmm:locator_name">
-        <ns1:locatorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:locatorName>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:locatorName>
       </xsl:for-each>
       <xsl:for-each select="ccmm:address_area">
-        <ns1:addressArea rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:addressArea>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:addressArea>
       </xsl:for-each>
       <xsl:for-each select="ccmm:post_name">
-        <ns1:postName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:postName>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:postName>
       </xsl:for-each>
       <xsl:for-each select="ccmm:administrative_unit_level_1">
-        <ns1:adminUnitL1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:adminUnitL1>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:adminUnitL1>
       </xsl:for-each>
       <xsl:for-each select="ccmm:administrative_unit_level_2">
-        <ns1:adminUnitL2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:adminUnitL2>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:adminUnitL2>
       </xsl:for-each>
       <xsl:for-each select="ccmm:post_code">
-        <ns1:postCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns1:postCode>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns1:postCode>

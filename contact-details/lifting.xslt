@@ -57,19 +57,19 @@
       <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
       <xsl:copy-of select="$arc"/>
       <xsl:for-each select="ccmm:data_box">
-        <ns0:dataBox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns0:dataBox>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns0:dataBox>
       </xsl:for-each>
       <xsl:for-each select="ccmm:email">
-        <ns0:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns0:email>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns0:email>
       </xsl:for-each>
       <xsl:for-each select="ccmm:phone">
-        <ns0:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns0:phone>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns0:phone>

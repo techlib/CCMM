@@ -13,7 +13,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="iri" type="xs:anyURI"/>
-      <xs:element name="label" maxOccurs="unbounded" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#prefLabel">
+      <xs:element maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#prefLabel">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - A human-readable name for the subject.
@@ -24,6 +24,7 @@
           <xs:simpleContent>
             <xs:extension base="xs:string">
               <xs:attribute ref="xml:lang" use="required"/>
+              <xs:assert test="@xml:lang != ''"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
