@@ -134,13 +134,13 @@
         </ns1:identifier>
       </xsl:for-each>
       <xsl:for-each select="ccmm:version">
-        <ns2:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns2:version>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns2:version>
       </xsl:for-each>
       <xsl:for-each select="ccmm:title">
-        <ns3:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+        <ns3:title>
           <xsl:apply-templates select="@*"/>
           <xsl:value-of select="."/>
         </ns3:title>
@@ -281,7 +281,7 @@
       <rdf:type rdf:resource="http://www.opengis.net/ont/sf#Envelope"/>
       <xsl:copy-of select="$arc"/>
       <xsl:for-each select="ccmm:gml">
-        <ns6:asGML rdf:datatype="http://www.opengis.net/gml/3.2#BoundingShapeType">
+        <ns6:asGML rdf:datatype="http://www.opengis.net/ont/geosparql#gmlLiteral">
           <xsl:call-template name="gml-transform-lifting"/>
         </ns6:asGML>
       </xsl:for-each>

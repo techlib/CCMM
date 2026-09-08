@@ -51,11 +51,90 @@
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
+      <xs:element maxOccurs="unbounded" name="description" sawsdl:modelReference="http://purl.org/dc/terms/description">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            description - A free-text account of the Catalogue.
+            This property can be repeated for parallel language versions of the description.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute ref="xml:lang" use="required"/>
+              <xs:assert test="@xml:lang != ''"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
       <xs:element maxOccurs="unbounded" name="qualified_attribution" type="ccmm:resource_attribution" sawsdl:modelReference="http://www.w3.org/ns/prov#qualifiedAttribution">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             qualified attribution - Link to a description of a relationship between repository and agent with the specification of the role of agent in this relationship.
             Relationship shall contain at least one agent with role &#34;Publisher&#34; from codelist https://vocabs.ccmm.cz/registry/codelist/AgentRole/.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="record" type="xs:anyURI" sawsdl:modelReference="http://www.w3.org/ns/dcat#record">
+        <xs:annotation>
+          <xs:documentation xml:lang="ar">
+            سجل - تربط الفهرس بسجل ضمنه
+          </xs:documentation>
+          <xs:documentation xml:lang="cs">
+            záznam - Záznam popisující registraci jedné datové sady či datové služby jakožto součásti katalogu.
+          </xs:documentation>
+          <xs:documentation xml:lang="da">
+            post - En post der beskriver registreringen af et enkelt datasæt eller en datatjeneste som er opført i kataloget.
+          </xs:documentation>
+          <xs:documentation xml:lang="el">
+            καταγραφή - Συνδέει έναν κατάλογο με τις καταγραφές του.
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            record - A Catalogue Record that is part of the Catalogue.
+          </xs:documentation>
+          <xs:documentation xml:lang="es">
+            registro - Describe la registración de un conjunto de datos o un servicio de datos en el catálogo.
+          </xs:documentation>
+          <xs:documentation xml:lang="fr">
+            registre - Relie un catalogue à ses registres.
+          </xs:documentation>
+          <xs:documentation xml:lang="it">
+            record - Un record che descrive la registrazione di un singolo set di dati o di un servizio dati che fa parte del catalogo.
+          </xs:documentation>
+          <xs:documentation xml:lang="ja">
+            カタログ・レコード - カタログの一部であるカタログ・レコード。
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dataset" type="xs:anyURI" sawsdl:modelReference="http://www.w3.org/ns/dcat#dataset">
+        <xs:annotation>
+          <xs:documentation xml:lang="ar">
+            قائمة بيانات - تربط الفهرس بقائمة بيانات ضمنه
+          </xs:documentation>
+          <xs:documentation xml:lang="cs">
+            datová sada - Kolekce dat, která je katalogizována v katalogu.
+          </xs:documentation>
+          <xs:documentation xml:lang="da">
+            datasæt - En samling af data som er opført i kataloget.
+          </xs:documentation>
+          <xs:documentation xml:lang="el">
+            σύνολο δεδομένων - Συνδέει έναν κατάλογο με ένα σύνολο δεδομένων το οποίο ανήκει στον εν λόγω κατάλογο.
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            dataset - A Dataset that is part of the Catalogue.
+            As empty Catalogues are usually indications of problems, this property should be combined with the property service to implement an empty Catalogue check.
+          </xs:documentation>
+          <xs:documentation xml:lang="es">
+            conjunto de datos - Un conjunto de datos que se lista en el catálogo.
+          </xs:documentation>
+          <xs:documentation xml:lang="fr">
+            jeu de données - Relie un catalogue à un jeu de données faisant partie de ce catalogue.
+          </xs:documentation>
+          <xs:documentation xml:lang="it">
+            dataset - Una raccolta di dati che è elencata nel catalogo.
+          </xs:documentation>
+          <xs:documentation xml:lang="ja">
+            データセット - カタログの一部であるデータセット。
           </xs:documentation>
         </xs:annotation>
       </xs:element>

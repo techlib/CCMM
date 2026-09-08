@@ -61,6 +61,13 @@
         </ccmm:label>
       </xsl:for-each>
     </xsl:for-each-group>
+    <xsl:for-each-group select="//sp:result[sp:binding[@name=$subj]/*[$id_test = c:id-key(.)] and sp:binding[@name=$pred]/sp:uri/text()=&#34;http://purl.org/dc/terms/description&#34;]" group-by="c:id-key(sp:binding[@name=$obj]/*[1])">
+      <xsl:for-each select="current-group()[1]">
+        <ccmm:description>
+          <xsl:apply-templates select="sp:binding[@name=$obj]/sp:literal"/>
+        </ccmm:description>
+      </xsl:for-each>
+    </xsl:for-each-group>
     <xsl:for-each-group select="//sp:result[sp:binding[@name=$subj]/*[$id_test = c:id-key(.)] and sp:binding[@name=$pred]/sp:uri/text()=&#34;http://www.w3.org/ns/prov#qualifiedAttribution&#34;]" group-by="c:id-key(sp:binding[@name=$obj]/*[1])">
       <xsl:for-each select="current-group()[1]">
         <ccmm:qualified_attribution>
@@ -70,6 +77,20 @@
             </xsl:with-param>
           </xsl:call-template>
         </ccmm:qualified_attribution>
+      </xsl:for-each>
+    </xsl:for-each-group>
+    <xsl:for-each-group select="//sp:result[sp:binding[@name=$subj]/*[$id_test = c:id-key(.)] and sp:binding[@name=$pred]/sp:uri/text()=&#34;http://www.w3.org/ns/dcat#record&#34;]" group-by="c:id-key(sp:binding[@name=$obj]/*[1])">
+      <xsl:for-each select="current-group()[1]">
+        <ccmm:record>
+          <xsl:apply-templates select="sp:binding[@name=$obj]/sp:uri"/>
+        </ccmm:record>
+      </xsl:for-each>
+    </xsl:for-each-group>
+    <xsl:for-each-group select="//sp:result[sp:binding[@name=$subj]/*[$id_test = c:id-key(.)] and sp:binding[@name=$pred]/sp:uri/text()=&#34;http://www.w3.org/ns/dcat#dataset&#34;]" group-by="c:id-key(sp:binding[@name=$obj]/*[1])">
+      <xsl:for-each select="current-group()[1]">
+        <ccmm:dataset>
+          <xsl:apply-templates select="sp:binding[@name=$obj]/sp:uri"/>
+        </ccmm:dataset>
       </xsl:for-each>
     </xsl:for-each-group>
   </xsl:template>

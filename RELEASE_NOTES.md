@@ -15,6 +15,8 @@ CHANGELOG
 * datacite was reprofiled to official datacite linked data representation
 * added JSON schema and JSON-LD contexts
 * added abstract and introduction into the specification
+* added identifier scheme notation
+* codelist values now have skos:prefLabel
 
 ### 2026-02-27 - minor changes
 * added SHACL file

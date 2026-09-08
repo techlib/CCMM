@@ -5,7 +5,7 @@
 <https://model.ccmm.cz/research-data/repository/> a dsvs:structure-entity;
     kv:dataPsmHumanDescription "{\"cs\":\"Datová struktura pro Katalog. Řízená kolekce metadat o datových sadách a datových službách\",\"en\":\"Data structure for Repository. A curated collection of metadata about resources.\"}";
     kv:dataPsmHumanLabel "{\"cs\":\"Katalog\",\"en\":\"Repository\"}";
-    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/repository/class-1742339809761-c64b-cd69-80de\",\"https://model.ccmm.cz/research-data/repository/attribute-1742339813596-b4eb-1f9d-ad64\",\"https://model.ccmm.cz/research-data/repository/associationEnd-1782737072635-ed6a-02b4-8eba\",\"https://model.ccmm.cz/research-data/repository/classReference-1782737082999-547a-b403-a852\"]";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/repository/class-1742339809761-c64b-cd69-80de\",\"https://model.ccmm.cz/research-data/repository/attribute-1742339813596-b4eb-1f9d-ad64\",\"https://model.ccmm.cz/research-data/repository/associationEnd-1782737072635-ed6a-02b4-8eba\",\"https://model.ccmm.cz/research-data/repository/classReference-1782737082999-547a-b403-a852\",\"https://model.ccmm.cz/research-data/repository/attribute-1788858052844-522e-fcb3-9c72\",\"https://model.ccmm.cz/research-data/repository/class-1788858158600-5bfa-c30e-8a11\",\"https://model.ccmm.cz/research-data/repository/associationEnd-1788858158602-376c-4796-a8c9\",\"https://model.ccmm.cz/research-data/repository/class-1788858158603-f392-9bbd-b266\",\"https://model.ccmm.cz/research-data/repository/associationEnd-1788858158603-fd2b-d525-bea7\"]";
     kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/repository/class-1742339809761-c64b-cd69-80de\"]";
     kv:dataPsmTechnicalLabel "null";
     kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
@@ -18,7 +18,7 @@
     kv:dataPsmHumanLabel "null";
     kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Repository\"";
     kv:dataPsmIsClosed "null";
-    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/repository/attribute-1742339813596-b4eb-1f9d-ad64\",\"https://model.ccmm.cz/research-data/repository/associationEnd-1782737072635-ed6a-02b4-8eba\"]";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/repository/attribute-1742339813596-b4eb-1f9d-ad64\",\"https://model.ccmm.cz/research-data/repository/attribute-1788858052844-522e-fcb3-9c72\",\"https://model.ccmm.cz/research-data/repository/associationEnd-1782737072635-ed6a-02b4-8eba\",\"https://model.ccmm.cz/research-data/repository/associationEnd-1788858158602-376c-4796-a8c9\",\"https://model.ccmm.cz/research-data/repository/associationEnd-1788858158603-fd2b-d525-bea7\"]";
     kv:dataPsmTechnicalLabel "\"repository\"";
     kv:instancesHaveIdentity "\"ALWAYS\"";
     kv:iri "\"https://model.ccmm.cz/research-data/repository/class-1742339809761-c64b-cd69-80de\"";
@@ -46,3 +46,51 @@
     kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/resource-attribution/\"";
     kv:iri "\"https://model.ccmm.cz/research-data/repository/classReference-1782737082999-547a-b403-a852\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
+:attribute-1788858052844-522e-fcb3-9c72 a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Repository.description\"";
+    kv:dataPsmTechnicalLabel "\"description\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/repository/attribute-1788858052844-522e-fcb3-9c72\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".
+:class-1788858158600-5bfa-c30e-8a11 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/MetadataRecord\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[]";
+    kv:dataPsmTechnicalLabel "\"metadata_record\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/repository/class-1788858158600-5bfa-c30e-8a11\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:associationEnd-1788858158602-376c-4796-a8c9 a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Repository.record\"";
+    kv:dataPsmIsDematerialize "null";
+    kv:dataPsmIsReverse "false";
+    kv:dataPsmPart "\"https://model.ccmm.cz/research-data/repository/class-1788858158600-5bfa-c30e-8a11\"";
+    kv:dataPsmTechnicalLabel "\"record\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/repository/associationEnd-1788858158602-376c-4796-a8c9\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/AssociationEnd\"]".
+:class-1788858158603-f392-9bbd-b266 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Dataset\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[]";
+    kv:dataPsmTechnicalLabel "\"dataset\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/repository/class-1788858158603-f392-9bbd-b266\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:associationEnd-1788858158603-fd2b-d525-bea7 a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Repository.dataset\"";
+    kv:dataPsmIsDematerialize "null";
+    kv:dataPsmIsReverse "false";
+    kv:dataPsmPart "\"https://model.ccmm.cz/research-data/repository/class-1788858158603-f392-9bbd-b266\"";
+    kv:dataPsmTechnicalLabel "\"dataset\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/repository/associationEnd-1788858158603-fd2b-d525-bea7\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/AssociationEnd\"]".

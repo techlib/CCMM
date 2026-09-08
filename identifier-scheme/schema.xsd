@@ -13,8 +13,8 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            label - Identifier scheme label
-            For example, DOI, ORCID etc.
+            label - Identifier scheme label.
+            For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID melongs to the notation.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>
@@ -25,6 +25,14 @@
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="notation" type="xs:string" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#notation">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            notation - Notation of the identifier scheme.
+            Fill in the short notations of the identifier scheme, e.g. ROR, ORCID, DOI etc.
+          </xs:documentation>
+        </xs:annotation>
       </xs:element>
       <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>
     </xs:sequence>
