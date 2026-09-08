@@ -17,14 +17,12 @@
       <attributed_agent>
         <person>
           <name>:unkn</name>
-          <given_name>:unkn</given_name>
-          <family_name>:unkn</family_name>
         </person>
       </attributed_agent>
       <role>
         <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager</iri>
         <label xml:lang="en">Data Manager</label>
-        <label xml:lang="cs">Manažer dat</label>
+        <label xml:lang="cs">Správce dat</label>
       </role>
     </qualified_attribution>
     <!-- Dates of this metadata record (best effort) -->
@@ -33,7 +31,7 @@
     <!-- Standards -->
     <conforms_to_standard>
         <iri>https://model.ccmm.cz/research-data/2.0.0</iri>
-        <label xml:lang="">CCMM RD 2.0.0</label>
+      <label xml:lang="en">Czech Core Metadata Model for Research Data 2.0.0</label>
     </conforms_to_standard>
     <conforms_to_standard>
       <iri>https://data.narodni-repozitar.cz/schemas/nr_datasets/nr-datasets-v1.0.0.json</iri>
@@ -41,7 +39,8 @@
     </conforms_to_standard>
     <original_repository>
       <iri>https://datarepo.eosc.cz</iri>
-      <label xml:lang="cs">Catch-all</label>
+      <label xml:lang="en">Catch-all</label>
+      <description xml:lang="en">The Data Catch-all Repository is a general-purpose repository for research data for which no more suitable disciplinary, institutional, or community repository is available.</description>
       <qualified_attribution>
         <attributed_agent>
           <organization>
@@ -62,7 +61,8 @@
     <value>10.48700/datst.dmq82-ed856</value>
     <scheme>
       <iri>https://doi.org/</iri>
-      <label xml:lang="">DOI</label>
+      <label xml:lang="en">Digital Object Identifier</label>
+      <notation>DOI</notation>
     </scheme>
   </identifier>
   <!-- Titles -->
@@ -84,7 +84,8 @@
           <value>0000-0001-5717-267X</value>
           <scheme>
             <iri>https://orcid.org/</iri>
-            <label xml:lang="">ORCID</label>
+            <label xml:lang="en">Open Research and Contributor ID</label>
+            <notation>ORCID</notation>
           </scheme>
         </identifier>
         <name>Salvetr, Pavel</name>
@@ -96,14 +97,16 @@
             <value>00hzjtg80</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>26316919</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="cs">Identifikační Číslo Osoby</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>COMTES FHT</name>
@@ -125,7 +128,8 @@
           <value>0000-0003-4013-9819</value>
           <scheme>
             <iri>https://orcid.org/</iri>
-            <label xml:lang="">ORCID</label>
+            <label xml:lang="en">Open Research and Contributor ID</label>
+            <notation>ORCID</notation>
           </scheme>
         </identifier>
         <name>Hodek, Josef</name>
@@ -137,7 +141,8 @@
             <value>00hzjtg80</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
@@ -171,14 +176,16 @@
             <value>00hzjtg80</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>26316919</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="cs">Identifikační Číslo Osoby</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>COMTES FHT</name>
@@ -200,7 +207,8 @@
           <value>0000-0001-9947-2566</value>
           <scheme>
             <iri>https://orcid.org/</iri>
-            <label xml:lang="">ORCID</label>
+            <label xml:lang="en">Open Research and Contributor ID</label>
+            <notation>ORCID</notation>
           </scheme>
         </identifier>
         <name>Novák, Pavel</name>
@@ -212,14 +220,16 @@
             <value>05ggn0a85</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>60461373</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="cs">Identifikační Číslo Osoby</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>Vysoká škola chemicko-technologická v Praze</name>
@@ -241,7 +251,8 @@
           <value>0000-0002-1241-6121</value>
           <scheme>
             <iri>https://orcid.org/</iri>
-            <label xml:lang="">ORCID</label>
+            <label xml:lang="en">Open Research and Contributor ID</label>
+            <notation>ORCID</notation>
           </scheme>
         </identifier>
         <name>Dlouhý, Jaromír</name>
@@ -253,14 +264,16 @@
             <value>00hzjtg80</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>26316919</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="cs">Identifikační Číslo Osoby</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>COMTES FHT</name>
@@ -282,7 +295,8 @@
           <value>0000-0002-4982-9114</value>
           <scheme>
             <iri>https://orcid.org/</iri>
-            <label xml:lang="">ORCID</label>
+            <label xml:lang="en">Open Research and Contributor ID</label>
+            <notation>ORCID</notation>
           </scheme>
         </identifier>
         <name>Brázda, Michal</name>
@@ -294,14 +308,16 @@
             <value>00hzjtg80</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>26316919</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="cs">Identifikační Číslo Osoby</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>COMTES FHT</name>
@@ -322,15 +338,17 @@
               <iri>https://ror.org/00hzjtg80</iri>
               <value>00hzjtg80</value>
               <scheme>
-                  <iri>https://ror.org/</iri>
-                  <label xml:lang="">ROR</label>
+                <iri>https://ror.org/</iri>
+                <label xml:lang="en">Research Organization Registry</label>
+                <notation>ROR</notation>
               </scheme>
           </identifier>
           <identifier>
               <value>26316919</value>
               <scheme>
-                  <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                  <label xml:lang="cs">IČO</label>
+                <iri>https://www.wikidata.org/entity/Q42302581</iri>
+                <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                <notation>IČO</notation>
               </scheme>
           </identifier>
         <name>COMTES FHT</name>
@@ -462,7 +480,8 @@
               <value>037n8p820</value>
           <scheme>
             <iri>https://ror.org/</iri>
-            <label xml:lang="">ROR</label>
+            <label xml:lang="en">Research Organization Registry</label>
+            <notation>ROR</notation>
           </scheme>
         </identifier>
         <identifier>
@@ -470,7 +489,8 @@
           <value>10.13039/501100001823</value>
           <scheme>
             <iri>https://doi.org/</iri>
-            <label xml:lang="">DOI</label>
+            <label xml:lang="en">Digital Object Identifier</label>
+            <notation>DOI</notation>
           </scheme>
         </identifier>
         <name>Ministerstvo školství, mládeže a tělovýchovy</name>
@@ -486,7 +506,8 @@
       <value>10.1007/s12540-025-01953-4</value>
       <scheme>
         <iri>https://doi.org/</iri>
-        <label xml:lang="">DOI</label>
+        <label xml:lang="en">Digital Object Identifier</label>
+        <notation>DOI</notation>
       </scheme>
     </identifier>
     <title>Influence of Deposition Parameters on the Building rate, In-Situ Formation of Austenite and Tensile Properties of SAF 2507 SDSS Fabricated by Directed Energy Deposition</title>

@@ -19,7 +19,8 @@
                         <value>0030-04X2-2030-4X26</value>
                         <scheme>
                             <iri>https://orcid.org/</iri>
-                            <label xml:lang="">ORCID</label>
+                            <label xml:lang="en">Open Research and Contributor ID</label>
+                            <notation>ORCID</notation>
                         </scheme>
                     </identifier>
                     <name>Novák</name>
@@ -38,7 +39,8 @@
                             <value>024d6js02</value>
                             <scheme>
                                 <iri>https://ror.org/</iri>
-                                <label xml:lang="">ROR</label>
+                                <label xml:lang="en">Research Organization Registry</label>
+                                <notation>ROR</notation>
                             </scheme>
                         </identifier>
                         <name>Univerzita Karlova</name>
@@ -55,15 +57,16 @@
         <date_created>2025-04-28</date_created>
         <conforms_to_standard>
             <iri>https://model.ccmm.cz/research-data/2.0.0</iri>
-            <label xml:lang="">CCMM RD 2.0.0</label>
+            <label xml:lang="en">Czech Core Metadata Model for Research Data 2.0.0</label>
         </conforms_to_standard>
         <conforms_to_standard>
             <iri>https://www.iso.org/standard/80275.html</iri>
-            <label xml:lang="">ISO 19115-1:2014/Amd 2:2020</label>
+            <label xml:lang="en">ISO 19115-1:2014/Amd 2:2020</label>
         </conforms_to_standard>
         <original_repository>
             <iri>https://original-repository.cz</iri>
             <label xml:lang="cs">Původní repozitář</label>
+            <description xml:lang="cs">Popis repozitáře.</description>
             <qualified_attribution>
                 <attributed_agent>
                     <organization>
@@ -84,7 +87,8 @@
         <value>10.45321/as36sl</value>
         <scheme>
             <iri>https://doi.org/</iri>
-            <label xml:lang="">DOI</label>
+            <label xml:lang="en">Digital Object Identifier</label>
+            <notation>DOI</notation>
         </scheme>
     </identifier>
     <identifier>
@@ -114,7 +118,8 @@
                     <value>0030-04X2-2030-4X26</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>Novák</name>
@@ -133,7 +138,8 @@
                         <value>024d6js02</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <name>Univerzita Karlova</name>
@@ -154,7 +160,8 @@
                     <value>0023-0802-44X6-26X0</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>Ivan Janouch</name>
@@ -173,7 +180,8 @@
                         <value>02j46qs45</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <name>Masarykova Univerzita</name>
@@ -223,9 +231,13 @@
     </resource_type>
     <primary_language>
         <iri>http://publications.europa.eu/resource/authority/language/CES</iri>
+        <label xml:lang="en">Czech</label>
+        <label xml:lang="cs">Čeština</label>
     </primary_language>
     <other_language>
         <iri>http://publications.europa.eu/resource/authority/language/ENG</iri>
+        <label xml:lang="en">English</label>
+        <label xml:lang="cs">Angličtina</label>            
     </other_language>
     <access_rights>
         <iri>http://purl.org/coar/access_right/c_abf2</iri>
@@ -350,7 +362,8 @@
                     <value>01pv73b02</value>
                     <scheme>
                         <iri>https://ror.org/</iri>
-                        <label xml:lang="">ROR</label>
+                        <label xml:lang="en">Research Organization Registry</label>
+                        <notation>ROR</notation>
                     </scheme>
                 </identifier>
                 <name>Grantová agentura České republiky</name>
