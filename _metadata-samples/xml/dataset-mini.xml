@@ -10,14 +10,14 @@
     <qualified_attribution>
       <attributed_agent>
         <person>
-          <!-- DataCite unknown placeholder, used when real information is not available -->
-          <name>:unkn</name>
-          <given_name>:unkn</given_name>
-          <family_name>:unkn</family_name>
+          <name>Pavel Steklý</name>
+          <given_name>Pavel</given_name>
+          <family_name>Staeklý</family_name>
         </person>
       </attributed_agent>
       <role>
         <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager</iri>
+        <label xml:lang="en">Data Manager</label>
       </role>
     </qualified_attribution>
 
@@ -26,13 +26,14 @@
     <!-- (1..*) Conforms to standard: this is the minimal variant with an IRI -->
     <conforms_to_standard>
       <iri>https://model.ccmm.cz/research-data/2.0.0</iri>
-      <label xml:lang="">CCMM RD 2.0.0</label>
+      <label xml:lang="en">Czech Core Metadata Model for Research Data 2.0.0</label>
     </conforms_to_standard>
     <!-- (1..1) original repository -->
     <!-- (!..*) shall contain at least one agent with role Publisher -->
        <original_repository>
             <iri>https://data.narodni-repozitar.cz</iri>
             <label xml:lang="cs">Původní repozitář</label>
+            <description xml:lang="cs">Popis původního repozitáře,</description>
             <qualified_attribution>
               <attributed_agent>
                 <organization>
@@ -74,17 +75,19 @@
     </attributed_agent>
     <role>
       <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
+      <label xml:lang="en">Creator</label>
     </role>
   </qualified_attribution>
   <!-- Publisher -->
   <qualified_attribution>
     <attributed_agent>
       <organization>
-        <name>:unkn</name>
+        <name>Nějaká organizace</name>
       </organization>
     </attributed_agent>
     <role>
       <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher</iri>
+      <label xml:lang="en">Publisher</label>
     </role>
   </qualified_attribution>
     
@@ -101,12 +104,14 @@
        </temporal_representation>
        <date_type>
             <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Created</iri>
+            <label xml:lang="en">Created</label>
        </date_type>
   </time_reference>
   
   <!-- (1-1) Specify one access rights -->
   <access_rights>
     <iri>http://purl.org/coar/access_right/c_f1cf</iri>
+    <label xml:lang="en">embargoed access</label>
   </access_rights>
 
   <!-- (1-*) Specify at least one subject. At least one subject must be a value from FRASCATI FORD vocabulary. There must be title, classification_code and subject_scheme. -->

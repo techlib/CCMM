@@ -39,7 +39,7 @@
         <!-- Standards the source record and this record conform to -->
         <conforms_to_standard>
             <iri>https://model.ccmm.cz/research-data/2.0.0</iri>
-            <label xml:lang="">CCMM RD 2.0.0</label>
+            <label xml:lang="en">Czech Core Metadata Model for Research Data 2.0.0</label>
         </conforms_to_standard>
         <conforms_to_standard>
             <iri>https://data.narodni-repozitar.cz/schemas/nr_datasets/nr-datasets-v1.0.0.json</iri>
@@ -48,6 +48,7 @@
         <original_repository>
             <iri>https://datarepo.eosc.cz</iri>
             <label xml:lang="cs">Catch-all</label>
+            <description xml:lang="en">The Data Catch-all Repository is a general-purpose repository for research data for which no more suitable disciplinary, institutional, or community repository is available.</description>
             <qualified_attribution>
                 <attributed_agent>
                     <organization>
@@ -69,7 +70,8 @@
         <scheme>
             <!-- IRI: DOI -->
             <iri>https://doi.org/</iri>
-            <label xml:lang="">DOI</label>
+            <label xml:lang="en">Digital Object Identifier</label>
+            <notation>DOI</notation>
         </scheme>
     </identifier>
     <!-- Titles -->
@@ -92,7 +94,8 @@
                     <value>0009-0003-1158-1138</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>Paldusová, Kateřina</name>
@@ -102,14 +105,16 @@
                         <value>02sat5y74</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <identifier>
                         <value>61388955</value>
                         <scheme>
                             <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                            <label xml:lang="cs">IČO</label>
+                            <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                            <notation>IČO</notation>
                         </scheme>
                     </identifier>
                     <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
@@ -131,7 +136,8 @@
                     <value>0000-0003-1662-9092</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>González Navarro, José Alfredo</name>
@@ -141,14 +147,16 @@
                         <value>02sat5y74</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <identifier>
                         <value>61388955</value>
                         <scheme>
                             <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                            <label xml:lang="cs">IČO</label>
+                            <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                            <notation>IČO</notation>
                         </scheme>
                     </identifier>
                     <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
@@ -170,7 +178,8 @@
                     <value>0009-0008-0140-2075</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>Echezarreta Mendicute, Irene</name>
@@ -180,14 +189,16 @@
                         <value>02sat5y74</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <identifier>
                         <value>61388955</value>
                         <scheme>
                             <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                            <label xml:lang="cs">IČO</label>
+                            <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                            <notation>IČO</notation>
                         </scheme>
                     </identifier>
                     <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
@@ -209,7 +220,8 @@
                     <value>0000-0002-4606-1218</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>Cebecauer, Marek</name>
@@ -219,14 +231,16 @@
                         <value>02sat5y74</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <identifier>
                         <value>61388955</value>
                         <scheme>
                             <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                            <label xml:lang="cs">IČO</label>
+                            <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                            <notation>IČO</notation>
                         </scheme>
                     </identifier>
                     <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
@@ -248,14 +262,16 @@
                     <value>02sat5y74</value>
                     <scheme>
                         <iri>https://ror.org/</iri>
-                        <label xml:lang="">ROR</label>
+                        <label xml:lang="en">Research Organization Registry</label>
+                        <notation>ROR</notation>
                     </scheme>
                 </identifier>
                 <identifier>
                     <value>61388955</value>
                     <scheme>
                         <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                        <label xml:lang="cs">IČO</label>
+                        <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                        <notation>IČO</notation>
                     </scheme>
                 </identifier>
                 <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
