@@ -104,7 +104,7 @@
                             "properties": {
                               "label": {
                                 "title": "label",
-                                "description": "Identifier scheme label",
+                                "description": "Identifier scheme label.",
                                 "type": "array",
                                 "items": {
                                   "title": "Language tagged string",
@@ -123,6 +123,15 @@
                                       "type": "string"
                                     }
                                   }
+                                }
+                              },
+                              "notation": {
+                                "title": "notation",
+                                "description": "Notation of the identifier scheme.",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
                                 }
                               }
                             }
@@ -263,7 +272,7 @@
                                           "properties": {
                                             "label": {
                                               "title": "label",
-                                              "description": "Identifier scheme label",
+                                              "description": "Identifier scheme label.",
                                               "type": "array",
                                               "items": {
                                                 "title": "Language tagged string",
@@ -282,6 +291,15 @@
                                                     "type": "string"
                                                   }
                                                 }
+                                              }
+                                            },
+                                            "notation": {
+                                              "title": "notation",
+                                              "description": "Notation of the identifier scheme.",
+                                              "type": "array",
+                                              "items": {
+                                                "title": "String",
+                                                "type": "string"
                                               }
                                             }
                                           }
@@ -521,7 +539,7 @@
                                           "properties": {
                                             "label": {
                                               "title": "label",
-                                              "description": "Identifier scheme label",
+                                              "description": "Identifier scheme label.",
                                               "type": "array",
                                               "items": {
                                                 "title": "Language tagged string",
@@ -540,6 +558,15 @@
                                                     "type": "string"
                                                   }
                                                 }
+                                              }
+                                            },
+                                            "notation": {
+                                              "title": "notation",
+                                              "description": "Notation of the identifier scheme.",
+                                              "type": "array",
+                                              "items": {
+                                                "title": "String",
+                                                "type": "string"
                                               }
                                             }
                                           }
@@ -776,7 +803,7 @@
                                                 "properties": {
                                                   "label": {
                                                     "title": "label",
-                                                    "description": "Identifier scheme label",
+                                                    "description": "Identifier scheme label.",
                                                     "type": "array",
                                                     "items": {
                                                       "title": "Language tagged string",
@@ -795,6 +822,15 @@
                                                           "type": "string"
                                                         }
                                                       }
+                                                    }
+                                                  },
+                                                  "notation": {
+                                                    "title": "notation",
+                                                    "description": "Notation of the identifier scheme.",
+                                                    "type": "array",
+                                                    "items": {
+                                                      "title": "String",
+                                                      "type": "string"
                                                     }
                                                   }
                                                 }

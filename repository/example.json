@@ -9,6 +9,10 @@
         "@id": "http://purl.org/dc/terms/title",
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
       },
+      "description": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      },
       "qualified_attribution": {
         "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
         "@container": "@set",
@@ -32,6 +36,10 @@
                       "label": {
                         "@id": "http://www.w3.org/2000/01/rdf-schema#label",
                         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                      },
+                      "notation": {
+                        "@id": "http://www.w3.org/2004/02/skos/core#notation",
+                        "@type": "xsd:string"
                       },
                       "identifier_scheme": {
                         "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
@@ -160,6 +168,10 @@
                           "label": {
                             "@id": "http://www.w3.org/2000/01/rdf-schema#label",
                             "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                          },
+                          "notation": {
+                            "@id": "http://www.w3.org/2004/02/skos/core#notation",
+                            "@type": "xsd:string"
                           },
                           "identifier_scheme": {
                             "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
@@ -297,6 +309,16 @@
           }
         }
       },
+      "record": {
+        "@id": "http://www.w3.org/ns/dcat#record",
+        "@type": "@id",
+        "@container": "@set"
+      },
+      "dataset": {
+        "@id": "http://www.w3.org/ns/dcat#dataset",
+        "@type": "@id",
+        "@container": "@set"
+      },
       "repository": {
         "@id": "http://www.w3.org/ns/dcat#Catalog",
         "@context": {}
@@ -314,10 +336,20 @@
       "@language": "Vrlc"
     }
   ],
+  "description": [
+    {
+      "@value": "XsmOHV",
+      "@language": "SC"
+    },
+    {
+      "@value": "9oUjuzpj",
+      "@language": "JhqdM1o"
+    }
+  ],
   "qualified_attribution": [
     {
       "attributed_agent": {
-        "name": "mOH"
+        "name": "P75"
       },
       "role": {
         "label": {}
@@ -325,7 +357,15 @@
     },
     {
       "attributed_agent": {
-        "name": "Uj"
+        "name": "s2F6RkP6i"
+      },
+      "role": {
+        "label": {}
+      }
+    },
+    {
+      "attributed_agent": {
+        "name": "eY0qk"
       },
       "role": {
         "label": {}

@@ -7,6 +7,7 @@
   "required": [
     "id",
     "label",
+    "description",
     "qualified_attribution"
   ],
   "properties": {
@@ -33,6 +34,30 @@
     "label": {
       "title": "label",
       "description": "Human readable name of the repository.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "description": {
+      "title": "description",
+      "description": "A free-text account of the Catalogue.",
       "type": "array",
       "minItems": 1,
       "items": {
@@ -105,7 +130,7 @@
                           "properties": {
                             "label": {
                               "title": "label",
-                              "description": "Identifier scheme label",
+                              "description": "Identifier scheme label.",
                               "type": "array",
                               "items": {
                                 "title": "Language tagged string",
@@ -124,6 +149,15 @@
                                     "type": "string"
                                   }
                                 }
+                              }
+                            },
+                            "notation": {
+                              "title": "notation",
+                              "description": "Notation of the identifier scheme.",
+                              "type": "array",
+                              "items": {
+                                "title": "String",
+                                "type": "string"
                               }
                             }
                           }
@@ -363,7 +397,7 @@
                           "properties": {
                             "label": {
                               "title": "label",
-                              "description": "Identifier scheme label",
+                              "description": "Identifier scheme label.",
                               "type": "array",
                               "items": {
                                 "title": "Language tagged string",
@@ -382,6 +416,15 @@
                                     "type": "string"
                                   }
                                 }
+                              }
+                            },
+                            "notation": {
+                              "title": "notation",
+                              "description": "Notation of the identifier scheme.",
+                              "type": "array",
+                              "items": {
+                                "title": "String",
+                                "type": "string"
                               }
                             }
                           }
@@ -618,7 +661,7 @@
                                 "properties": {
                                   "label": {
                                     "title": "label",
-                                    "description": "Identifier scheme label",
+                                    "description": "Identifier scheme label.",
                                     "type": "array",
                                     "items": {
                                       "title": "Language tagged string",
@@ -637,6 +680,15 @@
                                           "type": "string"
                                         }
                                       }
+                                    }
+                                  },
+                                  "notation": {
+                                    "title": "notation",
+                                    "description": "Notation of the identifier scheme.",
+                                    "type": "array",
+                                    "items": {
+                                      "title": "String",
+                                      "type": "string"
                                     }
                                   }
                                 }
@@ -878,6 +930,24 @@
             }
           }
         }
+      }
+    },
+    "record": {
+      "title": "record",
+      "description": "A Catalogue Record that is part of the Catalogue.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "iri"
+      }
+    },
+    "dataset": {
+      "title": "dataset",
+      "description": "A Dataset that is part of the Catalogue.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "iri"
       }
     }
   }

@@ -53,6 +53,13 @@
         </ccmm:label>
       </xsl:for-each>
     </xsl:for-each-group>
+    <xsl:for-each-group select="//sp:result[sp:binding[@name=$subj]/*[$id_test = c:id-key(.)] and sp:binding[@name=$pred]/sp:uri/text()=&#34;http://www.w3.org/2004/02/skos/core#notation&#34;]" group-by="c:id-key(sp:binding[@name=$obj]/*[1])">
+      <xsl:for-each select="current-group()[1]">
+        <ccmm:notation>
+          <xsl:apply-templates select="sp:binding[@name=$obj]/sp:literal"/>
+        </ccmm:notation>
+      </xsl:for-each>
+    </xsl:for-each-group>
   </xsl:template>
   <xsl:template match="@*|*"/>
 </xsl:stylesheet>

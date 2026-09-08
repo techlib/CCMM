@@ -775,6 +775,14 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ACatalogShape/5afc5e8c>.
 
+<https://model.ccmm.cz/research-data/dcat%3ACatalogShape/548e8df0> a sh:PropertyShape;
+    sh:description "This property can be repeated for parallel language versions of the description."@en;
+    sh:nodeKind sh:Literal;
+    sh:path <http://purl.org/dc/terms/description>;
+    sh:datatype rdf:langString.
+
+<https://model.ccmm.cz/research-data/dcat%3ACatalogShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ACatalogShape/548e8df0>.
+
 <https://model.ccmm.cz/research-data/dcat%3ACatalogShape/-4b7d5519> a sh:PropertyShape;
     sh:description "Relationship shall contain at least one agent with role \"Publisher\" from codelist https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
@@ -782,6 +790,21 @@
     sh:class <http://www.w3.org/ns/prov#Attribution>.
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ACatalogShape/-4b7d5519>.
+
+<https://model.ccmm.cz/research-data/dcat%3ACatalogShape/-882a3bf> a sh:PropertyShape;
+    sh:description "As empty Catalogues are usually indications of problems, this property should be combined with the property service to implement an empty Catalogue check."@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <http://www.w3.org/ns/dcat#dataset>;
+    sh:class <http://www.w3.org/ns/dcat#Dataset>.
+
+<https://model.ccmm.cz/research-data/dcat%3ACatalogShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ACatalogShape/-882a3bf>.
+
+<https://model.ccmm.cz/research-data/dcat%3ACatalogShape/3309c8a0> a sh:PropertyShape;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <http://www.w3.org/ns/dcat#record>;
+    sh:class <http://www.w3.org/ns/dcat#CatalogRecord>.
+
+<https://model.ccmm.cz/research-data/dcat%3ACatalogShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ACatalogShape/3309c8a0>.
 
 <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape> a sh:NodeShape;
     rdfs:seeAlso <https://model.ccmm.cz/research-data/Distribution-DownloadableFile>;
@@ -1269,12 +1292,21 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3AIdentifierSchemeShape/-717362e4> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "For example, DOI, ORCID etc."@en;
+    sh:description "For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID melongs to the notation."@en;
     sh:nodeKind sh:Literal;
     sh:path rdfs:label;
     sh:datatype rdf:langString.
 
 <https://model.ccmm.cz/research-data/ccmm%3AIdentifierSchemeShape> sh:property <https://model.ccmm.cz/research-data/ccmm%3AIdentifierSchemeShape/-717362e4>.
+
+<https://model.ccmm.cz/research-data/ccmm%3AIdentifierSchemeShape/-cc1c8e0> a sh:PropertyShape;
+    sh:name "notation"@en;
+    sh:description "Fill in the short notations of the identifier scheme, e.g. ROR, ORCID, DOI etc."@en;
+    sh:nodeKind sh:Literal;
+    sh:path <http://www.w3.org/2004/02/skos/core#notation>;
+    sh:datatype xsd:string.
+
+<https://model.ccmm.cz/research-data/ccmm%3AIdentifierSchemeShape> sh:property <https://model.ccmm.cz/research-data/ccmm%3AIdentifierSchemeShape/-cc1c8e0>.
 
 <https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/DescriptionShape> a sh:NodeShape;
     rdfs:seeAlso <https://model.ccmm.cz/research-data/Description>;

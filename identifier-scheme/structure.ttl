@@ -5,7 +5,7 @@
 <https://model.ccmm.cz/research-data/identifier-scheme/> a dsvs:structure-entity;
     kv:dataPsmHumanDescription "{\"en\":\"Data structure for Identifier scheme. Scheme in which is the identifier value unique, usually representing some authority. Identifier scheme shall always be represented as IRI identifier.\",\"cs\":\"Datová struktura pro Identifier scheme. Scheme in which is the identifier value unique, usually representing some authority. Identifier scheme shall always be represented as IRI identifier.\"}";
     kv:dataPsmHumanLabel "{\"en\":\"Identifier scheme\",\"cs\":\"Identifier scheme\"}";
-    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/identifier-scheme/class-1747731818380-b829-3f11-a2f1\",\"https://model.ccmm.cz/research-data/identifier-scheme/attribute-1747731822119-eeb8-b5f3-a985\"]";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/identifier-scheme/class-1747731818380-b829-3f11-a2f1\",\"https://model.ccmm.cz/research-data/identifier-scheme/attribute-1747731822119-eeb8-b5f3-a985\",\"https://model.ccmm.cz/research-data/identifier-scheme/attribute-1788858099343-abf4-47f5-89a2\"]";
     kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/identifier-scheme/class-1747731818380-b829-3f11-a2f1\"]";
     kv:dataPsmTechnicalLabel "null";
     kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
@@ -18,7 +18,7 @@
     kv:dataPsmHumanLabel "null";
     kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/IdentifierScheme\"";
     kv:dataPsmIsClosed "null";
-    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/identifier-scheme/attribute-1747731822119-eeb8-b5f3-a985\"]";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/identifier-scheme/attribute-1747731822119-eeb8-b5f3-a985\",\"https://model.ccmm.cz/research-data/identifier-scheme/attribute-1788858099343-abf4-47f5-89a2\"]";
     kv:dataPsmTechnicalLabel "\"identifier_scheme\"";
     kv:instancesHaveIdentity "\"ALWAYS\"";
     kv:iri "\"https://model.ccmm.cz/research-data/identifier-scheme/class-1747731818380-b829-3f11-a2f1\"";
@@ -30,4 +30,12 @@
     kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/IdentifierScheme.label\"";
     kv:dataPsmTechnicalLabel "\"label\"";
     kv:iri "\"https://model.ccmm.cz/research-data/identifier-scheme/attribute-1747731822119-eeb8-b5f3-a985\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".
+:attribute-1788858099343-abf4-47f5-89a2 a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/2001/XMLSchema#string\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/IdentifierScheme.notation\"";
+    kv:dataPsmTechnicalLabel "\"notation\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/identifier-scheme/attribute-1788858099343-abf4-47f5-89a2\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

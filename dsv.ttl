@@ -40,7 +40,8 @@
   dsv:reusedAsProperty skos:scopeNote;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Agent>
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
 :Person dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:definition "Physical person. "@en;
@@ -53,7 +54,8 @@
   dsv:reusedFromResource <http://www.w3.org/ns/prov#Person>
 ];
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/prov#Person>.
+    dsv:class <http://www.w3.org/ns/prov#Person>;
+    dsv:classRole role:main.
 :Organization dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Organization"@en;
@@ -61,13 +63,15 @@
     skos:scopeNote "If the Agent is an organisation, the use of the Organization Ontology is recommended."@en;
     dsv:specializes :Agent;
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/org#Organization>.
+    dsv:class <http://www.w3.org/ns/org#Organization>;
+    dsv:classRole role:main.
 :FundingReference dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Funding reference"@en;
     skos:definition "Information about financial support (funding) for the resource being registered."@en;
     a dsv:ClassProfile;
-    dsv:class <https://w3id.org/tib/datacite/class/FundingReference>.
+    dsv:class <https://w3id.org/tib/datacite/class/FundingReference>;
+    dsv:classRole role:supportive.
 :Distribution dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Distribution"@en;
@@ -79,20 +83,23 @@
   dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Distribution>
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
 :ValidationResult dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Validation result"@en;
     skos:definition "Class describing the result of validation testing. It may include validation of metadata, data and/or web services accessing the data."@en;
     a dsv:ClassProfile;
-    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#ValidationResult>.
+    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#ValidationResult>;
+    dsv:classRole role:supportive.
 :Subject dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Subject"@en;
     skos:definition "Subject, classification code, or key phrase describing the resource."@en;
     skos:scopeNote "Subjects are always concepts identified by IRI belonging to a vocabulary (subject scheme). For free-text keywords use a keyword."@en;
     a dsv:ClassProfile;
-    dsv:class <https://w3id.org/tib/datacite/class/Subject>.
+    dsv:class <https://w3id.org/tib/datacite/class/Subject>;
+    dsv:classRole role:supportive.
 :RelatedResource dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Related resource"@en;
@@ -100,27 +107,31 @@
     skos:scopeNote "Class is used for description of the resource together with the type of relation, for which is used value from codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Use qualified resource property to link to the dataset class. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc."@en;
     dsv:specializes :Resource;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#rdfs-Resource>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
 :ResourceAttribution dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Resource attribution"@en;
     skos:definition "Attribution is the ascribing of a Resource to an agent. It defines the responsibility of an agent to the resource in a given role."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Attribution>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :AttributedAgentRoleType dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Attributed agent role type"@en;
     skos:definition "Role of the agent in the attribution to the resource. "@en;
     skos:scopeNote "Use value from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Role>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :ContactDetails dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Contact details"@en;
     skos:definition "Contact details such as telephone, e-mail address etc."@en;
     skos:scopeNote "Describes contact details, such as telephone, e--mail address etc."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Kind>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :Address dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:definition "A spatial object that in a human-readable way identifies a fixed location. "@en;
@@ -132,7 +143,8 @@
   dsv:reusedFromResource <http://www.w3.org/ns/locn#Address>
 ];
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/locn#Address>.
+    dsv:class <http://www.w3.org/ns/locn#Address>;
+    dsv:classRole role:supportive.
 :MetadataRecord dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Metadata Record"@en, "Katalogizační záznam"@cs, "Record di catalogo"@it, "Registre du catalogue"@fr, "Registro del catálogo"@es, "Καταγραφή καταλόγου"@el, "سجل"@ar, "カタログ・レコード"@ja, "Katalogpost"@da;
@@ -152,7 +164,8 @@
   dsv:reusedAsProperty skos:scopeNote;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Standard>
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :Repository dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Repository"@en, "Catalogo"@it, "Catalogue"@fr, "Catálogo"@es, "Katalog"@cs, "Κατάλογος"@el, "فهرس قوائم البيانات"@ar, "カタログ"@ja, "Katalog"@da;
@@ -168,35 +181,40 @@
   dsv:reusedAsProperty skos:scopeNote;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Catalogue>
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
 :Distribution-DownloadableFile dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Distribution - downloadable file"@en;
     skos:definition "Physical embodiment of the dataset in a particular format. "@en;
     dsv:specializes :Distribution;
     a dsv:ClassProfile;
-    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#Distribution-DownloadableFile>.
+    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#Distribution-DownloadableFile>;
+    dsv:classRole role:main.
 :Distribution-DataService dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Distribution - data service"@en;
     skos:definition "Physical embodiment of the dataset distribution as a particular data service. "@en;
     dsv:specializes :Distribution;
     a dsv:ClassProfile;
-    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#Distribution-DataService>.
+    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#Distribution-DataService>;
+    dsv:classRole role:main.
 :File dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "File"@en;
     skos:definition "Digital resource representing collection of data."@en;
     skos:scopeNote "File is represented by URL on which is it accessable."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#rdfs-Resource>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :MediaType dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Media type"@en;
     skos:definition "A file format or physical medium."@en;
     skos:scopeNote "Use media type in a form of IRI from registry https://www.iana.org/assignments/media-types/media-types.xhtml."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#MediaType>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :DataService dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#DataService>;
@@ -211,7 +229,8 @@
   dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#DataService>
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
 :Documentation dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Documentation"@en;
@@ -223,21 +242,24 @@
   dsv:reusedAsProperty skos:scopeNote;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Document>
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :SubjectScheme dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Subject scheme"@en;
     skos:definition "Collection of subjects (keywords, concepts, classification codes) curated by a single source."@en;
     skos:scopeNote "Subject scheme sets a contexts for all subjects within this scheme. It usually represents thesauri, vocabulary etc., but may also  represent a set of concepts with the meaning of the same context, such as domain specific nomenclature."@en;
     a dsv:ClassProfile;
-    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#SubjectScheme>.
+    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#SubjectScheme>;
+    dsv:classRole role:supportive.
 :Location dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Location"@en;
     skos:definition "Spatial region or named place where the data was gathered or about which the data is focused."@en;
     skos:scopeNote "Location is represented according to the Open Formal Standard for Spatial Data. Locations are represented as a reference to the named place, geographic region or specific geometry according to the standardized geometry object representation. \nEvery Location instance must have at least one of the following attributes/relations: bbox, location name, geometry and/or related object identifier."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Location>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :Geometry dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Geometry"@en;
@@ -249,13 +271,15 @@
   dsv:reusedAsProperty skos:scopeNote;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Geometry>
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :AlternateTitle dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Alternate title"@en;
     skos:definition "Alternate title of the resource."@en;
     a dsv:ClassProfile;
-    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle>.
+    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle>;
+    dsv:classRole role:supportive.
 :Checksum dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:scopeNote "This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented. It is related to the download URL."@en;
@@ -271,56 +295,64 @@
   dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Checksum>
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :ChecksumAlgorithm dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Checksum algorithm"@en;
     skos:definition "Algorithm used for Checksums."@en;
     skos:scopeNote "Refers to an IRI,. e.g., instances of https://spdx.org/rdf/terms/#d4e2129 in SPDX Ontology."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#ChecksumAlgorithm>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :LicenceDocument dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Licence document"@en;
     skos:definition "A legal document giving official permission to do something with a resource and describing conditions under which it may be done."@en;
     skos:scopeNote "The IRI shall point to the document with the licence text."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#LicenceDocument>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :LocationRelationType dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Location relation type"@en;
     skos:definition "Relation of the dataset to the resource."@en;
     skos:scopeNote "Use value from codelist https://vocabs.ccmm.cz/registry/codelist/LocationRelation/."@en;
     a dsv:ClassProfile;
-    dsv:class skos:Concept.
+    dsv:class skos:Concept;
+    dsv:classRole role:supportive.
 :AlternateTitleType dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Alternate title type"@en;
     skos:definition "Type of alternate title."@en;
     skos:scopeNote "Use value from codelist https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/."@en;
     a dsv:ClassProfile;
-    dsv:class skos:Concept.
+    dsv:class skos:Concept;
+    dsv:classRole role:supportive.
 :DateType dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Date type"@en;
     skos:definition "Type of a date in relation to the resource."@en;
     skos:scopeNote "Use value from codelist https://vocabs.ccmm.cz/registry/codelist/TimeReference/."@en;
     a dsv:ClassProfile;
-    dsv:class skos:Concept.
+    dsv:class skos:Concept;
+    dsv:classRole role:supportive.
 :ResourceType dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Resource type"@en;
     skos:definition "Type of the resource."@en;
     skos:scopeNote "Use IRI identifier of the resource type from the codelist https://vocabularies.coar-repositories.org/resource_types/."@en;
     a dsv:ClassProfile;
-    dsv:class skos:Concept.
+    dsv:class skos:Concept;
+    dsv:classRole role:supportive.
 :ResourceRelationType dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Resource relation type"@en;
     skos:definition "Type of the relation between the dataset and given resource."@en;
     skos:scopeNote "Use value from the codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/."@en;
     a dsv:ClassProfile;
-    dsv:class skos:Concept.
+    dsv:class skos:Concept;
+    dsv:classRole role:supportive.
 :LanguageSystem dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Language system"@en;
@@ -332,27 +364,31 @@
   dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#LinguisticSystem>
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :Format dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Format"@en;
     skos:definition "Format of downloadable file."@en;
     skos:scopeNote "Use IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable codelist representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#MediaTypeOrExtent>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :AccessRights dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Access rights"@en;
     skos:definition "A statement about the access rights to the resource."@en;
     skos:scopeNote "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:\nembargoed access, metadata only access - :NON_PUBLIC,\nopen access - :PUBLIC,\nrestricted access - :RESTRICTED."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#RightsStatement>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :TimeRepresentation dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Time representation"@en, "entidad temporal"@es;
     skos:definition "Representation of time reference as a temporal interval or instant on which something relevant to the resource has happened."@en, "Un intervalo temporal o un instante."@es;
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/2006/time#TemporalEntity>.
+    dsv:class <http://www.w3.org/2006/time#TemporalEntity>;
+    dsv:classRole role:supportive.
 :TimeInstant dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Time instant"@en, "instante de tiempo."@es;
@@ -360,7 +396,8 @@
     skos:scopeNote "Use for representation of time reference with zero extent or duration."@en;
     dsv:specializes :TimeRepresentation;
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/2006/time#Instant>.
+    dsv:class <http://www.w3.org/2006/time#Instant>;
+    dsv:classRole role:supportive.
 :TimeInterval dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:scopeNote "Use for representation of time reference represented as an interval. Interval is represented by beginning and end time instants."@en;
@@ -377,7 +414,8 @@
   dsv:reusedFromResource <http://www.w3.org/2006/time#Interval>
 ];
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/2006/time#Interval>.
+    dsv:class <http://www.w3.org/2006/time#Interval>;
+    dsv:classRole role:supportive.
 :IdentifierScheme dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:scopeNote "Use identifier scheme in the form of IRI identifier. Methodology shall list known sources."@en;
@@ -393,21 +431,24 @@
   dsv:reusedFromResource <https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme>
 ];
     a dsv:ClassProfile;
-    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme>.
+    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme>;
+    dsv:classRole role:supportive.
 :Description dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Description"@en;
     skos:definition "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument."@en;
     skos:scopeNote "Description of the resource may have also a description type."@en;
     a dsv:ClassProfile;
-    dsv:class <https://w3id.org/tib/datacite/class/Description>.
+    dsv:class <https://w3id.org/tib/datacite/class/Description>;
+    dsv:classRole role:supportive.
 :DescriptionType dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Description type"@en;
     skos:definition "The type of the description."@en;
     skos:scopeNote "Use value from codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Concept>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :TimeReference dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:definition "An object representing time reference relevant to some event related to the resource has happened."@en;
@@ -418,7 +459,8 @@
   dsv:reusedFromResource <https://model.ccmm.cz/vocabulary/ccmm#TimeReference>
 ];
     a dsv:ClassProfile;
-    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#TimeReference>.
+    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#TimeReference>;
+    dsv:classRole role:supportive.
 :Resource dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Resource"@en;
@@ -433,7 +475,8 @@
     skos:definition "Unique and resolvable identifier containing the notation and identifier scheme in the form of URI."@en;
     skos:scopeNote "An identifier in a particular context, consisting of the content string that is the identifier and the context in a form of base IRI.\n- an optional identifier for the identifier scheme;\n- an optional identifier for the version of the identifier scheme;\n- an optional identifier for the agency that manages the identifier scheme."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Identifier>;
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :ProvenanceActivity dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Provenance activity"@en;
@@ -445,7 +488,8 @@
   dsv:reusedAsProperty skos:scopeNote;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Activity>
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
 :CommonProvenanceModelJsonRepresentation dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
@@ -460,7 +504,8 @@
   dsv:reusedFromResource <https://model.ccmm.cz/vocabulary/ccmm#CPMJsonRepresentation>
 ];
     a dsv:ClassProfile;
-    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#CPMJsonRepresentation>.
+    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#CPMJsonRepresentation>;
+    dsv:classRole role:supportive.
 :Ro-crateJsonRepresentation dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
@@ -475,7 +520,8 @@
   dsv:reusedFromResource <https://model.ccmm.cz/vocabulary/ccmm#Ro-crateJsonRepresentation>
 ];
     a dsv:ClassProfile;
-    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#Ro-crateJsonRepresentation>.
+    dsv:class <https://model.ccmm.cz/vocabulary/ccmm#Ro-crateJsonRepresentation>;
+    dsv:classRole role:supportive.
 
 <https://model.ccmm.cz/research-data/Dataset.hasRelatedResource> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
@@ -1320,6 +1366,54 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :CommonProvenanceModelJsonRepresentation.
 
+<https://model.ccmm.cz/research-data/Repository.dataset> dct:isPartOf <https://model.ccmm.cz/research-data/>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.dataset>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.dataset>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.dataset>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.dataset>
+];
+    dsv:cardinality cardinality:0n;
+    dsv:domain :Repository;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :Dataset.
+
+<https://model.ccmm.cz/research-data/Repository.record> dct:isPartOf <https://model.ccmm.cz/research-data/>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.record>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.record>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.record>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.record>
+];
+    dsv:cardinality cardinality:0n;
+    dsv:domain :Repository;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :MetadataRecord.
+
 <https://model.ccmm.cz/research-data/Dataset.title> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "title"@en;
@@ -1894,8 +1988,8 @@
 <https://model.ccmm.cz/research-data/IdentifierScheme.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
-    skos:definition "Identifier scheme label"@en;
-    skos:scopeNote "For example, DOI, ORCID etc."@en;
+    skos:definition "Identifier scheme label."@en;
+    skos:scopeNote "For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID melongs to the notation."@en;
     dsv:property rdfs:label;
     dsv:domain :IdentifierScheme;
     a dsv:DatatypePropertyProfile;
@@ -2113,5 +2207,39 @@
     dsv:cardinality cardinality:0n;
     dsv:property rdfs:label;
     dsv:domain :ProvenanceActivity;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange rdf:langString.
+
+<https://model.ccmm.cz/research-data/IdentifierScheme.notation> dct:isPartOf <https://model.ccmm.cz/research-data/>;
+    a dsv:TermProfile;
+    skos:prefLabel "notation"@en;
+    skos:definition "Notation of the identifier scheme."@en;
+    skos:scopeNote "Fill in the short notations of the identifier scheme, e.g. ROR, ORCID, DOI etc."@en;
+    dsv:property skos:notation;
+    dsv:domain :IdentifierScheme;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
+
+<https://model.ccmm.cz/research-data/Repository.description> dct:isPartOf <https://model.ccmm.cz/research-data/>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.description>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.description>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.description>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.description>
+];
+    dsv:cardinality cardinality:1n;
+    dsv:domain :Repository;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.

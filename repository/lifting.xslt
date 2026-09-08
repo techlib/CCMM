@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:c="https://schemas.dataspecer.com/xsd/core/" xmlns:ns0="http://purl.org/dc/terms/" xmlns:ns1="http://www.w3.org/ns/prov#">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:c="https://schemas.dataspecer.com/xsd/core/" xmlns:ns0="http://purl.org/dc/terms/" xmlns:ns1="http://www.w3.org/ns/prov#" xmlns:ns2="http://www.w3.org/ns/dcat#">
   <xsl:import href="../resource-attribution/lifting.xslt"/>
   <xsl:import href="../organization/lifting.xslt"/>
   <xsl:import href="../person/lifting.xslt"/>
@@ -69,10 +69,30 @@
           <xsl:value-of select="."/>
         </ns0:title>
       </xsl:for-each>
+      <xsl:for-each select="ccmm:description">
+        <ns0:description>
+          <xsl:apply-templates select="@*"/>
+          <xsl:value-of select="."/>
+        </ns0:description>
+      </xsl:for-each>
       <xsl:for-each select="ccmm:qualified_attribution">
         <ns1:qualifiedAttribution>
           <xsl:call-template name="_https_003a_002f_002fofn.gov.cz_002fclass_002f1782311692513-fbfd-95df-9c5a"/>
         </ns1:qualifiedAttribution>
+      </xsl:for-each>
+      <xsl:for-each select="ccmm:record">
+        <ns2:record>
+          <xsl:attribute name="rdf:resource">
+            <xsl:value-of select="."/>
+          </xsl:attribute>
+        </ns2:record>
+      </xsl:for-each>
+      <xsl:for-each select="ccmm:dataset">
+        <ns2:dataset>
+          <xsl:attribute name="rdf:resource">
+            <xsl:value-of select="."/>
+          </xsl:attribute>
+        </ns2:dataset>
       </xsl:for-each>
     </rdf:Description>
   </xsl:template>
