@@ -48,7 +48,7 @@
         <original_repository>
             <iri>https://datarepo.eosc.cz</iri>
             <label xml:lang="cs">Catch-all</label>
-            <description xml:lang="cs"/>
+            <description xml:lang="en">The Data Catch-all Repository is a general-purpose repository for research data for which no more suitable disciplinary, institutional, or community repository is available.</description>
             <qualified_attribution>
                 <attributed_agent>
                     <organization>
