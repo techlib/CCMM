@@ -1867,7 +1867,7 @@
     
         Czech Core Metadata Model for Research Data (CCMM) is a model for describing research data that facilitates their discovery, understanding, and sharing across European data repositories (catalogues) and within the context of Czech science and research. The model has been developed and maintained by the metadata group of the National Library of Technology within the project Czech Academic and Research Discovery Services (CARDS).
       </p><p>
-        CCMM establishes basic elements for describing datasets and provides a common metadata reference across repositories and domains.
+        CCMM establishes basic elements for describing research datasets and provides a common metadata reference across repositories and domains.
       </p><p>
         The namespace for CCMM: <a href="https://model.ccmm.cz/vocabulary/ccmm#">https://model.ccmm.cz/vocabulary/ccmm#</a>.
       </p><p>
@@ -1878,25 +1878,23 @@
         
         <h2>Introduction</h2>
         <p>
-            Czech Core Metadata Model for Research Data (CCMM) is a metadata profile for research data based on the FAIR principles (Findable, Accessible, Interoperable, Reusable) and a metadata profile of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>, a model designed for description of data across European data portals. The most recent CCMM version, 2.0.0, is at <a href="https://github.com/techlib/CCMM/tree/2.0.0">https://github.com/techlib/CCMM/tree/2.0.0</a>. The model was created and is maintained in Dataspecer, a tool developed at Charles University available from <a href="https://dataspecer.com/">https://dataspecer.com/</a>.
+            Czech Core Metadata Model for Research Data (CCMM), a metadata model for research data, is based on the FAIR principles (Findable, Accessible, Interoperable, Reusable) and is a metadata profile of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>, a model designed for description of data across European data portals. The most recent CCMM version, 2.0.0, is at <a href="https://github.com/techlib/CCMM">https://github.com/techlib/CCMM</a>. The model was created and is maintained in Dataspecer, a tool developed at Charles University available from <a href="https://dataspecer.com/">https://dataspecer.com/</a>.
         </p><p>
-            CCMM draws on the FAIR principles in order to make data better understandable, improve discoverability, support standard persistent identifiers (PIDs), and lead to more efficient monitoring of research and associated research data.
+            CCMM draws on the FAIR principles in order to make data easier to understand, improve discoverability, support standard Persistent Identifiers (PIDs), and leads to more efficient monitoring of research and associated research data.
         </p><p>
             The records in the <a href="https://nma.eosc.cz/"></a>Czech National Metadata Directory (N&aacute;rodn&iacute; metadatov&yacute; adres&aacute;&#345;, NMA)</a> are usually primarily in Czech and secondarily in English but the language choice depends on a research community. CCMM supports any combination of languages.
         </p><p>
-            The Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH), a communication protocol for sharing digital repository metadata, is also one of the methods of transferring metadata recorded in CCMM. For OAI-PMH transfers, use the namespace <a href="https://model.ccmm.cz/research-data">https://model.ccmm.cz/research-data</a> and the most recent version of the Dataset object schema, <a href="https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd">https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd</a>. The recommended prefix for OAI-PMH is ccmm-xml.      
+            The Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH), a communication protocol for sharing digital repository metadata, is a common method for transferring XML encoded metadata recorded in CCMM. For OAI-PMH transfers, use the namespace <a href="https://model.ccmm.cz/research-data">https://model.ccmm.cz/research-data</a> and the most recent version of the Dataset object schema, <a href="https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd">https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd</a>. The recommended prefix for OAI-PMH is ccmm-xml.      
         </p><p>
-            CCMM uses Persistent Identifiers (PIDs) to identify external resources. Although the final choices are up to metadata administrators, the recommended PIDs are ORCID for persons (<a href="https://orcid.org/">https://orcid.org/</a>) and ROR for organizations (<a href="https://ror.org/">https://ror.org/</a>).
+            CCMM uses PIDs to identify external resources. Although the final choices are up to metadata administrators, the recommended PIDs are ORCID for persons (<a href="https://orcid.org/">https://orcid.org/</a>) and ROR for organizations (<a href="https://ror.org/">https://ror.org/</a>).
         </p><p>
             CCMM incorporates controlled vocabularies, with a subset that is embedded in the model and therefore required. The embedded vocabularies are listed in the registry Controlled Vocabularies at <a href="https://www.ccmm.cz/en/controlled-vocabularies/">https://www.ccmm.cz/en/controlled-vocabularies/</a>. CCMM accepts any domain-specific subject terminologies.
         </p><p>
-            As a profile of DCAT-AP, CCMM profiles its basic classes, adjusted to reflect the area specific to CCMM, i.e., research data.
-        </p><p>  
-            CCMM has been developed as an RDF graph that consists of classes, their attributes, and relations between the classes. The principal element in the context of metadata description of datasets is class Dataset. Entities are divides into main and supportive, as their division roughly corresponds to the division in DCAT-AP. The main classes are essential to the model and support classes provide additional information.
+            CCMM has been developed as an RDF graph that consists of classes, their attributes, and relations between the classes. The Dataset class is the principal element in the context of metadata description of datasets. Classes are divided into main and supportive. The main classes are essential to the model and support classes provide additional information.
         </p><p>
-            The main representation of CCMM is the conceptual model in the form of RDF Graph, serialized in turtle format (the file dsv.ttl). The technical representation in strucutred formats is provided in XSD files, JSON schemas and also in graphs supported by Turtle and JSON-LD context files. For the technical representation, use Dataset as the root element.
+            CCMM has two basic representations: conceptual, as the graph, is the main one, and technical, as a set of structured formats, is secondary. The RDF graph is serialized in Turtle (the file dsv.ttl). The technical structureis primarily in XSD and further as JSON schemas as well as in graphs supported by Turtle and JSON-LD context files. For the technical representation, use Dataset as the root element.
         </p><p>
-            Metadata profile is maintained in the tool, developed for application profiles design.
+            Metadata profile is maintained in the tool Dataspecer, developed for application profiles design.
         </p><p>    
           A detailed introduction to CCMM, in Czech, is here: <a href="https://doi.org/10.48813/7825-md51">https://doi.org/10.48813/7825-md51</a>.
         </p>
