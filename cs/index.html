@@ -1864,9 +1864,9 @@
     <p class="copyright"></p>
     <section id="abstract">
       <p>
-        Czech Core Metadat Model for Research Data (CCMM) je metadatový model pro popis výzkumných dat, který určený pro jejich objevování, porozumění a sdílení napříč evropskými datovými repozitáři (katalogy) a také v kontextu české vědy a výzkumu. Model byl vyvinut a spravován skupinou pro metadata Národní technické knihovny v rámci projektu Czech Academic and Research Discovery Services (CARDS).
+        Czech Core Metadat Model for Research Data (CCMM) je metadatový model pro popis výzkumných dat. Jeho cílem je lepší objevování, porozumění a sdílení těchto dat napříč evropskými datovými repozitáři (katalogy) a také v kontextu české vědy a výzkumu. Model byl vyvinut a spravován skupinou pro metadata Národní technické knihovny v rámci projektu Czech Academic and Research Discovery Services (CARDS).
       </p><p>
-        CCMM definuje základní metadatové prvky pro popis datových sad a poskytuje společný referenční metadatový rámec napříč repozitáři a doménami.
+        CCMM definuje základní metadatové prvky pro popis výzkumných datových sad a poskytuje společný referenční metadatový rámec napříč repozitáři a doménami.
       </p><p>
         Jmenný prostor CCMM je <a href="https://model.ccmm.cz/vocabulary/ccmm#">https://model.ccmm.cz/vocabulary/ccmm#</a>.
       </p><p>
@@ -1877,21 +1877,19 @@
     <section>
         <h2>Úvod</h2>
         <p>
-            Czech Core Metadata Model for Research Data (CCMM) je metadatový model pro výzkumná data založený na principech FAIR (Findable, Accessible, Interoperable, Reusable), a zároveň je metadatovým profilem <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>, modelu určeného pro popis dat v evropských datových katalozích. Nejnovější verze CCMM, 2.0.0, je spravována v repozitáři na Githubu <a href="https://github.com/techlib/CCMM/tree/2.0.0">https://github.com/techlib/CCMM/tree/2.0.0</a>. Model byl vytvořen a je spravován v nástroji Dataspecer, vyvinutém na Univerzitě Karlově a dostupném na <a href="https://dataspecer.com/">https://dataspecer.com/</a>.
+            Czech Core Metadata Model for Research Data (CCMM) je metadatový model pro výzkumná data založený na principech FAIR (Findable, Accessible, Interoperable, Reusable), a zároveň je metadatovým profilem <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>, modelu určeného pro popis dat v evropských datových katalozích. Nejnovější verze CCMM, 2.0.0, je spravována v repozitáři na Githubu <a href="https://github.com/techlib/CCMM">https://github.com/techlib/CCMM</a>. Model byl vytvořen a je spravován v nástroji Dataspecer, vyvinutém na Univerzitě Karlově a dostupném na <a href="https://dataspecer.com/">https://dataspecer.com/</a>.
         </p><p>
             CCMM vychází z principů FAIR s cílem zvýšit srouzmitelnost dat, zlepšit jejich vyhledatelnost, podporovat standardní perzistentní identifikátory (PID) a přispět k efektivnějšímu monitorování výzkumu a výzkumných dat.
         </p><p>
             Většina záznamů v <a href="https://nma.eosc.cz/">Národním metadatovém adresáři (NMA)</a> je primárně v češtině a sekundárně v angličtině, volba jazyka je však na konkrétní výzkumné komunitě. CCMM podporuje libovolnou kombinaci jazyků.
         </p><p>
-            Protokol Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH), komunikační protokol pro sdílení metadat digitálních repozitářů, je jednou z metod přenosu metadat zaznamenaných v CCMM. Pro přenos prostřednictvím OAI-PMH použijte jmenný prostor <a href="https://model.ccmm.cz/research-data">https://model.ccmm.cz/research-data</a> a nejnovější verzi schématu objektu Datová sada (Dataset), např. <a href="https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd">https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd</a>. Doporučený prefix pro přenos OAI-PMH je ccmm-xml.
+            Protokol Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH), komunikační protokol pro sdílení metadat digitálních repozitářů, je běžnou metodou přenosu metadat zakódovaných v XML pro CCMM. Pro přenos prostřednictvím OAI-PMH použijte jmenný prostor <a href="https://model.ccmm.cz/research-data">https://model.ccmm.cz/research-data</a> a nejnovější verzi schématu objektu Datová sada (Dataset), např. <a href="https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd">https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd</a>. Doporučený prefix pro přenos OAI-PMH je ccmm-xml.
         </p><p>
-            CCMM používá k identifikaci externích zdrojů Persistentní identifikátory (PID). Přestože volba identifikátorů závisí na správci metadat, doporučenými schématy jsou ORCID pro osoby (<a href="https://orcid.org/">https://orcid.org/</a>) a ROR pro organizace (<a href="https://ror.org/">https://ror.org/</a>).
+            CCMM používá k identifikaci externích zdrojů persistentní identifikátory (PID). Přestože volba identifikátorů závisí na správci metadat, doporučenými schématy jsou ORCID pro osoby (<a href="https://orcid.org/">https://orcid.org/</a>) a ROR pro organizace (<a href="https://ror.org/">https://ror.org/</a>).
         </p><p>
             Jako podpora pro CCMM je vyžadována nebo doporučena celá řada řízených slovníků. Pro oborově specifickou terminologii je vhodné použít slovníky, které jsou v dané komunitě zavedené, ale přímo do CCMM je zabudováno několik povinných řízených slovníků. Některé byly znovu použity z existujících registrů, jiné jsou spravovány v nově vytvořeném registru řízených slovníků, který je k dispozici na adrese <a href="https://www.ccmm.cz/en/controlled-vocabularies/">https://www.ccmm.cz/en/controlled-vocabularies/</a>. CCMM akceptuje jakékoli oborově specifické tematické terminologie.
         </p><p>
-            CCMM je profilem DCAT-AP a jako takový profiluje jeho základní třídy, dělá to ovšem v kontextu využití pro popis výzkumných dat.
-        </p><p>
-            CCMM byl vytvořen jako RDF graf, který se skládá z tříd, jejich atributů a vztahů mezi třídami. V kontextu popisu metadat je základním stavebním kamenem prvek Dataset. Entity jsou rozděleny na hlavní a podpůrné, přičemž hlavní jsou nezbytnými částmi modelu, zatímco podpůrné poskytují doplňující informace. Částečně to pokrývá rozdělení v DCAT-AP, ale důležitost některých tříd je v kontextu CCMM odlišná.
+            CCMM byl vytvořen jako RDF graf, který se skládá z tříd, jejich atributů a vztahů mezi třídami. V kontextu popisu metadat je ústřední entitou třída Dataset. Entity jsou rozděleny na hlavní a podpůrné, přičemž hlavní jsou nezbytnými částmi modelu, zatímco podpůrné poskytují doplňující informace.
         </p><p>
             Hlavním výstupem CCMM je konceptuální model ve formě RDF grafu, serializovaného ve formátu Turtle (soubor dsv.ttl v GitHubu). Technická reprezentace ve strukturovaných formátech je poskytována v souborech XSD, JSON schématech a také ve formě grafu prostřednictvím souborů Turtle a JSON-LD context. Pro technickou reprezentaci použijte jako kořenový element Dataset.
         </p><p>
