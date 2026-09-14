@@ -149,7 +149,8 @@
             <value>26316919</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="en">Identification Number (IČO)</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>COMTES FHT</name>
