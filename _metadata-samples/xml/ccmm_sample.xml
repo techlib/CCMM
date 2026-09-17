@@ -202,9 +202,9 @@
             </time_instant>
         </temporal_representation>
         <date_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Collected</iri>
-            <label xml:lang="en">Date Collected</label>
-            <label xml:lang="cs">Datum sběru</label>
+            <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Created</iri>
+            <label xml:lang="en">Date Created</label>
+            <label xml:lang="cs">Datum vytvoření</label>
         </date_type>
     </time_reference>
     <time_reference>
