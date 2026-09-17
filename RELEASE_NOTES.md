@@ -1,6 +1,6 @@
 CHANGELOG
 ---------------------------------------
-### 2026-10-01 - Profiling CCMM to DCAT-AP
+### 2026-10-01 - Major release 2.0.0
 * profiling properties through DCAT-AP (instead of final resources)
 * respecting cardinalities of DCAT-AP
 * dividing subjects to subjects (from controlled vocabulary) and keyword (plain string)
