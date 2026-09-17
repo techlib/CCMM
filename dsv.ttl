@@ -104,7 +104,7 @@
     a dsv:TermProfile;
     skos:prefLabel "Related resource"@en;
     skos:definition "Resource represents any resource, physical or digital, that is related to the described dataset."@en;
-    skos:scopeNote "Class is used for description of the resource together with the type of relation, for which is used value from codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Use qualified resource property to link to the dataset class. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc."@en;
+    skos:scopeNote "Class is used for description of the resource together with the type of relation, for which is used value from code list https://w3id.org/tib/datacite/vocab/relationType. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc."@en;
     dsv:specializes :Resource;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#rdfs-Resource>;
     a dsv:ClassProfile;
@@ -317,7 +317,7 @@
     a dsv:TermProfile;
     skos:prefLabel "Location relation type"@en;
     skos:definition "Relation of the dataset to the resource."@en;
-    skos:scopeNote "Use value from codelist https://vocabs.ccmm.cz/registry/codelist/LocationRelation/."@en;
+    skos:scopeNote "Use value from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/."@en;
     a dsv:ClassProfile;
     dsv:class skos:Concept;
     dsv:classRole role:supportive.
@@ -325,7 +325,7 @@
     a dsv:TermProfile;
     skos:prefLabel "Alternate title type"@en;
     skos:definition "Type of alternate title."@en;
-    skos:scopeNote "Use value from codelist https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/."@en;
+    skos:scopeNote "Use value from the code list https://w3id.org/tib/datacite/vocab/titleType."@en;
     a dsv:ClassProfile;
     dsv:class skos:Concept;
     dsv:classRole role:supportive.
@@ -333,7 +333,7 @@
     a dsv:TermProfile;
     skos:prefLabel "Date type"@en;
     skos:definition "Type of a date in relation to the resource."@en;
-    skos:scopeNote "Use value from codelist https://vocabs.ccmm.cz/registry/codelist/TimeReference/."@en;
+    skos:scopeNote "Use value from the code list https://w3id.org/tib/datacite/vocab/dateType."@en;
     a dsv:ClassProfile;
     dsv:class skos:Concept;
     dsv:classRole role:supportive.
@@ -341,7 +341,7 @@
     a dsv:TermProfile;
     skos:prefLabel "Resource type"@en;
     skos:definition "Type of the resource."@en;
-    skos:scopeNote "Use IRI identifier of the resource type from the codelist https://vocabularies.coar-repositories.org/resource_types/."@en;
+    skos:scopeNote "Use IRI identifier of the resource type from the register https://vocabularies.coar-repositories.org/resource_types/."@en;
     a dsv:ClassProfile;
     dsv:class skos:Concept;
     dsv:classRole role:supportive.
@@ -349,7 +349,7 @@
     a dsv:TermProfile;
     skos:prefLabel "Resource relation type"@en;
     skos:definition "Type of the relation between the dataset and given resource."@en;
-    skos:scopeNote "Use value from the codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/."@en;
+    skos:scopeNote "Use value from the code list https://w3id.org/tib/datacite/vocab/relationType."@en;
     a dsv:ClassProfile;
     dsv:class skos:Concept;
     dsv:classRole role:supportive.
@@ -445,7 +445,7 @@
     a dsv:TermProfile;
     skos:prefLabel "Description type"@en;
     skos:definition "The type of the description."@en;
-    skos:scopeNote "Use value from codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/."@en;
+    skos:scopeNote "Use value from the code list https://w3id.org/tib/datacite/vocab/descriptionType."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Concept>;
     a dsv:ClassProfile;
     dsv:classRole role:supportive.
@@ -570,7 +570,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has subject"@en;
     skos:definition "Dataset described using a subject."@en;
-    skos:scopeNote "At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference codelist https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this codelist as a subject."@en;
+    skos:scopeNote "At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference code list https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this code list as a subject."@en;
     dsv:cardinality cardinality:1n;
     dsv:property <https://w3id.org/tib/datacite/property/subject>;
     dsv:domain :Dataset;
@@ -581,7 +581,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has time reference"@en;
     skos:definition "Reference to events related to the dataset."@en;
-    skos:scopeNote "Must contain at least one time reference with date type value \"Created\"  from  https://vocabs.ccmm.cz/registry/codelist/TimeReference/."@en;
+    skos:scopeNote "Must contain at least one time reference with date type value \"Created\"  represented by https://w3id.org/tib/datacite/vocab/dateType/Created."@en;
     dsv:cardinality cardinality:1n;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#hasTimeReference>;
     dsv:domain :Dataset;
@@ -1018,7 +1018,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has date type"@en;
     skos:definition "Reference to the codelist of date types."@en;
-    skos:scopeNote "References to the value from https://vocabs.ccmm.cz/registry/codelist/TimeReference/."@en;
+    skos:scopeNote "References to the value from the code list https://w3id.org/tib/datacite/vocab/dateType."@en;
     dsv:cardinality cardinality:11;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
     dsv:domain :TimeReference;
@@ -1029,7 +1029,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has resource relation type"@en;
     skos:definition "Relation to the relation type between dataset and resource."@en;
-    skos:scopeNote "Use value from https://vocabs.ccmm.cz/registry/codelist/RelationType/."@en;
+    skos:scopeNote "Use value from the code list https://w3id.org/tib/datacite/vocab/relationType."@en;
     dsv:cardinality cardinality:01;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
     dsv:domain :RelatedResource;
@@ -1040,7 +1040,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has location relation type"@en;
     skos:definition "Relation of the location to the dataset."@en;
-    skos:scopeNote "Use values from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/."@en;
+    skos:scopeNote "Use values from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/."@en;
     dsv:cardinality cardinality:11;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
     dsv:domain :Location;
@@ -1051,7 +1051,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has alternate title type"@en;
     skos:definition "Type of the alternate name relation."@en;
-    skos:scopeNote "References to the value from https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/."@en;
+    skos:scopeNote "References to the value from the code list https://w3id.org/tib/datacite/vocab/titleType."@en;
     dsv:cardinality cardinality:01;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
     dsv:domain :AlternateTitle;
@@ -1081,7 +1081,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has description"@en;
     skos:definition "Relation to the description of a dataset."@en;
-    skos:scopeNote "Description may have various type from the codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. "@en;
+    skos:scopeNote "Description may have various type from the code list https://w3id.org/tib/datacite/vocab/descriptionType."@en;
     dsv:cardinality cardinality:1n;
     dsv:property <https://w3id.org/tib/datacite/property/description>;
     dsv:domain :Dataset;
@@ -1092,7 +1092,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has description type"@en;
     skos:definition "Relation to the type of the description."@en;
-    skos:scopeNote "Type of the description from the code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/."@en;
+    skos:scopeNote "Type of the description from the code list https://w3id.org/tib/datacite/vocab/descriptionType."@en;
     dsv:cardinality cardinality:01;
     dsv:property <https://w3id.org/tib/datacite/property/descriptionType>;
     dsv:domain :Description;
@@ -1110,15 +1110,11 @@
 
 <https://model.ccmm.cz/research-data/Resource.hasAlternateTitle> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
+    skos:definition "References to the alternate title of the resource."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty rdfs:label;
   dsv:reusedAsProperty skos:prefLabel;
-  dsv:reusedFromResource <https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle>
-], [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
-  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource <https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle>
 ];
     dsv:cardinality cardinality:0n;
@@ -1677,7 +1673,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Media type label."@en;
-    skos:scopeNote "Use the label of the corresponding value from the used code list (usually IANA: https://www.iana.org/assignments/media-types/media-types.xhtml). This property may be repeated for parallel language versions of the label."@en;
+    skos:scopeNote "Use a label of the corresponding value from the used code list (usually IANA: https://www.iana.org/assignments/media-types/media-types.xhtml). This property may be repeated for parallel language versions of the label."@en;
     dsv:cardinality cardinality:11;
     dsv:property skos:prefLabel;
     dsv:domain :MediaType;
@@ -1738,7 +1734,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Resource agent role type label."@en;
-    skos:scopeNote "Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. This property may be repeated for parallel language versions of the label."@en;
+    skos:scopeNote "Use a label of the corresponding value from the code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. This property may be repeated for parallel language versions of the label."@en;
     dsv:cardinality cardinality:11;
     dsv:property skos:prefLabel;
     dsv:domain :AttributedAgentRoleType;
@@ -1890,7 +1886,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Label of format value."@en;
-    skos:scopeNote "Use a label of a corresponding code list value from http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label."@en;
+    skos:scopeNote "Use a label of the corresponding value from the code list http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label."@en;
     dsv:cardinality cardinality:11;
     dsv:property skos:prefLabel;
     dsv:domain :Format;
@@ -1901,7 +1897,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Language label"@en;
-    skos:scopeNote "Use language label code from http://publications.europa.eu/resource/authority/language/. "@en;
+    skos:scopeNote "Use a language label code from the code list http://publications.europa.eu/resource/authority/language/. "@en;
     dsv:cardinality cardinality:11;
     dsv:property skos:prefLabel;
     dsv:domain :LanguageSystem;
@@ -1923,7 +1919,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Label of the resource type."@en;
-    skos:scopeNote "Use label of a corresponding value from code list https://vocabularies.coar-repositories.org/resource_types/. This property may be repeated for parallel language versions of the label."@en;
+    skos:scopeNote "Use a label of the corresponding value from the register https://vocabularies.coar-repositories.org/resource_types/. This property may be repeated for parallel language versions of the label."@en;
     dsv:cardinality cardinality:11;
     dsv:property skos:prefLabel;
     dsv:domain :ResourceType;
@@ -1945,7 +1941,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Date type label."@en;
-    skos:scopeNote "Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/TimeReference/. This property may be repeated for parallel language versions of the label."@en;
+    skos:scopeNote "Use label of a corresponding value from the code list https://w3id.org/tib/datacite/vocab/dateType. This property may be repeated for parallel language versions of the label."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Concept.preferredLabel>;
     dsv:cardinality cardinality:11;
     dsv:domain :DateType;
@@ -1956,7 +1952,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Label of the relation type."@en;
-    skos:scopeNote "Use label of corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/RelationType/. This property may be repeated for parallel language versions of the label."@en;
+    skos:scopeNote "Use a label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/relationType. This property may be repeated for parallel language versions of the label."@en;
     dsv:cardinality cardinality:11;
     dsv:property skos:prefLabel;
     dsv:domain :ResourceRelationType;
@@ -1967,7 +1963,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Location relation type label."@en;
-    skos:scopeNote "Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label."@en;
+    skos:scopeNote "Use label of a corresponding value from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label."@en;
     dsv:cardinality cardinality:11;
     dsv:property skos:prefLabel;
     dsv:domain :LocationRelationType;
@@ -1978,7 +1974,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Alternate title type label."@en;
-    skos:scopeNote "Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/. This property may be repeated for parallel language versions of the label."@en;
+    skos:scopeNote "Use a label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/titleType. This property may be repeated for parallel language versions of the label."@en;
     dsv:cardinality cardinality:11;
     dsv:property skos:prefLabel;
     dsv:domain :AlternateTitleType;
@@ -2041,7 +2037,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Label of the description type."@en;
-    skos:scopeNote "Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. This property may be repeated for parallel language versions of the label."@en;
+    skos:scopeNote "Use the label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/descriptionType. This property may be repeated for parallel language versions of the label."@en;
     dsv:cardinality cardinality:11;
     dsv:property skos:prefLabel;
     dsv:domain :DescriptionType;

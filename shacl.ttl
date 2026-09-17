@@ -82,7 +82,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/e881620> a sh:PropertyShape;
     sh:name "has subject"@en;
-    sh:description "At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference codelist https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this codelist as a subject."@en;
+    sh:description "At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference code list https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this code list as a subject."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://w3id.org/tib/datacite/property/subject>;
     sh:minCount 1;
@@ -92,7 +92,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/5cd2bbfb> a sh:PropertyShape;
     sh:name "has time reference"@en;
-    sh:description "Must contain at least one time reference with date type value \"Created\"  from  https://vocabs.ccmm.cz/registry/codelist/TimeReference/."@en;
+    sh:description "Must contain at least one time reference with date type value \"Created\"  represented by https://w3id.org/tib/datacite/vocab/dateType/Created."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#hasTimeReference>;
     sh:minCount 1;
@@ -130,7 +130,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/78d1c0c0> a sh:PropertyShape;
     sh:name "has description"@en;
-    sh:description "Description may have various type from the codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. "@en;
+    sh:description "Description may have various type from the code list https://w3id.org/tib/datacite/vocab/descriptionType."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://w3id.org/tib/datacite/property/description>;
     sh:minCount 1;
@@ -480,7 +480,7 @@
 
 <https://model.ccmm.cz/research-data/rdfs%3AResourceShape/2d020c93> a sh:PropertyShape;
     sh:name "has resource relation type"@en;
-    sh:description "Use value from https://vocabs.ccmm.cz/registry/codelist/RelationType/."@en;
+    sh:description "Use value from the code list https://w3id.org/tib/datacite/vocab/relationType."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
     sh:maxCount 1;
@@ -519,7 +519,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ARoleShape/51044033> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. This property may be repeated for parallel language versions of the label."@en;
+    sh:description "Use a label of the corresponding value from the code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. This property may be repeated for parallel language versions of the label."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
     sh:maxCount 1;
@@ -908,7 +908,7 @@
 
 <https://model.ccmm.cz/research-data/dcterms%3AMediaTypeShape/-743a4b5c> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "Use the label of the corresponding value from the used code list (usually IANA: https://www.iana.org/assignments/media-types/media-types.xhtml). This property may be repeated for parallel language versions of the label."@en;
+    sh:description "Use a label of the corresponding value from the used code list (usually IANA: https://www.iana.org/assignments/media-types/media-types.xhtml). This property may be repeated for parallel language versions of the label."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
     sh:maxCount 1;
@@ -1004,7 +1004,7 @@
 
 <https://model.ccmm.cz/research-data/dcterms%3ALocationShape/-65ca3f4f> a sh:PropertyShape;
     sh:name "has location relation type"@en;
-    sh:description "Use values from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/."@en;
+    sh:description "Use values from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
     sh:maxCount 1;
@@ -1060,7 +1060,7 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3AAlternateTitleShape/-3d589306> a sh:PropertyShape;
     sh:name "has alternate title type"@en;
-    sh:description "References to the value from https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/."@en;
+    sh:description "References to the value from the code list https://w3id.org/tib/datacite/vocab/titleType."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
     sh:maxCount 1;
@@ -1125,7 +1125,7 @@
 
 <https://model.ccmm.cz/research-data/skos%3AConceptShape/-58c605ed> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label."@en;
+    sh:description "Use label of a corresponding value from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
     sh:maxCount 1;
@@ -1137,7 +1137,7 @@
 
 <https://model.ccmm.cz/research-data/skos%3AConceptShape/6ddde680> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/. This property may be repeated for parallel language versions of the label."@en;
+    sh:description "Use a label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/titleType. This property may be repeated for parallel language versions of the label."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
     sh:maxCount 1;
@@ -1149,7 +1149,7 @@
 
 <https://model.ccmm.cz/research-data/skos%3AConceptShape/-687b8690> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/TimeReference/. This property may be repeated for parallel language versions of the label."@en;
+    sh:description "Use label of a corresponding value from the code list https://w3id.org/tib/datacite/vocab/dateType. This property may be repeated for parallel language versions of the label."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
     sh:maxCount 1;
@@ -1161,7 +1161,7 @@
 
 <https://model.ccmm.cz/research-data/skos%3AConceptShape/-505842b0> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "Use label of a corresponding value from code list https://vocabularies.coar-repositories.org/resource_types/. This property may be repeated for parallel language versions of the label."@en;
+    sh:description "Use a label of the corresponding value from the register https://vocabularies.coar-repositories.org/resource_types/. This property may be repeated for parallel language versions of the label."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
     sh:maxCount 1;
@@ -1173,7 +1173,7 @@
 
 <https://model.ccmm.cz/research-data/skos%3AConceptShape/535606c> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "Use label of corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/RelationType/. This property may be repeated for parallel language versions of the label."@en;
+    sh:description "Use a label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/relationType. This property may be repeated for parallel language versions of the label."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
     sh:maxCount 1;
@@ -1189,7 +1189,7 @@
 
 <https://model.ccmm.cz/research-data/dcterms%3ALinguisticSystemShape/-1ffef31> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "Use language label code from http://publications.europa.eu/resource/authority/language/. "@en;
+    sh:description "Use a language label code from the code list http://publications.europa.eu/resource/authority/language/. "@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
     sh:maxCount 1;
@@ -1205,7 +1205,7 @@
 
 <https://model.ccmm.cz/research-data/dcterms%3AMediaTypeOrExtentShape/-5bd0de1> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "Use a label of a corresponding code list value from http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label."@en;
+    sh:description "Use a label of the corresponding value from the code list http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
     sh:maxCount 1;
@@ -1325,7 +1325,7 @@
 
 <https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/DescriptionShape/4fc7062d> a sh:PropertyShape;
     sh:name "has description type"@en;
-    sh:description "Type of the description from the code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/."@en;
+    sh:description "Type of the description from the code list https://w3id.org/tib/datacite/vocab/descriptionType."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://w3id.org/tib/datacite/property/descriptionType>;
     sh:maxCount 1;
@@ -1337,7 +1337,7 @@
 
 <https://model.ccmm.cz/research-data/skos%3AConceptShape/2d4e697c> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. This property may be repeated for parallel language versions of the label."@en;
+    sh:description "Use the label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/descriptionType. This property may be repeated for parallel language versions of the label."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
     sh:maxCount 1;
@@ -1363,7 +1363,7 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3ATimeReferenceShape/6c5961b8> a sh:PropertyShape;
     sh:name "has date type"@en;
-    sh:description "References to the value from https://vocabs.ccmm.cz/registry/codelist/TimeReference/."@en;
+    sh:description "References to the value from the code list https://w3id.org/tib/datacite/vocab/dateType."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#hasType>;
     sh:maxCount 1;

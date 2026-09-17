@@ -1878,25 +1878,23 @@
         
         <h2>Introduction</h2>
         <p>
-            Czech Core Metadata Model for Research Data (CCMM), a metadata model for research data, is based on the FAIR principles (Findable, Accessible, Interoperable, Reusable) and is a metadata profile of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>, a model designed for description of data across European data portals. The most recent CCMM version, 2.0.0, is at <a href="https://github.com/techlib/CCMM">https://github.com/techlib/CCMM</a>. The model was created and is maintained in Dataspecer, a tool developed at Charles University available from <a href="https://dataspecer.com/">https://dataspecer.com/</a>.
+            Czech Core Metadata Model for Research Data (CCMM), a metadata model for research data, is based on the FAIR principles (Findable, Accessible, Interoperable, Reusable) and is a metadata profile of <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>, a model designed for description of data across European data portals. The most recent CCMM version, 2.0.0, is at <a href="https://github.com/techlib/CCMM">https://github.com/techlib/CCMM</a>. The model was created and is maintained in Dataspecer, a tool developed at Charles University: <a href="https://dataspecer.com/">https://dataspecer.com/</a>.
         </p><p>
-            CCMM draws on the FAIR principles in order to make data easier to understand, improve discoverability, support standard Persistent Identifiers (PIDs), and leads to more efficient monitoring of research and associated research data.
+            CCMM draws on the FAIR principles in order to make data easier to understand, improve discoverability, and support standard persistent identifiers (PIDs). This leads to more efficient monitoring of research and associated research data.
         </p><p>
             The records in the <a href="https://nma.eosc.cz/"></a>Czech National Metadata Directory (N&aacute;rodn&iacute; metadatov&yacute; adres&aacute;&#345;, NMA)</a> are usually primarily in Czech and secondarily in English but the language choice depends on a research community. CCMM supports any combination of languages.
         </p><p>
-            The Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH), a communication protocol for sharing digital repository metadata, is a common method for transferring XML encoded metadata recorded in CCMM. For OAI-PMH transfers, use the namespace <a href="https://model.ccmm.cz/research-data">https://model.ccmm.cz/research-data</a> and the most recent version of the Dataset object schema, <a href="https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd">https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd</a>. The recommended prefix for OAI-PMH is ccmm-xml.      
+            The Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH), a communication protocol for sharing digital repository metadata, is a common method for transferring XML-encoded metadata recorded in CCMM. For OAI-PMH transfers, use the namespace <a href="https://model.ccmm.cz/research-data">https://model.ccmm.cz/research-data</a> and the most recent version of the Dataset object schema: <a href="https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd">https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd</a>. The recommended prefix for OAI-PMH is ccmm-xml.      
         </p><p>
             CCMM uses PIDs to identify external resources. Although the final choices are up to metadata administrators, the recommended PIDs are ORCID for persons (<a href="https://orcid.org/">https://orcid.org/</a>) and ROR for organizations (<a href="https://ror.org/">https://ror.org/</a>).
         </p><p>
-            CCMM incorporates controlled vocabularies, with a subset that is embedded in the model and therefore required. The embedded vocabularies are listed in the registry Controlled Vocabularies at <a href="https://www.ccmm.cz/en/controlled-vocabularies/">https://www.ccmm.cz/en/controlled-vocabularies/</a>. CCMM accepts any domain-specific subject terminologies.
+            CCMM incorporates controlled vocabularies, with a subset that is embedded in the model and therefore required. The embedded vocabularies are listed in the registry Controlled Vocabularies at <a href="https://vocabs.repo.cz/en/">https://vocabs.repo.cz/en/</a>. CCMM accepts any domain-specific subject terminologies.
         </p><p>
-            CCMM has been developed as an RDF graph that consists of classes, their attributes, and relations between the classes. The Dataset class is the principal element in the context of metadata description of datasets. Classes are divided into main and supportive. The main classes are essential to the model and support classes provide additional information.
+            CCMM has been developed as an RDF graph that consists of classes, their attributes, and relations between the classes. The Dataset class is the principal element in the context of metadata description of datasets. Classes are divided into main and supportive. The main classes are essential to the model and the support classes provide additional information.
         </p><p>
-            CCMM has two basic representations: conceptual, as the graph, is the main one, and technical, as a set of structured formats, is secondary. The RDF graph is serialized in Turtle (the file dsv.ttl). The technical structureis primarily in XSD and further as JSON schemas as well as in graphs supported by Turtle and JSON-LD context files. For the technical representation, use Dataset as the root element.
+            CCMM's main representation is conceptual, as a graph, and has a secondary technical representation as a set of structured formats. The RDF graph is serialized in Turtle (the file dsv.ttl). The technical structure is primarily in XSD and further as JSON schemas as well as in graphs supported by Turtle and JSON-LD context files. For the technical representation, use Dataset as the root element.
         </p><p>
-            Metadata profile is maintained in the tool Dataspecer, developed for application profiles design.
-        </p><p>    
-          A detailed introduction to CCMM, in Czech, is here: <a href="https://doi.org/10.48813/7825-md51">https://doi.org/10.48813/7825-md51</a>.
+            A detailed introduction to CCMM, in Czech, is here: <a href="https://doi.org/10.48813/7825-md51">https://doi.org/10.48813/7825-md51</a>.
         </p>
       </section>
     <section>
@@ -1913,7 +1911,7 @@
       <section>
         <h2>Main class profiles</h2>
         <p>
-          Mian class profiles represent the core of CCMM profile. This section describes basic entities -- repository, dataset, its metadata and distributions and persons and organizations acting in various roles in attribution to aforementioned entities.
+          Main class profiles represent the core of CCMM profile. This section describes the basic entities: repository, dataset, its metadata and distributions and persons and organizations acting in various roles in attribution to aforementioned entities.
         </p>
 
           <section id="Resource">
@@ -2009,6 +2007,10 @@
                   <tr>
                     <td>Label</td>
                     <td>has alternate title</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>References to the alternate title of the resource.</td>
                   </tr>
                   <tr>
                     <td>Domain</td>
@@ -2834,7 +2836,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Description may have various type from the codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. </td>
+                    <td>Description may have various type from the code list https://w3id.org/tib/datacite/vocab/descriptionType.</td>
                   </tr>
                 </table>
               </section>    <section id="Dataset.hasDistribution">
@@ -3362,7 +3364,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference codelist https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this codelist as a subject.</td>
+                    <td>At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference code list https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this code list as a subject.</td>
                   </tr>
                 </table>
               </section>    <section id="Dataset.hasTimeReference">
@@ -3427,7 +3429,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Must contain at least one time reference with date type value &quot;Created&quot;  from  https://vocabs.ccmm.cz/registry/codelist/TimeReference/.</td>
+                    <td>Must contain at least one time reference with date type value &quot;Created&quot;  represented by https://w3id.org/tib/datacite/vocab/dateType/Created.</td>
                   </tr>
                 </table>
               </section>    <section id="Dataset.hasValidationResult">
@@ -5410,7 +5412,7 @@
           
               <tr>
                 <td>Usage note</td>
-                <td>Class is used for description of the resource together with the type of relation, for which is used value from codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Use qualified resource property to link to the dataset class. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc.</td>
+                <td>Class is used for description of the resource together with the type of relation, for which is used value from code list https://w3id.org/tib/datacite/vocab/relationType. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc.</td>
               </tr>
             </table>
           
@@ -5487,7 +5489,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use value from https://vocabs.ccmm.cz/registry/codelist/RelationType/.</td>
+                    <td>Use value from the code list https://w3id.org/tib/datacite/vocab/relationType.</td>
                   </tr>
                 </table>
               </section>    <section id="Resource.resourceURL">
@@ -9312,7 +9314,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>References to the value from https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/.</td>
+                    <td>References to the value from the code list https://w3id.org/tib/datacite/vocab/titleType.</td>
                   </tr>
                 </table>
               </section>    <section id="AlternateTitle.title">
@@ -9433,7 +9435,7 @@
           
               <tr>
                 <td>Usage note</td>
-                <td>Use value from codelist https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/.</td>
+                <td>Use value from the code list https://w3id.org/tib/datacite/vocab/titleType.</td>
               </tr>
             </table>
           
@@ -9519,7 +9521,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/. This property may be repeated for parallel language versions of the label.</td>
+                    <td>Use a label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/titleType. This property may be repeated for parallel language versions of the label.</td>
                   </tr>
                 </table>
               </section>
@@ -9818,7 +9820,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. This property may be repeated for parallel language versions of the label.</td>
+                    <td>Use a label of the corresponding value from the code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. This property may be repeated for parallel language versions of the label.</td>
                   </tr>
                 </table>
               </section>
@@ -10655,7 +10657,7 @@
           
               <tr>
                 <td>Usage note</td>
-                <td>Use value from codelist https://vocabs.ccmm.cz/registry/codelist/TimeReference/.</td>
+                <td>Use value from the code list https://w3id.org/tib/datacite/vocab/dateType.</td>
               </tr>
             </table>
           
@@ -10751,7 +10753,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/TimeReference/. This property may be repeated for parallel language versions of the label.</td>
+                    <td>Use label of a corresponding value from the code list https://w3id.org/tib/datacite/vocab/dateType. This property may be repeated for parallel language versions of the label.</td>
                   </tr>
                 </table>
               </section>
@@ -10961,7 +10963,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Type of the description from the code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/.</td>
+                    <td>Type of the description from the code list https://w3id.org/tib/datacite/vocab/descriptionType.</td>
                   </tr>
                 </table>
               </section>
@@ -11019,7 +11021,7 @@
           
               <tr>
                 <td>Usage note</td>
-                <td>Use value from codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/.</td>
+                <td>Use value from the code list https://w3id.org/tib/datacite/vocab/descriptionType.</td>
               </tr>
             </table>
           
@@ -11105,7 +11107,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. This property may be repeated for parallel language versions of the label.</td>
+                    <td>Use the label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/descriptionType. This property may be repeated for parallel language versions of the label.</td>
                   </tr>
                 </table>
               </section>
@@ -11522,7 +11524,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use a label of a corresponding code list value from http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label.</td>
+                    <td>Use a label of the corresponding value from the code list http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label.</td>
                   </tr>
                 </table>
               </section>
@@ -12697,7 +12699,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use language label code from http://publications.europa.eu/resource/authority/language/. </td>
+                    <td>Use a language label code from the code list http://publications.europa.eu/resource/authority/language/. </td>
                   </tr>
                 </table>
               </section>
@@ -13169,7 +13171,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use values from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/.</td>
+                    <td>Use values from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/.</td>
                   </tr>
                 </table>
               </section>    <section id="Location.hasRelatedObject">
@@ -13345,7 +13347,7 @@
           
               <tr>
                 <td>Usage note</td>
-                <td>Use value from codelist https://vocabs.ccmm.cz/registry/codelist/LocationRelation/.</td>
+                <td>Use value from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/.</td>
               </tr>
             </table>
           
@@ -13431,7 +13433,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label.</td>
+                    <td>Use label of a corresponding value from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label.</td>
                   </tr>
                 </table>
               </section>
@@ -13596,7 +13598,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use the label of the corresponding value from the used code list (usually IANA: https://www.iana.org/assignments/media-types/media-types.xhtml). This property may be repeated for parallel language versions of the label.</td>
+                    <td>Use a label of the corresponding value from the used code list (usually IANA: https://www.iana.org/assignments/media-types/media-types.xhtml). This property may be repeated for parallel language versions of the label.</td>
                   </tr>
                 </table>
               </section>
@@ -14147,7 +14149,7 @@
           
               <tr>
                 <td>Usage note</td>
-                <td>Use value from the codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/.</td>
+                <td>Use value from the code list https://w3id.org/tib/datacite/vocab/relationType.</td>
               </tr>
             </table>
           
@@ -14233,7 +14235,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use label of corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/RelationType/. This property may be repeated for parallel language versions of the label.</td>
+                    <td>Use a label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/relationType. This property may be repeated for parallel language versions of the label.</td>
                   </tr>
                 </table>
               </section>
@@ -14281,7 +14283,7 @@
           
               <tr>
                 <td>Usage note</td>
-                <td>Use IRI identifier of the resource type from the codelist https://vocabularies.coar-repositories.org/resource_types/.</td>
+                <td>Use IRI identifier of the resource type from the register https://vocabularies.coar-repositories.org/resource_types/.</td>
               </tr>
             </table>
           
@@ -14367,7 +14369,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Use label of a corresponding value from code list https://vocabularies.coar-repositories.org/resource_types/. This property may be repeated for parallel language versions of the label.</td>
+                    <td>Use a label of the corresponding value from the register https://vocabularies.coar-repositories.org/resource_types/. This property may be repeated for parallel language versions of the label.</td>
                   </tr>
                 </table>
               </section>
@@ -15505,7 +15507,7 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>References to the value from https://vocabs.ccmm.cz/registry/codelist/TimeReference/.</td>
+                    <td>References to the value from the code list https://w3id.org/tib/datacite/vocab/dateType.</td>
                   </tr>
                 </table>
               </section>    <section id="TimeReference.hasTemporalRepresentation">
@@ -21708,7 +21710,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           optional
           item of type
 
@@ -28268,7 +28270,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           optional
           item of type
 
@@ -53683,7 +53685,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           optional
           item of type
 
@@ -56907,7 +56909,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           optional
           item of type
 
@@ -61805,7 +61807,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           optional
           item of type
 
@@ -70318,7 +70320,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           optional
           item of type
 
@@ -88778,7 +88780,7 @@
         </i>
 
           <a href="#Resource.hasAlternateTitle"><strong>has alternate title</strong></a>
-          
+          (References to the alternate title of the resource.)
 
     </dd>
 
@@ -91596,7 +91598,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           optional
           item of type
 
@@ -106268,7 +106270,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           optional
           item of type
 
@@ -118664,7 +118666,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           optional
           item of type
 
@@ -123812,7 +123814,7 @@
         </i>
 
           <a href="#Resource.hasAlternateTitle"><strong>has alternate title</strong></a>
-          
+          (References to the alternate title of the resource.)
 
     </dd>
 

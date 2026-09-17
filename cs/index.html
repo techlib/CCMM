@@ -1877,24 +1877,22 @@
     <section>
         <h2>Úvod</h2>
         <p>
-            Czech Core Metadata Model for Research Data (CCMM) je metadatový model pro výzkumná data založený na principech FAIR (Findable, Accessible, Interoperable, Reusable), a zároveň je metadatovým profilem <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>, modelu určeného pro popis dat v evropských datových katalozích. Nejnovější verze CCMM, 2.0.0, je spravována v repozitáři na Githubu <a href="https://github.com/techlib/CCMM">https://github.com/techlib/CCMM</a>. Model byl vytvořen a je spravován v nástroji Dataspecer, vyvinutém na Univerzitě Karlově a dostupném na <a href="https://dataspecer.com/">https://dataspecer.com/</a>.
+            Czech Core Metadata Model for Research Data (CCMM) je metadatový model pro výzkumná data založený na principech FAIR (Findable, Accessible, Interoperable, Reusable), a zároveň je metadatovým profilem <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.1/">DCAT-AP</a>, modelu určeného pro popis dat v evropských datových katalozích. Nejnovější verze CCMM, 2.0.0, je spravována v repozitáři na Githubu <a href="https://github.com/techlib/CCMM">https://github.com/techlib/CCMM</a>. Model byl vytvořen a je spravován v nástroji Dataspecer, vyvinutém na Univerzitě Karlově: <a href="https://dataspecer.com/">https://dataspecer.com/</a>.
         </p><p>
             CCMM vychází z principů FAIR s cílem zvýšit srouzmitelnost dat, zlepšit jejich vyhledatelnost, podporovat standardní perzistentní identifikátory (PID) a přispět k efektivnějšímu monitorování výzkumu a výzkumných dat.
         </p><p>
             Většina záznamů v <a href="https://nma.eosc.cz/">Národním metadatovém adresáři (NMA)</a> je primárně v češtině a sekundárně v angličtině, volba jazyka je však na konkrétní výzkumné komunitě. CCMM podporuje libovolnou kombinaci jazyků.
         </p><p>
-            Protokol Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH), komunikační protokol pro sdílení metadat digitálních repozitářů, je běžnou metodou přenosu metadat zakódovaných v XML pro CCMM. Pro přenos prostřednictvím OAI-PMH použijte jmenný prostor <a href="https://model.ccmm.cz/research-data">https://model.ccmm.cz/research-data</a> a nejnovější verzi schématu objektu Datová sada (Dataset), např. <a href="https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd">https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd</a>. Doporučený prefix pro přenos OAI-PMH je ccmm-xml.
+            Protokol Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH), komunikační protokol pro sdílení metadat digitálních repozitářů, je běžnou metodou přenosu metadat zakódovaných v XML pro CCMM. Pro přenos prostřednictvím OAI-PMH použijte jmenný prostor <a href="https://model.ccmm.cz/research-data">https://model.ccmm.cz/research-data</a> a nejnovější verzi schématu objektu Datová sada (Dataset): <a href="https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd">https://model.ccmm.cz/research-data/2.0.0/dataset/schema.xsd</a>. Doporučený prefix pro přenos OAI-PMH je ccmm-xml.
         </p><p>
             CCMM používá k identifikaci externích zdrojů persistentní identifikátory (PID). Přestože volba identifikátorů závisí na správci metadat, doporučenými schématy jsou ORCID pro osoby (<a href="https://orcid.org/">https://orcid.org/</a>) a ROR pro organizace (<a href="https://ror.org/">https://ror.org/</a>).
         </p><p>
-            Jako podpora pro CCMM je vyžadována nebo doporučena celá řada řízených slovníků. Pro oborově specifickou terminologii je vhodné použít slovníky, které jsou v dané komunitě zavedené, ale přímo do CCMM je zabudováno několik povinných řízených slovníků. Některé byly znovu použity z existujících registrů, jiné jsou spravovány v nově vytvořeném registru řízených slovníků, který je k dispozici na adrese <a href="https://www.ccmm.cz/en/controlled-vocabularies/">https://www.ccmm.cz/en/controlled-vocabularies/</a>. CCMM akceptuje jakékoli oborově specifické tematické terminologie.
+            Jako podpora pro CCMM je vyžadována nebo doporučena celá řada řízených slovníků. Pro oborově specifickou terminologii je vhodné použít slovníky, které jsou v dané komunitě zavedené, ale přímo do CCMM je zabudováno několik povinných řízených slovníků. Některé byly znovu použity z existujících registrů, jiné jsou spravovány v nově vytvořeném registru řízených slovníků, který je k dispozici na adrese <a href="https://vocabs.repo.cz/en/">https://vocabs.repo.cz/en/</a>. CCMM akceptuje jakékoli oborově specifické tematické terminologie.
         </p><p>
             CCMM byl vytvořen jako RDF graf, který se skládá z tříd, jejich atributů a vztahů mezi třídami. V kontextu popisu metadat je ústřední entitou třída Dataset. Entity jsou rozděleny na hlavní a podpůrné, přičemž hlavní jsou nezbytnými částmi modelu, zatímco podpůrné poskytují doplňující informace.
         </p><p>
-            Hlavním výstupem CCMM je konceptuální model ve formě RDF grafu, serializovaného ve formátu Turtle (soubor dsv.ttl v GitHubu). Technická reprezentace ve strukturovaných formátech je poskytována v souborech XSD, JSON schématech a také ve formě grafu prostřednictvím souborů Turtle a JSON-LD context. Pro technickou reprezentaci použijte jako kořenový element Dataset.
+            Hlavním výstupem CCMM je konceptuální model ve formě RDF grafu, a má sekundární technickou reprezentaci jako sadu strukturovaných formátů. RDF graf je serializovaný ve formátu Turtle (soubor dsv.ttl v GitHubu). Technická struktura je poskytována v souborech XSD, JSON schématech a také ve formě grafu prostřednictvím souborů Turtle a JSON-LD context. Pro technickou reprezentaci použijte jako kořenový element Dataset.
         </p><p>
-            Metadatový profil je spravován v nástroji Dataspecer, který byl vyvinut za účelem tvorby aplikačních profilů.
-        </p><p>    
             Podrobný úvod do CCMM v češtině je zde: <a href="https://doi.org/10.48813/7825-md51">https://doi.org/10.48813/7825-md51</a>.
         </p>
           </section>
@@ -2008,6 +2006,10 @@
                   <tr>
                     <td>Název</td>
                     <td>has alternate title (@en)</td>
+                  </tr>
+                  <tr>
+                    <td>Definice</td>
+                    <td>References to the alternate title of the resource. (@en)</td>
                   </tr>
                   <tr>
                     <td>Definiční obor</td>
@@ -2833,7 +2835,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Description may have various type from the codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/.  (@en)</td>
+                    <td>Description may have various type from the code list https://w3id.org/tib/datacite/vocab/descriptionType. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="Dataset.hasDistribution">
@@ -3361,7 +3363,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference codelist https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this codelist as a subject. (@en)</td>
+                    <td>At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference code list https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this code list as a subject. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="Dataset.hasTimeReference">
@@ -3426,7 +3428,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Must contain at least one time reference with date type value &quot;Created&quot;  from  https://vocabs.ccmm.cz/registry/codelist/TimeReference/. (@en)</td>
+                    <td>Must contain at least one time reference with date type value &quot;Created&quot;  represented by https://w3id.org/tib/datacite/vocab/dateType/Created. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="Dataset.hasValidationResult">
@@ -5409,7 +5411,7 @@
           
               <tr>
                 <td>Popis použití v profilu</td>
-                <td>Class is used for description of the resource together with the type of relation, for which is used value from codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Use qualified resource property to link to the dataset class. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc. (@en)</td>
+                <td>Class is used for description of the resource together with the type of relation, for which is used value from code list https://w3id.org/tib/datacite/vocab/relationType. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc. (@en)</td>
               </tr>
             </table>
           
@@ -5486,7 +5488,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use value from https://vocabs.ccmm.cz/registry/codelist/RelationType/. (@en)</td>
+                    <td>Use value from the code list https://w3id.org/tib/datacite/vocab/relationType. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="Resource.resourceURL">
@@ -9311,7 +9313,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>References to the value from https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/. (@en)</td>
+                    <td>References to the value from the code list https://w3id.org/tib/datacite/vocab/titleType. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="AlternateTitle.title">
@@ -9432,7 +9434,7 @@
           
               <tr>
                 <td>Popis použití v profilu</td>
-                <td>Use value from codelist https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/. (@en)</td>
+                <td>Use value from the code list https://w3id.org/tib/datacite/vocab/titleType. (@en)</td>
               </tr>
             </table>
           
@@ -9518,7 +9520,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/. This property may be repeated for parallel language versions of the label. (@en)</td>
+                    <td>Use a label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/titleType. This property may be repeated for parallel language versions of the label. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -9817,7 +9819,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. This property may be repeated for parallel language versions of the label. (@en)</td>
+                    <td>Use a label of the corresponding value from the code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. This property may be repeated for parallel language versions of the label. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -10654,7 +10656,7 @@
           
               <tr>
                 <td>Popis použití v profilu</td>
-                <td>Use value from codelist https://vocabs.ccmm.cz/registry/codelist/TimeReference/. (@en)</td>
+                <td>Use value from the code list https://w3id.org/tib/datacite/vocab/dateType. (@en)</td>
               </tr>
             </table>
           
@@ -10750,7 +10752,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/TimeReference/. This property may be repeated for parallel language versions of the label. (@en)</td>
+                    <td>Use label of a corresponding value from the code list https://w3id.org/tib/datacite/vocab/dateType. This property may be repeated for parallel language versions of the label. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -10960,7 +10962,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Type of the description from the code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. (@en)</td>
+                    <td>Type of the description from the code list https://w3id.org/tib/datacite/vocab/descriptionType. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -11018,7 +11020,7 @@
           
               <tr>
                 <td>Popis použití v profilu</td>
-                <td>Use value from codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. (@en)</td>
+                <td>Use value from the code list https://w3id.org/tib/datacite/vocab/descriptionType. (@en)</td>
               </tr>
             </table>
           
@@ -11104,7 +11106,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. This property may be repeated for parallel language versions of the label. (@en)</td>
+                    <td>Use the label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/descriptionType. This property may be repeated for parallel language versions of the label. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -11521,7 +11523,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use a label of a corresponding code list value from http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label. (@en)</td>
+                    <td>Use a label of the corresponding value from the code list http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -12696,7 +12698,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use language label code from http://publications.europa.eu/resource/authority/language/.  (@en)</td>
+                    <td>Use a language label code from the code list http://publications.europa.eu/resource/authority/language/.  (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -13168,7 +13170,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use values from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. (@en)</td>
+                    <td>Use values from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="Location.hasRelatedObject">
@@ -13344,7 +13346,7 @@
           
               <tr>
                 <td>Popis použití v profilu</td>
-                <td>Use value from codelist https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. (@en)</td>
+                <td>Use value from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. (@en)</td>
               </tr>
             </table>
           
@@ -13430,7 +13432,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label. (@en)</td>
+                    <td>Use label of a corresponding value from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -13595,7 +13597,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use the label of the corresponding value from the used code list (usually IANA: https://www.iana.org/assignments/media-types/media-types.xhtml). This property may be repeated for parallel language versions of the label. (@en)</td>
+                    <td>Use a label of the corresponding value from the used code list (usually IANA: https://www.iana.org/assignments/media-types/media-types.xhtml). This property may be repeated for parallel language versions of the label. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -14146,7 +14148,7 @@
           
               <tr>
                 <td>Popis použití v profilu</td>
-                <td>Use value from the codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/. (@en)</td>
+                <td>Use value from the code list https://w3id.org/tib/datacite/vocab/relationType. (@en)</td>
               </tr>
             </table>
           
@@ -14232,7 +14234,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use label of corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/RelationType/. This property may be repeated for parallel language versions of the label. (@en)</td>
+                    <td>Use a label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/relationType. This property may be repeated for parallel language versions of the label. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -14280,7 +14282,7 @@
           
               <tr>
                 <td>Popis použití v profilu</td>
-                <td>Use IRI identifier of the resource type from the codelist https://vocabularies.coar-repositories.org/resource_types/. (@en)</td>
+                <td>Use IRI identifier of the resource type from the register https://vocabularies.coar-repositories.org/resource_types/. (@en)</td>
               </tr>
             </table>
           
@@ -14366,7 +14368,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>Use label of a corresponding value from code list https://vocabularies.coar-repositories.org/resource_types/. This property may be repeated for parallel language versions of the label. (@en)</td>
+                    <td>Use a label of the corresponding value from the register https://vocabularies.coar-repositories.org/resource_types/. This property may be repeated for parallel language versions of the label. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -15504,7 +15506,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>References to the value from https://vocabs.ccmm.cz/registry/codelist/TimeReference/. (@en)</td>
+                    <td>References to the value from the code list https://w3id.org/tib/datacite/vocab/dateType. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="TimeReference.hasTemporalRepresentation">
@@ -21616,7 +21618,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           nepovinná
           položka typu
 
@@ -28084,7 +28086,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           nepovinná
           položka typu
 
@@ -53116,7 +53118,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           nepovinná
           položka typu
 
@@ -56298,7 +56300,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           nepovinná
           položka typu
 
@@ -61127,7 +61129,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           nepovinná
           položka typu
 
@@ -69506,7 +69508,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           nepovinná
           položka typu
 
@@ -87695,7 +87697,7 @@
         </i>
 
           <a href="#Resource.hasAlternateTitle"><strong>has alternate title</strong></a>
-          
+          (References to the alternate title of the resource.)
 
     </dd>
 
@@ -90494,7 +90496,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           nepovinná
           položka typu
 
@@ -105009,7 +105011,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           nepovinná
           položka typu
 
@@ -117269,7 +117271,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>alternate_title</code>:
-            (<a href="#Resource.hasAlternateTitle" label="">has alternate title</a>)
+            (<a href="#Resource.hasAlternateTitle" label="References to the alternate title of the resource.">has alternate title</a>)
           nepovinná
           položka typu
 
@@ -122349,7 +122351,7 @@
         </i>
 
           <a href="#Resource.hasAlternateTitle"><strong>has alternate title</strong></a>
-          
+          (References to the alternate title of the resource.)
 
     </dd>
 

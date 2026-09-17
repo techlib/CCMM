@@ -5,7 +5,7 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Resource relation type - Type of the relation between the dataset and given resource.
-        Use value from the codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/.
+        Use value from the code list https://w3id.org/tib/datacite/vocab/relationType.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -14,7 +14,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Label of the relation type.
-            Use label of corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/RelationType/. This property may be repeated for parallel language versions of the label.
+            Use a label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/relationType. This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>
