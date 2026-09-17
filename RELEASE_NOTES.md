@@ -1,6 +1,6 @@
 CHANGELOG
 ---------------------------------------
-### 2026-08-28 - Profiling CCMM to DCAT-AP
+### 2026-10-01 - Profiling CCMM to DCAT-AP
 * profiling properties through DCAT-AP (instead of final resources)
 * respecting cardinalities of DCAT-AP
 * dividing subjects to subjects (from controlled vocabulary) and keyword (plain string)
@@ -17,6 +17,8 @@ CHANGELOG
 * added abstract and introduction into the specification
 * added identifier scheme notation
 * codelist values now have skos:prefLabel
+* introduction and abstract texts added
+* classes are grouped and ordered into main and supportive
 
 ### 2026-02-27 - minor changes
 * added SHACL file
