@@ -5,7 +5,7 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Date type - Type of a date in relation to the resource.
-        Use value from codelist https://vocabs.ccmm.cz/registry/codelist/TimeReference/.
+        Use value from the code list https://w3id.org/tib/datacite/vocab/dateType.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -14,7 +14,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Date type label.
-            Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/TimeReference/. This property may be repeated for parallel language versions of the label.
+            Use label of a corresponding value from the code list https://w3id.org/tib/datacite/vocab/dateType. This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

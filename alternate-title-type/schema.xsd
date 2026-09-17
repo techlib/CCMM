@@ -5,7 +5,7 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Alternate title type - Type of alternate title.
-        Use value from codelist https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/.
+        Use value from the code list https://w3id.org/tib/datacite/vocab/titleType.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -14,7 +14,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Alternate title type label.
-            Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/. This property may be repeated for parallel language versions of the label.
+            Use a label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/titleType. This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

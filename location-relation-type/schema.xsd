@@ -5,7 +5,7 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Location relation type - Relation of the dataset to the resource.
-        Use value from codelist https://vocabs.ccmm.cz/registry/codelist/LocationRelation/.
+        Use value from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -14,7 +14,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Location relation type label.
-            Use label of a corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label.
+            Use label of a corresponding value from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/. This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

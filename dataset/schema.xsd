@@ -80,7 +80,7 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="alternate_title" type="ccmm:alternate_title" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            has alternate title
+            has alternate title - References to the alternate title of the resource.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -104,7 +104,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has time reference - Reference to events related to the dataset.
-            Must contain at least one time reference with date type value &#34;Created&#34;  from  https://vocabs.ccmm.cz/registry/codelist/TimeReference/.
+            Must contain at least one time reference with date type value &#34;Created&#34;  represented by https://w3id.org/tib/datacite/vocab/dateType/Created.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -147,7 +147,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has subject - Dataset described using a subject.
-            At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference codelist https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this codelist as a subject.
+            At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference code list https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this code list as a subject.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -195,7 +195,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has description - Relation to the description of a dataset.
-            Description may have various type from the codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. 
+            Description may have various type from the code list https://w3id.org/tib/datacite/vocab/descriptionType.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

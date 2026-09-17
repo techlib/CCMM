@@ -14,7 +14,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Label of format value.
-            Use a label of a corresponding code list value from http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label.
+            Use a label of the corresponding value from the code list http://publications.europa.eu/resource/dataset/file-type. This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

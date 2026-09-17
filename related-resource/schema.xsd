@@ -10,7 +10,7 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Related resource - Resource represents any resource, physical or digital, that is related to the described dataset.
-        Class is used for description of the resource together with the type of relation, for which is used value from codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Use qualified resource property to link to the dataset class. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc.
+        Class is used for description of the resource together with the type of relation, for which is used value from code list https://w3id.org/tib/datacite/vocab/relationType. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -32,7 +32,7 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="alternate_title" type="ccmm:alternate_title" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            has alternate title
+            has alternate title - References to the alternate title of the resource.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -71,7 +71,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has resource relation type - Relation to the relation type between dataset and resource.
-            Use value from https://vocabs.ccmm.cz/registry/codelist/RelationType/.
+            Use value from the code list https://w3id.org/tib/datacite/vocab/relationType.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

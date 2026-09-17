@@ -169,6 +169,7 @@
                 },
                 "alternate_title": {
                   "title": "has alternate title",
+                  "description": "References to the alternate title of the resource.",
                   "type": "array",
                   "items": {
                     "title": "Alternate title",

@@ -5,7 +5,7 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Description type - The type of the description.
-        Use value from codelist https://vocabs.ccmm.cz/registry/codelist/DescriptionType/.
+        Use value from the code list https://w3id.org/tib/datacite/vocab/descriptionType.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -14,7 +14,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Label of the description type.
-            Use the label of the corresponding value from code list https://vocabs.ccmm.cz/registry/codelist/DescriptionType/. This property may be repeated for parallel language versions of the label.
+            Use the label of the corresponding value from the code list https://w3id.org/tib/datacite/vocab/descriptionType. This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>
