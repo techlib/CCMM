@@ -79,7 +79,7 @@
     <alternate_title>
         <title xml:lang="en">The Czech Science Foundation Grant Application Data Set</title>
         <alternate_title_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/TranslatedTitle</iri>
+            <iri>https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle</iri>
             <label xml:lang="cs">Přeložený název</label>
             <label xml:lang="en">Translated Title</label>
         </alternate_title_type>
@@ -295,7 +295,7 @@
           </time_instant>
       </temporal_representation>
               <date_type>
-                  <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Issued</iri>
+                  <iri>https://w3id.org/tib/datacite/vocab/dateType/Issued</iri>
                   <label xml:lang="en">Date Issued</label>
                   <label xml:lang="cs">Datum vydání</label>
               </date_type>
@@ -312,7 +312,7 @@
         </time_interval>
         </temporal_representation>
             <date_type>
-                <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Created</iri>
+                <iri>https://w3id.org/tib/datacite/vocab/dateType/Created</iri>
                 <label xml:lang="en">Date Created</label>
                 <label xml:lang="cs">Datum vytvoření</label>
             </date_type>
@@ -329,7 +329,7 @@
         </time_interval>
         </temporal_representation>
             <date_type>
-                <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Collected</iri>
+                <iri>https://w3id.org/tib/datacite/vocab/dateType/Collected</iri>
                 <label xml:lang="en">Date Collected</label>
                 <label xml:lang="cs">Datum sběru</label>
             </date_type>
@@ -341,7 +341,7 @@
         </time_instant>
         </temporal_representation>
             <date_type>
-                <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Available</iri>
+                <iri>https://w3id.org/tib/datacite/vocab/dateType/Available</iri>
                 <label xml:lang="en">Date Available</label>
                 <label xml:lang="cs">Datum zveřejnění</label>
             </date_type>
@@ -421,7 +421,7 @@
     <description>
         <description_text xml:lang="cs">Data podporující strukturu neutrofilových extracelulárních pastí pocházejících z lidských neutrofilů</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Abstract</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/Abstract</iri>
             <label xml:lang="cs">Abstrakt</label>
             <label xml:lang="en">Abstract</label>
         </description_type>
@@ -429,7 +429,7 @@
     <description>
         <description_text xml:lang="en">Data supporting the structure of neutrophil extracellular traps generated from human neutrophils</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Abstract</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/Abstract</iri>
             <label xml:lang="cs">Abstrakt</label>
             <label xml:lang="en">Abstract</label>
         </description_type>
@@ -437,7 +437,7 @@
     <description>
         <description_text xml:lang="cs">Doplňující mikroskopická data</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/TechnicalInfo</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo</iri>
             <label xml:lang="cs">Technická informace</label>
             <label xml:lang="en">Technical Info</label>
         </description_type>
@@ -445,7 +445,7 @@
     <description>
         <description_text xml:lang="en">Supplementary microscopy data</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/TechnicalInfo</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo</iri>
             <label xml:lang="cs">Technická informace</label>
             <label xml:lang="en">Technical Info</label>
         </description_type>
@@ -453,7 +453,7 @@
     <description>
         <description_text xml:lang="cs">Izolace neutrofilů ze vzorků lidské krve, stimulace neutrofilů pomocí agens indukujících NETózu, akvizice mikroskopických dat</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Methods</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/Methods</iri>
             <label xml:lang="cs">Metodologie</label>
             <label xml:lang="en">Methods</label>
         </description_type>
@@ -461,7 +461,7 @@
     <description>
         <description_text xml:lang="en">Isolation of neutrophils from human blood samples, neutrophil stimulation with NETosis-inducing agents, microscopy data acquisition</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Methods</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/Methods</iri>
             <label xml:lang="cs">Metodologie</label>
             <label xml:lang="en">Methods</label>
         </description_type>

@@ -103,7 +103,7 @@
             </time_instant>
        </temporal_representation>
        <date_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Created</iri>
+         <iri>https://w3id.org/tib/datacite/vocab/dateType/Created</iri>
             <label xml:lang="en">Created</label>
        </date_type>
   </time_reference>
