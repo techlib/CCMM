@@ -108,21 +108,6 @@
     dcat:keyword "kvalita ovzduší"@cs ;
     dcat:version "1.0.23" ;
     prov:qualifiedAttribution [ a prov:Attribution ;
-            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
-            prov:agent [ a prov:Person ;
-                    ns2:family-name "Janouch" ;
-                    ns2:given-name "Ivan" ;
-                    ns1:identifier <https://orcid.org/0023-0802-44X6-26X0> ;
-                    dcat:contactPoint [ a ns2:Kind ;
-                            ns2:hasAddress [ a ns11:Address ;
-                                    ns11:fullAddress "Pražská 3, 60200, Brno" ] ;
-                            ns0:email "256384@muni.cz" ;
-                            ns0:phone "+420876543219" ] ;
-                    foaf:name "Ivan Janouch" ;
-                    ns0:hasAffiliation [ a org:Organization ;
-                            ns1:identifier <https://ror.org/02j46qs45> ;
-                            foaf:name "Masarykova Univerzita" ] ] ],
-        [ a prov:Attribution ;
             dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
             prov:agent [ a prov:Person ;
                     ns2:family-name "Novák" ;
@@ -136,7 +121,22 @@
                     foaf:name "Novák" ;
                     ns0:hasAffiliation [ a org:Organization ;
                             ns1:identifier <https://ror.org/024d6js02> ;
-                            foaf:name "Univerzita Karlova" ] ] ] ;
+                            foaf:name "Univerzita Karlova" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
+            prov:agent [ a prov:Person ;
+                    ns2:family-name "Janouch" ;
+                    ns2:given-name "Ivan" ;
+                    ns1:identifier <https://orcid.org/0023-0802-44X6-26X0> ;
+                    dcat:contactPoint [ a ns2:Kind ;
+                            ns2:hasAddress [ a ns11:Address ;
+                                    ns11:fullAddress "Pražská 3, 60200, Brno" ] ;
+                            ns0:email "256384@muni.cz" ;
+                            ns0:phone "+420876543219" ] ;
+                    foaf:name "Ivan Janouch" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier <https://ror.org/02j46qs45> ;
+                            foaf:name "Masarykova Univerzita" ] ] ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             ns0:hasRo-crateJsonRepresentation <https://link.to/ro-crate-json> ] ;
     ns0:hasAlternateTitle [ a ns0:AlternateTitle ;
@@ -145,22 +145,22 @@
     ns0:hasOtherLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
     ns0:hasPrimaryLanguage <http://publications.europa.eu/resource/authority/language/CES> ;
     ns0:hasTimeReference [ a ns0:TimeReference ;
-            time:hasTime [ a time:Instant ;
-                    time:inXSDDateTime "2025-04-27T12:00:01+02:00"^^xsd:dateTime ] ;
-            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Created> ],
-        [ a ns0:TimeReference ;
             time:hasTime [ a time:Interval ;
                     time:hasBeginning [ a time:Instant ;
                             time:inXSDDate "2024-01-01"^^xsd:date ] ;
                     time:hasEnd [ a time:Instant ;
                             time:inXSDDate "2024-12-31"^^xsd:date ] ] ;
-            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Collected> ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Collected> ],
+        [ a ns0:TimeReference ;
+            time:hasTime [ a time:Instant ;
+                    time:inXSDDateTime "2025-04-27T12:00:01+02:00"^^xsd:dateTime ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Created> ] ;
     ns0:hasValidationResult [ a ns0:ValidationResult ] ;
     ns0:isDescribedBy <https://original-catalogue/dataset_metadata_id> ;
     ns5:description [ a <https://w3id.org/tib/datacite/class/Description> ;
             dcterms:description """Tato datová sada obsahuje měření kvality ovzduší ve středních Čechách v
             roce 2024."""@cs ;
-            ns5:descriptionType <https://w3id.org/tib/datacite/property/descriptionType/Abstract> ] ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> ] ;
     ns5:fundingReference <https://funder-org.org/grants/123456789> ;
     ns5:publicationYear "2025"^^xsd:gYear ;
     ns5:subject <http://inspire.ec.europa.eu/theme/ef>,
@@ -349,36 +349,37 @@
     ns0:inSubjectScheme <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> ;
     ns5:classificationCode "10509" .
 
-<https://w3id.org/tib/datacite/property/descriptionType/Abstract> a skos:Concept ;
-    skos:prefLabel "Abstrakt"@cs,
-        "Abstract"@en .
-
 <https://w3id.org/tib/datacite/vocab/dateType/Collected> a skos:Concept ;
     skos:prefLabel "Datum sběru"@cs,
-        "Date Collected"@en .
+        "Collected"@en .
 
 <https://w3id.org/tib/datacite/vocab/dateType/Created> a skos:Concept ;
     skos:prefLabel "Datum vytvoření"@cs,
-        "Date Created"@en .
+        "Created"@en .
+
+<https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> a skos:Concept ;
+    skos:prefLabel "Abstrakt"@cs,
+        "Abstract"@en .
 
 <https://w3id.org/tib/datacite/vocab/relationType/HasMetadata> a skos:Concept ;
     skos:prefLabel "má metadata"@cs,
-        "has metadata"@en .
+        "hasMetadata"@en .
 
 <https://w3id.org/tib/datacite/vocab/relationType/IsCollectedBy> a skos:Concept ;
     skos:prefLabel "je sbírán (čím)"@cs,
-        "is collected by"@en .
+        "isCollectedBy"@en .
 
 <https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom> a skos:Concept ;
     skos:prefLabel "je odvozen od (čeho)"@cs,
-        "is derived from"@en .
+        "isDerivedFrom"@en .
 
 <https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy> a skos:Concept ;
-    skos:prefLabel "je na něj odkazováno z (čeho)"@cs .
+    skos:prefLabel "je na něj odkazováno z (čeho)"@cs,
+        "IsReferencedBy"@en .
 
 <https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle> a skos:Concept ;
     skos:prefLabel "Přeložený název"@cs,
-        "Translated Title"@en .
+        "TranslatedTitle"@en .
 
 <https://www.iso.org/standard/80275.html> a dcterms:Standard ;
     rdfs:label "ISO 19115-1:2014/Amd 2:2020"@en .

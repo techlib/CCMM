@@ -141,7 +141,7 @@
                                 rdf:about="https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">Přeložený název</ns0:prefLabel>
-                  <ns0:prefLabel xml:lang="en">Translated Title</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">TranslatedTitle</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
          </rdf:Description>
@@ -554,7 +554,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/dateType/Issued">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">Date Issued</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">Issued</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Datum vydání</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
@@ -587,7 +587,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/dateType/Created">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">Date Created</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">Created</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Datum vytvoření</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
@@ -620,7 +620,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/dateType/Collected">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">Date Collected</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">Collected</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Datum sběru</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
@@ -642,7 +642,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/dateType/Available">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">Date Available</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">Available</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Datum zveřejnění</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
@@ -767,7 +767,7 @@
             <ns0:description xml:lang="cs">Data podporující strukturu neutrofilových extracelulárních pastí pocházejících z lidských neutrofilů</ns0:description>
             <ns1:descriptionType>
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
-                                rdf:about="https://w3id.org/tib/datacite/property/descriptionType/Abstract">
+                                rdf:about="https://w3id.org/tib/datacite/vocab/descriptionType/Abstract">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">Abstrakt</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="en">Abstract</ns0:prefLabel>
@@ -783,7 +783,7 @@
             <ns0:description xml:lang="en">Data supporting the structure of neutrophil extracellular traps generated from human neutrophils</ns0:description>
             <ns1:descriptionType>
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
-                                rdf:about="https://w3id.org/tib/datacite/property/descriptionType/Abstract">
+                                rdf:about="https://w3id.org/tib/datacite/vocab/descriptionType/Abstract">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">Abstrakt</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="en">Abstract</ns0:prefLabel>
@@ -799,10 +799,10 @@
             <ns0:description xml:lang="cs">Doplňující mikroskopická data</ns0:description>
             <ns1:descriptionType>
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
-                                rdf:about="https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo">
+                                rdf:about="https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">Technická informace</ns0:prefLabel>
-                  <ns0:prefLabel xml:lang="en">Technical Info</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">TechnicalInfo</ns0:prefLabel>
                </rdf:Description>
             </ns1:descriptionType>
          </rdf:Description>
@@ -815,10 +815,10 @@
             <ns0:description xml:lang="en">Supplementary microscopy data</ns0:description>
             <ns1:descriptionType>
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
-                                rdf:about="https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo">
+                                rdf:about="https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">Technická informace</ns0:prefLabel>
-                  <ns0:prefLabel xml:lang="en">Technical Info</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">TechnicalInfo</ns0:prefLabel>
                </rdf:Description>
             </ns1:descriptionType>
          </rdf:Description>
@@ -831,7 +831,7 @@
             <ns0:description xml:lang="cs">Izolace neutrofilů ze vzorků lidské krve, stimulace neutrofilů pomocí agens indukujících NETózu, akvizice mikroskopických dat</ns0:description>
             <ns1:descriptionType>
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
-                                rdf:about="https://w3id.org/tib/datacite/property/descriptionType/Methods">
+                                rdf:about="https://w3id.org/tib/datacite/vocab/descriptionType/Methods">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">Metodologie</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="en">Methods</ns0:prefLabel>
@@ -847,7 +847,7 @@
             <ns0:description xml:lang="en">Isolation of neutrophils from human blood samples, neutrophil stimulation with NETosis-inducing agents, microscopy data acquisition</ns0:description>
             <ns1:descriptionType>
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
-                                rdf:about="https://w3id.org/tib/datacite/property/descriptionType/Methods">
+                                rdf:about="https://w3id.org/tib/datacite/vocab/descriptionType/Methods">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">Metodologie</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="en">Methods</ns0:prefLabel>

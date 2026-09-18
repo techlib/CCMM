@@ -87,28 +87,6 @@
         "human neutrophils"@en,
         "microscopy"@en ;
     prov:qualifiedAttribution [ a prov:Attribution ;
-            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
-            prov:agent [ a prov:Person ;
-                    ns1:identifier <https://orcid.org/0009-0003-1158-1138> ;
-                    foaf:name "Paldusová, Kateřina" ;
-                    ns0:hasAffiliation [ a org:Organization ;
-                            ns1:identifier [ a ns1:Identifier ;
-                                    skos:notation "61388955" ;
-                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
-                                <https://ror.org/02sat5y74> ;
-                            foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ],
-        [ a prov:Attribution ;
-            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
-            prov:agent [ a prov:Person ;
-                    ns1:identifier <https://orcid.org/0000-0002-4606-1218> ;
-                    foaf:name "Cebecauer, Marek" ;
-                    ns0:hasAffiliation [ a org:Organization ;
-                            ns1:identifier [ a ns1:Identifier ;
-                                    skos:notation "61388955" ;
-                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
-                                <https://ror.org/02sat5y74> ;
-                            foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ],
-        [ a prov:Attribution ;
             dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
             prov:agent [ a org:Organization ;
                     ns1:identifier [ a ns1:Identifier ;
@@ -119,8 +97,8 @@
         [ a prov:Attribution ;
             dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
             prov:agent [ a prov:Person ;
-                    ns1:identifier <https://orcid.org/0000-0003-1662-9092> ;
-                    foaf:name "González Navarro, José Alfredo" ;
+                    ns1:identifier <https://orcid.org/0009-0003-1158-1138> ;
+                    foaf:name "Paldusová, Kateřina" ;
                     ns0:hasAffiliation [ a org:Organization ;
                             ns1:identifier [ a ns1:Identifier ;
                                     skos:notation "61388955" ;
@@ -137,15 +115,44 @@
                                     skos:notation "61388955" ;
                                     ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
                                 <https://ror.org/02sat5y74> ;
+                            foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns1:identifier <https://orcid.org/0000-0003-1662-9092> ;
+                    foaf:name "González Navarro, José Alfredo" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "61388955" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/02sat5y74> ;
+                            foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns1:identifier <https://orcid.org/0000-0002-4606-1218> ;
+                    foaf:name "Cebecauer, Marek" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "61388955" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/02sat5y74> ;
                             foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ] ;
     ns0:hasAlternateTitle [ a ns0:AlternateTitle ;
             dcterms:alternative "The Czech Science Foundation Grant Application Data Set"@en ;
             ns0:hasType <https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle> ] ;
     ns0:hasPrimaryLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
     ns0:hasTimeReference [ a ns0:TimeReference ;
+            time:hasTime [ a time:Interval ;
+                    time:hasBeginning [ a time:Instant ;
+                            time:inXSDDate "2025-04-02"^^xsd:date ] ;
+                    time:hasEnd [ a time:Instant ;
+                            time:inXSDDate "2025-04-03"^^xsd:date ] ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Created> ],
+        [ a ns0:TimeReference ;
             time:hasTime [ a time:Instant ;
                     time:inXSDDate "2025-04-03"^^xsd:date ] ;
-            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Available> ],
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Issued> ],
         [ a ns0:TimeReference ;
             time:hasTime [ a time:Interval ;
                     time:hasBeginning [ a time:Instant ;
@@ -156,35 +163,28 @@
         [ a ns0:TimeReference ;
             time:hasTime [ a time:Instant ;
                     time:inXSDDate "2025-04-03"^^xsd:date ] ;
-            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Issued> ],
-        [ a ns0:TimeReference ;
-            time:hasTime [ a time:Interval ;
-                    time:hasBeginning [ a time:Instant ;
-                            time:inXSDDate "2025-04-02"^^xsd:date ] ;
-                    time:hasEnd [ a time:Instant ;
-                            time:inXSDDate "2025-04-03"^^xsd:date ] ] ;
-            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Created> ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Available> ] ;
     ns0:hasValidationResult [ a ns0:ValidationResult ] ;
     ns0:inScheme <https://doi.org/> ;
     ns0:isDescribedBy <https://datarepo.eosc.cz/datasets/records/datst.1m3t2-78951> ;
     ns5:description [ a <https://w3id.org/tib/datacite/class/Description> ;
-            dcterms:description "Data supporting the structure of neutrophil extracellular traps generated from human neutrophils"@en ;
-            ns5:descriptionType <https://w3id.org/tib/datacite/property/descriptionType/Abstract> ],
-        [ a <https://w3id.org/tib/datacite/class/Description> ;
             dcterms:description "Supplementary microscopy data"@en ;
-            ns5:descriptionType <https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo> ],
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> ],
         [ a <https://w3id.org/tib/datacite/class/Description> ;
             dcterms:description "Isolation of neutrophils from human blood samples, neutrophil stimulation with NETosis-inducing agents, microscopy data acquisition"@en ;
-            ns5:descriptionType <https://w3id.org/tib/datacite/property/descriptionType/Methods> ],
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Methods> ],
         [ a <https://w3id.org/tib/datacite/class/Description> ;
-            dcterms:description "Izolace neutrofilů ze vzorků lidské krve, stimulace neutrofilů pomocí agens indukujících NETózu, akvizice mikroskopických dat"@cs ;
-            ns5:descriptionType <https://w3id.org/tib/datacite/property/descriptionType/Methods> ],
+            dcterms:description "Data supporting the structure of neutrophil extracellular traps generated from human neutrophils"@en ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> ],
         [ a <https://w3id.org/tib/datacite/class/Description> ;
             dcterms:description "Doplňující mikroskopická data"@cs ;
-            ns5:descriptionType <https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo> ],
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> ],
+        [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Izolace neutrofilů ze vzorků lidské krve, stimulace neutrofilů pomocí agens indukujících NETózu, akvizice mikroskopických dat"@cs ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Methods> ],
         [ a <https://w3id.org/tib/datacite/class/Description> ;
             dcterms:description "Data podporující strukturu neutrofilových extracelulárních pastí pocházejících z lidských neutrofilů"@cs ;
-            ns5:descriptionType <https://w3id.org/tib/datacite/property/descriptionType/Abstract> ] ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> ] ;
     ns5:publicationYear "2025"^^xsd:gYear ;
     ns5:subject <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10601>,
         <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10606>,
@@ -239,23 +239,23 @@
 
 <https://w3id.org/tib/datacite/vocab/dateType/Available> a skos:Concept ;
     skos:prefLabel "Datum zveřejnění"@cs,
-        "Date Available"@en .
+        "Available"@en .
 
 <https://w3id.org/tib/datacite/vocab/dateType/Collected> a skos:Concept ;
     skos:prefLabel "Datum sběru"@cs,
-        "Date Collected"@en .
+        "Collected"@en .
 
 <https://w3id.org/tib/datacite/vocab/dateType/Created> a skos:Concept ;
     skos:prefLabel "Datum vytvoření"@cs,
-        "Date Created"@en .
+        "Created"@en .
 
 <https://w3id.org/tib/datacite/vocab/dateType/Issued> a skos:Concept ;
     skos:prefLabel "Datum vydání"@cs,
-        "Date Issued"@en .
+        "Issued"@en .
 
 <https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle> a skos:Concept ;
     skos:prefLabel "Přeložený název"@cs,
-        "Translated Title"@en .
+        "TranslatedTitle"@en .
 
 <http://publications.europa.eu/resource/authority/file-type/PDF> a dcterms:MediaTypeOrExtent ;
     skos:prefLabel "PDF"@en .
@@ -414,17 +414,17 @@
     skos:prefLabel "Vydavatel"@cs,
         "Publisher"@en .
 
-<https://w3id.org/tib/datacite/property/descriptionType/Abstract> a skos:Concept ;
+<https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> a skos:Concept ;
     skos:prefLabel "Abstrakt"@cs,
         "Abstract"@en .
 
-<https://w3id.org/tib/datacite/property/descriptionType/Methods> a skos:Concept ;
+<https://w3id.org/tib/datacite/vocab/descriptionType/Methods> a skos:Concept ;
     skos:prefLabel "Metodologie"@cs,
         "Methods"@en .
 
-<https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo> a skos:Concept ;
+<https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> a skos:Concept ;
     skos:prefLabel "Technická informace"@cs,
-        "Technical Info"@en .
+        "TechnicalInfo"@en .
 
 <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> a ns0:SubjectScheme ;
     rdfs:label "Oborové třídění OECD FORD (Frascati)"@cs,

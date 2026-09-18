@@ -1,3341 +1,5 @@
 {
-  "@context": {
-    "@version": 1.1,
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "id": "@id",
-    "type": "@type",
-    "metadata_identification": {
-      "@id": "https://model.ccmm.cz/vocabulary/ccmm#isDescribedBy",
-      "@container": "@set",
-      "@context": {
-        "title": {
-          "@id": "http://purl.org/dc/terms/title",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "language": {
-          "@id": "http://purl.org/dc/terms/language",
-          "@container": "@set",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "language_system": {
-              "@id": "http://purl.org/dc/terms/LinguisticSystem",
-              "@context": {}
-            }
-          }
-        },
-        "qualified_attribution": {
-          "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
-          "@container": "@set",
-          "@context": {
-            "attributed_agent": {
-              "@id": "http://www.w3.org/ns/prov#agent",
-              "@type": "@id",
-              "@context": {
-                "identifier": {
-                  "@id": "http://www.w3.org/ns/adms#identifier",
-                  "@container": "@set",
-                  "@context": {
-                    "value": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                      "@type": "xsd:string"
-                    },
-                    "scheme": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                      "@type": "@id",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                        },
-                        "notation": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                          "@type": "xsd:string"
-                        },
-                        "identifier_scheme": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "authorized": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                      "@type": "xsd:boolean"
-                    },
-                    "identifier": {
-                      "@id": "http://www.w3.org/ns/adms#Identifier",
-                      "@context": {}
-                    }
-                  }
-                },
-                "name": {
-                  "@id": "http://xmlns.com/foaf/0.1/name",
-                  "@type": "xsd:string"
-                },
-                "alternate_name": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                  "@container": "@language"
-                },
-                "contact_point": {
-                  "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                  "@container": "@set",
-                  "@context": {
-                    "data_box": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                      "@type": "xsd:string"
-                    },
-                    "email": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                      "@type": "xsd:string"
-                    },
-                    "phone": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                      "@type": "xsd:string"
-                    },
-                    "address": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                      "@container": "@set",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                        },
-                        "full_address": {
-                          "@id": "http://www.w3.org/ns/locn#fullAddress",
-                          "@type": "xsd:string"
-                        },
-                        "po_box": {
-                          "@id": "http://www.w3.org/ns/locn#poBox",
-                          "@type": "xsd:string"
-                        },
-                        "thoroughfare": {
-                          "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                          "@type": "xsd:string"
-                        },
-                        "locator_designator": {
-                          "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                          "@type": "xsd:string"
-                        },
-                        "locator_name": {
-                          "@id": "http://www.w3.org/ns/locn#locatorName",
-                          "@type": "xsd:string"
-                        },
-                        "address_area": {
-                          "@id": "http://www.w3.org/ns/locn#addressArea",
-                          "@type": "xsd:string"
-                        },
-                        "post_name": {
-                          "@id": "http://www.w3.org/ns/locn#postName",
-                          "@type": "xsd:string"
-                        },
-                        "administrative_unit_level_1": {
-                          "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                          "@type": "xsd:string"
-                        },
-                        "administrative_unit_level_2": {
-                          "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                          "@type": "xsd:string"
-                        },
-                        "post_code": {
-                          "@id": "http://www.w3.org/ns/locn#postCode",
-                          "@type": "xsd:string"
-                        },
-                        "address": {
-                          "@id": "http://www.w3.org/ns/locn#Address",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "contact_details": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                      "@context": {}
-                    }
-                  }
-                },
-                "given_name": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#given-name",
-                  "@type": "xsd:string"
-                },
-                "family_name": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#family-name",
-                  "@type": "xsd:string"
-                },
-                "affiliation": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAffiliation",
-                  "@container": "@set",
-                  "@context": {
-                    "identifier": {
-                      "@id": "http://www.w3.org/ns/adms#identifier",
-                      "@container": "@set",
-                      "@context": {
-                        "value": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                          "@type": "xsd:string"
-                        },
-                        "scheme": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                          "@type": "@id",
-                          "@context": {
-                            "label": {
-                              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                            },
-                            "notation": {
-                              "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                              "@type": "xsd:string"
-                            },
-                            "identifier_scheme": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "authorized": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                          "@type": "xsd:boolean"
-                        },
-                        "identifier": {
-                          "@id": "http://www.w3.org/ns/adms#Identifier",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "name": {
-                      "@id": "http://xmlns.com/foaf/0.1/name",
-                      "@type": "xsd:string"
-                    },
-                    "alternate_name": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                      "@container": "@language"
-                    },
-                    "contact_point": {
-                      "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                      "@container": "@set",
-                      "@context": {
-                        "data_box": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                          "@type": "xsd:string"
-                        },
-                        "email": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                          "@type": "xsd:string"
-                        },
-                        "phone": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                          "@type": "xsd:string"
-                        },
-                        "address": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                          "@container": "@set",
-                          "@context": {
-                            "label": {
-                              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                            },
-                            "full_address": {
-                              "@id": "http://www.w3.org/ns/locn#fullAddress",
-                              "@type": "xsd:string"
-                            },
-                            "po_box": {
-                              "@id": "http://www.w3.org/ns/locn#poBox",
-                              "@type": "xsd:string"
-                            },
-                            "thoroughfare": {
-                              "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                              "@type": "xsd:string"
-                            },
-                            "locator_designator": {
-                              "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                              "@type": "xsd:string"
-                            },
-                            "locator_name": {
-                              "@id": "http://www.w3.org/ns/locn#locatorName",
-                              "@type": "xsd:string"
-                            },
-                            "address_area": {
-                              "@id": "http://www.w3.org/ns/locn#addressArea",
-                              "@type": "xsd:string"
-                            },
-                            "post_name": {
-                              "@id": "http://www.w3.org/ns/locn#postName",
-                              "@type": "xsd:string"
-                            },
-                            "administrative_unit_level_1": {
-                              "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                              "@type": "xsd:string"
-                            },
-                            "administrative_unit_level_2": {
-                              "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                              "@type": "xsd:string"
-                            },
-                            "post_code": {
-                              "@id": "http://www.w3.org/ns/locn#postCode",
-                              "@type": "xsd:string"
-                            },
-                            "address": {
-                              "@id": "http://www.w3.org/ns/locn#Address",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "contact_details": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "organization": {
-                      "@id": "http://www.w3.org/ns/org#Organization",
-                      "@context": {}
-                    }
-                  }
-                },
-                "organization": {
-                  "@id": "http://www.w3.org/ns/org#Organization",
-                  "@context": {}
-                },
-                "person": {
-                  "@id": "http://www.w3.org/ns/prov#Person",
-                  "@context": {}
-                }
-              }
-            },
-            "role": {
-              "@id": "http://www.w3.org/ns/dcat#hadRole",
-              "@type": "@id",
-              "@context": {
-                "label": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                  "@container": "@language"
-                },
-                "attributed_agent_role_type": {
-                  "@id": "http://www.w3.org/ns/dcat#Role",
-                  "@context": {}
-                }
-              }
-            },
-            "resource_attribution": {
-              "@id": "http://www.w3.org/ns/prov#Attribution",
-              "@context": {}
-            }
-          }
-        },
-        "date_updated": {
-          "@id": "http://purl.org/dc/terms/modified",
-          "@type": "xsd:date"
-        },
-        "date_created": {
-          "@id": "http://purl.org/dc/terms/created",
-          "@type": "xsd:date"
-        },
-        "conforms_to_standard": {
-          "@id": "http://purl.org/dc/terms/conformsTo",
-          "@container": "@set",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "application_profile": {
-              "@id": "http://purl.org/dc/terms/Standard",
-              "@context": {}
-            }
-          }
-        },
-        "original_repository": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#originalRepository",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://purl.org/dc/terms/title",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "description": {
-              "@id": "http://purl.org/dc/terms/description",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "qualified_attribution": {
-              "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
-              "@container": "@set",
-              "@context": {
-                "attributed_agent": {
-                  "@id": "http://www.w3.org/ns/prov#agent",
-                  "@type": "@id",
-                  "@context": {
-                    "identifier": {
-                      "@id": "http://www.w3.org/ns/adms#identifier",
-                      "@container": "@set",
-                      "@context": {
-                        "value": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                          "@type": "xsd:string"
-                        },
-                        "scheme": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                          "@type": "@id",
-                          "@context": {
-                            "label": {
-                              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                            },
-                            "notation": {
-                              "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                              "@type": "xsd:string"
-                            },
-                            "identifier_scheme": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "authorized": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                          "@type": "xsd:boolean"
-                        },
-                        "identifier": {
-                          "@id": "http://www.w3.org/ns/adms#Identifier",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "name": {
-                      "@id": "http://xmlns.com/foaf/0.1/name",
-                      "@type": "xsd:string"
-                    },
-                    "alternate_name": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                      "@container": "@language"
-                    },
-                    "contact_point": {
-                      "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                      "@container": "@set",
-                      "@context": {
-                        "data_box": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                          "@type": "xsd:string"
-                        },
-                        "email": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                          "@type": "xsd:string"
-                        },
-                        "phone": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                          "@type": "xsd:string"
-                        },
-                        "address": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                          "@container": "@set",
-                          "@context": {
-                            "label": {
-                              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                            },
-                            "full_address": {
-                              "@id": "http://www.w3.org/ns/locn#fullAddress",
-                              "@type": "xsd:string"
-                            },
-                            "po_box": {
-                              "@id": "http://www.w3.org/ns/locn#poBox",
-                              "@type": "xsd:string"
-                            },
-                            "thoroughfare": {
-                              "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                              "@type": "xsd:string"
-                            },
-                            "locator_designator": {
-                              "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                              "@type": "xsd:string"
-                            },
-                            "locator_name": {
-                              "@id": "http://www.w3.org/ns/locn#locatorName",
-                              "@type": "xsd:string"
-                            },
-                            "address_area": {
-                              "@id": "http://www.w3.org/ns/locn#addressArea",
-                              "@type": "xsd:string"
-                            },
-                            "post_name": {
-                              "@id": "http://www.w3.org/ns/locn#postName",
-                              "@type": "xsd:string"
-                            },
-                            "administrative_unit_level_1": {
-                              "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                              "@type": "xsd:string"
-                            },
-                            "administrative_unit_level_2": {
-                              "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                              "@type": "xsd:string"
-                            },
-                            "post_code": {
-                              "@id": "http://www.w3.org/ns/locn#postCode",
-                              "@type": "xsd:string"
-                            },
-                            "address": {
-                              "@id": "http://www.w3.org/ns/locn#Address",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "contact_details": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "given_name": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#given-name",
-                      "@type": "xsd:string"
-                    },
-                    "family_name": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#family-name",
-                      "@type": "xsd:string"
-                    },
-                    "affiliation": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAffiliation",
-                      "@container": "@set",
-                      "@context": {
-                        "identifier": {
-                          "@id": "http://www.w3.org/ns/adms#identifier",
-                          "@container": "@set",
-                          "@context": {
-                            "value": {
-                              "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                              "@type": "xsd:string"
-                            },
-                            "scheme": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                              "@type": "@id",
-                              "@context": {
-                                "label": {
-                                  "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                                  "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                                },
-                                "notation": {
-                                  "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                                  "@type": "xsd:string"
-                                },
-                                "identifier_scheme": {
-                                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                                  "@context": {}
-                                }
-                              }
-                            },
-                            "authorized": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                              "@type": "xsd:boolean"
-                            },
-                            "identifier": {
-                              "@id": "http://www.w3.org/ns/adms#Identifier",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "name": {
-                          "@id": "http://xmlns.com/foaf/0.1/name",
-                          "@type": "xsd:string"
-                        },
-                        "alternate_name": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                          "@container": "@language"
-                        },
-                        "contact_point": {
-                          "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                          "@container": "@set",
-                          "@context": {
-                            "data_box": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                              "@type": "xsd:string"
-                            },
-                            "email": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                              "@type": "xsd:string"
-                            },
-                            "phone": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                              "@type": "xsd:string"
-                            },
-                            "address": {
-                              "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                              "@container": "@set",
-                              "@context": {
-                                "label": {
-                                  "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                                  "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                                },
-                                "full_address": {
-                                  "@id": "http://www.w3.org/ns/locn#fullAddress",
-                                  "@type": "xsd:string"
-                                },
-                                "po_box": {
-                                  "@id": "http://www.w3.org/ns/locn#poBox",
-                                  "@type": "xsd:string"
-                                },
-                                "thoroughfare": {
-                                  "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                                  "@type": "xsd:string"
-                                },
-                                "locator_designator": {
-                                  "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                                  "@type": "xsd:string"
-                                },
-                                "locator_name": {
-                                  "@id": "http://www.w3.org/ns/locn#locatorName",
-                                  "@type": "xsd:string"
-                                },
-                                "address_area": {
-                                  "@id": "http://www.w3.org/ns/locn#addressArea",
-                                  "@type": "xsd:string"
-                                },
-                                "post_name": {
-                                  "@id": "http://www.w3.org/ns/locn#postName",
-                                  "@type": "xsd:string"
-                                },
-                                "administrative_unit_level_1": {
-                                  "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                                  "@type": "xsd:string"
-                                },
-                                "administrative_unit_level_2": {
-                                  "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                                  "@type": "xsd:string"
-                                },
-                                "post_code": {
-                                  "@id": "http://www.w3.org/ns/locn#postCode",
-                                  "@type": "xsd:string"
-                                },
-                                "address": {
-                                  "@id": "http://www.w3.org/ns/locn#Address",
-                                  "@context": {}
-                                }
-                              }
-                            },
-                            "contact_details": {
-                              "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "organization": {
-                          "@id": "http://www.w3.org/ns/org#Organization",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "organization": {
-                      "@id": "http://www.w3.org/ns/org#Organization",
-                      "@context": {}
-                    },
-                    "person": {
-                      "@id": "http://www.w3.org/ns/prov#Person",
-                      "@context": {}
-                    }
-                  }
-                },
-                "role": {
-                  "@id": "http://www.w3.org/ns/dcat#hadRole",
-                  "@type": "@id",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                      "@container": "@language"
-                    },
-                    "attributed_agent_role_type": {
-                      "@id": "http://www.w3.org/ns/dcat#Role",
-                      "@context": {}
-                    }
-                  }
-                },
-                "resource_attribution": {
-                  "@id": "http://www.w3.org/ns/prov#Attribution",
-                  "@context": {}
-                }
-              }
-            },
-            "record": {
-              "@id": "http://www.w3.org/ns/dcat#record",
-              "@type": "@id",
-              "@container": "@set"
-            },
-            "dataset": {
-              "@id": "http://www.w3.org/ns/dcat#dataset",
-              "@type": "@id",
-              "@container": "@set"
-            },
-            "repository": {
-              "@id": "http://www.w3.org/ns/dcat#Catalog",
-              "@context": {}
-            }
-          }
-        },
-        "metadata_record": {
-          "@id": "http://www.w3.org/ns/dcat#CatalogRecord",
-          "@context": {}
-        }
-      }
-    },
-    "identifier": {
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@container": "@set",
-      "@context": {
-        "value": {
-          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-          "@type": "xsd:string"
-        },
-        "scheme": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "notation": {
-              "@id": "http://www.w3.org/2004/02/skos/core#notation",
-              "@type": "xsd:string"
-            },
-            "identifier_scheme": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-              "@context": {}
-            }
-          }
-        },
-        "authorized": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-          "@type": "xsd:boolean"
-        },
-        "identifier": {
-          "@id": "http://www.w3.org/ns/adms#Identifier",
-          "@context": {}
-        }
-      }
-    },
-    "version": {
-      "@id": "http://www.w3.org/ns/dcat#version",
-      "@type": "xsd:string"
-    },
-    "title": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "xsd:string"
-    },
-    "alternate_title": {
-      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle",
-      "@container": "@set",
-      "@context": {
-        "title": {
-          "@id": "http://purl.org/dc/terms/alternative",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "alternate_title_type": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "alternate_title_type": {
-              "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-              "@context": {}
-            }
-          }
-        },
-        "alternate_title": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle",
-          "@context": {}
-        }
-      }
-    },
-    "qualified_attribution": {
-      "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
-      "@container": "@set",
-      "@context": {
-        "attributed_agent": {
-          "@id": "http://www.w3.org/ns/prov#agent",
-          "@type": "@id",
-          "@context": {
-            "identifier": {
-              "@id": "http://www.w3.org/ns/adms#identifier",
-              "@container": "@set",
-              "@context": {
-                "value": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                  "@type": "xsd:string"
-                },
-                "scheme": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                  "@type": "@id",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                    },
-                    "notation": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                      "@type": "xsd:string"
-                    },
-                    "identifier_scheme": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                      "@context": {}
-                    }
-                  }
-                },
-                "authorized": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                  "@type": "xsd:boolean"
-                },
-                "identifier": {
-                  "@id": "http://www.w3.org/ns/adms#Identifier",
-                  "@context": {}
-                }
-              }
-            },
-            "name": {
-              "@id": "http://xmlns.com/foaf/0.1/name",
-              "@type": "xsd:string"
-            },
-            "alternate_name": {
-              "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-              "@container": "@language"
-            },
-            "contact_point": {
-              "@id": "http://www.w3.org/ns/dcat#contactPoint",
-              "@container": "@set",
-              "@context": {
-                "data_box": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                  "@type": "xsd:string"
-                },
-                "email": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                  "@type": "xsd:string"
-                },
-                "phone": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                  "@type": "xsd:string"
-                },
-                "address": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                  "@container": "@set",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                    },
-                    "full_address": {
-                      "@id": "http://www.w3.org/ns/locn#fullAddress",
-                      "@type": "xsd:string"
-                    },
-                    "po_box": {
-                      "@id": "http://www.w3.org/ns/locn#poBox",
-                      "@type": "xsd:string"
-                    },
-                    "thoroughfare": {
-                      "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                      "@type": "xsd:string"
-                    },
-                    "locator_designator": {
-                      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                      "@type": "xsd:string"
-                    },
-                    "locator_name": {
-                      "@id": "http://www.w3.org/ns/locn#locatorName",
-                      "@type": "xsd:string"
-                    },
-                    "address_area": {
-                      "@id": "http://www.w3.org/ns/locn#addressArea",
-                      "@type": "xsd:string"
-                    },
-                    "post_name": {
-                      "@id": "http://www.w3.org/ns/locn#postName",
-                      "@type": "xsd:string"
-                    },
-                    "administrative_unit_level_1": {
-                      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                      "@type": "xsd:string"
-                    },
-                    "administrative_unit_level_2": {
-                      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                      "@type": "xsd:string"
-                    },
-                    "post_code": {
-                      "@id": "http://www.w3.org/ns/locn#postCode",
-                      "@type": "xsd:string"
-                    },
-                    "address": {
-                      "@id": "http://www.w3.org/ns/locn#Address",
-                      "@context": {}
-                    }
-                  }
-                },
-                "contact_details": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                  "@context": {}
-                }
-              }
-            },
-            "given_name": {
-              "@id": "http://www.w3.org/2006/vcard/ns#given-name",
-              "@type": "xsd:string"
-            },
-            "family_name": {
-              "@id": "http://www.w3.org/2006/vcard/ns#family-name",
-              "@type": "xsd:string"
-            },
-            "affiliation": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAffiliation",
-              "@container": "@set",
-              "@context": {
-                "identifier": {
-                  "@id": "http://www.w3.org/ns/adms#identifier",
-                  "@container": "@set",
-                  "@context": {
-                    "value": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                      "@type": "xsd:string"
-                    },
-                    "scheme": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                      "@type": "@id",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                        },
-                        "notation": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                          "@type": "xsd:string"
-                        },
-                        "identifier_scheme": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "authorized": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                      "@type": "xsd:boolean"
-                    },
-                    "identifier": {
-                      "@id": "http://www.w3.org/ns/adms#Identifier",
-                      "@context": {}
-                    }
-                  }
-                },
-                "name": {
-                  "@id": "http://xmlns.com/foaf/0.1/name",
-                  "@type": "xsd:string"
-                },
-                "alternate_name": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                  "@container": "@language"
-                },
-                "contact_point": {
-                  "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                  "@container": "@set",
-                  "@context": {
-                    "data_box": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                      "@type": "xsd:string"
-                    },
-                    "email": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                      "@type": "xsd:string"
-                    },
-                    "phone": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                      "@type": "xsd:string"
-                    },
-                    "address": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                      "@container": "@set",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                        },
-                        "full_address": {
-                          "@id": "http://www.w3.org/ns/locn#fullAddress",
-                          "@type": "xsd:string"
-                        },
-                        "po_box": {
-                          "@id": "http://www.w3.org/ns/locn#poBox",
-                          "@type": "xsd:string"
-                        },
-                        "thoroughfare": {
-                          "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                          "@type": "xsd:string"
-                        },
-                        "locator_designator": {
-                          "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                          "@type": "xsd:string"
-                        },
-                        "locator_name": {
-                          "@id": "http://www.w3.org/ns/locn#locatorName",
-                          "@type": "xsd:string"
-                        },
-                        "address_area": {
-                          "@id": "http://www.w3.org/ns/locn#addressArea",
-                          "@type": "xsd:string"
-                        },
-                        "post_name": {
-                          "@id": "http://www.w3.org/ns/locn#postName",
-                          "@type": "xsd:string"
-                        },
-                        "administrative_unit_level_1": {
-                          "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                          "@type": "xsd:string"
-                        },
-                        "administrative_unit_level_2": {
-                          "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                          "@type": "xsd:string"
-                        },
-                        "post_code": {
-                          "@id": "http://www.w3.org/ns/locn#postCode",
-                          "@type": "xsd:string"
-                        },
-                        "address": {
-                          "@id": "http://www.w3.org/ns/locn#Address",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "contact_details": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                      "@context": {}
-                    }
-                  }
-                },
-                "organization": {
-                  "@id": "http://www.w3.org/ns/org#Organization",
-                  "@context": {}
-                }
-              }
-            },
-            "organization": {
-              "@id": "http://www.w3.org/ns/org#Organization",
-              "@context": {}
-            },
-            "person": {
-              "@id": "http://www.w3.org/ns/prov#Person",
-              "@context": {}
-            }
-          }
-        },
-        "role": {
-          "@id": "http://www.w3.org/ns/dcat#hadRole",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "attributed_agent_role_type": {
-              "@id": "http://www.w3.org/ns/dcat#Role",
-              "@context": {}
-            }
-          }
-        },
-        "resource_attribution": {
-          "@id": "http://www.w3.org/ns/prov#Attribution",
-          "@context": {}
-        }
-      }
-    },
-    "publication_year": {
-      "@id": "https://w3id.org/tib/datacite/property/publicationYear",
-      "@type": "xsd:gYear"
-    },
-    "time_reference": {
-      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasTimeReference",
-      "@container": "@set",
-      "@context": {
-        "temporal_representation": {
-          "@id": "http://www.w3.org/2006/time#hasTime",
-          "@type": "@id",
-          "@context": {
-            "beginning": {
-              "@id": "http://www.w3.org/2006/time#hasBeginning",
-              "@type": "@id",
-              "@context": {
-                "date_time": {
-                  "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                  "@type": "xsd:dateTime"
-                },
-                "date": {
-                  "@id": "http://www.w3.org/2006/time#inXSDDate",
-                  "@type": "xsd:date"
-                },
-                "time_instant": {
-                  "@id": "http://www.w3.org/2006/time#Instant",
-                  "@context": {}
-                }
-              }
-            },
-            "end": {
-              "@id": "http://www.w3.org/2006/time#hasEnd",
-              "@type": "@id",
-              "@context": {
-                "date_time": {
-                  "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                  "@type": "xsd:dateTime"
-                },
-                "date": {
-                  "@id": "http://www.w3.org/2006/time#inXSDDate",
-                  "@type": "xsd:date"
-                },
-                "time_instant": {
-                  "@id": "http://www.w3.org/2006/time#Instant",
-                  "@context": {}
-                }
-              }
-            },
-            "date_time": {
-              "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-              "@type": "xsd:dateTime"
-            },
-            "date": {
-              "@id": "http://www.w3.org/2006/time#inXSDDate",
-              "@type": "xsd:date"
-            },
-            "time_interval": {
-              "@id": "http://www.w3.org/2006/time#Interval",
-              "@context": {}
-            },
-            "time_instant": {
-              "@id": "http://www.w3.org/2006/time#Instant",
-              "@context": {}
-            }
-          }
-        },
-        "date_type": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "date_type": {
-              "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-              "@context": {}
-            }
-          }
-        },
-        "date_information": {
-          "@id": "https://w3id.org/tib/datacite/property/dateInformation",
-          "@container": "@language"
-        },
-        "time_reference": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#TimeReference",
-          "@context": {}
-        }
-      }
-    },
-    "resource_type": {
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "@id",
-      "@context": {
-        "label": {
-          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "@container": "@language"
-        },
-        "resource_type": {
-          "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-          "@context": {}
-        }
-      }
-    },
-    "primary_language": {
-      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasPrimaryLanguage",
-      "@type": "@id",
-      "@context": {
-        "label": {
-          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "@container": "@language"
-        },
-        "language_system": {
-          "@id": "http://purl.org/dc/terms/LinguisticSystem",
-          "@context": {}
-        }
-      }
-    },
-    "other_language": {
-      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasOtherLanguage",
-      "@container": "@set",
-      "@context": {
-        "label": {
-          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "@container": "@language"
-        },
-        "language_system": {
-          "@id": "http://purl.org/dc/terms/LinguisticSystem",
-          "@context": {}
-        }
-      }
-    },
-    "access_rights": {
-      "@id": "http://purl.org/dc/terms/accessRights",
-      "@type": "@id",
-      "@context": {
-        "label": {
-          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-          "@container": "@language"
-        },
-        "access_rights": {
-          "@id": "http://purl.org/dc/terms/RightsStatement",
-          "@context": {}
-        }
-      }
-    },
-    "subject": {
-      "@id": "https://w3id.org/tib/datacite/property/subject",
-      "@container": "@set",
-      "@context": {
-        "title": {
-          "@id": "http://purl.org/dc/terms/title",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "definition": {
-          "@id": "http://www.w3.org/2004/02/skos/core#definition",
-          "@container": "@language"
-        },
-        "classification_code": {
-          "@id": "https://w3id.org/tib/datacite/property/classificationCode",
-          "@type": "xsd:string"
-        },
-        "subject_scheme": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "subject_scheme": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#SubjectScheme",
-              "@context": {}
-            }
-          }
-        },
-        "subject": {
-          "@id": "https://w3id.org/tib/datacite/class/Subject",
-          "@context": {}
-        }
-      }
-    },
-    "keyword": {
-      "@id": "http://www.w3.org/ns/dcat#keyword",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "description": {
-      "@id": "https://w3id.org/tib/datacite/property/description",
-      "@container": "@set",
-      "@context": {
-        "description_text": {
-          "@id": "http://purl.org/dc/terms/description",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "description_type": {
-          "@id": "https://w3id.org/tib/datacite/property/descriptionType",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "description_type": {
-              "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-              "@context": {}
-            }
-          }
-        },
-        "description": {
-          "@id": "https://w3id.org/tib/datacite/class/Description",
-          "@context": {}
-        }
-      }
-    },
-    "location": {
-      "@id": "http://purl.org/dc/terms/spatial",
-      "@container": "@set",
-      "@context": {
-        "bounding_box": {
-          "@id": "http://www.w3.org/ns/dcat#bbox",
-          "@type": "http://www.opengis.net/ont/sf#Envelope"
-        },
-        "label": {
-          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "geometry": {
-          "@id": "http://www.w3.org/ns/locn#geometry",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "gml": {
-              "@id": "http://www.opengis.net/ont/geosparql#asGML",
-              "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral"
-            },
-            "wkt": {
-              "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-              "@type": "http://www.opengis.net/ont/geosparql#wktLiteral"
-            },
-            "geometry": {
-              "@id": "http://www.w3.org/ns/locn#Geometry",
-              "@context": {}
-            }
-          }
-        },
-        "related_object": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasRelatedResource",
-          "@container": "@set",
-          "@context": {
-            "identifier": {
-              "@id": "http://www.w3.org/ns/adms#identifier",
-              "@container": "@set",
-              "@context": {
-                "value": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                  "@type": "xsd:string"
-                },
-                "scheme": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                  "@type": "@id",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                    },
-                    "notation": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                      "@type": "xsd:string"
-                    },
-                    "identifier_scheme": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                      "@context": {}
-                    }
-                  }
-                },
-                "authorized": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                  "@type": "xsd:boolean"
-                },
-                "identifier": {
-                  "@id": "http://www.w3.org/ns/adms#Identifier",
-                  "@context": {}
-                }
-              }
-            },
-            "title": {
-              "@id": "http://purl.org/dc/terms/title",
-              "@type": "xsd:string"
-            },
-            "alternate_title": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle",
-              "@container": "@set",
-              "@context": {
-                "title": {
-                  "@id": "http://purl.org/dc/terms/alternative",
-                  "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                },
-                "alternate_title_type": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-                  "@type": "@id",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                      "@container": "@language"
-                    },
-                    "alternate_title_type": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-                      "@context": {}
-                    }
-                  }
-                },
-                "alternate_title": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle",
-                  "@context": {}
-                }
-              }
-            },
-            "resource_url": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl",
-              "@type": "xsd:anyURI"
-            },
-            "qualified_attribution": {
-              "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
-              "@container": "@set",
-              "@context": {
-                "attributed_agent": {
-                  "@id": "http://www.w3.org/ns/prov#agent",
-                  "@type": "@id",
-                  "@context": {
-                    "identifier": {
-                      "@id": "http://www.w3.org/ns/adms#identifier",
-                      "@container": "@set",
-                      "@context": {
-                        "value": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                          "@type": "xsd:string"
-                        },
-                        "scheme": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                          "@type": "@id",
-                          "@context": {
-                            "label": {
-                              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                            },
-                            "notation": {
-                              "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                              "@type": "xsd:string"
-                            },
-                            "identifier_scheme": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "authorized": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                          "@type": "xsd:boolean"
-                        },
-                        "identifier": {
-                          "@id": "http://www.w3.org/ns/adms#Identifier",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "name": {
-                      "@id": "http://xmlns.com/foaf/0.1/name",
-                      "@type": "xsd:string"
-                    },
-                    "alternate_name": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                      "@container": "@language"
-                    },
-                    "contact_point": {
-                      "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                      "@container": "@set",
-                      "@context": {
-                        "data_box": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                          "@type": "xsd:string"
-                        },
-                        "email": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                          "@type": "xsd:string"
-                        },
-                        "phone": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                          "@type": "xsd:string"
-                        },
-                        "address": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                          "@container": "@set",
-                          "@context": {
-                            "label": {
-                              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                            },
-                            "full_address": {
-                              "@id": "http://www.w3.org/ns/locn#fullAddress",
-                              "@type": "xsd:string"
-                            },
-                            "po_box": {
-                              "@id": "http://www.w3.org/ns/locn#poBox",
-                              "@type": "xsd:string"
-                            },
-                            "thoroughfare": {
-                              "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                              "@type": "xsd:string"
-                            },
-                            "locator_designator": {
-                              "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                              "@type": "xsd:string"
-                            },
-                            "locator_name": {
-                              "@id": "http://www.w3.org/ns/locn#locatorName",
-                              "@type": "xsd:string"
-                            },
-                            "address_area": {
-                              "@id": "http://www.w3.org/ns/locn#addressArea",
-                              "@type": "xsd:string"
-                            },
-                            "post_name": {
-                              "@id": "http://www.w3.org/ns/locn#postName",
-                              "@type": "xsd:string"
-                            },
-                            "administrative_unit_level_1": {
-                              "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                              "@type": "xsd:string"
-                            },
-                            "administrative_unit_level_2": {
-                              "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                              "@type": "xsd:string"
-                            },
-                            "post_code": {
-                              "@id": "http://www.w3.org/ns/locn#postCode",
-                              "@type": "xsd:string"
-                            },
-                            "address": {
-                              "@id": "http://www.w3.org/ns/locn#Address",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "contact_details": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "given_name": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#given-name",
-                      "@type": "xsd:string"
-                    },
-                    "family_name": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#family-name",
-                      "@type": "xsd:string"
-                    },
-                    "affiliation": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAffiliation",
-                      "@container": "@set",
-                      "@context": {
-                        "identifier": {
-                          "@id": "http://www.w3.org/ns/adms#identifier",
-                          "@container": "@set",
-                          "@context": {
-                            "value": {
-                              "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                              "@type": "xsd:string"
-                            },
-                            "scheme": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                              "@type": "@id",
-                              "@context": {
-                                "label": {
-                                  "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                                  "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                                },
-                                "notation": {
-                                  "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                                  "@type": "xsd:string"
-                                },
-                                "identifier_scheme": {
-                                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                                  "@context": {}
-                                }
-                              }
-                            },
-                            "authorized": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                              "@type": "xsd:boolean"
-                            },
-                            "identifier": {
-                              "@id": "http://www.w3.org/ns/adms#Identifier",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "name": {
-                          "@id": "http://xmlns.com/foaf/0.1/name",
-                          "@type": "xsd:string"
-                        },
-                        "alternate_name": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                          "@container": "@language"
-                        },
-                        "contact_point": {
-                          "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                          "@container": "@set",
-                          "@context": {
-                            "data_box": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                              "@type": "xsd:string"
-                            },
-                            "email": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                              "@type": "xsd:string"
-                            },
-                            "phone": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                              "@type": "xsd:string"
-                            },
-                            "address": {
-                              "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                              "@container": "@set",
-                              "@context": {
-                                "label": {
-                                  "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                                  "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                                },
-                                "full_address": {
-                                  "@id": "http://www.w3.org/ns/locn#fullAddress",
-                                  "@type": "xsd:string"
-                                },
-                                "po_box": {
-                                  "@id": "http://www.w3.org/ns/locn#poBox",
-                                  "@type": "xsd:string"
-                                },
-                                "thoroughfare": {
-                                  "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                                  "@type": "xsd:string"
-                                },
-                                "locator_designator": {
-                                  "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                                  "@type": "xsd:string"
-                                },
-                                "locator_name": {
-                                  "@id": "http://www.w3.org/ns/locn#locatorName",
-                                  "@type": "xsd:string"
-                                },
-                                "address_area": {
-                                  "@id": "http://www.w3.org/ns/locn#addressArea",
-                                  "@type": "xsd:string"
-                                },
-                                "post_name": {
-                                  "@id": "http://www.w3.org/ns/locn#postName",
-                                  "@type": "xsd:string"
-                                },
-                                "administrative_unit_level_1": {
-                                  "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                                  "@type": "xsd:string"
-                                },
-                                "administrative_unit_level_2": {
-                                  "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                                  "@type": "xsd:string"
-                                },
-                                "post_code": {
-                                  "@id": "http://www.w3.org/ns/locn#postCode",
-                                  "@type": "xsd:string"
-                                },
-                                "address": {
-                                  "@id": "http://www.w3.org/ns/locn#Address",
-                                  "@context": {}
-                                }
-                              }
-                            },
-                            "contact_details": {
-                              "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "organization": {
-                          "@id": "http://www.w3.org/ns/org#Organization",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "organization": {
-                      "@id": "http://www.w3.org/ns/org#Organization",
-                      "@context": {}
-                    },
-                    "person": {
-                      "@id": "http://www.w3.org/ns/prov#Person",
-                      "@context": {}
-                    }
-                  }
-                },
-                "role": {
-                  "@id": "http://www.w3.org/ns/dcat#hadRole",
-                  "@type": "@id",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                      "@container": "@language"
-                    },
-                    "attributed_agent_role_type": {
-                      "@id": "http://www.w3.org/ns/dcat#Role",
-                      "@context": {}
-                    }
-                  }
-                },
-                "resource_attribution": {
-                  "@id": "http://www.w3.org/ns/prov#Attribution",
-                  "@context": {}
-                }
-              }
-            },
-            "time_reference": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasTimeReference",
-              "@container": "@set",
-              "@context": {
-                "temporal_representation": {
-                  "@id": "http://www.w3.org/2006/time#hasTime",
-                  "@type": "@id",
-                  "@context": {
-                    "beginning": {
-                      "@id": "http://www.w3.org/2006/time#hasBeginning",
-                      "@type": "@id",
-                      "@context": {
-                        "date_time": {
-                          "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                          "@type": "xsd:dateTime"
-                        },
-                        "date": {
-                          "@id": "http://www.w3.org/2006/time#inXSDDate",
-                          "@type": "xsd:date"
-                        },
-                        "time_instant": {
-                          "@id": "http://www.w3.org/2006/time#Instant",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "end": {
-                      "@id": "http://www.w3.org/2006/time#hasEnd",
-                      "@type": "@id",
-                      "@context": {
-                        "date_time": {
-                          "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                          "@type": "xsd:dateTime"
-                        },
-                        "date": {
-                          "@id": "http://www.w3.org/2006/time#inXSDDate",
-                          "@type": "xsd:date"
-                        },
-                        "time_instant": {
-                          "@id": "http://www.w3.org/2006/time#Instant",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "date_time": {
-                      "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                      "@type": "xsd:dateTime"
-                    },
-                    "date": {
-                      "@id": "http://www.w3.org/2006/time#inXSDDate",
-                      "@type": "xsd:date"
-                    },
-                    "time_interval": {
-                      "@id": "http://www.w3.org/2006/time#Interval",
-                      "@context": {}
-                    },
-                    "time_instant": {
-                      "@id": "http://www.w3.org/2006/time#Instant",
-                      "@context": {}
-                    }
-                  }
-                },
-                "date_type": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-                  "@type": "@id",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                      "@container": "@language"
-                    },
-                    "date_type": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-                      "@context": {}
-                    }
-                  }
-                },
-                "date_information": {
-                  "@id": "https://w3id.org/tib/datacite/property/dateInformation",
-                  "@container": "@language"
-                },
-                "time_reference": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#TimeReference",
-                  "@context": {}
-                }
-              }
-            },
-            "resource_type": {
-              "@id": "http://purl.org/dc/terms/type",
-              "@type": "@id",
-              "@context": {
-                "label": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                  "@container": "@language"
-                },
-                "resource_type": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-                  "@context": {}
-                }
-              }
-            },
-            "resource_relation_type": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-              "@type": "@id",
-              "@context": {
-                "label": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                  "@container": "@language"
-                },
-                "resource_relation_type": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-                  "@context": {}
-                }
-              }
-            },
-            "related_resource": {
-              "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
-              "@context": {}
-            }
-          }
-        },
-        "relation_type": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "relation_type": {
-              "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-              "@context": {}
-            }
-          }
-        },
-        "location": {
-          "@id": "http://purl.org/dc/terms/Location",
-          "@context": {}
-        }
-      }
-    },
-    "funding_reference": {
-      "@id": "https://w3id.org/tib/datacite/property/fundingReference",
-      "@container": "@set",
-      "@context": {
-        "local_identifier": {
-          "@id": "https://w3id.org/tib/datacite/property/awardNumber",
-          "@type": "xsd:string"
-        },
-        "award_title": {
-          "@id": "https://w3id.org/tib/datacite/property/awardTitle",
-          "@type": "xsd:string"
-        },
-        "funding_program": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#fundingProgram",
-          "@type": "xsd:anyURI"
-        },
-        "funder": {
-          "@id": "https://w3id.org/tib/datacite/property/funderIdentifier",
-          "@container": "@set",
-          "@context": {
-            "identifier": {
-              "@id": "http://www.w3.org/ns/adms#identifier",
-              "@container": "@set",
-              "@context": {
-                "value": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                  "@type": "xsd:string"
-                },
-                "scheme": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                  "@type": "@id",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                    },
-                    "notation": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                      "@type": "xsd:string"
-                    },
-                    "identifier_scheme": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                      "@context": {}
-                    }
-                  }
-                },
-                "authorized": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                  "@type": "xsd:boolean"
-                },
-                "identifier": {
-                  "@id": "http://www.w3.org/ns/adms#Identifier",
-                  "@context": {}
-                }
-              }
-            },
-            "name": {
-              "@id": "http://xmlns.com/foaf/0.1/name",
-              "@type": "xsd:string"
-            },
-            "alternate_name": {
-              "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-              "@container": "@language"
-            },
-            "contact_point": {
-              "@id": "http://www.w3.org/ns/dcat#contactPoint",
-              "@container": "@set",
-              "@context": {
-                "data_box": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                  "@type": "xsd:string"
-                },
-                "email": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                  "@type": "xsd:string"
-                },
-                "phone": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                  "@type": "xsd:string"
-                },
-                "address": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                  "@container": "@set",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                    },
-                    "full_address": {
-                      "@id": "http://www.w3.org/ns/locn#fullAddress",
-                      "@type": "xsd:string"
-                    },
-                    "po_box": {
-                      "@id": "http://www.w3.org/ns/locn#poBox",
-                      "@type": "xsd:string"
-                    },
-                    "thoroughfare": {
-                      "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                      "@type": "xsd:string"
-                    },
-                    "locator_designator": {
-                      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                      "@type": "xsd:string"
-                    },
-                    "locator_name": {
-                      "@id": "http://www.w3.org/ns/locn#locatorName",
-                      "@type": "xsd:string"
-                    },
-                    "address_area": {
-                      "@id": "http://www.w3.org/ns/locn#addressArea",
-                      "@type": "xsd:string"
-                    },
-                    "post_name": {
-                      "@id": "http://www.w3.org/ns/locn#postName",
-                      "@type": "xsd:string"
-                    },
-                    "administrative_unit_level_1": {
-                      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                      "@type": "xsd:string"
-                    },
-                    "administrative_unit_level_2": {
-                      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                      "@type": "xsd:string"
-                    },
-                    "post_code": {
-                      "@id": "http://www.w3.org/ns/locn#postCode",
-                      "@type": "xsd:string"
-                    },
-                    "address": {
-                      "@id": "http://www.w3.org/ns/locn#Address",
-                      "@context": {}
-                    }
-                  }
-                },
-                "contact_details": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                  "@context": {}
-                }
-              }
-            },
-            "given_name": {
-              "@id": "http://www.w3.org/2006/vcard/ns#given-name",
-              "@type": "xsd:string"
-            },
-            "family_name": {
-              "@id": "http://www.w3.org/2006/vcard/ns#family-name",
-              "@type": "xsd:string"
-            },
-            "affiliation": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAffiliation",
-              "@container": "@set",
-              "@context": {
-                "identifier": {
-                  "@id": "http://www.w3.org/ns/adms#identifier",
-                  "@container": "@set",
-                  "@context": {
-                    "value": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                      "@type": "xsd:string"
-                    },
-                    "scheme": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                      "@type": "@id",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                        },
-                        "notation": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                          "@type": "xsd:string"
-                        },
-                        "identifier_scheme": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "authorized": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                      "@type": "xsd:boolean"
-                    },
-                    "identifier": {
-                      "@id": "http://www.w3.org/ns/adms#Identifier",
-                      "@context": {}
-                    }
-                  }
-                },
-                "name": {
-                  "@id": "http://xmlns.com/foaf/0.1/name",
-                  "@type": "xsd:string"
-                },
-                "alternate_name": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                  "@container": "@language"
-                },
-                "contact_point": {
-                  "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                  "@container": "@set",
-                  "@context": {
-                    "data_box": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                      "@type": "xsd:string"
-                    },
-                    "email": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                      "@type": "xsd:string"
-                    },
-                    "phone": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                      "@type": "xsd:string"
-                    },
-                    "address": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                      "@container": "@set",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                        },
-                        "full_address": {
-                          "@id": "http://www.w3.org/ns/locn#fullAddress",
-                          "@type": "xsd:string"
-                        },
-                        "po_box": {
-                          "@id": "http://www.w3.org/ns/locn#poBox",
-                          "@type": "xsd:string"
-                        },
-                        "thoroughfare": {
-                          "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                          "@type": "xsd:string"
-                        },
-                        "locator_designator": {
-                          "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                          "@type": "xsd:string"
-                        },
-                        "locator_name": {
-                          "@id": "http://www.w3.org/ns/locn#locatorName",
-                          "@type": "xsd:string"
-                        },
-                        "address_area": {
-                          "@id": "http://www.w3.org/ns/locn#addressArea",
-                          "@type": "xsd:string"
-                        },
-                        "post_name": {
-                          "@id": "http://www.w3.org/ns/locn#postName",
-                          "@type": "xsd:string"
-                        },
-                        "administrative_unit_level_1": {
-                          "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                          "@type": "xsd:string"
-                        },
-                        "administrative_unit_level_2": {
-                          "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                          "@type": "xsd:string"
-                        },
-                        "post_code": {
-                          "@id": "http://www.w3.org/ns/locn#postCode",
-                          "@type": "xsd:string"
-                        },
-                        "address": {
-                          "@id": "http://www.w3.org/ns/locn#Address",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "contact_details": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                      "@context": {}
-                    }
-                  }
-                },
-                "organization": {
-                  "@id": "http://www.w3.org/ns/org#Organization",
-                  "@context": {}
-                }
-              }
-            },
-            "organization": {
-              "@id": "http://www.w3.org/ns/org#Organization",
-              "@context": {}
-            },
-            "person": {
-              "@id": "http://www.w3.org/ns/prov#Person",
-              "@context": {}
-            }
-          }
-        },
-        "funding_reference": {
-          "@id": "https://w3id.org/tib/datacite/class/FundingReference",
-          "@context": {}
-        }
-      }
-    },
-    "related_resource": {
-      "@id": "http://purl.org/dc/terms/relation",
-      "@container": "@set",
-      "@context": {
-        "identifier": {
-          "@id": "http://www.w3.org/ns/adms#identifier",
-          "@container": "@set",
-          "@context": {
-            "value": {
-              "@id": "http://www.w3.org/2004/02/skos/core#notation",
-              "@type": "xsd:string"
-            },
-            "scheme": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-              "@type": "@id",
-              "@context": {
-                "label": {
-                  "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                  "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                },
-                "notation": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                  "@type": "xsd:string"
-                },
-                "identifier_scheme": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                  "@context": {}
-                }
-              }
-            },
-            "authorized": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-              "@type": "xsd:boolean"
-            },
-            "identifier": {
-              "@id": "http://www.w3.org/ns/adms#Identifier",
-              "@context": {}
-            }
-          }
-        },
-        "title": {
-          "@id": "http://purl.org/dc/terms/title",
-          "@type": "xsd:string"
-        },
-        "alternate_title": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle",
-          "@container": "@set",
-          "@context": {
-            "title": {
-              "@id": "http://purl.org/dc/terms/alternative",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "alternate_title_type": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-              "@type": "@id",
-              "@context": {
-                "label": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                  "@container": "@language"
-                },
-                "alternate_title_type": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-                  "@context": {}
-                }
-              }
-            },
-            "alternate_title": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle",
-              "@context": {}
-            }
-          }
-        },
-        "resource_url": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl",
-          "@type": "xsd:anyURI"
-        },
-        "qualified_attribution": {
-          "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
-          "@container": "@set",
-          "@context": {
-            "attributed_agent": {
-              "@id": "http://www.w3.org/ns/prov#agent",
-              "@type": "@id",
-              "@context": {
-                "identifier": {
-                  "@id": "http://www.w3.org/ns/adms#identifier",
-                  "@container": "@set",
-                  "@context": {
-                    "value": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                      "@type": "xsd:string"
-                    },
-                    "scheme": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                      "@type": "@id",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                        },
-                        "notation": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                          "@type": "xsd:string"
-                        },
-                        "identifier_scheme": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "authorized": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                      "@type": "xsd:boolean"
-                    },
-                    "identifier": {
-                      "@id": "http://www.w3.org/ns/adms#Identifier",
-                      "@context": {}
-                    }
-                  }
-                },
-                "name": {
-                  "@id": "http://xmlns.com/foaf/0.1/name",
-                  "@type": "xsd:string"
-                },
-                "alternate_name": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                  "@container": "@language"
-                },
-                "contact_point": {
-                  "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                  "@container": "@set",
-                  "@context": {
-                    "data_box": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                      "@type": "xsd:string"
-                    },
-                    "email": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                      "@type": "xsd:string"
-                    },
-                    "phone": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                      "@type": "xsd:string"
-                    },
-                    "address": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                      "@container": "@set",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                        },
-                        "full_address": {
-                          "@id": "http://www.w3.org/ns/locn#fullAddress",
-                          "@type": "xsd:string"
-                        },
-                        "po_box": {
-                          "@id": "http://www.w3.org/ns/locn#poBox",
-                          "@type": "xsd:string"
-                        },
-                        "thoroughfare": {
-                          "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                          "@type": "xsd:string"
-                        },
-                        "locator_designator": {
-                          "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                          "@type": "xsd:string"
-                        },
-                        "locator_name": {
-                          "@id": "http://www.w3.org/ns/locn#locatorName",
-                          "@type": "xsd:string"
-                        },
-                        "address_area": {
-                          "@id": "http://www.w3.org/ns/locn#addressArea",
-                          "@type": "xsd:string"
-                        },
-                        "post_name": {
-                          "@id": "http://www.w3.org/ns/locn#postName",
-                          "@type": "xsd:string"
-                        },
-                        "administrative_unit_level_1": {
-                          "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                          "@type": "xsd:string"
-                        },
-                        "administrative_unit_level_2": {
-                          "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                          "@type": "xsd:string"
-                        },
-                        "post_code": {
-                          "@id": "http://www.w3.org/ns/locn#postCode",
-                          "@type": "xsd:string"
-                        },
-                        "address": {
-                          "@id": "http://www.w3.org/ns/locn#Address",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "contact_details": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                      "@context": {}
-                    }
-                  }
-                },
-                "given_name": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#given-name",
-                  "@type": "xsd:string"
-                },
-                "family_name": {
-                  "@id": "http://www.w3.org/2006/vcard/ns#family-name",
-                  "@type": "xsd:string"
-                },
-                "affiliation": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAffiliation",
-                  "@container": "@set",
-                  "@context": {
-                    "identifier": {
-                      "@id": "http://www.w3.org/ns/adms#identifier",
-                      "@container": "@set",
-                      "@context": {
-                        "value": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                          "@type": "xsd:string"
-                        },
-                        "scheme": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                          "@type": "@id",
-                          "@context": {
-                            "label": {
-                              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                            },
-                            "notation": {
-                              "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                              "@type": "xsd:string"
-                            },
-                            "identifier_scheme": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "authorized": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                          "@type": "xsd:boolean"
-                        },
-                        "identifier": {
-                          "@id": "http://www.w3.org/ns/adms#Identifier",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "name": {
-                      "@id": "http://xmlns.com/foaf/0.1/name",
-                      "@type": "xsd:string"
-                    },
-                    "alternate_name": {
-                      "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                      "@container": "@language"
-                    },
-                    "contact_point": {
-                      "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                      "@container": "@set",
-                      "@context": {
-                        "data_box": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                          "@type": "xsd:string"
-                        },
-                        "email": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                          "@type": "xsd:string"
-                        },
-                        "phone": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                          "@type": "xsd:string"
-                        },
-                        "address": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                          "@container": "@set",
-                          "@context": {
-                            "label": {
-                              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                            },
-                            "full_address": {
-                              "@id": "http://www.w3.org/ns/locn#fullAddress",
-                              "@type": "xsd:string"
-                            },
-                            "po_box": {
-                              "@id": "http://www.w3.org/ns/locn#poBox",
-                              "@type": "xsd:string"
-                            },
-                            "thoroughfare": {
-                              "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                              "@type": "xsd:string"
-                            },
-                            "locator_designator": {
-                              "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                              "@type": "xsd:string"
-                            },
-                            "locator_name": {
-                              "@id": "http://www.w3.org/ns/locn#locatorName",
-                              "@type": "xsd:string"
-                            },
-                            "address_area": {
-                              "@id": "http://www.w3.org/ns/locn#addressArea",
-                              "@type": "xsd:string"
-                            },
-                            "post_name": {
-                              "@id": "http://www.w3.org/ns/locn#postName",
-                              "@type": "xsd:string"
-                            },
-                            "administrative_unit_level_1": {
-                              "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                              "@type": "xsd:string"
-                            },
-                            "administrative_unit_level_2": {
-                              "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                              "@type": "xsd:string"
-                            },
-                            "post_code": {
-                              "@id": "http://www.w3.org/ns/locn#postCode",
-                              "@type": "xsd:string"
-                            },
-                            "address": {
-                              "@id": "http://www.w3.org/ns/locn#Address",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "contact_details": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "organization": {
-                      "@id": "http://www.w3.org/ns/org#Organization",
-                      "@context": {}
-                    }
-                  }
-                },
-                "organization": {
-                  "@id": "http://www.w3.org/ns/org#Organization",
-                  "@context": {}
-                },
-                "person": {
-                  "@id": "http://www.w3.org/ns/prov#Person",
-                  "@context": {}
-                }
-              }
-            },
-            "role": {
-              "@id": "http://www.w3.org/ns/dcat#hadRole",
-              "@type": "@id",
-              "@context": {
-                "label": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                  "@container": "@language"
-                },
-                "attributed_agent_role_type": {
-                  "@id": "http://www.w3.org/ns/dcat#Role",
-                  "@context": {}
-                }
-              }
-            },
-            "resource_attribution": {
-              "@id": "http://www.w3.org/ns/prov#Attribution",
-              "@context": {}
-            }
-          }
-        },
-        "time_reference": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasTimeReference",
-          "@container": "@set",
-          "@context": {
-            "temporal_representation": {
-              "@id": "http://www.w3.org/2006/time#hasTime",
-              "@type": "@id",
-              "@context": {
-                "beginning": {
-                  "@id": "http://www.w3.org/2006/time#hasBeginning",
-                  "@type": "@id",
-                  "@context": {
-                    "date_time": {
-                      "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                      "@type": "xsd:dateTime"
-                    },
-                    "date": {
-                      "@id": "http://www.w3.org/2006/time#inXSDDate",
-                      "@type": "xsd:date"
-                    },
-                    "time_instant": {
-                      "@id": "http://www.w3.org/2006/time#Instant",
-                      "@context": {}
-                    }
-                  }
-                },
-                "end": {
-                  "@id": "http://www.w3.org/2006/time#hasEnd",
-                  "@type": "@id",
-                  "@context": {
-                    "date_time": {
-                      "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                      "@type": "xsd:dateTime"
-                    },
-                    "date": {
-                      "@id": "http://www.w3.org/2006/time#inXSDDate",
-                      "@type": "xsd:date"
-                    },
-                    "time_instant": {
-                      "@id": "http://www.w3.org/2006/time#Instant",
-                      "@context": {}
-                    }
-                  }
-                },
-                "date_time": {
-                  "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                  "@type": "xsd:dateTime"
-                },
-                "date": {
-                  "@id": "http://www.w3.org/2006/time#inXSDDate",
-                  "@type": "xsd:date"
-                },
-                "time_interval": {
-                  "@id": "http://www.w3.org/2006/time#Interval",
-                  "@context": {}
-                },
-                "time_instant": {
-                  "@id": "http://www.w3.org/2006/time#Instant",
-                  "@context": {}
-                }
-              }
-            },
-            "date_type": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-              "@type": "@id",
-              "@context": {
-                "label": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                  "@container": "@language"
-                },
-                "date_type": {
-                  "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-                  "@context": {}
-                }
-              }
-            },
-            "date_information": {
-              "@id": "https://w3id.org/tib/datacite/property/dateInformation",
-              "@container": "@language"
-            },
-            "time_reference": {
-              "@id": "https://model.ccmm.cz/vocabulary/ccmm#TimeReference",
-              "@context": {}
-            }
-          }
-        },
-        "resource_type": {
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "resource_type": {
-              "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-              "@context": {}
-            }
-          }
-        },
-        "resource_relation_type": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "resource_relation_type": {
-              "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-              "@context": {}
-            }
-          }
-        },
-        "related_resource": {
-          "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
-          "@context": {}
-        }
-      }
-    },
-    "distribution": {
-      "@id": "http://www.w3.org/ns/dcat#distribution",
-      "@container": "@set",
-      "@context": {
-        "title": {
-          "@id": "http://purl.org/dc/terms/title",
-          "@type": "xsd:string"
-        },
-        "access_url": {
-          "@id": "http://www.w3.org/ns/dcat#accessURL",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "access_service": {
-          "@id": "http://www.w3.org/ns/dcat#accessService",
-          "@container": "@set",
-          "@context": {
-            "label": {
-              "@id": "http://purl.org/dc/terms/title",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "endpoint_url": {
-              "@id": "http://www.w3.org/ns/dcat#endpointURL",
-              "@container": "@set",
-              "@context": {
-                "identifier": {
-                  "@id": "http://www.w3.org/ns/adms#identifier",
-                  "@container": "@set",
-                  "@context": {
-                    "value": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                      "@type": "xsd:string"
-                    },
-                    "scheme": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                      "@type": "@id",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                        },
-                        "notation": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                          "@type": "xsd:string"
-                        },
-                        "identifier_scheme": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "authorized": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                      "@type": "xsd:boolean"
-                    },
-                    "identifier": {
-                      "@id": "http://www.w3.org/ns/adms#Identifier",
-                      "@context": {}
-                    }
-                  }
-                },
-                "title": {
-                  "@id": "http://purl.org/dc/terms/title",
-                  "@type": "xsd:string"
-                },
-                "alternate_title": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle",
-                  "@container": "@set",
-                  "@context": {
-                    "title": {
-                      "@id": "http://purl.org/dc/terms/alternative",
-                      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                    },
-                    "alternate_title_type": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-                      "@type": "@id",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                          "@container": "@language"
-                        },
-                        "alternate_title_type": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "alternate_title": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle",
-                      "@context": {}
-                    }
-                  }
-                },
-                "resource_url": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl",
-                  "@type": "xsd:anyURI"
-                },
-                "qualified_attribution": {
-                  "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
-                  "@container": "@set",
-                  "@context": {
-                    "attributed_agent": {
-                      "@id": "http://www.w3.org/ns/prov#agent",
-                      "@type": "@id",
-                      "@context": {
-                        "identifier": {
-                          "@id": "http://www.w3.org/ns/adms#identifier",
-                          "@container": "@set",
-                          "@context": {
-                            "value": {
-                              "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                              "@type": "xsd:string"
-                            },
-                            "scheme": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                              "@type": "@id",
-                              "@context": {
-                                "label": {
-                                  "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                                  "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                                },
-                                "notation": {
-                                  "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                                  "@type": "xsd:string"
-                                },
-                                "identifier_scheme": {
-                                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                                  "@context": {}
-                                }
-                              }
-                            },
-                            "authorized": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                              "@type": "xsd:boolean"
-                            },
-                            "identifier": {
-                              "@id": "http://www.w3.org/ns/adms#Identifier",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "name": {
-                          "@id": "http://xmlns.com/foaf/0.1/name",
-                          "@type": "xsd:string"
-                        },
-                        "alternate_name": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                          "@container": "@language"
-                        },
-                        "contact_point": {
-                          "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                          "@container": "@set",
-                          "@context": {
-                            "data_box": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                              "@type": "xsd:string"
-                            },
-                            "email": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                              "@type": "xsd:string"
-                            },
-                            "phone": {
-                              "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                              "@type": "xsd:string"
-                            },
-                            "address": {
-                              "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                              "@container": "@set",
-                              "@context": {
-                                "label": {
-                                  "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                                  "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                                },
-                                "full_address": {
-                                  "@id": "http://www.w3.org/ns/locn#fullAddress",
-                                  "@type": "xsd:string"
-                                },
-                                "po_box": {
-                                  "@id": "http://www.w3.org/ns/locn#poBox",
-                                  "@type": "xsd:string"
-                                },
-                                "thoroughfare": {
-                                  "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                                  "@type": "xsd:string"
-                                },
-                                "locator_designator": {
-                                  "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                                  "@type": "xsd:string"
-                                },
-                                "locator_name": {
-                                  "@id": "http://www.w3.org/ns/locn#locatorName",
-                                  "@type": "xsd:string"
-                                },
-                                "address_area": {
-                                  "@id": "http://www.w3.org/ns/locn#addressArea",
-                                  "@type": "xsd:string"
-                                },
-                                "post_name": {
-                                  "@id": "http://www.w3.org/ns/locn#postName",
-                                  "@type": "xsd:string"
-                                },
-                                "administrative_unit_level_1": {
-                                  "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                                  "@type": "xsd:string"
-                                },
-                                "administrative_unit_level_2": {
-                                  "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                                  "@type": "xsd:string"
-                                },
-                                "post_code": {
-                                  "@id": "http://www.w3.org/ns/locn#postCode",
-                                  "@type": "xsd:string"
-                                },
-                                "address": {
-                                  "@id": "http://www.w3.org/ns/locn#Address",
-                                  "@context": {}
-                                }
-                              }
-                            },
-                            "contact_details": {
-                              "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "given_name": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#given-name",
-                          "@type": "xsd:string"
-                        },
-                        "family_name": {
-                          "@id": "http://www.w3.org/2006/vcard/ns#family-name",
-                          "@type": "xsd:string"
-                        },
-                        "affiliation": {
-                          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasAffiliation",
-                          "@container": "@set",
-                          "@context": {
-                            "identifier": {
-                              "@id": "http://www.w3.org/ns/adms#identifier",
-                              "@container": "@set",
-                              "@context": {
-                                "value": {
-                                  "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                                  "@type": "xsd:string"
-                                },
-                                "scheme": {
-                                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#inScheme",
-                                  "@type": "@id",
-                                  "@context": {
-                                    "label": {
-                                      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                                      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                                    },
-                                    "notation": {
-                                      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-                                      "@type": "xsd:string"
-                                    },
-                                    "identifier_scheme": {
-                                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                                      "@context": {}
-                                    }
-                                  }
-                                },
-                                "authorized": {
-                                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#authorized",
-                                  "@type": "xsd:boolean"
-                                },
-                                "identifier": {
-                                  "@id": "http://www.w3.org/ns/adms#Identifier",
-                                  "@context": {}
-                                }
-                              }
-                            },
-                            "name": {
-                              "@id": "http://xmlns.com/foaf/0.1/name",
-                              "@type": "xsd:string"
-                            },
-                            "alternate_name": {
-                              "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-                              "@container": "@language"
-                            },
-                            "contact_point": {
-                              "@id": "http://www.w3.org/ns/dcat#contactPoint",
-                              "@container": "@set",
-                              "@context": {
-                                "data_box": {
-                                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
-                                  "@type": "xsd:string"
-                                },
-                                "email": {
-                                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
-                                  "@type": "xsd:string"
-                                },
-                                "phone": {
-                                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
-                                  "@type": "xsd:string"
-                                },
-                                "address": {
-                                  "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
-                                  "@container": "@set",
-                                  "@context": {
-                                    "label": {
-                                      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                                      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                                    },
-                                    "full_address": {
-                                      "@id": "http://www.w3.org/ns/locn#fullAddress",
-                                      "@type": "xsd:string"
-                                    },
-                                    "po_box": {
-                                      "@id": "http://www.w3.org/ns/locn#poBox",
-                                      "@type": "xsd:string"
-                                    },
-                                    "thoroughfare": {
-                                      "@id": "http://www.w3.org/ns/locn#thoroughfare",
-                                      "@type": "xsd:string"
-                                    },
-                                    "locator_designator": {
-                                      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-                                      "@type": "xsd:string"
-                                    },
-                                    "locator_name": {
-                                      "@id": "http://www.w3.org/ns/locn#locatorName",
-                                      "@type": "xsd:string"
-                                    },
-                                    "address_area": {
-                                      "@id": "http://www.w3.org/ns/locn#addressArea",
-                                      "@type": "xsd:string"
-                                    },
-                                    "post_name": {
-                                      "@id": "http://www.w3.org/ns/locn#postName",
-                                      "@type": "xsd:string"
-                                    },
-                                    "administrative_unit_level_1": {
-                                      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-                                      "@type": "xsd:string"
-                                    },
-                                    "administrative_unit_level_2": {
-                                      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-                                      "@type": "xsd:string"
-                                    },
-                                    "post_code": {
-                                      "@id": "http://www.w3.org/ns/locn#postCode",
-                                      "@type": "xsd:string"
-                                    },
-                                    "address": {
-                                      "@id": "http://www.w3.org/ns/locn#Address",
-                                      "@context": {}
-                                    }
-                                  }
-                                },
-                                "contact_details": {
-                                  "@id": "http://www.w3.org/2006/vcard/ns#Kind",
-                                  "@context": {}
-                                }
-                              }
-                            },
-                            "organization": {
-                              "@id": "http://www.w3.org/ns/org#Organization",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "organization": {
-                          "@id": "http://www.w3.org/ns/org#Organization",
-                          "@context": {}
-                        },
-                        "person": {
-                          "@id": "http://www.w3.org/ns/prov#Person",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "role": {
-                      "@id": "http://www.w3.org/ns/dcat#hadRole",
-                      "@type": "@id",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                          "@container": "@language"
-                        },
-                        "attributed_agent_role_type": {
-                          "@id": "http://www.w3.org/ns/dcat#Role",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "resource_attribution": {
-                      "@id": "http://www.w3.org/ns/prov#Attribution",
-                      "@context": {}
-                    }
-                  }
-                },
-                "time_reference": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasTimeReference",
-                  "@container": "@set",
-                  "@context": {
-                    "temporal_representation": {
-                      "@id": "http://www.w3.org/2006/time#hasTime",
-                      "@type": "@id",
-                      "@context": {
-                        "beginning": {
-                          "@id": "http://www.w3.org/2006/time#hasBeginning",
-                          "@type": "@id",
-                          "@context": {
-                            "date_time": {
-                              "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                              "@type": "xsd:dateTime"
-                            },
-                            "date": {
-                              "@id": "http://www.w3.org/2006/time#inXSDDate",
-                              "@type": "xsd:date"
-                            },
-                            "time_instant": {
-                              "@id": "http://www.w3.org/2006/time#Instant",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "end": {
-                          "@id": "http://www.w3.org/2006/time#hasEnd",
-                          "@type": "@id",
-                          "@context": {
-                            "date_time": {
-                              "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                              "@type": "xsd:dateTime"
-                            },
-                            "date": {
-                              "@id": "http://www.w3.org/2006/time#inXSDDate",
-                              "@type": "xsd:date"
-                            },
-                            "time_instant": {
-                              "@id": "http://www.w3.org/2006/time#Instant",
-                              "@context": {}
-                            }
-                          }
-                        },
-                        "date_time": {
-                          "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-                          "@type": "xsd:dateTime"
-                        },
-                        "date": {
-                          "@id": "http://www.w3.org/2006/time#inXSDDate",
-                          "@type": "xsd:date"
-                        },
-                        "time_interval": {
-                          "@id": "http://www.w3.org/2006/time#Interval",
-                          "@context": {}
-                        },
-                        "time_instant": {
-                          "@id": "http://www.w3.org/2006/time#Instant",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "date_type": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-                      "@type": "@id",
-                      "@context": {
-                        "label": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                          "@container": "@language"
-                        },
-                        "date_type": {
-                          "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-                          "@context": {}
-                        }
-                      }
-                    },
-                    "date_information": {
-                      "@id": "https://w3id.org/tib/datacite/property/dateInformation",
-                      "@container": "@language"
-                    },
-                    "time_reference": {
-                      "@id": "https://model.ccmm.cz/vocabulary/ccmm#TimeReference",
-                      "@context": {}
-                    }
-                  }
-                },
-                "resource_type": {
-                  "@id": "http://purl.org/dc/terms/type",
-                  "@type": "@id",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                      "@container": "@language"
-                    },
-                    "resource_type": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-                      "@context": {}
-                    }
-                  }
-                },
-                "resource_relation_type": {
-                  "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
-                  "@type": "@id",
-                  "@context": {
-                    "label": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-                      "@container": "@language"
-                    },
-                    "resource_relation_type": {
-                      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
-                      "@context": {}
-                    }
-                  }
-                },
-                "related_resource": {
-                  "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
-                  "@context": {}
-                }
-              }
-            },
-            "licence": {
-              "@id": "http://purl.org/dc/terms/license",
-              "@type": "@id",
-              "@context": {
-                "title": {
-                  "@id": "http://purl.org/dc/terms/title",
-                  "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                },
-                "licence_document": {
-                  "@id": "http://purl.org/dc/terms/LicenseDocument",
-                  "@context": {}
-                }
-              }
-            },
-            "data_service": {
-              "@id": "http://www.w3.org/ns/dcat#DataService",
-              "@context": {}
-            }
-          }
-        },
-        "conforms_to": {
-          "@id": "http://purl.org/dc/terms/conformsTo",
-          "@container": "@set",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "application_profile": {
-              "@id": "http://purl.org/dc/terms/Standard",
-              "@context": {}
-            }
-          }
-        },
-        "documentation": {
-          "@id": "http://xmlns.com/foaf/0.1/page",
-          "@container": "@set",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "documentation": {
-              "@id": "http://xmlns.com/foaf/0.1/Document",
-              "@context": {}
-            }
-          }
-        },
-        "rights": {
-          "@id": "http://purl.org/dc/terms/rights",
-          "@container": "@set",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "access_rights": {
-              "@id": "http://purl.org/dc/terms/RightsStatement",
-              "@context": {}
-            }
-          }
-        },
-        "licence": {
-          "@id": "http://purl.org/dc/terms/license",
-          "@type": "@id",
-          "@context": {
-            "title": {
-              "@id": "http://purl.org/dc/terms/title",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "licence_document": {
-              "@id": "http://purl.org/dc/terms/LicenseDocument",
-              "@context": {}
-            }
-          }
-        },
-        "description": {
-          "@id": "http://purl.org/dc/terms/description",
-          "@container": "@language"
-        },
-        "download_url": {
-          "@id": "http://www.w3.org/ns/dcat#downloadURL",
-          "@container": "@set",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-              "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-            },
-            "file": {
-              "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
-              "@context": {}
-            }
-          }
-        },
-        "format": {
-          "@id": "http://purl.org/dc/terms/format",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "format": {
-              "@id": "http://purl.org/dc/terms/MediaTypeOrExtent",
-              "@context": {}
-            }
-          }
-        },
-        "media_type": {
-          "@id": "http://www.w3.org/ns/dcat#mediaType",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "media_type": {
-              "@id": "http://purl.org/dc/terms/MediaType",
-              "@context": {}
-            }
-          }
-        },
-        "packaging_format": {
-          "@id": "http://www.w3.org/ns/dcat#packageFormat",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "media_type": {
-              "@id": "http://purl.org/dc/terms/MediaType",
-              "@context": {}
-            }
-          }
-        },
-        "compression_format": {
-          "@id": "http://www.w3.org/ns/dcat#compressFormat",
-          "@type": "@id",
-          "@context": {
-            "label": {
-              "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-              "@container": "@language"
-            },
-            "media_type": {
-              "@id": "http://purl.org/dc/terms/MediaType",
-              "@context": {}
-            }
-          }
-        },
-        "byte_size": {
-          "@id": "http://www.w3.org/ns/dcat#byteSize",
-          "@type": "xsd:integer"
-        },
-        "checksum": {
-          "@id": "http://spdx.org/rdf/terms#checksum",
-          "@type": "@id",
-          "@context": {
-            "checksum_value": {
-              "@id": "http://spdx.org/rdf/terms#checksumValue",
-              "@type": "xsd:hexBinary"
-            },
-            "algorithm": {
-              "@id": "http://spdx.org/rdf/terms#algorithm",
-              "@type": "@id",
-              "@context": {
-                "label": {
-                  "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-                  "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-                },
-                "checksum_algorithm": {
-                  "@id": "http://spdx.org/rdf/terms#ChecksumAlgorithm",
-                  "@context": {}
-                }
-              }
-            },
-            "checksum": {
-              "@id": "http://spdx.org/rdf/terms#Checksum",
-              "@context": {}
-            }
-          }
-        },
-        "distribution_data_service": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#Distribution-DataService",
-          "@context": {}
-        },
-        "distribution_downloadable_file": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#Distribution-DownloadableFile",
-          "@context": {}
-        }
-      }
-    },
-    "validation_result": {
-      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasValidationResult",
-      "@container": "@set",
-      "@context": {
-        "label": {
-          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "validation_result": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#ValidationResult",
-          "@context": {}
-        }
-      }
-    },
-    "generated_by": {
-      "@id": "http://www.w3.org/ns/prov#wasGeneratedBy",
-      "@container": "@set",
-      "@context": {
-        "label": {
-          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "common_provenance_model_json_representation": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasCPMJsonRepresentation",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "ro-crate_json_representation": {
-          "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasRo-crateJsonRepresentation",
-          "@type": "@id",
-          "@container": "@set"
-        },
-        "provenance_activity": {
-          "@id": "http://www.w3.org/ns/prov#Activity",
-          "@context": {}
-        }
-      }
-    },
-    "dataset": {
-      "@id": "http://www.w3.org/ns/dcat#Dataset",
-      "@context": {}
-    }
-  },
+  "@context": "https://model.ccmm.cz/research-data/dataset/context.jsonld",
   "id": "https://doi.org/10.48700/datst.dmq82-ed856",
   "type": [
     "dataset",
@@ -3400,6 +64,74 @@
           },
           "qualified_attribution": [
             {
+              "id": "_:b0",
+              "type": "resource_attribution",
+              "role": {
+                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                "type": "attributed_agent_role_type",
+                "label": {
+                  "en": "Creator",
+                  "cs": "Autor"
+                }
+              },
+              "attributed_agent": {
+                "id": "_:b6",
+                "type": "person",
+                "http://xmlns.com/foaf/0.1/name": "Salvetr, Pavel"
+              }
+            },
+            {
+              "id": "_:b1",
+              "type": "resource_attribution",
+              "role": {
+                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                "type": "attributed_agent_role_type",
+                "label": {
+                  "en": "Creator",
+                  "cs": "Autor"
+                }
+              },
+              "attributed_agent": {
+                "id": "_:b7",
+                "type": "person",
+                "http://xmlns.com/foaf/0.1/name": "Hodek, Josef"
+              }
+            },
+            {
+              "id": "_:b2",
+              "type": "resource_attribution",
+              "role": {
+                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                "type": "attributed_agent_role_type",
+                "label": {
+                  "en": "Creator",
+                  "cs": "Autor"
+                }
+              },
+              "attributed_agent": {
+                "id": "_:b8",
+                "type": "person",
+                "http://xmlns.com/foaf/0.1/name": "Uhlík, Matouš"
+              }
+            },
+            {
+              "id": "_:b3",
+              "type": "resource_attribution",
+              "role": {
+                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                "type": "attributed_agent_role_type",
+                "label": {
+                  "en": "Creator",
+                  "cs": "Autor"
+                }
+              },
+              "attributed_agent": {
+                "id": "_:b9",
+                "type": "person",
+                "http://xmlns.com/foaf/0.1/name": "Novák, Pavel"
+              }
+            },
+            {
               "id": "_:b4",
               "type": "resource_attribution",
               "role": {
@@ -3413,7 +145,7 @@
               "attributed_agent": {
                 "id": "_:b10",
                 "type": "person",
-                "http://xmlns.com/foaf/0.1/name": "Salvetr, Pavel"
+                "http://xmlns.com/foaf/0.1/name": "Dlouhý, Jaromír"
               }
             },
             {
@@ -3430,74 +162,6 @@
               "attributed_agent": {
                 "id": "_:b11",
                 "type": "person",
-                "http://xmlns.com/foaf/0.1/name": "Hodek, Josef"
-              }
-            },
-            {
-              "id": "_:b6",
-              "type": "resource_attribution",
-              "role": {
-                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                "type": "attributed_agent_role_type",
-                "label": {
-                  "en": "Creator",
-                  "cs": "Autor"
-                }
-              },
-              "attributed_agent": {
-                "id": "_:b12",
-                "type": "person",
-                "http://xmlns.com/foaf/0.1/name": "Uhlík, Matouš"
-              }
-            },
-            {
-              "id": "_:b7",
-              "type": "resource_attribution",
-              "role": {
-                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                "type": "attributed_agent_role_type",
-                "label": {
-                  "en": "Creator",
-                  "cs": "Autor"
-                }
-              },
-              "attributed_agent": {
-                "id": "_:b13",
-                "type": "person",
-                "http://xmlns.com/foaf/0.1/name": "Novák, Pavel"
-              }
-            },
-            {
-              "id": "_:b8",
-              "type": "resource_attribution",
-              "role": {
-                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                "type": "attributed_agent_role_type",
-                "label": {
-                  "en": "Creator",
-                  "cs": "Autor"
-                }
-              },
-              "attributed_agent": {
-                "id": "_:b14",
-                "type": "person",
-                "http://xmlns.com/foaf/0.1/name": "Dlouhý, Jaromír"
-              }
-            },
-            {
-              "id": "_:b9",
-              "type": "resource_attribution",
-              "role": {
-                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                "type": "attributed_agent_role_type",
-                "label": {
-                  "en": "Creator",
-                  "cs": "Autor"
-                }
-              },
-              "attributed_agent": {
-                "id": "_:b15",
-                "type": "person",
                 "http://xmlns.com/foaf/0.1/name": "Brázda, Michal"
               }
             }
@@ -3508,7 +172,7 @@
             "http://www.w3.org/2004/02/skos/core#prefLabel": [
               {
                 "@language": "en",
-                "@value": "is referenced by"
+                "@value": "IsReferencedBy"
               },
               {
                 "@language": "cs",
@@ -3533,6 +197,74 @@
       ],
       "qualified_attribution": [
         {
+          "id": "_:b0",
+          "type": "resource_attribution",
+          "role": {
+            "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+            "type": "attributed_agent_role_type",
+            "label": {
+              "en": "Creator",
+              "cs": "Autor"
+            }
+          },
+          "attributed_agent": {
+            "id": "_:b6",
+            "type": "person",
+            "http://xmlns.com/foaf/0.1/name": "Salvetr, Pavel"
+          }
+        },
+        {
+          "id": "_:b1",
+          "type": "resource_attribution",
+          "role": {
+            "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+            "type": "attributed_agent_role_type",
+            "label": {
+              "en": "Creator",
+              "cs": "Autor"
+            }
+          },
+          "attributed_agent": {
+            "id": "_:b7",
+            "type": "person",
+            "http://xmlns.com/foaf/0.1/name": "Hodek, Josef"
+          }
+        },
+        {
+          "id": "_:b2",
+          "type": "resource_attribution",
+          "role": {
+            "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+            "type": "attributed_agent_role_type",
+            "label": {
+              "en": "Creator",
+              "cs": "Autor"
+            }
+          },
+          "attributed_agent": {
+            "id": "_:b8",
+            "type": "person",
+            "http://xmlns.com/foaf/0.1/name": "Uhlík, Matouš"
+          }
+        },
+        {
+          "id": "_:b3",
+          "type": "resource_attribution",
+          "role": {
+            "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+            "type": "attributed_agent_role_type",
+            "label": {
+              "en": "Creator",
+              "cs": "Autor"
+            }
+          },
+          "attributed_agent": {
+            "id": "_:b9",
+            "type": "person",
+            "http://xmlns.com/foaf/0.1/name": "Novák, Pavel"
+          }
+        },
+        {
           "id": "_:b4",
           "type": "resource_attribution",
           "role": {
@@ -3546,7 +278,7 @@
           "attributed_agent": {
             "id": "_:b10",
             "type": "person",
-            "http://xmlns.com/foaf/0.1/name": "Salvetr, Pavel"
+            "http://xmlns.com/foaf/0.1/name": "Dlouhý, Jaromír"
           }
         },
         {
@@ -3563,74 +295,6 @@
           "attributed_agent": {
             "id": "_:b11",
             "type": "person",
-            "http://xmlns.com/foaf/0.1/name": "Hodek, Josef"
-          }
-        },
-        {
-          "id": "_:b6",
-          "type": "resource_attribution",
-          "role": {
-            "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-            "type": "attributed_agent_role_type",
-            "label": {
-              "en": "Creator",
-              "cs": "Autor"
-            }
-          },
-          "attributed_agent": {
-            "id": "_:b12",
-            "type": "person",
-            "http://xmlns.com/foaf/0.1/name": "Uhlík, Matouš"
-          }
-        },
-        {
-          "id": "_:b7",
-          "type": "resource_attribution",
-          "role": {
-            "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-            "type": "attributed_agent_role_type",
-            "label": {
-              "en": "Creator",
-              "cs": "Autor"
-            }
-          },
-          "attributed_agent": {
-            "id": "_:b13",
-            "type": "person",
-            "http://xmlns.com/foaf/0.1/name": "Novák, Pavel"
-          }
-        },
-        {
-          "id": "_:b8",
-          "type": "resource_attribution",
-          "role": {
-            "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-            "type": "attributed_agent_role_type",
-            "label": {
-              "en": "Creator",
-              "cs": "Autor"
-            }
-          },
-          "attributed_agent": {
-            "id": "_:b14",
-            "type": "person",
-            "http://xmlns.com/foaf/0.1/name": "Dlouhý, Jaromír"
-          }
-        },
-        {
-          "id": "_:b9",
-          "type": "resource_attribution",
-          "role": {
-            "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-            "type": "attributed_agent_role_type",
-            "label": {
-              "en": "Creator",
-              "cs": "Autor"
-            }
-          },
-          "attributed_agent": {
-            "id": "_:b15",
-            "type": "person",
             "http://xmlns.com/foaf/0.1/name": "Brázda, Michal"
           }
         }
@@ -3641,7 +305,7 @@
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
           {
             "@language": "en",
-            "@value": "is referenced by"
+            "@value": "IsReferencedBy"
           },
           {
             "@language": "cs",
@@ -3746,6 +410,74 @@
               },
               "qualified_attribution": [
                 {
+                  "id": "_:b0",
+                  "type": "resource_attribution",
+                  "role": {
+                    "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                    "type": "attributed_agent_role_type",
+                    "label": {
+                      "en": "Creator",
+                      "cs": "Autor"
+                    }
+                  },
+                  "attributed_agent": {
+                    "id": "_:b6",
+                    "type": "person",
+                    "http://xmlns.com/foaf/0.1/name": "Salvetr, Pavel"
+                  }
+                },
+                {
+                  "id": "_:b1",
+                  "type": "resource_attribution",
+                  "role": {
+                    "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                    "type": "attributed_agent_role_type",
+                    "label": {
+                      "en": "Creator",
+                      "cs": "Autor"
+                    }
+                  },
+                  "attributed_agent": {
+                    "id": "_:b7",
+                    "type": "person",
+                    "http://xmlns.com/foaf/0.1/name": "Hodek, Josef"
+                  }
+                },
+                {
+                  "id": "_:b2",
+                  "type": "resource_attribution",
+                  "role": {
+                    "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                    "type": "attributed_agent_role_type",
+                    "label": {
+                      "en": "Creator",
+                      "cs": "Autor"
+                    }
+                  },
+                  "attributed_agent": {
+                    "id": "_:b8",
+                    "type": "person",
+                    "http://xmlns.com/foaf/0.1/name": "Uhlík, Matouš"
+                  }
+                },
+                {
+                  "id": "_:b3",
+                  "type": "resource_attribution",
+                  "role": {
+                    "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                    "type": "attributed_agent_role_type",
+                    "label": {
+                      "en": "Creator",
+                      "cs": "Autor"
+                    }
+                  },
+                  "attributed_agent": {
+                    "id": "_:b9",
+                    "type": "person",
+                    "http://xmlns.com/foaf/0.1/name": "Novák, Pavel"
+                  }
+                },
+                {
                   "id": "_:b4",
                   "type": "resource_attribution",
                   "role": {
@@ -3759,7 +491,7 @@
                   "attributed_agent": {
                     "id": "_:b10",
                     "type": "person",
-                    "http://xmlns.com/foaf/0.1/name": "Salvetr, Pavel"
+                    "http://xmlns.com/foaf/0.1/name": "Dlouhý, Jaromír"
                   }
                 },
                 {
@@ -3776,74 +508,6 @@
                   "attributed_agent": {
                     "id": "_:b11",
                     "type": "person",
-                    "http://xmlns.com/foaf/0.1/name": "Hodek, Josef"
-                  }
-                },
-                {
-                  "id": "_:b6",
-                  "type": "resource_attribution",
-                  "role": {
-                    "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                    "type": "attributed_agent_role_type",
-                    "label": {
-                      "en": "Creator",
-                      "cs": "Autor"
-                    }
-                  },
-                  "attributed_agent": {
-                    "id": "_:b12",
-                    "type": "person",
-                    "http://xmlns.com/foaf/0.1/name": "Uhlík, Matouš"
-                  }
-                },
-                {
-                  "id": "_:b7",
-                  "type": "resource_attribution",
-                  "role": {
-                    "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                    "type": "attributed_agent_role_type",
-                    "label": {
-                      "en": "Creator",
-                      "cs": "Autor"
-                    }
-                  },
-                  "attributed_agent": {
-                    "id": "_:b13",
-                    "type": "person",
-                    "http://xmlns.com/foaf/0.1/name": "Novák, Pavel"
-                  }
-                },
-                {
-                  "id": "_:b8",
-                  "type": "resource_attribution",
-                  "role": {
-                    "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                    "type": "attributed_agent_role_type",
-                    "label": {
-                      "en": "Creator",
-                      "cs": "Autor"
-                    }
-                  },
-                  "attributed_agent": {
-                    "id": "_:b14",
-                    "type": "person",
-                    "http://xmlns.com/foaf/0.1/name": "Dlouhý, Jaromír"
-                  }
-                },
-                {
-                  "id": "_:b9",
-                  "type": "resource_attribution",
-                  "role": {
-                    "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                    "type": "attributed_agent_role_type",
-                    "label": {
-                      "en": "Creator",
-                      "cs": "Autor"
-                    }
-                  },
-                  "attributed_agent": {
-                    "id": "_:b15",
-                    "type": "person",
                     "http://xmlns.com/foaf/0.1/name": "Brázda, Michal"
                   }
                 }
@@ -3854,7 +518,7 @@
                 "http://www.w3.org/2004/02/skos/core#prefLabel": [
                   {
                     "@language": "en",
-                    "@value": "is referenced by"
+                    "@value": "IsReferencedBy"
                   },
                   {
                     "@language": "cs",
@@ -3879,6 +543,74 @@
           ],
           "qualified_attribution": [
             {
+              "id": "_:b0",
+              "type": "resource_attribution",
+              "role": {
+                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                "type": "attributed_agent_role_type",
+                "label": {
+                  "en": "Creator",
+                  "cs": "Autor"
+                }
+              },
+              "attributed_agent": {
+                "id": "_:b6",
+                "type": "person",
+                "http://xmlns.com/foaf/0.1/name": "Salvetr, Pavel"
+              }
+            },
+            {
+              "id": "_:b1",
+              "type": "resource_attribution",
+              "role": {
+                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                "type": "attributed_agent_role_type",
+                "label": {
+                  "en": "Creator",
+                  "cs": "Autor"
+                }
+              },
+              "attributed_agent": {
+                "id": "_:b7",
+                "type": "person",
+                "http://xmlns.com/foaf/0.1/name": "Hodek, Josef"
+              }
+            },
+            {
+              "id": "_:b2",
+              "type": "resource_attribution",
+              "role": {
+                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                "type": "attributed_agent_role_type",
+                "label": {
+                  "en": "Creator",
+                  "cs": "Autor"
+                }
+              },
+              "attributed_agent": {
+                "id": "_:b8",
+                "type": "person",
+                "http://xmlns.com/foaf/0.1/name": "Uhlík, Matouš"
+              }
+            },
+            {
+              "id": "_:b3",
+              "type": "resource_attribution",
+              "role": {
+                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+                "type": "attributed_agent_role_type",
+                "label": {
+                  "en": "Creator",
+                  "cs": "Autor"
+                }
+              },
+              "attributed_agent": {
+                "id": "_:b9",
+                "type": "person",
+                "http://xmlns.com/foaf/0.1/name": "Novák, Pavel"
+              }
+            },
+            {
               "id": "_:b4",
               "type": "resource_attribution",
               "role": {
@@ -3892,7 +624,7 @@
               "attributed_agent": {
                 "id": "_:b10",
                 "type": "person",
-                "http://xmlns.com/foaf/0.1/name": "Salvetr, Pavel"
+                "http://xmlns.com/foaf/0.1/name": "Dlouhý, Jaromír"
               }
             },
             {
@@ -3909,74 +641,6 @@
               "attributed_agent": {
                 "id": "_:b11",
                 "type": "person",
-                "http://xmlns.com/foaf/0.1/name": "Hodek, Josef"
-              }
-            },
-            {
-              "id": "_:b6",
-              "type": "resource_attribution",
-              "role": {
-                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                "type": "attributed_agent_role_type",
-                "label": {
-                  "en": "Creator",
-                  "cs": "Autor"
-                }
-              },
-              "attributed_agent": {
-                "id": "_:b12",
-                "type": "person",
-                "http://xmlns.com/foaf/0.1/name": "Uhlík, Matouš"
-              }
-            },
-            {
-              "id": "_:b7",
-              "type": "resource_attribution",
-              "role": {
-                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                "type": "attributed_agent_role_type",
-                "label": {
-                  "en": "Creator",
-                  "cs": "Autor"
-                }
-              },
-              "attributed_agent": {
-                "id": "_:b13",
-                "type": "person",
-                "http://xmlns.com/foaf/0.1/name": "Novák, Pavel"
-              }
-            },
-            {
-              "id": "_:b8",
-              "type": "resource_attribution",
-              "role": {
-                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                "type": "attributed_agent_role_type",
-                "label": {
-                  "en": "Creator",
-                  "cs": "Autor"
-                }
-              },
-              "attributed_agent": {
-                "id": "_:b14",
-                "type": "person",
-                "http://xmlns.com/foaf/0.1/name": "Dlouhý, Jaromír"
-              }
-            },
-            {
-              "id": "_:b9",
-              "type": "resource_attribution",
-              "role": {
-                "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
-                "type": "attributed_agent_role_type",
-                "label": {
-                  "en": "Creator",
-                  "cs": "Autor"
-                }
-              },
-              "attributed_agent": {
-                "id": "_:b15",
-                "type": "person",
                 "http://xmlns.com/foaf/0.1/name": "Brázda, Michal"
               }
             }
@@ -3987,7 +651,7 @@
             "http://www.w3.org/2004/02/skos/core#prefLabel": [
               {
                 "@language": "en",
-                "@value": "is referenced by"
+                "@value": "IsReferencedBy"
               },
               {
                 "@language": "cs",
@@ -4725,7 +1389,7 @@
               },
               {
                 "@language": "en",
-                "@value": "Translated Title"
+                "@value": "TranslatedTitle"
               }
             ]
           }
@@ -4756,7 +1420,7 @@
             "http://www.w3.org/2004/02/skos/core#prefLabel": [
               {
                 "@language": "en",
-                "@value": "Date Issued"
+                "@value": "Issued"
               },
               {
                 "@language": "cs",
@@ -4794,7 +1458,7 @@
             "http://www.w3.org/2004/02/skos/core#prefLabel": [
               {
                 "@language": "en",
-                "@value": "Date Created"
+                "@value": "Created"
               },
               {
                 "@language": "cs",
@@ -4820,7 +1484,7 @@
             "http://www.w3.org/2004/02/skos/core#prefLabel": [
               {
                 "@language": "en",
-                "@value": "Date Available"
+                "@value": "Available"
               },
               {
                 "@language": "cs",
@@ -4880,7 +1544,7 @@
           "date_updated": "2025-10-14",
           "qualified_attribution": [
             {
-              "id": "_:b2",
+              "id": "_:b14",
               "type": "resource_attribution",
               "role": {
                 "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager",
@@ -4891,7 +1555,7 @@
                 }
               },
               "attributed_agent": {
-                "id": "_:b3",
+                "id": "_:b15",
                 "type": "person",
                 "http://xmlns.com/foaf/0.1/name": ":unkn"
               }
@@ -4910,7 +1574,7 @@
             },
             "qualified_attribution": [
               {
-                "id": "_:b0",
+                "id": "_:b12",
                 "type": "resource_attribution",
                 "role": {
                   "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher",
@@ -4921,7 +1585,7 @@
                   }
                 },
                 "attributed_agent": {
-                  "id": "_:b1",
+                  "id": "_:b13",
                   "type": "organization",
                   "http://xmlns.com/foaf/0.1/name": "COMTES FHT"
                 }
@@ -4939,7 +1603,7 @@
             "@value": "Industry applications of duplex stainless steels require a two-phase microstructure with a nearly balanced austenite-ferrite content to achieve good mechanical properties and good corrosion resistance. The most widespread additive manufacturing method such as laser powder bed fusion provides nearly fully ferritic microstructures due to the very high cooling rate, and the post-processing heat treatment must be performed. In contrast, other additive manufacturing methods, such as directed deposition methods, reach lower cooling rates and enable to obtain an equal ferrite–austenite ratio directly in the microstructure of the as-built state. In this work, the super duplex stainless steel SAF 2507 was deposited by directed energy deposition. The process parameters, namely, the laser power, laser beam spot, and powder feed rate, were varied to investigate the impact of the energy area density on the microstructure and tensile properties. A decrease in the energy area density caused an increase in the austenite content of 48 vol% and a numerical simulation of the sample temperature distribution inside the block during deposition, explaining the relationship between the amount of in situ formed austenite and the deposition parameters, was provided. Simultaneously, the deposition rate increased by more than five times. In contrast, the samples deposited at a higher building rate are characterized by greater porosity and lower elongation values in the vertical direction. The effect of the deposition parameters on the yield strength is low."
           },
           "https://w3id.org/tib/datacite/property/descriptionType": {
-            "id": "https://w3id.org/tib/datacite/property/descriptionType/Abstract",
+            "id": "https://w3id.org/tib/datacite/vocab/descriptionType/Abstract",
             "type": "http://www.w3.org/2004/02/skos/core#Concept",
             "http://www.w3.org/2004/02/skos/core#prefLabel": [
               {
@@ -4961,7 +1625,7 @@
             "@value": "The data set is related to the investigation of the influence of deposition parameters on the microstructure, austenite formation, and tensile properties of SAF 2507 super duplex stainless steel fabricated using directed energy deposition (DED). The experiments were carried out at COMTES FHT (Czech Republic) using an INSSTEK MX-600 system equipped with a 2 kW Yttrium fiber laser. SAF 2507 powder (particle size 45–150 μm) was deposited under three different parameter sets, varying laser power, beam diameter, layer thickness, hatch distance, and powder feed rate, while maintaining constant scan speed. A zig-zag deposition strategy was applied under a protective argon atmosphere (5.0, 99.999%). For each parameter set, 20×20×20 mm cubes were built and used for analysis. Microstructure and phase composition were characterized using optical microscopy, scanning electron microscopy, EBSD analysis, X-ray diffraction. Tensile properties were evaluated using miniature tensile tests. Thermal simulations of the deposition process were carried out using Simufact Welding 2024.1 with the Advanced Thermal Cycle (ATC) method."
           },
           "https://w3id.org/tib/datacite/property/descriptionType": {
-            "id": "https://w3id.org/tib/datacite/property/descriptionType/Methods",
+            "id": "https://w3id.org/tib/datacite/vocab/descriptionType/Methods",
             "type": "http://www.w3.org/2004/02/skos/core#Concept",
             "http://www.w3.org/2004/02/skos/core#prefLabel": [
               {
@@ -4983,12 +1647,12 @@
             "@value": "The sets of experimental data were recorded on several instruments within COMTES FHT. In cases where possible (XRD, MTT, EBSD), the data are in xlsx format enabling any replotting."
           },
           "https://w3id.org/tib/datacite/property/descriptionType": {
-            "id": "https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo",
+            "id": "https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo",
             "type": "http://www.w3.org/2004/02/skos/core#Concept",
             "http://www.w3.org/2004/02/skos/core#prefLabel": [
               {
                 "@language": "en",
-                "@value": "Technical Info"
+                "@value": "TechnicalInfo"
               },
               {
                 "@language": "cs",
@@ -5777,7 +2441,7 @@
           },
           {
             "@language": "en",
-            "@value": "Translated Title"
+            "@value": "TranslatedTitle"
           }
         ]
       }
@@ -5808,7 +2472,7 @@
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
           {
             "@language": "en",
-            "@value": "Date Issued"
+            "@value": "Issued"
           },
           {
             "@language": "cs",
@@ -5846,7 +2510,7 @@
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
           {
             "@language": "en",
-            "@value": "Date Created"
+            "@value": "Created"
           },
           {
             "@language": "cs",
@@ -5872,7 +2536,7 @@
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
           {
             "@language": "en",
-            "@value": "Date Available"
+            "@value": "Available"
           },
           {
             "@language": "cs",
@@ -5932,7 +2596,7 @@
       "date_updated": "2025-10-14",
       "qualified_attribution": [
         {
-          "id": "_:b2",
+          "id": "_:b14",
           "type": "resource_attribution",
           "role": {
             "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager",
@@ -5943,7 +2607,7 @@
             }
           },
           "attributed_agent": {
-            "id": "_:b3",
+            "id": "_:b15",
             "type": "person",
             "http://xmlns.com/foaf/0.1/name": ":unkn"
           }
@@ -5962,7 +2626,7 @@
         },
         "qualified_attribution": [
           {
-            "id": "_:b0",
+            "id": "_:b12",
             "type": "resource_attribution",
             "role": {
               "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher",
@@ -5973,7 +2637,7 @@
               }
             },
             "attributed_agent": {
-              "id": "_:b1",
+              "id": "_:b13",
               "type": "organization",
               "http://xmlns.com/foaf/0.1/name": "COMTES FHT"
             }
@@ -5991,7 +2655,7 @@
         "@value": "Industry applications of duplex stainless steels require a two-phase microstructure with a nearly balanced austenite-ferrite content to achieve good mechanical properties and good corrosion resistance. The most widespread additive manufacturing method such as laser powder bed fusion provides nearly fully ferritic microstructures due to the very high cooling rate, and the post-processing heat treatment must be performed. In contrast, other additive manufacturing methods, such as directed deposition methods, reach lower cooling rates and enable to obtain an equal ferrite–austenite ratio directly in the microstructure of the as-built state. In this work, the super duplex stainless steel SAF 2507 was deposited by directed energy deposition. The process parameters, namely, the laser power, laser beam spot, and powder feed rate, were varied to investigate the impact of the energy area density on the microstructure and tensile properties. A decrease in the energy area density caused an increase in the austenite content of 48 vol% and a numerical simulation of the sample temperature distribution inside the block during deposition, explaining the relationship between the amount of in situ formed austenite and the deposition parameters, was provided. Simultaneously, the deposition rate increased by more than five times. In contrast, the samples deposited at a higher building rate are characterized by greater porosity and lower elongation values in the vertical direction. The effect of the deposition parameters on the yield strength is low."
       },
       "https://w3id.org/tib/datacite/property/descriptionType": {
-        "id": "https://w3id.org/tib/datacite/property/descriptionType/Abstract",
+        "id": "https://w3id.org/tib/datacite/vocab/descriptionType/Abstract",
         "type": "http://www.w3.org/2004/02/skos/core#Concept",
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
           {
@@ -6013,7 +2677,7 @@
         "@value": "The data set is related to the investigation of the influence of deposition parameters on the microstructure, austenite formation, and tensile properties of SAF 2507 super duplex stainless steel fabricated using directed energy deposition (DED). The experiments were carried out at COMTES FHT (Czech Republic) using an INSSTEK MX-600 system equipped with a 2 kW Yttrium fiber laser. SAF 2507 powder (particle size 45–150 μm) was deposited under three different parameter sets, varying laser power, beam diameter, layer thickness, hatch distance, and powder feed rate, while maintaining constant scan speed. A zig-zag deposition strategy was applied under a protective argon atmosphere (5.0, 99.999%). For each parameter set, 20×20×20 mm cubes were built and used for analysis. Microstructure and phase composition were characterized using optical microscopy, scanning electron microscopy, EBSD analysis, X-ray diffraction. Tensile properties were evaluated using miniature tensile tests. Thermal simulations of the deposition process were carried out using Simufact Welding 2024.1 with the Advanced Thermal Cycle (ATC) method."
       },
       "https://w3id.org/tib/datacite/property/descriptionType": {
-        "id": "https://w3id.org/tib/datacite/property/descriptionType/Methods",
+        "id": "https://w3id.org/tib/datacite/vocab/descriptionType/Methods",
         "type": "http://www.w3.org/2004/02/skos/core#Concept",
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
           {
@@ -6035,12 +2699,12 @@
         "@value": "The sets of experimental data were recorded on several instruments within COMTES FHT. In cases where possible (XRD, MTT, EBSD), the data are in xlsx format enabling any replotting."
       },
       "https://w3id.org/tib/datacite/property/descriptionType": {
-        "id": "https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo",
+        "id": "https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo",
         "type": "http://www.w3.org/2004/02/skos/core#Concept",
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
           {
             "@language": "en",
-            "@value": "Technical Info"
+            "@value": "TechnicalInfo"
           },
           {
             "@language": "cs",

@@ -132,7 +132,7 @@
                                 rdf:about="https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">Přeložený název</ns0:prefLabel>
-                  <ns0:prefLabel xml:lang="en">Translated Title</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">TranslatedTitle</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
          </rdf:Description>
@@ -706,7 +706,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/dateType/Issued">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">Date Issued</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">Issued</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Datum vydání</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
@@ -739,7 +739,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/dateType/Created">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">Date Created</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">Created</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Datum vytvoření</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
@@ -761,7 +761,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/dateType/Available">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">Date Available</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">Available</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Datum zveřejnění</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
@@ -824,7 +824,7 @@
             <ns0:description xml:lang="en">Industry applications of duplex stainless steels require a two-phase microstructure with a nearly balanced austenite-ferrite content to achieve good mechanical properties and good corrosion resistance. The most widespread additive manufacturing method such as laser powder bed fusion provides nearly fully ferritic microstructures due to the very high cooling rate, and the post-processing heat treatment must be performed. In contrast, other additive manufacturing methods, such as directed deposition methods, reach lower cooling rates and enable to obtain an equal ferrite–austenite ratio directly in the microstructure of the as-built state. In this work, the super duplex stainless steel SAF 2507 was deposited by directed energy deposition. The process parameters, namely, the laser power, laser beam spot, and powder feed rate, were varied to investigate the impact of the energy area density on the microstructure and tensile properties. A decrease in the energy area density caused an increase in the austenite content of 48 vol% and a numerical simulation of the sample temperature distribution inside the block during deposition, explaining the relationship between the amount of in situ formed austenite and the deposition parameters, was provided. Simultaneously, the deposition rate increased by more than five times. In contrast, the samples deposited at a higher building rate are characterized by greater porosity and lower elongation values in the vertical direction. The effect of the deposition parameters on the yield strength is low.</ns0:description>
             <ns1:descriptionType>
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
-                                rdf:about="https://w3id.org/tib/datacite/property/descriptionType/Abstract">
+                                rdf:about="https://w3id.org/tib/datacite/vocab/descriptionType/Abstract">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="en">Abstract</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Abstrakt</ns0:prefLabel>
@@ -840,7 +840,7 @@
             <ns0:description xml:lang="en">The data set is related to the investigation of the influence of deposition parameters on the microstructure, austenite formation, and tensile properties of SAF 2507 super duplex stainless steel fabricated using directed energy deposition (DED). The experiments were carried out at COMTES FHT (Czech Republic) using an INSSTEK MX-600 system equipped with a 2 kW Yttrium fiber laser. SAF 2507 powder (particle size 45–150 μm) was deposited under three different parameter sets, varying laser power, beam diameter, layer thickness, hatch distance, and powder feed rate, while maintaining constant scan speed. A zig-zag deposition strategy was applied under a protective argon atmosphere (5.0, 99.999%). For each parameter set, 20×20×20 mm cubes were built and used for analysis. Microstructure and phase composition were characterized using optical microscopy, scanning electron microscopy, EBSD analysis, X-ray diffraction. Tensile properties were evaluated using miniature tensile tests. Thermal simulations of the deposition process were carried out using Simufact Welding 2024.1 with the Advanced Thermal Cycle (ATC) method.</ns0:description>
             <ns1:descriptionType>
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
-                                rdf:about="https://w3id.org/tib/datacite/property/descriptionType/Methods">
+                                rdf:about="https://w3id.org/tib/datacite/vocab/descriptionType/Methods">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="en">Methods</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Metodologie</ns0:prefLabel>
@@ -856,9 +856,9 @@
             <ns0:description xml:lang="en">The sets of experimental data were recorded on several instruments within COMTES FHT. In cases where possible (XRD, MTT, EBSD), the data are in xlsx format enabling any replotting.</ns0:description>
             <ns1:descriptionType>
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
-                                rdf:about="https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo">
+                                rdf:about="https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">Technical Info</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">TechnicalInfo</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Technická informace</ns0:prefLabel>
                </rdf:Description>
             </ns1:descriptionType>
@@ -1113,7 +1113,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">is referenced by</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">IsReferencedBy</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">je na něj odkazováno z (čeho)</ns0:prefLabel>
                </rdf:Description>
             </ns2:hasType>

@@ -209,7 +209,7 @@
                                 rdf:about="https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">Přeložený název</ns0:prefLabel>
-                  <ns0:prefLabel xml:lang="en">Translated Title</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">TranslatedTitle</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
          </rdf:Description>
@@ -401,7 +401,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/dateType/Created">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">Date Created</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">Created</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Datum vytvoření</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
@@ -434,7 +434,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/dateType/Collected">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">Date Collected</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">Collected</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Datum sběru</ns0:prefLabel>
                </rdf:Description>
             </ns1:hasType>
@@ -524,7 +524,7 @@
             roce 2024.</ns0:description>
             <ns1:descriptionType>
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
-                                rdf:about="https://w3id.org/tib/datacite/property/descriptionType/Abstract">
+                                rdf:about="https://w3id.org/tib/datacite/vocab/descriptionType/Abstract">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="en">Abstract</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">Abstrakt</ns0:prefLabel>
@@ -691,6 +691,7 @@
                                 rdf:about="https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">je na něj odkazováno z (čeho)</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">IsReferencedBy</ns0:prefLabel>
                </rdf:Description>
             </ns2:hasType>
          </rdf:Description>
@@ -700,7 +701,7 @@
                           xmlns:ns1="http://purl.org/dc/terms/"
                           xmlns:ns2="https://model.ccmm.cz/vocabulary/ccmm#"
                           xmlns:ns3="http://www.w3.org/ns/prov#"
-                          rdf:nodeID="d43e671">
+                          rdf:nodeID="d43e674">
             <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
             <ns1:title>ENVI LVS1 Sampler pro odběr prašného aerosolu</ns1:title>
             <ns2:resourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.envitech-bohemia.cz/p/264/envi-lvs1-sampler-pro-odber-prasneho-aerosolu</ns2:resourceUrl>
@@ -716,7 +717,7 @@
                                 rdf:about="https://w3id.org/tib/datacite/vocab/relationType/IsCollectedBy">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">je sbírán (čím)</ns0:prefLabel>
-                  <ns0:prefLabel xml:lang="en">is collected by</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">isCollectedBy</ns0:prefLabel>
                </rdf:Description>
             </ns2:hasType>
          </rdf:Description>
@@ -741,7 +742,7 @@
                <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
                                 rdf:about="https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-                  <ns0:prefLabel xml:lang="en">is derived from</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">isDerivedFrom</ns0:prefLabel>
                   <ns0:prefLabel xml:lang="cs">je odvozen od (čeho)</ns0:prefLabel>
                </rdf:Description>
             </ns2:hasType>
@@ -762,7 +763,7 @@
                                 rdf:about="https://w3id.org/tib/datacite/vocab/relationType/HasMetadata">
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
                   <ns0:prefLabel xml:lang="cs">má metadata</ns0:prefLabel>
-                  <ns0:prefLabel xml:lang="en">has metadata</ns0:prefLabel>
+                  <ns0:prefLabel xml:lang="en">hasMetadata</ns0:prefLabel>
                </rdf:Description>
             </ns2:hasType>
          </rdf:Description>
@@ -771,7 +772,7 @@
          <rdf:Description xmlns:ns0="http://purl.org/dc/terms/"
                           xmlns:ns1="http://www.w3.org/ns/dcat#"
                           xmlns:ns2="http://xmlns.com/foaf/0.1/"
-                          rdf:nodeID="d43e754">
+                          rdf:nodeID="d43e757">
             <rdf:type rdf:resource="https://model.ccmm.cz/vocabulary/ccmm#Distribution-DataService"/>
             <ns0:title>Služba WMS pro prohlížení dat o kvalitě ovzduší</ns0:title>
             <ns1:accessURL rdf:resource="https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi"/>
@@ -784,7 +785,7 @@
                                       xmlns:ns1="http://purl.org/dc/terms/"
                                       xmlns:ns2="https://model.ccmm.cz/vocabulary/ccmm#"
                                       xmlns:ns3="http://www.w3.org/ns/prov#"
-                                      rdf:nodeID="d43e765">
+                                      rdf:nodeID="d43e768">
                         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
                         <ns1:title>Endpoint of WMS service Air quality</ns1:title>
                         <ns2:resourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi</ns2:resourceUrl>
@@ -868,7 +869,7 @@
             </ns1:mediaType>
             <ns1:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</ns1:byteSize>
             <ns2:checksum>
-               <rdf:Description xmlns:ns0="http://spdx.org/rdf/terms#" rdf:nodeID="d43e859">
+               <rdf:Description xmlns:ns0="http://spdx.org/rdf/terms#" rdf:nodeID="d43e862">
                   <rdf:type rdf:resource="http://spdx.org/rdf/terms#Checksum"/>
                   <ns0:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">9c56cc51b374d3a94e096e3f5483c05c6e69e221ae5d62a5435c5f3a9fc84938</ns0:checksumValue>
                   <ns0:algorithm>
@@ -894,14 +895,14 @@
          </rdf:Description>
       </ns2:distribution>
       <ns0:hasValidationResult>
-         <rdf:Description xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:nodeID="d43e885">
+         <rdf:Description xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:nodeID="d43e888">
             <rdf:type rdf:resource="https://model.ccmm.cz/vocabulary/ccmm#ValidationResult"/>
          </rdf:Description>
       </ns0:hasValidationResult>
       <ns4:wasGeneratedBy>
          <rdf:Description xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#"
                           xmlns:ns1="https://model.ccmm.cz/vocabulary/ccmm#"
-                          rdf:nodeID="d43e889">
+                          rdf:nodeID="d43e892">
             <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
             <ns1:hasRo-crateJsonRepresentation rdf:resource="https://link.to/ro-crate-json"/>
          </rdf:Description>

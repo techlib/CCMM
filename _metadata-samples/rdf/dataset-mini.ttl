@@ -76,7 +76,7 @@
             prov:qualifiedAttribution [ a prov:Attribution ;
                     dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager> ;
                     prov:agent [ a prov:Person ;
-                            ns2:family-name "Staeklý" ;
+                            ns2:family-name "Steklý" ;
                             ns2:given-name "Pavel" ;
                             foaf:name "Pavel Steklý" ] ] ;
             ns0:originalRepository <https://data.narodni-repozitar.cz> ] ;

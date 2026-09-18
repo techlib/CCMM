@@ -35,7 +35,7 @@
                         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
                         <ns1:name>Pavel Steklý</ns1:name>
                         <ns2:given-name>Pavel</ns2:given-name>
-                        <ns2:family-name>Staeklý</ns2:family-name>
+                        <ns2:family-name>Steklý</ns2:family-name>
                      </rdf:Description>
                   </ns0:agent>
                   <ns1:hadRole>
