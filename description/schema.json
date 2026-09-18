@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/description/schema.json",
+  "title": "Description",
+  "description": "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.",
+  "type": "object",
+  "required": [
+    "description_text"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "description"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "description"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "description_text": {
+      "title": "description text",
+      "description": "A free-text account of the Data Service.",
+      "type": "object",
+      "required": [
+        "@value",
+        "@language"
+      ],
+      "properties": {
+        "@value": {
+          "title": "Text v daném jazyce",
+          "type": "string"
+        },
+        "@language": {
+          "title": "Jazyk textu",
+          "type": "string"
+        }
+      }
+    },
+    "description_type": {
+      "title": "has description type",
+      "description": "Relation to the type of the description.",
+      "type": "object",
+      "required": [
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "title": "label",
+          "description": "Label of the description type.",
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

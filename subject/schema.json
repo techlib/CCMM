@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/subject/schema.json",
+  "title": "Subject",
+  "description": "Subject, classification code, or key phrase describing the resource.",
+  "type": "object",
+  "required": [
+    "title",
+    "classification_code",
+    "subject_scheme"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "subject"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "subject"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "title": {
+      "title": "title",
+      "description": "Title of the subject.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "definition": {
+      "title": "definition",
+      "description": "Definition of the subject in the given context.",
+      "type": "array",
+      "items": {
+        "title": "Text",
+        "type": "object",
+        "additionalProperties": {
+          "title": "Hodnota v jiném jazyce",
+          "type": "string"
+        },
+        "properties": {
+          "cs": {
+            "title": "Hodnota v českém jazyce",
+            "type": "string"
+          },
+          "en": {
+            "title": "Hodnota v anglickém jazyce",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "classification_code": {
+      "title": "classification code",
+      "description": "The classification code used for notation of the subject term in the subject scheme.",
+      "type": "string"
+    },
+    "subject_scheme": {
+      "title": "in subject scheme",
+      "description": "Belonging of the subject to the subject scheme.",
+      "type": "object",
+      "properties": {
+        "label": {
+          "title": "label",
+          "description": "Label of the subject scheme.",
+          "type": "array",
+          "items": {
+            "title": "Language tagged string",
+            "type": "object",
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "properties": {
+              "@value": {
+                "title": "Text v daném jazyce",
+                "type": "string"
+              },
+              "@language": {
+                "title": "Jazyk textu",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

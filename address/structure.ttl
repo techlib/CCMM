@@ -8,7 +8,7 @@
     kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/address/class-1742288744053-1c9b-5b71-be90\",\"https://model.ccmm.cz/research-data/address/attribute-1747639475731-8283-b763-ab0a\",\"https://model.ccmm.cz/research-data/address/attribute-1747639475767-4431-fca7-951a\",\"https://model.ccmm.cz/research-data/address/attribute-1747639475801-911b-c224-b37f\",\"https://model.ccmm.cz/research-data/address/attribute-1747639475829-d5be-072d-a6be\",\"https://model.ccmm.cz/research-data/address/attribute-1747639475864-4479-e17d-a042\",\"https://model.ccmm.cz/research-data/address/attribute-1747639475899-9589-4c68-b00d\",\"https://model.ccmm.cz/research-data/address/attribute-1747639475936-c576-5b03-b679\",\"https://model.ccmm.cz/research-data/address/attribute-1747639475974-69a9-2f9f-af60\",\"https://model.ccmm.cz/research-data/address/attribute-1747639476011-351b-b73d-bc27\",\"https://model.ccmm.cz/research-data/address/attribute-1747639476057-b861-c8cf-a92f\",\"https://model.ccmm.cz/research-data/address/attribute-1747639476098-2903-2fd5-b0c3\"]";
     kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/address/class-1742288744053-1c9b-5b71-be90\"]";
     kv:dataPsmTechnicalLabel "null";
-    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
     kv:iri "\"https://model.ccmm.cz/research-data/address/\"";
     kv:jsonEnforceContext "\"no\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".

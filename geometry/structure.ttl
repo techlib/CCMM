@@ -8,7 +8,7 @@
     kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/geometry/class-1742340936467-5d87-fae6-b5c7\",\"https://model.ccmm.cz/research-data/geometry/attribute-1742340940393-8587-6ee3-970b\",\"https://model.ccmm.cz/research-data/geometry/attribute-1750754717040-575d-bfd2-912c\",\"https://model.ccmm.cz/research-data/geometry/attribute-1750754717078-130d-e76a-b879\"]";
     kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/geometry/class-1742340936467-5d87-fae6-b5c7\"]";
     kv:dataPsmTechnicalLabel "null";
-    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
     kv:iri "\"https://model.ccmm.cz/research-data/geometry/\"";
     kv:jsonEnforceContext "\"no\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".

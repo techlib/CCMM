@@ -1,0 +1,88 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "temporal_representation": {
+      "@id": "http://www.w3.org/2006/time#hasTime",
+      "@type": "@id",
+      "@context": {
+        "beginning": {
+          "@id": "http://www.w3.org/2006/time#hasBeginning",
+          "@type": "@id",
+          "@context": {
+            "date_time": {
+              "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+              "@type": "xsd:dateTime"
+            },
+            "date": {
+              "@id": "http://www.w3.org/2006/time#inXSDDate",
+              "@type": "xsd:date"
+            },
+            "time_instant": {
+              "@id": "http://www.w3.org/2006/time#Instant",
+              "@context": {}
+            }
+          }
+        },
+        "end": {
+          "@id": "http://www.w3.org/2006/time#hasEnd",
+          "@type": "@id",
+          "@context": {
+            "date_time": {
+              "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+              "@type": "xsd:dateTime"
+            },
+            "date": {
+              "@id": "http://www.w3.org/2006/time#inXSDDate",
+              "@type": "xsd:date"
+            },
+            "time_instant": {
+              "@id": "http://www.w3.org/2006/time#Instant",
+              "@context": {}
+            }
+          }
+        },
+        "date_time": {
+          "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+          "@type": "xsd:dateTime"
+        },
+        "date": {
+          "@id": "http://www.w3.org/2006/time#inXSDDate",
+          "@type": "xsd:date"
+        },
+        "time_interval": {
+          "@id": "http://www.w3.org/2006/time#Interval",
+          "@context": {}
+        },
+        "time_instant": {
+          "@id": "http://www.w3.org/2006/time#Instant",
+          "@context": {}
+        }
+      }
+    },
+    "date_type": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
+      "@type": "@id",
+      "@context": {
+        "label": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@container": "@language"
+        },
+        "date_type": {
+          "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+          "@context": {}
+        }
+      }
+    },
+    "date_information": {
+      "@id": "https://w3id.org/tib/datacite/property/dateInformation",
+      "@container": "@language"
+    },
+    "time_reference": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#TimeReference",
+      "@context": {}
+    }
+  }
+}

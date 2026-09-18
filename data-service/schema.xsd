@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
   <xs:include schemaLocation="../related-resource/schema.xsd"/>
+  <xs:include schemaLocation="../licence-document/schema.xsd"/>
   <xs:complexType name="data_service" sawsdl:modelReference="http://www.w3.org/ns/dcat#DataService">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -11,7 +12,7 @@
         Datatjeneste - Et websted eller endpoint der udstiller operationer relateret til opdagelse af, adgang til eller behandlende funktioner på data eller relaterede ressourcer.
       </xs:documentation>
       <xs:documentation xml:lang="en">
-        Data service - A collection of operations that provides access to one or more datasets or data processing functions.
+        Data Service - A collection of operations that provides access to one or more datasets or data processing functions.
       </xs:documentation>
       <xs:documentation xml:lang="es">
         Servicio de datos - Un sitio o end-point que provee operaciones relacionadas a funciones de descubrimiento, acceso, o procesamiento de datos o recursos relacionados.
@@ -22,7 +23,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="iri" type="xs:anyURI"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+      <xs:element maxOccurs="unbounded" name="label" sawsdl:modelReference="http://purl.org/dc/terms/title">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Data service label
@@ -32,6 +33,7 @@
           <xs:simpleContent>
             <xs:extension base="xs:string">
               <xs:attribute ref="xml:lang" use="required"/>
+              <xs:assert test="@xml:lang != ''"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
@@ -52,6 +54,13 @@
           </xs:documentation>
           <xs:documentation xml:lang="it">
             end-point del servizio - La locazione principale o l'endpoint primario del servizio (un IRI risolvibile via web).
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="licence" type="ccmm:licence_document" sawsdl:modelReference="http://purl.org/dc/terms/license">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has licence - A licence under which the Data service is made available.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

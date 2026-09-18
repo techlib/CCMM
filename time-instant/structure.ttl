@@ -8,7 +8,7 @@
     kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/time-instant/class-1750713474658-dd87-9fe9-a4ab\",\"https://model.ccmm.cz/research-data/time-instant/container-1750760718402-28a0-9682-9762\",\"https://model.ccmm.cz/research-data/time-instant/attribute-1750760723348-1ba3-b4f8-a3b5\",\"https://model.ccmm.cz/research-data/time-instant/attribute-1750760723391-ad15-3405-aa50\"]";
     kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/time-instant/class-1750713474658-dd87-9fe9-a4ab\"]";
     kv:dataPsmTechnicalLabel "null";
-    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
     kv:iri "\"https://model.ccmm.cz/research-data/time-instant/\"";
     kv:jsonEnforceContext "\"no\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".

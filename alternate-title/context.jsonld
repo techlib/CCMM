@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "title": {
+      "@id": "http://purl.org/dc/terms/alternative",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "alternate_title_type": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasType",
+      "@type": "@id",
+      "@context": {
+        "label": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@container": "@language"
+        },
+        "alternate_title_type": {
+          "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+          "@context": {}
+        }
+      }
+    },
+    "alternate_title": {
+      "@id": "https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle",
+      "@context": {}
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@prefix : <https://model.ccmm.cz/research-data/licence-document/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://model.ccmm.cz/research-data/licence-document/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for Licence document. A legal document giving official permission to do something with a resource and describing conditions under which it may be done.\",\"cs\":\"Datová struktura pro Licence document. A legal document giving official permission to do something with a resource and describing conditions under which it may be done.\"}";
+    kv:dataPsmHumanLabel "{\"en\":\"Licence document\",\"cs\":\"Licence document\"}";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/licence-document/class-1785943107074-47da-df8e-9e09\",\"https://model.ccmm.cz/research-data/licence-document/attribute-1785943123882-4abc-53f6-b611\"]";
+    kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/licence-document/class-1785943107074-47da-df8e-9e09\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://model.ccmm.cz/research-data/licence-document/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1785943107074-47da-df8e-9e09 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/LicenceDocument\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/licence-document/attribute-1785943123882-4abc-53f6-b611\"]";
+    kv:dataPsmTechnicalLabel "\"licence_document\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/licence-document/class-1785943107074-47da-df8e-9e09\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1785943123882-4abc-53f6-b611 a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/LicenceDocument.title\"";
+    kv:dataPsmTechnicalLabel "\"title\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/licence-document/attribute-1785943123882-4abc-53f6-b611\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

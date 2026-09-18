@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/checksum/schema.json",
+  "title": "Checksum",
+  "description": "A value that allows the contents of a file to be authenticated.",
+  "type": "object",
+  "required": [
+    "checksum_value",
+    "algorithm"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "checksum"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "checksum"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "checksum_value": {
+      "title": "checksum value",
+      "description": "A lower case hexadecimal encoded digest value produced using a specific algorithm. ",
+      "type": "string"
+    },
+    "algorithm": {
+      "title": "uses algorithm",
+      "description": "The algorithm used to produce the subject Checksum.",
+      "type": "object",
+      "properties": {
+        "label": {
+          "title": "label",
+          "description": "A human-readable name for the subject.",
+          "type": "array",
+          "items": {
+            "title": "Language tagged string",
+            "type": "object",
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "properties": {
+              "@value": {
+                "title": "Text v daném jazyce",
+                "type": "string"
+              },
+              "@language": {
+                "title": "Jazyk textu",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

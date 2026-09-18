@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../data-service/schema.xsd"/>
   <xs:include schemaLocation="../application-profile/schema.xsd"/>
   <xs:include schemaLocation="../documentation/schema.xsd"/>
+  <xs:include schemaLocation="../access-rights/schema.xsd"/>
+  <xs:include schemaLocation="../licence-document/schema.xsd"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
   <xs:complexType name="distribution_data_service" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#Distribution-DataService">
     <xs:annotation>
@@ -12,10 +14,11 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element name="title" type="xs:string" sawsdl:modelReference="http://purl.org/dc/terms/title">
+      <xs:element maxOccurs="unbounded" name="title" type="xs:string" sawsdl:modelReference="http://purl.org/dc/terms/title">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             title - A name given to the distribution.
+            This property can be repeated for parallel language versions of the description. The main title of a distribution is the one in the primary language of the dataset.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -28,7 +31,7 @@
             dataadgangstjeneste - Et websted eller endpoint der giver adgang til en repræsentation af datasættet.
           </xs:documentation>
           <xs:documentation xml:lang="en">
-            has access service - A site or end-point that gives access to the distribution of the dataset.
+            has access service - A data service that gives access to the distribution of the dataset.
             Access service SHOULD be used to link to a description of Data service that can provide access to this distribution.
           </xs:documentation>
           <xs:documentation xml:lang="es">
@@ -39,11 +42,11 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to_specification" type="ccmm:application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to" type="ccmm:application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            conforms to specification - An established standard to which the distribution conforms.
-            This property SHOULD be used to indicate the profile or specification that this data service conforms to. This is (generally) a complementary concern to the service standard.
+            conforms to - An established schema to which the described Distribution conforms.
+            This property should be used to indicate the model, schema, ontology, view or profile that this representation of a dataset conforms to. This is (generally) a complementary concern to the media type, service standard or format.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -51,6 +54,24 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has documentation - A page or document about this Distribution.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="rights" type="ccmm:access_rights" sawsdl:modelReference="http://purl.org/dc/terms/rights">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has rights - A statement that specifies rights associated with the Distribution.
+            Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:
+            embargoed access, metadata only access - :NON_PUBLIC,
+            open access - :PUBLIC,
+            restricted access - :RESTRICTED.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="licence" type="ccmm:licence_document" sawsdl:modelReference="http://purl.org/dc/terms/license">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has licence - A licence under which the Distribution is made available.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -65,12 +86,45 @@
           <xs:simpleContent>
             <xs:extension base="xs:string">
               <xs:attribute ref="xml:lang" use="required"/>
+              <xs:assert test="@xml:lang != ''"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
       <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>
     </xs:sequence>
+    <xs:attribute use="required" name="access_url" type="xs:anyURI" sawsdl:modelReference="http://www.w3.org/ns/dcat#accessURL">
+      <xs:annotation>
+        <xs:documentation xml:lang="ar">
+          رابط وصول - أي رابط يتيح الوصول إلى البيانات. إذا كان الرابط هو ربط مباشر لملف يمكن تحميله استخدم الخاصية downloadURL
+        </xs:documentation>
+        <xs:documentation xml:lang="cs">
+          přístupová adresa - URL zdroje, přes které je přístupná distribuce datové sady. Příkladem může být vstupní stránka, RSS kanál či SPARQL endpoint. Použijte ve všech případech kromě URL souboru ke stažení, pro které je lepší použít dcat:downloadURL.
+        </xs:documentation>
+        <xs:documentation xml:lang="da">
+          adgangsadresse - En URL for en ressource som giver adgang til en repræsentation af datsættet. Fx destinationsside, feed, SPARQL-endpoint. Anvendes i alle sammenhænge undtagen til angivelse af et simpelt download link hvor anvendelse af egenskaben downloadURL foretrækkes.
+        </xs:documentation>
+        <xs:documentation xml:lang="el">
+          URL πρόσβασης - Μπορεί να είναι οποιουδήποτε είδους URL που δίνει πρόσβαση στη διανομή ενός συνόλου δεδομένων. Π.χ. ιστοσελίδα αρχικής πρόσβασης, μεταφόρτωση, feed URL, σημείο διάθεσης SPARQL. Να χρησιμοποιείται όταν ο κατάλογος δεν περιέχει πληροφορίες εαν πρόκειται ή όχι για μεταφορτώσιμο αρχείο.
+        </xs:documentation>
+        <xs:documentation xml:lang="en">
+          access URL - A URL that gives access to a Distribution of the Dataset.
+          The resource at the access URL may contain information about how to get the Dataset. It shall be the web page (not a document file).
+        </xs:documentation>
+        <xs:documentation xml:lang="es">
+          URL de acceso - Puede ser cualquier tipo de URL que de acceso a una distribución del conjunto de datos, e.g., página de destino, descarga, URL feed, punto de acceso SPARQL. Esta propriedad se debe usar cuando su catálogo de datos no tiene información sobre donde está o cuando no se puede descargar.
+        </xs:documentation>
+        <xs:documentation xml:lang="fr">
+          URL d'accès - Ceci peut être tout type d'URL qui donne accès à une distribution du jeu de données. Par exemple, un lien à une page HTML contenant un lien au jeu de données, un Flux RSS, un point d'accès SPARQL. Utilisez le lorsque votre catalogue ne contient pas d'information sur quoi il est ou quand ce n'est pas téléchargeable.
+        </xs:documentation>
+        <xs:documentation xml:lang="it">
+          indirizzo di accesso - Un URL di una risorsa che consente di accedere a una distribuzione del set di dati. Per esempio, pagina di destinazione, feed, endpoint SPARQL. Da utilizzare per tutti i casi, tranne  quando  si tratta di un semplice link per il download nel qual caso è preferito downloadURL.
+        </xs:documentation>
+        <xs:documentation xml:lang="ja">
+          アクセスURL - データセットの配信にアクセス権を与えるランディング・ページ、フィード、SPARQLエンドポイント、その他の種類の資源。
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:element name="distribution-data-service" type="ccmm:distribution_data_service"/>
 </xs:schema>

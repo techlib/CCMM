@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/identifier-scheme/schema.json",
+  "title": "Identifier scheme",
+  "description": "Scheme in which is the identifier value unique, usually representing some authority. Identifier scheme shall always be represented as IRI identifier.",
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "identifier_scheme"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "identifier_scheme"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "label": {
+      "title": "label",
+      "description": "Identifier scheme label.",
+      "type": "array",
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "notation": {
+      "title": "notation",
+      "description": "Notation of the identifier scheme.",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "@context": "https://model.ccmm.cz/research-data/dataset/context.jsonld",
+  "type": "dataset",
+  "access_rights": {
+    "id": "http://purl.org/coar/access_right/c_f1cf",
+    "type": "access_rights",
+    "http://www.w3.org/2004/02/skos/core#prefLabel": {
+      "@language": "en",
+      "@value": "embargoed access"
+    }
+  },
+  "http://purl.org/dc/terms/title": "Datová sada pro Údaje o zdravotní gramotnosti a depresi seniorů ve věku 65 a více let",
+  "identifier": [
+    {
+      "id": "https://doi.org/10.48700/datst.xd12h-dfz24",
+      "type": "identifier",
+      "http://www.w3.org/2004/02/skos/core#notation": "10.48700/datst.xd12h-dfz24",
+      "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
+        "id": "https://doi.org/",
+        "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme"
+      }
+    }
+  ],
+  "qualified_attribution": [
+    {
+      "type": "resource_attribution",
+      "role": {
+        "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+        "type": "attributed_agent_role_type",
+        "label": {
+          "en": "Creator"
+        }
+      },
+      "attributed_agent": {
+        "type": "person",
+        "http://www.w3.org/2006/vcard/ns#family-name": "Bártlová",
+        "http://www.w3.org/2006/vcard/ns#given-name": "Sylva",
+        "http://xmlns.com/foaf/0.1/name": "Bártlová, Sylva"
+      }
+    },
+    {
+      "type": "resource_attribution",
+      "role": {
+        "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher",
+        "type": "attributed_agent_role_type",
+        "label": {
+          "cs": "Vydavatel",
+          "en": "Publisher"
+        }
+      },
+      "attributed_agent": {
+        "type": "organization",
+        "http://xmlns.com/foaf/0.1/name": "Nějaká organizace"
+      }
+    }
+  ],
+  "time_reference": [
+    {
+      "type": "time_reference",
+      "http://www.w3.org/2006/time#hasTime": {
+        "type": "http://www.w3.org/2006/time#Instant",
+        "http://www.w3.org/2006/time#inXSDDate": {
+          "type": "xsd:date",
+          "@value": "2024-05-01"
+        }
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#hasType": {
+        "id": "https://w3id.org/tib/datacite/vocab/dateType/Created",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": {
+          "@language": "en",
+          "@value": "Created"
+        }
+      }
+    }
+  ],
+  "metadata_identification": [
+    {
+      "type": "metadata_record",
+      "conforms_to_standard": [
+        {
+          "id": "https://model.ccmm.cz/research-data/2.0.0",
+          "type": "application_profile",
+          "http://www.w3.org/2000/01/rdf-schema#label": {
+            "@language": "en",
+            "@value": "Czech Core Metadata Model for Research Data 2.0.0"
+          }
+        }
+      ],
+      "date_updated": "2025-07-25",
+      "qualified_attribution": [
+        {
+          "type": "resource_attribution",
+          "role": {
+            "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager",
+            "type": "attributed_agent_role_type",
+            "label": {
+              "en": "Data Manager"
+            }
+          },
+          "attributed_agent": {
+            "type": "person",
+            "http://www.w3.org/2006/vcard/ns#family-name": "Steklý",
+            "http://www.w3.org/2006/vcard/ns#given-name": "Pavel",
+            "http://xmlns.com/foaf/0.1/name": "Pavel Steklý"
+          }
+        }
+      ],
+      "original_repository": {
+        "id": "https://data.narodni-repozitar.cz",
+        "type": "repository",
+        "http://purl.org/dc/terms/description": {
+          "@language": "cs",
+          "@value": "Popis původního repozitáře,"
+        },
+        "http://purl.org/dc/terms/title": {
+          "@language": "cs",
+          "@value": "Původní repozitář"
+        },
+        "qualified_attribution": [
+          {
+            "type": "resource_attribution",
+            "role": {
+              "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher",
+              "type": "attributed_agent_role_type",
+              "label": {
+                "cs": "Vydavatel",
+                "en": "Publisher"
+              }
+            },
+            "attributed_agent": {
+              "type": "organization",
+              "http://xmlns.com/foaf/0.1/name": "Univerzita Karlova"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "description": [
+    {
+      "type": "description",
+      "http://purl.org/dc/terms/description": {
+        "@language": "cs",
+        "@value": "Toto je jen ukázka metadat pro neexistující datovou sadu."
+      }
+    }
+  ],
+  "publication_year": "2026",
+  "subject": [
+    {
+      "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30300/30304",
+      "type": "subject",
+      "http://purl.org/dc/terms/title": {
+        "@language": "cs",
+        "@value": "Veřejné a environmentální zdraví"
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme": {
+        "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/",
+        "type": "https://model.ccmm.cz/vocabulary/ccmm#SubjectScheme"
+      },
+      "https://w3id.org/tib/datacite/property/classificationCode": "10509"
+    }
+  ]
+}

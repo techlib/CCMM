@@ -1,0 +1,869 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/resource-attribution/schema.json",
+  "title": "Resource attribution",
+  "description": "Attribution is the ascribing of a Resource to an agent. It defines the responsibility of an agent to the resource in a given role.",
+  "type": "object",
+  "required": [
+    "attributed_agent",
+    "role"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "resource_attribution"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "resource_attribution"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "attributed_agent": {
+      "title": "has attributed agent",
+      "description": "The agent attributed to the resource.",
+      "anyOf": [
+        {
+          "title": "Organization",
+          "description": "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.",
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "identifier": {
+              "title": "has identifier",
+              "description": "has identifier",
+              "type": "array",
+              "items": {
+                "title": "Identifier",
+                "description": "Unique and resolvable identifier containing the notation and identifier scheme in the form of URI.",
+                "type": "object",
+                "required": [
+                  "value",
+                  "scheme"
+                ],
+                "properties": {
+                  "value": {
+                    "title": "value",
+                    "description": "Value of the identifier within the given identifier scheme.",
+                    "type": "string"
+                  },
+                  "scheme": {
+                    "title": "in scheme",
+                    "description": "Relation between the identifier and scheme in which it is defined and unique.",
+                    "type": "object",
+                    "properties": {
+                      "label": {
+                        "title": "label",
+                        "description": "Identifier scheme label.",
+                        "type": "array",
+                        "items": {
+                          "title": "Language tagged string",
+                          "type": "object",
+                          "required": [
+                            "@value",
+                            "@language"
+                          ],
+                          "properties": {
+                            "@value": {
+                              "title": "Text v daném jazyce",
+                              "type": "string"
+                            },
+                            "@language": {
+                              "title": "Jazyk textu",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "notation": {
+                        "title": "notation",
+                        "description": "Notation of the identifier scheme.",
+                        "type": "array",
+                        "items": {
+                          "title": "String",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "authorized": {
+                    "title": "authorized",
+                    "description": "Specifies whether the identifier is authorized by the subject it represents.",
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "name": {
+              "title": "name",
+              "description": "Name of the agent.",
+              "type": "string"
+            },
+            "alternate_name": {
+              "title": "alternate name",
+              "description": "To specify the organizational name associated with the object",
+              "type": "array",
+              "items": {
+                "title": "Text",
+                "type": "object",
+                "additionalProperties": {
+                  "title": "Hodnota v jiném jazyce",
+                  "type": "string"
+                },
+                "properties": {
+                  "cs": {
+                    "title": "Hodnota v českém jazyce",
+                    "type": "string"
+                  },
+                  "en": {
+                    "title": "Hodnota v anglickém jazyce",
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "contact_point": {
+              "title": "has contact point",
+              "description": "Relevant contact information for the catalogued resource. ",
+              "type": "array",
+              "items": {
+                "title": "Contact details",
+                "description": "Contact details such as telephone, e-mail address etc.",
+                "type": "object",
+                "properties": {
+                  "data_box": {
+                    "title": "data box",
+                    "description": "Code of the data box.",
+                    "type": "array",
+                    "items": {
+                      "title": "String",
+                      "type": "string"
+                    }
+                  },
+                  "email": {
+                    "title": "email",
+                    "description": "Email address.",
+                    "type": "array",
+                    "items": {
+                      "title": "String",
+                      "type": "string"
+                    }
+                  },
+                  "phone": {
+                    "title": "phone",
+                    "description": "Phone number",
+                    "type": "array",
+                    "items": {
+                      "title": "String",
+                      "type": "string"
+                    }
+                  },
+                  "address": {
+                    "title": "has address",
+                    "description": "To specify the components of the delivery address for the object",
+                    "type": "array",
+                    "items": {
+                      "title": "Address",
+                      "description": "A spatial object that in a human-readable way identifies a fixed location. ",
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "title": "label",
+                          "description": "Address label",
+                          "type": "array",
+                          "items": {
+                            "title": "Language tagged string",
+                            "type": "object",
+                            "required": [
+                              "@value",
+                              "@language"
+                            ],
+                            "properties": {
+                              "@value": {
+                                "title": "Text v daném jazyce",
+                                "type": "string"
+                              },
+                              "@language": {
+                                "title": "Jazyk textu",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "full_address": {
+                          "title": "full address",
+                          "description": "The complete address written as a string.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "po_box": {
+                          "title": "post office box",
+                          "description": "A location designator for a postal delivery point at a post office, usually a number.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "thoroughfare": {
+                          "title": "thoroughfare",
+                          "description": "The name of a passage or way through from one location to another.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "locator_designator": {
+                          "title": "locator designator",
+                          "description": "A number or sequence of characters that uniquely identifies the locator within the relevant scope.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "locator_name": {
+                          "title": "locator name",
+                          "description": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "address_area": {
+                          "title": "address area",
+                          "description": "The name of a geographic area that groups Addresses.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "post_name": {
+                          "title": "post name",
+                          "description": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. ",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "administrative_unit_level_1": {
+                          "title": "administrative unit level 1",
+                          "description": "The name of the uppermost level of the address, almost always a country.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "administrative_unit_level_2": {
+                          "title": "administrative unit level 2",
+                          "description": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "post_code": {
+                          "title": "post code",
+                          "description": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Person",
+          "description": "Physical person. ",
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "identifier": {
+              "title": "has identifier",
+              "description": "has identifier",
+              "type": "array",
+              "items": {
+                "title": "Identifier",
+                "description": "Unique and resolvable identifier containing the notation and identifier scheme in the form of URI.",
+                "type": "object",
+                "required": [
+                  "value",
+                  "scheme"
+                ],
+                "properties": {
+                  "value": {
+                    "title": "value",
+                    "description": "Value of the identifier within the given identifier scheme.",
+                    "type": "string"
+                  },
+                  "scheme": {
+                    "title": "in scheme",
+                    "description": "Relation between the identifier and scheme in which it is defined and unique.",
+                    "type": "object",
+                    "properties": {
+                      "label": {
+                        "title": "label",
+                        "description": "Identifier scheme label.",
+                        "type": "array",
+                        "items": {
+                          "title": "Language tagged string",
+                          "type": "object",
+                          "required": [
+                            "@value",
+                            "@language"
+                          ],
+                          "properties": {
+                            "@value": {
+                              "title": "Text v daném jazyce",
+                              "type": "string"
+                            },
+                            "@language": {
+                              "title": "Jazyk textu",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "notation": {
+                        "title": "notation",
+                        "description": "Notation of the identifier scheme.",
+                        "type": "array",
+                        "items": {
+                          "title": "String",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "authorized": {
+                    "title": "authorized",
+                    "description": "Specifies whether the identifier is authorized by the subject it represents.",
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "name": {
+              "title": "name",
+              "description": "Name of the agent.",
+              "type": "string"
+            },
+            "given_name": {
+              "title": "given name",
+              "description": "The given name associated with the person.",
+              "type": "array",
+              "items": {
+                "title": "String",
+                "type": "string"
+              }
+            },
+            "family_name": {
+              "title": "family name",
+              "description": "The family name associated with the person.",
+              "type": "array",
+              "items": {
+                "title": "String",
+                "type": "string"
+              }
+            },
+            "contact_point": {
+              "title": "has contact point",
+              "description": "Relevant contact information for the catalogued resource. ",
+              "type": "array",
+              "items": {
+                "title": "Contact details",
+                "description": "Contact details such as telephone, e-mail address etc.",
+                "type": "object",
+                "properties": {
+                  "data_box": {
+                    "title": "data box",
+                    "description": "Code of the data box.",
+                    "type": "array",
+                    "items": {
+                      "title": "String",
+                      "type": "string"
+                    }
+                  },
+                  "email": {
+                    "title": "email",
+                    "description": "Email address.",
+                    "type": "array",
+                    "items": {
+                      "title": "String",
+                      "type": "string"
+                    }
+                  },
+                  "phone": {
+                    "title": "phone",
+                    "description": "Phone number",
+                    "type": "array",
+                    "items": {
+                      "title": "String",
+                      "type": "string"
+                    }
+                  },
+                  "address": {
+                    "title": "has address",
+                    "description": "To specify the components of the delivery address for the object",
+                    "type": "array",
+                    "items": {
+                      "title": "Address",
+                      "description": "A spatial object that in a human-readable way identifies a fixed location. ",
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "title": "label",
+                          "description": "Address label",
+                          "type": "array",
+                          "items": {
+                            "title": "Language tagged string",
+                            "type": "object",
+                            "required": [
+                              "@value",
+                              "@language"
+                            ],
+                            "properties": {
+                              "@value": {
+                                "title": "Text v daném jazyce",
+                                "type": "string"
+                              },
+                              "@language": {
+                                "title": "Jazyk textu",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "full_address": {
+                          "title": "full address",
+                          "description": "The complete address written as a string.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "po_box": {
+                          "title": "post office box",
+                          "description": "A location designator for a postal delivery point at a post office, usually a number.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "thoroughfare": {
+                          "title": "thoroughfare",
+                          "description": "The name of a passage or way through from one location to another.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "locator_designator": {
+                          "title": "locator designator",
+                          "description": "A number or sequence of characters that uniquely identifies the locator within the relevant scope.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "locator_name": {
+                          "title": "locator name",
+                          "description": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "address_area": {
+                          "title": "address area",
+                          "description": "The name of a geographic area that groups Addresses.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "post_name": {
+                          "title": "post name",
+                          "description": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. ",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "administrative_unit_level_1": {
+                          "title": "administrative unit level 1",
+                          "description": "The name of the uppermost level of the address, almost always a country.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "administrative_unit_level_2": {
+                          "title": "administrative unit level 2",
+                          "description": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "post_code": {
+                          "title": "post code",
+                          "description": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "affiliation": {
+              "title": "has affiliation",
+              "description": "Affiliation of the person to an organization.",
+              "type": "array",
+              "items": {
+                "title": "Organization",
+                "description": "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.",
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "identifier": {
+                    "title": "has identifier",
+                    "description": "has identifier",
+                    "type": "array",
+                    "items": {
+                      "title": "Identifier",
+                      "description": "Unique and resolvable identifier containing the notation and identifier scheme in the form of URI.",
+                      "type": "object",
+                      "required": [
+                        "value",
+                        "scheme"
+                      ],
+                      "properties": {
+                        "value": {
+                          "title": "value",
+                          "description": "Value of the identifier within the given identifier scheme.",
+                          "type": "string"
+                        },
+                        "scheme": {
+                          "title": "in scheme",
+                          "description": "Relation between the identifier and scheme in which it is defined and unique.",
+                          "type": "object",
+                          "properties": {
+                            "label": {
+                              "title": "label",
+                              "description": "Identifier scheme label.",
+                              "type": "array",
+                              "items": {
+                                "title": "Language tagged string",
+                                "type": "object",
+                                "required": [
+                                  "@value",
+                                  "@language"
+                                ],
+                                "properties": {
+                                  "@value": {
+                                    "title": "Text v daném jazyce",
+                                    "type": "string"
+                                  },
+                                  "@language": {
+                                    "title": "Jazyk textu",
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "notation": {
+                              "title": "notation",
+                              "description": "Notation of the identifier scheme.",
+                              "type": "array",
+                              "items": {
+                                "title": "String",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "authorized": {
+                          "title": "authorized",
+                          "description": "Specifies whether the identifier is authorized by the subject it represents.",
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  },
+                  "name": {
+                    "title": "name",
+                    "description": "Name of the agent.",
+                    "type": "string"
+                  },
+                  "alternate_name": {
+                    "title": "alternate name",
+                    "description": "To specify the organizational name associated with the object",
+                    "type": "array",
+                    "items": {
+                      "title": "Text",
+                      "type": "object",
+                      "additionalProperties": {
+                        "title": "Hodnota v jiném jazyce",
+                        "type": "string"
+                      },
+                      "properties": {
+                        "cs": {
+                          "title": "Hodnota v českém jazyce",
+                          "type": "string"
+                        },
+                        "en": {
+                          "title": "Hodnota v anglickém jazyce",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "contact_point": {
+                    "title": "has contact point",
+                    "description": "Relevant contact information for the catalogued resource. ",
+                    "type": "array",
+                    "items": {
+                      "title": "Contact details",
+                      "description": "Contact details such as telephone, e-mail address etc.",
+                      "type": "object",
+                      "properties": {
+                        "data_box": {
+                          "title": "data box",
+                          "description": "Code of the data box.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "email": {
+                          "title": "email",
+                          "description": "Email address.",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "phone": {
+                          "title": "phone",
+                          "description": "Phone number",
+                          "type": "array",
+                          "items": {
+                            "title": "String",
+                            "type": "string"
+                          }
+                        },
+                        "address": {
+                          "title": "has address",
+                          "description": "To specify the components of the delivery address for the object",
+                          "type": "array",
+                          "items": {
+                            "title": "Address",
+                            "description": "A spatial object that in a human-readable way identifies a fixed location. ",
+                            "type": "object",
+                            "properties": {
+                              "label": {
+                                "title": "label",
+                                "description": "Address label",
+                                "type": "array",
+                                "items": {
+                                  "title": "Language tagged string",
+                                  "type": "object",
+                                  "required": [
+                                    "@value",
+                                    "@language"
+                                  ],
+                                  "properties": {
+                                    "@value": {
+                                      "title": "Text v daném jazyce",
+                                      "type": "string"
+                                    },
+                                    "@language": {
+                                      "title": "Jazyk textu",
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              },
+                              "full_address": {
+                                "title": "full address",
+                                "description": "The complete address written as a string.",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
+                                }
+                              },
+                              "po_box": {
+                                "title": "post office box",
+                                "description": "A location designator for a postal delivery point at a post office, usually a number.",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
+                                }
+                              },
+                              "thoroughfare": {
+                                "title": "thoroughfare",
+                                "description": "The name of a passage or way through from one location to another.",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
+                                }
+                              },
+                              "locator_designator": {
+                                "title": "locator designator",
+                                "description": "A number or sequence of characters that uniquely identifies the locator within the relevant scope.",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
+                                }
+                              },
+                              "locator_name": {
+                                "title": "locator name",
+                                "description": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
+                                }
+                              },
+                              "address_area": {
+                                "title": "address area",
+                                "description": "The name of a geographic area that groups Addresses.",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
+                                }
+                              },
+                              "post_name": {
+                                "title": "post name",
+                                "description": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. ",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
+                                }
+                              },
+                              "administrative_unit_level_1": {
+                                "title": "administrative unit level 1",
+                                "description": "The name of the uppermost level of the address, almost always a country.",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
+                                }
+                              },
+                              "administrative_unit_level_2": {
+                                "title": "administrative unit level 2",
+                                "description": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
+                                }
+                              },
+                              "post_code": {
+                                "title": "post code",
+                                "description": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+                                "type": "array",
+                                "items": {
+                                  "title": "String",
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "role": {
+      "title": "had role",
+      "description": "Role of the agent in the attribution to the resource. ",
+      "type": "object",
+      "required": [
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "title": "label",
+          "description": "Resource agent role type label.",
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

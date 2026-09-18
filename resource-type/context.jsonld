@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "label": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@container": "@language"
+    },
+    "resource_type": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@context": {}
+    }
+  }
+}

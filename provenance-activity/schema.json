@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/provenance-activity/schema.json",
+  "title": "Provenance activity",
+  "description": "An activity is something that occurs over a period of time and acts upon or with the origin or life cycle of dataset; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "provenance_activity"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "provenance_activity"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "label": {
+      "title": "label",
+      "description": "A human-readable name for the activity.",
+      "type": "array",
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "common_provenance_model_json_representation": {
+      "title": "has common provenance model json representation",
+      "description": "Link to the JSON representation of provenance activity according to the Common provenance model specified in ISO 23494-2 standard.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "iri"
+      }
+    },
+    "ro-crate_json_representation": {
+      "title": "has RO-Crate JSON representation",
+      "description": "Link to the JSON-LD representation of provenance activity according to the RO-Crate specification.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "iri"
+      }
+    }
+  }
+}

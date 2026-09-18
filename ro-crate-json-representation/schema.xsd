@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="ro-crate_json_representation" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#Ro-crateJsonRepresentation">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        RO-Crate JSON representation - Representation of provenance activity in JSON-LD format corresponding to the RO-Crate specification.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="iri" type="xs:anyURI"/>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ro-crate_json_representation" type="ccmm:ro-crate_json_representation"/>
+</xs:schema>

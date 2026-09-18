@@ -1,0 +1,52 @@
+{
+  "@context": {
+    "@context": {
+      "@version": 1.1,
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "id": "@id",
+      "type": "@type",
+      "title": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      },
+      "definition": {
+        "@id": "http://www.w3.org/2004/02/skos/core#definition",
+        "@container": "@language"
+      },
+      "classification_code": {
+        "@id": "https://w3id.org/tib/datacite/property/classificationCode",
+        "@type": "xsd:string"
+      },
+      "subject_scheme": {
+        "@id": "https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme",
+        "@type": "@id",
+        "@context": {
+          "label": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+          },
+          "subject_scheme": {
+            "@id": "https://model.ccmm.cz/vocabulary/ccmm#SubjectScheme",
+            "@context": {}
+          }
+        }
+      },
+      "subject": {
+        "@id": "https://w3id.org/tib/datacite/class/Subject",
+        "@context": {}
+      }
+    }
+  },
+  "title": [
+    {
+      "@value": "8rLSA9CEiz",
+      "@language": "jE"
+    },
+    {
+      "@value": "",
+      "@language": "Vrlc"
+    }
+  ],
+  "classification_code": "XsmOHV",
+  "subject_scheme": {}
+}

@@ -12,8 +12,11 @@
     kv:instancesHaveIdentity "\"OPTIONAL\"";
     kv:instancesSpecifyTypes "\"OPTIONAL\"";
     kv:publicBaseUrl "\"https://model.ccmm.cz/research-data/\"";
-    kv:useGenerators "{\"csv\":false,\"sparql\":false,\"shacl\":false,\"shex\":false,\"openapi\":false,\"plantUML\":false,\"jsonExample\":false,\"json\":false}".
+    kv:useGenerators "{\"csv\":false,\"sparql\":false,\"shacl\":false,\"shex\":false,\"openapi\":false,\"plantUML\":false,\"jsonExample\":true,\"json\":true}".
 :json a <https://dataspecer.com/work-in-progress/generator-configuration/configuration-entry/>;
     dsvgc:has-configuration-type ce:json;
-    kv:includeContextInExample "false";
+    kv:dereferenceContext "true";
+    kv:dereferenceSchema "true";
+    kv:includeContextInExample "true";
+    kv:jsonDefaultTypeKeyMapping "\"technical-label\"";
     kv:jsonLabelLanguage "\"en\"".
