@@ -1,0 +1,880 @@
+{
+  "@context": "https://model.ccmm.cz/research-data/dataset/context.jsonld",
+  "id": "https://organization.cz/dataset_server/dataset_id",
+  "type": "dataset",
+  "access_rights": {
+    "id": "http://purl.org/coar/access_right/c_abf2",
+    "type": "access_rights",
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "open access"
+      },
+      {
+        "@language": "cs",
+        "@value": "otevřený přístup"
+      }
+    ]
+  },
+  "related_resource": [
+    {
+      "id": "http://data.europa.eu/eli/dir/2008/50/oj",
+      "type": "related_resource",
+      "http://purl.org/dc/terms/title": "Směrnice Evropského parlamentu a Rady 2008/50/ES ze dne 21. května 2008 o kvalitě\n            vnějšího ovzduší a čistším ovzduší pro Evropu",
+      "resource_type": {
+        "id": "http://purl.org/coar/resource_type/c_18cf/",
+        "type": "resource_type",
+        "label": {
+          "en": "text",
+          "cs": "text"
+        }
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#hasType": {
+        "id": "https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@language": "cs",
+            "@value": "je na něj odkazováno z (čeho)"
+          },
+          {
+            "@language": "en",
+            "@value": "IsReferencedBy"
+          }
+        ]
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl": {
+        "type": "xsd:anyURI",
+        "@value": "https://eur-lex.europa.eu/legal-content/CS/TXT/HTML/?uri=CELEX:32008L0050&qid=1754039487879"
+      }
+    },
+    {
+      "type": "related_resource",
+      "http://purl.org/dc/terms/title": "ENVI LVS1 Sampler pro odběr prašného aerosolu",
+      "resource_type": {
+        "id": "http://purl.org/coar/resource_type/8KJG-QS0Y",
+        "type": "resource_type",
+        "label": {
+          "en": "research instrument"
+        }
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#hasType": {
+        "id": "https://w3id.org/tib/datacite/vocab/relationType/IsCollectedBy",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@language": "cs",
+            "@value": "je sbírán (čím)"
+          },
+          {
+            "@language": "en",
+            "@value": "isCollectedBy"
+          }
+        ]
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl": {
+        "type": "xsd:anyURI",
+        "@value": "https://www.envitech-bohemia.cz/p/264/envi-lvs1-sampler-pro-odber-prasneho-aerosolu"
+      }
+    },
+    {
+      "id": "https://opendata.chmi.cz/air_quality/now/data/",
+      "type": "related_resource",
+      "http://purl.org/dc/terms/title": "Kvalita ovzduší – aktuální hodinové údaje",
+      "resource_type": {
+        "id": "http://purl.org/coar/resource_type/FF4C-28RK",
+        "type": "resource_type",
+        "label": {
+          "en": "observational data"
+        }
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#hasType": {
+        "id": "https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@language": "en",
+            "@value": "isDerivedFrom"
+          },
+          {
+            "@language": "cs",
+            "@value": "je odvozen od (čeho)"
+          }
+        ]
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl": {
+        "type": "xsd:anyURI",
+        "@value": "https://opendata.chmi.cz/air_quality/"
+      }
+    },
+    {
+      "id": "https://data.gov.cz/zdroj/datové-sady/00020699/c724d055011d82189bbfc3766ffd1eb7",
+      "type": "related_resource",
+      "http://purl.org/dc/terms/title": "Metadata datoivé sady INSPIRE – Kvalita ovzduší – přehledy (data) na měřicích\n            stanicích",
+      "https://model.ccmm.cz/vocabulary/ccmm#hasType": {
+        "id": "https://w3id.org/tib/datacite/vocab/relationType/HasMetadata",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@language": "cs",
+            "@value": "má metadata"
+          },
+          {
+            "@language": "en",
+            "@value": "hasMetadata"
+          }
+        ]
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl": {
+        "type": "xsd:anyURI",
+        "@value": "https://data.gov.cz/zdroj/datové-sady/00020699/c724d055011d82189bbfc3766ffd1eb7"
+      }
+    }
+  ],
+  "location": [
+    {
+      "type": "location",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "cs",
+        "@value": "Středočeský kraj"
+      },
+      "http://www.w3.org/ns/dcat#bbox": {
+        "type": "http://www.opengis.net/ont/sf#Envelope",
+        "http://www.opengis.net/ont/geosparql#asGML": {
+          "type": "http://www.opengis.net/ont/geosparql#gmlLiteral",
+          "@value": "\n                <gml:Envelope xmlns=\"https://schema.ccmm.cz/research-data/2.0\" xmlns:gml=\"http://www.opengis.net/gml/3.2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                    <gml:lowerCorner>13.394972457505816 49.50127042751268</gml:lowerCorner>\n                    <gml:upperCorner>15.585575400519133 50.61421606255462</gml:upperCorner>\n                </gml:Envelope>\n            "
+        }
+      },
+      "http://www.w3.org/ns/locn#geometry": {
+        "type": "http://www.w3.org/ns/locn#Geometry",
+        "http://www.opengis.net/ont/geosparql#asGML": {
+          "type": "http://www.opengis.net/ont/geosparql#gmlLiteral",
+          "@value": "\n                <gml:MultiSurface xmlns=\"https://schema.ccmm.cz/research-data/2.0\" xmlns:gml=\"http://www.opengis.net/gml/3.2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" gml:id=\"MS.AU.2.27\" srsName=\"http://www.opengis.net/def/crs/EPSG/0/5514\" srsDimension=\"2\">\n                    <gml:surfaceMember>\n                        <gml:Polygon gml:id=\"S.AU.2.27.1\">\n                            <gml:exterior>\n                                <gml:LinearRing>\n                                    <gml:posList>-700345.18 -989088.81 -700397.4 -989124.72\n                                        -700413.72 -989135.06 -700460.36 -989161.37 -700464.2\n                                        -989163.4 -700499.66 -989177.78 -700543.38 -989185.44\n                                        -700547.56 -989186.17 -734005.2 -1034221.4 -734000.7\n                                        -1034206.55 -733990.88 -1034174.1 -733982.57 -1034166.93\n                                        -733980.5 -1034165.15 -733970.63 -1034131.76 -733969.44\n                                        -1034127.73 -733973.52 -1034126.34 -733972.62\n                                        -1034123.26</gml:posList>\n                                </gml:LinearRing>\n                            </gml:exterior>\n                        </gml:Polygon>\n                    </gml:surfaceMember>\n                </gml:MultiSurface>\n            "
+        },
+        "http://www.opengis.net/ont/geosparql#asWKT": {
+          "type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "@value": "<http://www.opengis.net/def/crs/EPSG/0/4326> POLYGON ((14.508682697577541\n                50.51144569678917, 14.477983995157558 50.518028235000116, 14.478035479185621\n                50.45555539736816, 14.43880488232486 50.421645176771875, 14.36581743554305\n                50.446719892855725, 14.35739194570175 50.36258757705775, 14.250657864603255\n                50.33210789446332, 14.020371354587127 50.357187064119046, 13.880065240527614\n                50.25844541078942, 13.778984389572202 50.265648633804574, 13.495504438237504\n                50.17943830724704, 13.411503893003527 50.10568117653557, 13.417170120315802\n                50.03544699629592, 13.832381491846519 49.950644934840085, 13.795973119752944\n                49.80605469619334, 13.85777765771411 49.70834633763184, 13.731479412226832\n                49.6646629397591, 13.756733581251808 49.524668139017024, 13.967097422200993\n                49.51543217474966, 14.046896101223354 49.56571182490248, 14.088997534155055\n                49.520140414785175, 14.263020664899983 49.55285796043711, 14.389212294975863\n                49.53296587296373, 14.564954244472574 49.54952076690324, 14.646281469761647\n                49.50408988161226, 14.735996252098658 49.5403919181108, 14.747207923257832\n                49.62756002769342, 14.932262624987828 49.542327845490064, 15.005169791530534\n                49.6041078098593, 15.232274449831607 49.60593619825548, 15.243541844074144\n                49.65489001943007, 15.16792950938833 49.69645491207288, 15.212758939211\n                49.758168304172386, 15.510333591208592 49.853893057205454, 15.5246155982382\n                49.97119836125438, 15.361856320336926 50.046941393360356, 15.41520889434986\n                50.12977066138589, 15.32818568688134 50.15316027875852, 15.401167427630014\n                50.22145049356703, 15.356241063917224 50.293232962277955, 15.207509418150238\n                50.28784932198144, 15.089561576559703 50.37564180390385, 15.15967793985348\n                50.46503338472152, 15.100730871208327 50.548897837519775, 14.915528393428872\n                50.61835182571946, 14.85663081512601 50.57566962715006, 14.820147490564125\n                50.543574383167936, 14.769635500894594 50.56495862568477, 14.741574967586558\n                50.53286099312848, 14.688263940665593 50.48824277888082, 14.604089936049633\n                50.479312687191054, 14.508682697577541 50.51144569678917))"
+        }
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#hasRelatedResource": {
+        "id": "https://vdp.cuzk.gov.cz/vdp/ruian/vusc/27",
+        "type": "http://www.w3.org/2000/01/rdf-schema#Resource",
+        "http://purl.org/dc/terms/title": "Středočeský kraj"
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#hasType": {
+        "id": "https://vocabs.ccmm.cz/registry/codelist/LocationRelation/Collected",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@language": "cs",
+            "@value": "Získáno v lokaci"
+          },
+          {
+            "@language": "en",
+            "@value": "Collected in"
+          }
+        ]
+      }
+    }
+  ],
+  "http://purl.org/dc/terms/title": "Kvalita ovzduší ve středních čechách 2024",
+  "resource_type": {
+    "id": "http://purl.org/coar/resource_type/c_ddb1",
+    "type": "resource_type",
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "cs",
+        "@value": "datová sada"
+      },
+      {
+        "@language": "en",
+        "@value": "dataset"
+      }
+    ]
+  },
+  "identifier": [
+    {
+      "id": "https://doi.org/10.45321/as36sl",
+      "type": "identifier",
+      "http://www.w3.org/2004/02/skos/core#notation": "10.45321/as36sl",
+      "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
+        "id": "https://doi.org/",
+        "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
+        "http://www.w3.org/2000/01/rdf-schema#label": {
+          "@language": "en",
+          "@value": "Digital Object Identifier"
+        },
+        "http://www.w3.org/2004/02/skos/core#notation": "DOI"
+      }
+    },
+    {
+      "id": "https://organization.cz/datasets/air-q-cb-25-23",
+      "type": "identifier",
+      "http://www.w3.org/2004/02/skos/core#notation": "air-q-cb-25-23",
+      "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
+        "id": "https://organization.cz/datasets/",
+        "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
+        "http://www.w3.org/2000/01/rdf-schema#label": {
+          "@language": "cs",
+          "@value": "Organizační identifikační schéma"
+        }
+      }
+    }
+  ],
+  "distribution": [
+    {
+      "type": "distribution_data_service",
+      "conforms_to": [
+        {
+          "id": "http://data.europa.eu/eli/reg/2010/1089",
+          "type": "application_profile",
+          "http://www.w3.org/2000/01/rdf-schema#label": {
+            "@language": "cs",
+            "@value": "NAŘÍZENÍ KOMISE (ES) č. 976/2009 ze dne 19. října 2009, kterým\n                    se provádí směrnice Evropského parlamentu a Rady 2007/2/ES, pokud jde o síťové\n                    služby"
+          }
+        }
+      ],
+      "description": {
+        "cs": "Prohlížecí služba (WMS)  byla vytvořena na základě dat ČHMÚ a\n                obsahuje vrstvy: 1) Zóny a aglomerace hodnocení a řízení kvality ovzduší; 2) Státní\n                síť imisního monitoringu; 3) Pole koncentrací látek znečišťující ovzduší v gridu 1x1\n                km (Imisní limity pro ochranu lidského zdraví; Imisní limity pro ochranu ekosystémů\n                a vegetace); 4) Přehledy (data) naměřené na stanicích Státní imisní sítě\n                (Koncentrace látek znečišťujících ovzduší, pro které jsou stanoveny imisní limity\n                pro ochranu lidského zdraví; Koncentrace polutantů, pro které jsou stanoveny imisní\n                limity pro ochranu ekosystémů a vegetace) pro rok 2023."
+      },
+      "licence": {
+        "id": "http://link-to-license-statement.com",
+        "type": "licence_document"
+      },
+      "rights": [
+        {
+          "id": "https://vocabularies.coar-repositories.org/access_rights/c_abf2/",
+          "type": "access_rights",
+          "label": {
+            "en": "open access"
+          }
+        }
+      ],
+      "http://purl.org/dc/terms/title": "Služba WMS pro prohlížení dat o kvalitě ovzduší",
+      "access_service": [
+        {
+          "id": "https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi",
+          "type": "data_service",
+          "http://purl.org/dc/terms/title": {
+            "@language": "en",
+            "@value": "Endpoint of WMS service Air quality"
+          },
+          "endpoint_url": [
+            {
+              "id": "_:b32",
+              "type": "related_resource",
+              "http://purl.org/dc/terms/title": "Endpoint of WMS service Air quality",
+              "resource_url": "https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi"
+            }
+          ]
+        }
+      ],
+      "access_url": [
+        {
+          "id": "https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi",
+          "type": "http://www.w3.org/ns/dcat#DataService",
+          "http://purl.org/dc/terms/title": {
+            "@language": "en",
+            "@value": "Endpoint of WMS service Air quality"
+          },
+          "http://www.w3.org/ns/dcat#endpointURL": {
+            "id": "_:b32",
+            "type": "http://www.w3.org/2000/01/rdf-schema#Resource",
+            "http://purl.org/dc/terms/title": "Endpoint of WMS service Air quality",
+            "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl": {
+              "type": "xsd:anyURI",
+              "@value": "https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi"
+            }
+          }
+        }
+      ],
+      "documentation": [
+        {
+          "id": "https://geoportal.gov.cz/web/guest/catalogue-client;jsessionid=F54A364E040A9D2184E42D94D288851C/",
+          "type": "documentation"
+        }
+      ]
+    },
+    {
+      "id": "http://portal.chmi.cz/AQ_DATA",
+      "type": "distribution_downloadable_file",
+      "conforms_to": [
+        {
+          "id": "https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd",
+          "type": "application_profile",
+          "http://www.w3.org/2000/01/rdf-schema#label": {
+            "@language": "en",
+            "@value": "Environmental monitoring facilities"
+          }
+        }
+      ],
+      "format": {
+        "id": "https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/file-type/GPKG",
+        "type": "format",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": {
+          "@language": "en",
+          "@value": "GeoPackage"
+        }
+      },
+      "licence": {
+        "id": "http://link-to-license-statement.com",
+        "type": "licence_document"
+      },
+      "rights": [
+        {
+          "id": "https://vocabularies.coar-repositories.org/access_rights/c_abf2/",
+          "type": "access_rights",
+          "label": {
+            "en": "open access"
+          }
+        }
+      ],
+      "http://purl.org/dc/terms/title": "Kvalita ovzduší",
+      "checksum": {
+        "type": "checksum",
+        "http://spdx.org/rdf/terms#algorithm": {
+          "id": "https://spdx.org/rdf/terms/#d4e4247",
+          "type": "http://spdx.org/rdf/terms#ChecksumAlgorithm"
+        },
+        "http://spdx.org/rdf/terms#checksumValue": {
+          "type": "xsd:hexBinary",
+          "@value": "9c56cc51b374d3a94e096e3f5483c05c6e69e221ae5d62a5435c5f3a9fc84938"
+        }
+      },
+      "access_url": [
+        "https://www.chmi.cz/o-nas/organizacni-struktura/usek-kvality-ovzdusi/oddeleni-informacniho-systemu-kvality-ovzdusi/odkazy"
+      ],
+      "byte_size": 256,
+      "download_url": [
+        {
+          "id": "https://geoportal.gov.cz/atom/CHMU/chmu_ovzdusi_AQ_data_epsg4258_2023.zip",
+          "type": "file",
+          "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+              "@language": "cs",
+              "@value": "Datová sada ve formátu Geopackage"
+            },
+            {
+              "@language": "en",
+              "@value": "Dataset in Geopackage format"
+            }
+          ]
+        }
+      ],
+      "media_type": {
+        "id": "https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/file-type/ZIP",
+        "type": "media_type",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": {
+          "@language": "en",
+          "@value": "ZIP"
+        }
+      }
+    }
+  ],
+  "http://www.w3.org/ns/dcat#keyword": {
+    "@language": "cs",
+    "@value": "kvalita ovzduší"
+  },
+  "http://www.w3.org/ns/dcat#version": "1.0.23",
+  "qualified_attribution": [
+    {
+      "type": "resource_attribution",
+      "role": {
+        "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator",
+        "type": "attributed_agent_role_type",
+        "label": {
+          "en": "Creator",
+          "cs": "Autor"
+        }
+      },
+      "attributed_agent": {
+        "type": "person",
+        "http://www.w3.org/2006/vcard/ns#family-name": "Novák",
+        "http://www.w3.org/2006/vcard/ns#given-name": "Jan",
+        "identifier": [
+          {
+            "id": "https://orcid.org/0030-04X2-2030-4X26",
+            "type": "identifier",
+            "http://www.w3.org/2004/02/skos/core#notation": "0030-04X2-2030-4X26",
+            "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
+              "id": "https://orcid.org/",
+              "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
+              "http://www.w3.org/2000/01/rdf-schema#label": {
+                "@language": "en",
+                "@value": "Open Research and Contributor ID"
+              },
+              "http://www.w3.org/2004/02/skos/core#notation": "ORCID"
+            }
+          }
+        ],
+        "contact_point": [
+          {
+            "type": "contact_details",
+            "address": [
+              {
+                "type": "address",
+                "http://www.w3.org/ns/locn#fullAddress": "Dlouhá 15, 11000, Praha 1"
+              }
+            ],
+            "https://model.ccmm.cz/vocabulary/ccmm#email": "jan.novak@email.com",
+            "https://model.ccmm.cz/vocabulary/ccmm#phone": "+0112345678"
+          }
+        ],
+        "http://xmlns.com/foaf/0.1/name": "Novák",
+        "affiliation": [
+          {
+            "type": "organization",
+            "identifier": [
+              {
+                "id": "https://ror.org/024d6js02",
+                "type": "identifier",
+                "http://www.w3.org/2004/02/skos/core#notation": "024d6js02",
+                "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
+                  "id": "https://ror.org/",
+                  "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
+                  "http://www.w3.org/2000/01/rdf-schema#label": {
+                    "@language": "en",
+                    "@value": "Research Organization Registry"
+                  },
+                  "http://www.w3.org/2004/02/skos/core#notation": "ROR"
+                }
+              }
+            ],
+            "http://xmlns.com/foaf/0.1/name": "Univerzita Karlova"
+          }
+        ]
+      }
+    },
+    {
+      "type": "resource_attribution",
+      "role": {
+        "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher",
+        "type": "attributed_agent_role_type",
+        "label": {
+          "cs": "Vydavatel",
+          "en": "Publisher"
+        }
+      },
+      "attributed_agent": {
+        "type": "person",
+        "http://www.w3.org/2006/vcard/ns#family-name": "Janouch",
+        "http://www.w3.org/2006/vcard/ns#given-name": "Ivan",
+        "identifier": [
+          {
+            "id": "https://orcid.org/0023-0802-44X6-26X0",
+            "type": "identifier",
+            "http://www.w3.org/2004/02/skos/core#notation": "0023-0802-44X6-26X0",
+            "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
+              "id": "https://orcid.org/",
+              "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
+              "http://www.w3.org/2000/01/rdf-schema#label": {
+                "@language": "en",
+                "@value": "Open Research and Contributor ID"
+              },
+              "http://www.w3.org/2004/02/skos/core#notation": "ORCID"
+            }
+          }
+        ],
+        "contact_point": [
+          {
+            "type": "contact_details",
+            "address": [
+              {
+                "type": "address",
+                "http://www.w3.org/ns/locn#fullAddress": "Pražská 3, 60200, Brno"
+              }
+            ],
+            "https://model.ccmm.cz/vocabulary/ccmm#email": "256384@muni.cz",
+            "https://model.ccmm.cz/vocabulary/ccmm#phone": "+420876543219"
+          }
+        ],
+        "http://xmlns.com/foaf/0.1/name": "Ivan Janouch",
+        "affiliation": [
+          {
+            "type": "organization",
+            "identifier": [
+              {
+                "id": "https://ror.org/02j46qs45",
+                "type": "identifier",
+                "http://www.w3.org/2004/02/skos/core#notation": "02j46qs45",
+                "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
+                  "id": "https://ror.org/",
+                  "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
+                  "http://www.w3.org/2000/01/rdf-schema#label": {
+                    "@language": "en",
+                    "@value": "Research Organization Registry"
+                  },
+                  "http://www.w3.org/2004/02/skos/core#notation": "ROR"
+                }
+              }
+            ],
+            "http://xmlns.com/foaf/0.1/name": "Masarykova Univerzita"
+          }
+        ]
+      }
+    }
+  ],
+  "generated_by": [
+    {
+      "type": "provenance_activity",
+      "ro-crate_json_representation": [
+        "https://link.to/ro-crate-json"
+      ]
+    }
+  ],
+  "alternate_title": [
+    {
+      "type": "alternate_title",
+      "http://purl.org/dc/terms/alternative": {
+        "@language": "en",
+        "@value": "Air quality measurements in Central Bohemian Region in 2024."
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#hasType": {
+        "id": "https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@language": "cs",
+            "@value": "Přeložený název"
+          },
+          {
+            "@language": "en",
+            "@value": "TranslatedTitle"
+          }
+        ]
+      }
+    }
+  ],
+  "other_language": [
+    {
+      "id": "http://publications.europa.eu/resource/authority/language/ENG",
+      "type": "language_system",
+      "label": {
+        "en": "English",
+        "cs": "Angličtina"
+      }
+    }
+  ],
+  "primary_language": {
+    "id": "http://publications.europa.eu/resource/authority/language/CES",
+    "type": "language_system",
+    "label": {
+      "cs": [
+        "čeština",
+        "Čeština"
+      ],
+      "en": "Czech"
+    }
+  },
+  "time_reference": [
+    {
+      "type": "time_reference",
+      "http://www.w3.org/2006/time#hasTime": {
+        "type": "http://www.w3.org/2006/time#Instant",
+        "http://www.w3.org/2006/time#inXSDDateTime": {
+          "type": "xsd:dateTime",
+          "@value": "2025-04-27T12:00:01+02:00"
+        }
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#hasType": {
+        "id": "https://w3id.org/tib/datacite/vocab/dateType/Created",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@language": "en",
+            "@value": "Created"
+          },
+          {
+            "@language": "cs",
+            "@value": "Datum vytvoření"
+          }
+        ]
+      }
+    },
+    {
+      "type": "time_reference",
+      "http://www.w3.org/2006/time#hasTime": {
+        "type": "http://www.w3.org/2006/time#Interval",
+        "http://www.w3.org/2006/time#hasBeginning": {
+          "type": "http://www.w3.org/2006/time#Instant",
+          "http://www.w3.org/2006/time#inXSDDate": {
+            "type": "xsd:date",
+            "@value": "2024-01-01"
+          }
+        },
+        "http://www.w3.org/2006/time#hasEnd": {
+          "type": "http://www.w3.org/2006/time#Instant",
+          "http://www.w3.org/2006/time#inXSDDate": {
+            "type": "xsd:date",
+            "@value": "2024-12-31"
+          }
+        }
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#hasType": {
+        "id": "https://w3id.org/tib/datacite/vocab/dateType/Collected",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@language": "en",
+            "@value": "Collected"
+          },
+          {
+            "@language": "cs",
+            "@value": "Datum sběru"
+          }
+        ]
+      }
+    }
+  ],
+  "validation_result": [
+    {
+      "type": "validation_result"
+    }
+  ],
+  "metadata_identification": [
+    {
+      "id": "https://original-catalogue/dataset_metadata_id",
+      "type": "metadata_record",
+      "conforms_to_standard": [
+        {
+          "id": "https://model.ccmm.cz/research-data/2.0.0",
+          "type": "application_profile",
+          "http://www.w3.org/2000/01/rdf-schema#label": {
+            "@language": "en",
+            "@value": "Czech Core Metadata Model for Research Data 2.0.0"
+          }
+        },
+        {
+          "id": "https://www.iso.org/standard/80275.html",
+          "type": "application_profile",
+          "http://www.w3.org/2000/01/rdf-schema#label": {
+            "@language": "en",
+            "@value": "ISO 19115-1:2014/Amd 2:2020"
+          }
+        }
+      ],
+      "date_created": "2025-04-28",
+      "language": [
+        {
+          "id": "http://publications.europa.eu/resource/authority/language/CES",
+          "type": "language_system",
+          "label": {
+            "cs": [
+              "čeština",
+              "Čeština"
+            ],
+            "en": "Czech"
+          }
+        }
+      ],
+      "date_updated": "2025-07-25",
+      "qualified_attribution": [
+        {
+          "type": "resource_attribution",
+          "role": {
+            "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager",
+            "type": "attributed_agent_role_type",
+            "label": {
+              "en": "Data Manager",
+              "cs": "Manažer dat"
+            }
+          },
+          "attributed_agent": {
+            "type": "person",
+            "http://www.w3.org/2006/vcard/ns#family-name": "Novák",
+            "http://www.w3.org/2006/vcard/ns#given-name": "Jan",
+            "identifier": [
+              {
+                "id": "https://orcid.org/0030-04X2-2030-4X26",
+                "type": "identifier",
+                "http://www.w3.org/2004/02/skos/core#notation": "0030-04X2-2030-4X26",
+                "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
+                  "id": "https://orcid.org/",
+                  "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
+                  "http://www.w3.org/2000/01/rdf-schema#label": {
+                    "@language": "en",
+                    "@value": "Open Research and Contributor ID"
+                  },
+                  "http://www.w3.org/2004/02/skos/core#notation": "ORCID"
+                }
+              }
+            ],
+            "contact_point": [
+              {
+                "type": "contact_details",
+                "address": [
+                  {
+                    "type": "address",
+                    "http://www.w3.org/ns/locn#fullAddress": "Dlouhá 15, 11000, Praha 1"
+                  }
+                ],
+                "https://model.ccmm.cz/vocabulary/ccmm#email": "jan.novak@email.com",
+                "https://model.ccmm.cz/vocabulary/ccmm#phone": "+0112345678"
+              }
+            ],
+            "http://xmlns.com/foaf/0.1/name": "Novák",
+            "affiliation": [
+              {
+                "type": "organization",
+                "identifier": [
+                  {
+                    "id": "https://ror.org/024d6js02",
+                    "type": "identifier",
+                    "http://www.w3.org/2004/02/skos/core#notation": "024d6js02",
+                    "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
+                      "id": "https://ror.org/",
+                      "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
+                      "http://www.w3.org/2000/01/rdf-schema#label": {
+                        "@language": "en",
+                        "@value": "Research Organization Registry"
+                      },
+                      "http://www.w3.org/2004/02/skos/core#notation": "ROR"
+                    }
+                  }
+                ],
+                "http://xmlns.com/foaf/0.1/name": "Univerzita Karlova"
+              }
+            ]
+          }
+        }
+      ],
+      "original_repository": {
+        "id": "https://original-repository.cz",
+        "type": "repository",
+        "http://purl.org/dc/terms/description": {
+          "@language": "cs",
+          "@value": "Popis repozitáře."
+        },
+        "http://purl.org/dc/terms/title": {
+          "@language": "cs",
+          "@value": "Původní repozitář"
+        },
+        "qualified_attribution": [
+          {
+            "type": "resource_attribution",
+            "role": {
+              "id": "https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher",
+              "type": "attributed_agent_role_type",
+              "label": {
+                "cs": "Vydavatel",
+                "en": "Publisher"
+              }
+            },
+            "attributed_agent": {
+              "type": "organization",
+              "http://xmlns.com/foaf/0.1/name": "Univerzita Karlova"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "description": [
+    {
+      "type": "description",
+      "http://purl.org/dc/terms/description": {
+        "@language": "cs",
+        "@value": "Tato datová sada obsahuje měření kvality ovzduší ve středních Čechách v\n            roce 2024."
+      },
+      "https://w3id.org/tib/datacite/property/descriptionType": {
+        "id": "https://w3id.org/tib/datacite/vocab/descriptionType/Abstract",
+        "type": "http://www.w3.org/2004/02/skos/core#Concept",
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+          {
+            "@language": "en",
+            "@value": "Abstract"
+          },
+          {
+            "@language": "cs",
+            "@value": "Abstrakt"
+          }
+        ]
+      }
+    }
+  ],
+  "funding_reference": [
+    {
+      "id": "https://funder-org.org/grants/123456789",
+      "type": "funding_reference",
+      "https://model.ccmm.cz/vocabulary/ccmm#fundingProgram": {
+        "type": "xsd:anyURI",
+        "@value": "https://funder-org.org/program/abcdefgh"
+      },
+      "https://w3id.org/tib/datacite/property/awardNumber": "https://doi.org/award-identifier",
+      "https://w3id.org/tib/datacite/property/awardTitle": "Program for air pollution research",
+      "https://w3id.org/tib/datacite/property/funderIdentifier": {
+        "id": "https://ror.org/01pv73b02",
+        "type": "http://www.w3.org/ns/org#Organization",
+        "identifier": [
+          {
+            "type": "identifier",
+            "http://www.w3.org/2004/02/skos/core#notation": "01pv73b02",
+            "scheme": {
+              "id": "https://ror.org/",
+              "type": "identifier_scheme",
+              "http://www.w3.org/2000/01/rdf-schema#label": {
+                "@language": "en",
+                "@value": "Research Organization Registry"
+              },
+              "http://www.w3.org/2004/02/skos/core#notation": "ROR"
+            }
+          }
+        ],
+        "http://xmlns.com/foaf/0.1/name": "Grantová agentura České republiky"
+      }
+    }
+  ],
+  "publication_year": "2025",
+  "subject": [
+    {
+      "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10500/10509",
+      "type": "subject",
+      "http://purl.org/dc/terms/title": [
+        {
+          "@language": "cs",
+          "@value": "Meteorologie, vědy o atmosféře"
+        },
+        {
+          "@language": "en",
+          "@value": "Meteorology and atmospheric sciences"
+        }
+      ],
+      "https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme": {
+        "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/",
+        "type": "https://model.ccmm.cz/vocabulary/ccmm#SubjectScheme",
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@language": "en",
+            "@value": "OECD FORD Subject Category (Frascati)"
+          },
+          {
+            "@language": "cs",
+            "@value": "Oborové třídění OECD FORD (Frascati)"
+          }
+        ]
+      },
+      "https://w3id.org/tib/datacite/property/classificationCode": "10509"
+    },
+    {
+      "id": "http://inspire.ec.europa.eu/theme/ef",
+      "type": "subject",
+      "http://purl.org/dc/terms/title": {
+        "@language": "en",
+        "@value": "Environmental monitoring facilities"
+      },
+      "http://www.w3.org/2004/02/skos/core#definition": {
+        "@language": "en",
+        "@value": "Location and operation of environmental monitoring facilities\n            includes observation and measurement of emissions, of the state of environmental media\n            and of other ecosystem parameters (biodiversity, ecological conditions of vegetation,\n            etc.) by or on behalf of public authorities."
+      },
+      "https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme": {
+        "id": "https://inspire.ec.europa.eu/theme/",
+        "type": "https://model.ccmm.cz/vocabulary/ccmm#SubjectScheme",
+        "http://www.w3.org/2000/01/rdf-schema#label": {
+          "@language": "en",
+          "@value": "INSPIRE theme register"
+        }
+      },
+      "https://w3id.org/tib/datacite/property/classificationCode": "EF"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns0: <https://model.ccmm.cz/vocabulary/ccmm#> .
+@prefix ns1: <http://www.w3.org/ns/adms#> .
+@prefix ns2: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns5: <https://w3id.org/tib/datacite/property/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/coar/access_right/c_f1cf> a dcterms:RightsStatement ;
+    skos:prefLabel "embargoed access"@en .
+
+<https://data.narodni-repozitar.cz> a dcat:Catalog ;
+    dcterms:description "Popis původního repozitáře,"@cs ;
+    dcterms:title "Původní repozitář"@cs ;
+    prov:qualifiedAttribution [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
+            prov:agent [ a org:Organization ;
+                    foaf:name "Univerzita Karlova" ] ] .
+
+<https://doi.org/> a ns0:IdentifierScheme .
+
+<https://doi.org/10.48700/datst.xd12h-dfz24> a ns1:Identifier ;
+    skos:notation "10.48700/datst.xd12h-dfz24" ;
+    ns0:inScheme <https://doi.org/> .
+
+<https://model.ccmm.cz/research-data/2.0.0> a dcterms:Standard ;
+    rdfs:label "Czech Core Metadata Model for Research Data 2.0.0"@en .
+
+<https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager> a dcat:Role ;
+    skos:prefLabel "Data Manager"@en .
+
+<https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> a dcat:Role ;
+    skos:prefLabel "Creator"@en .
+
+<https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> a ns0:SubjectScheme .
+
+<https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30300/30304> a <https://w3id.org/tib/datacite/class/Subject> ;
+    dcterms:title "Veřejné a environmentální zdraví"@cs ;
+    ns0:inSubjectScheme <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> ;
+    ns5:classificationCode "10509" .
+
+<https://w3id.org/tib/datacite/vocab/dateType/Created> a skos:Concept ;
+    skos:prefLabel "Created"@en .
+
+<https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> a dcat:Role ;
+    skos:prefLabel "Vydavatel"@cs,
+        "Publisher"@en .
+
+[] a dcat:Dataset ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_f1cf> ;
+    dcterms:title "Datová sada pro Údaje o zdravotní gramotnosti a depresi seniorů ve věku 65 a více let" ;
+    ns1:identifier <https://doi.org/10.48700/datst.xd12h-dfz24> ;
+    prov:qualifiedAttribution [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns2:family-name "Bártlová" ;
+                    ns2:given-name "Sylva" ;
+                    foaf:name "Bártlová, Sylva" ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
+            prov:agent [ a org:Organization ;
+                    foaf:name "Nějaká organizace" ] ] ;
+    ns0:hasTimeReference [ a ns0:TimeReference ;
+            time:hasTime [ a time:Instant ;
+                    time:inXSDDate "2024-05-01"^^xsd:date ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Created> ] ;
+    ns0:isDescribedBy [ a dcat:CatalogRecord ;
+            dcterms:conformsTo <https://model.ccmm.cz/research-data/2.0.0> ;
+            dcterms:modified "2025-07-25"^^xsd:date ;
+            prov:qualifiedAttribution [ a prov:Attribution ;
+                    dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager> ;
+                    prov:agent [ a prov:Person ;
+                            ns2:family-name "Steklý" ;
+                            ns2:given-name "Pavel" ;
+                            foaf:name "Pavel Steklý" ] ] ;
+            ns0:originalRepository <https://data.narodni-repozitar.cz> ] ;
+    ns5:description [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Toto je jen ukázka metadat pro neexistující datovou sadu."@cs ] ;
+    ns5:publicationYear "2026"^^xsd:gYear ;
+    ns5:subject <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30300/30304> .
+
