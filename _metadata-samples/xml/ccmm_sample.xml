@@ -107,7 +107,7 @@
         <alternate_title_type>
             <iri>https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle</iri>
             <label xml:lang="cs">Přeložený název</label>
-            <label xml:lang="en">Translated Title</label>
+            <label xml:lang="en">TranslatedTitle</label>
         </alternate_title_type>
     </alternate_title>
     <qualified_attribution>
@@ -203,7 +203,7 @@
         </temporal_representation>
         <date_type>
             <iri>https://w3id.org/tib/datacite/vocab/dateType/Created</iri>
-            <label xml:lang="en">Date Created</label>
+            <label xml:lang="en">Created</label>
             <label xml:lang="cs">Datum vytvoření</label>
         </date_type>
     </time_reference>
@@ -220,7 +220,7 @@
         </temporal_representation>
         <date_type>
             <iri>https://w3id.org/tib/datacite/vocab/dateType/Collected</iri>
-            <label xml:lang="en">Date Collected</label>
+            <label xml:lang="en">Collected</label>
             <label xml:lang="cs">Datum sběru</label>
         </date_type>
     </time_reference>
@@ -274,7 +274,7 @@
         <description_text xml:lang="cs">Tato datová sada obsahuje měření kvality ovzduší ve středních Čechách v
             roce 2024.</description_text>
         <description_type>
-            <iri>https://w3id.org/tib/datacite/property/descriptionType/Abstract</iri>
+            <iri>https://w3id.org/tib/datacite/vocab/descriptionType/Abstract</iri>
             <label xml:lang="en">Abstract</label>
             <label xml:lang="cs">Abstrakt</label>
         </description_type>
@@ -385,6 +385,7 @@
         <resource_relation_type>
             <iri>https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy</iri>
             <label xml:lang="cs">je na něj odkazováno z (čeho)</label>
+            <label xml:lang="en">IsReferencedBy</label>
         </resource_relation_type>
     </related_resource>
     <!-- physical tool -->
@@ -398,7 +399,7 @@
         <resource_relation_type>
             <iri>https://w3id.org/tib/datacite/vocab/relationType/IsCollectedBy</iri>
             <label xml:lang="cs">je sbírán (čím)</label>
-            <label xml:lang="en">is collected by</label>
+            <label xml:lang="en">isCollectedBy</label>
         </resource_relation_type>
     </related_resource>
     <!-- dataset -->
@@ -412,7 +413,7 @@
         </resource_type>
         <resource_relation_type>
             <iri>https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom</iri>
-            <label xml:lang="en">is derived from</label>
+            <label xml:lang="en">isDerivedFrom</label>
             <label xml:lang="cs">je odvozen od (čeho)</label>
         </resource_relation_type>
     </related_resource>
@@ -426,7 +427,7 @@
         <resource_relation_type>
             <iri>https://w3id.org/tib/datacite/vocab/relationType/HasMetadata</iri>
             <label xml:lang="cs">má metadata</label>
-            <label xml:lang="en">has metadata</label>
+            <label xml:lang="en">hasMetadata</label>
         </resource_relation_type>
     </related_resource>
     <distribution>

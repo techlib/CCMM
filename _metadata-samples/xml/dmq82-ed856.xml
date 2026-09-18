@@ -72,7 +72,7 @@
     <alternate_title_type>
       <iri>https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle</iri>
       <label xml:lang="cs">Přeložený název</label>
-      <label xml:lang="en">Translated Title</label>
+      <label xml:lang="en">TranslatedTitle</label>
     </alternate_title_type>
   </alternate_title>
   <!-- 1) Pavel Salvetr — Creator -->
@@ -373,7 +373,7 @@
       </temporal_representation>
               <date_type>
                   <iri>https://w3id.org/tib/datacite/vocab/dateType/Issued</iri>
-                  <label xml:lang="en">Date Issued</label>
+                  <label xml:lang="en">Issued</label>
                   <label xml:lang="cs">Datum vydání</label>
               </date_type>
   </time_reference>
@@ -390,7 +390,7 @@
       </temporal_representation>
       <date_type>
         <iri>https://w3id.org/tib/datacite/vocab/dateType/Created</iri>
-        <label xml:lang="en">Date Created</label>
+        <label xml:lang="en">Created</label>
         <label xml:lang="cs">Datum vytvoření</label>
       </date_type>
   </time_reference>
@@ -403,7 +403,7 @@
       </temporal_representation>
               <date_type>
                   <iri>https://w3id.org/tib/datacite/vocab/dateType/Available</iri>
-                  <label xml:lang="en">Date Available</label>
+                  <label xml:lang="en">Available</label>
                   <label xml:lang="cs">Datum zveřejnění</label>
               </date_type>
   </time_reference>
@@ -448,7 +448,7 @@
   <description>
     <description_text xml:lang="en">Industry applications of duplex stainless steels require a two-phase microstructure with a nearly balanced austenite-ferrite content to achieve good mechanical properties and good corrosion resistance. The most widespread additive manufacturing method such as laser powder bed fusion provides nearly fully ferritic microstructures due to the very high cooling rate, and the post-processing heat treatment must be performed. In contrast, other additive manufacturing methods, such as directed deposition methods, reach lower cooling rates and enable to obtain an equal ferrite–austenite ratio directly in the microstructure of the as-built state. In this work, the super duplex stainless steel SAF 2507 was deposited by directed energy deposition. The process parameters, namely, the laser power, laser beam spot, and powder feed rate, were varied to investigate the impact of the energy area density on the microstructure and tensile properties. A decrease in the energy area density caused an increase in the austenite content of 48 vol% and a numerical simulation of the sample temperature distribution inside the block during deposition, explaining the relationship between the amount of in situ formed austenite and the deposition parameters, was provided. Simultaneously, the deposition rate increased by more than five times. In contrast, the samples deposited at a higher building rate are characterized by greater porosity and lower elongation values in the vertical direction. The effect of the deposition parameters on the yield strength is low.</description_text>
     <description_type>
-      <iri>https://w3id.org/tib/datacite/property/descriptionType/Abstract</iri>
+      <iri>https://w3id.org/tib/datacite/vocab/descriptionType/Abstract</iri>
       <label xml:lang="en">Abstract</label>
       <label xml:lang="cs">Abstrakt</label>
     </description_type>
@@ -456,7 +456,7 @@
   <description>
     <description_text xml:lang="en">The data set is related to the investigation of the influence of deposition parameters on the microstructure, austenite formation, and tensile properties of SAF 2507 super duplex stainless steel fabricated using directed energy deposition (DED). The experiments were carried out at COMTES FHT (Czech Republic) using an INSSTEK MX-600 system equipped with a 2 kW Yttrium fiber laser. SAF 2507 powder (particle size 45–150 μm) was deposited under three different parameter sets, varying laser power, beam diameter, layer thickness, hatch distance, and powder feed rate, while maintaining constant scan speed. A zig-zag deposition strategy was applied under a protective argon atmosphere (5.0, 99.999%). For each parameter set, 20×20×20 mm cubes were built and used for analysis. Microstructure and phase composition were characterized using optical microscopy, scanning electron microscopy, EBSD analysis, X-ray diffraction. Tensile properties were evaluated using miniature tensile tests. Thermal simulations of the deposition process were carried out using Simufact Welding 2024.1 with the Advanced Thermal Cycle (ATC) method.</description_text>
     <description_type>
-      <iri>https://w3id.org/tib/datacite/property/descriptionType/Methods</iri>
+      <iri>https://w3id.org/tib/datacite/vocab/descriptionType/Methods</iri>
       <label xml:lang="en">Methods</label>
       <label xml:lang="cs">Metodologie</label>
     </description_type>
@@ -464,8 +464,8 @@
   <description>
     <description_text xml:lang="en">The sets of experimental data were recorded on several instruments within COMTES FHT. In cases where possible (XRD, MTT, EBSD), the data are in xlsx format enabling any replotting.</description_text>
     <description_type>
-      <iri>https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo</iri>
-      <label xml:lang="en">Technical Info</label>
+      <iri>https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo</iri>
+      <label xml:lang="en">TechnicalInfo</label>
       <label xml:lang="cs">Technická informace</label>
     </description_type>
   </description>
@@ -592,7 +592,7 @@
     </resource_type>
     <resource_relation_type>
       <iri>https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy</iri>
-      <label xml:lang="en">is referenced by</label>
+      <label xml:lang="en">IsReferencedBy</label>
       <label xml:lang="cs">je na něj odkazováno z (čeho)</label>
     </resource_relation_type>
   </related_resource>
