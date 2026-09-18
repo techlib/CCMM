@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataset xsi:schemaLocation="https://schema.ccmm.cz/research-data/1.1 https://model.ccmm.cz/research-data/dataset/schema.xsd"
-    xmlns="https://schema.ccmm.cz/research-data/1.1" xmlns:gml="http://www.opengis.net/gml/3.2"
+<dataset
+    xsi:schemaLocation="https://schema.ccmm.cz/research-data/2.0 https://model.ccmm.cz/research-data/dataset/schema.xsd"
+    xmlns="https://schema.ccmm.cz/research-data/2.0" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <iri>https://organization.cz/dataset_server/dataset_id</iri>
     <metadata_identification>
@@ -10,15 +11,16 @@
             <iri>http://publications.europa.eu/resource/authority/language/CES</iri>
             <label xml:lang="cs">čeština</label>
         </language>
-        <qualified_relation>
-            <relation>
+        <qualified_attribution>
+            <attributed_agent>
                 <person>
                     <identifier>
                         <iri>https://orcid.org/0030-04X2-2030-4X26</iri>
                         <value>0030-04X2-2030-4X26</value>
                         <scheme>
                             <iri>https://orcid.org/</iri>
-                            <label xml:lang="">ORCID</label>
+                            <label xml:lang="en">Open Research and Contributor ID</label>
+                            <notation>ORCID</notation>
                         </scheme>
                     </identifier>
                     <name>Novák</name>
@@ -37,31 +39,46 @@
                             <value>024d6js02</value>
                             <scheme>
                                 <iri>https://ror.org/</iri>
-                                <label xml:lang="">ROR</label>
+                                <label xml:lang="en">Research Organization Registry</label>
+                                <notation>ROR</notation>
                             </scheme>
                         </identifier>
                         <name>Univerzita Karlova</name>
                     </affiliation>
                 </person>
-            </relation>
+            </attributed_agent>
             <role>
                 <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager</iri>
                 <label xml:lang="en">Data Manager</label>
                 <label xml:lang="cs">Manažer dat</label>
             </role>
-        </qualified_relation>
+        </qualified_attribution>
         <date_updated>2025-07-25</date_updated>
         <date_created>2025-04-28</date_created>
         <conforms_to_standard>
-            <iri>https://model.ccmm.cz/research-data/1.1.0</iri>
-            <label xml:lang="">CCMM RD 1.1.0</label>
+            <iri>https://model.ccmm.cz/research-data/2.0.0</iri>
+            <label xml:lang="en">Czech Core Metadata Model for Research Data 2.0.0</label>
         </conforms_to_standard>
         <conforms_to_standard>
             <iri>https://www.iso.org/standard/80275.html</iri>
-            <label xml:lang="">ISO 19115-1:2014/Amd 2:2020</label>
+            <label xml:lang="en">ISO 19115-1:2014/Amd 2:2020</label>
         </conforms_to_standard>
         <original_repository>
             <iri>https://original-repository.cz</iri>
+            <label xml:lang="cs">Původní repozitář</label>
+            <description xml:lang="cs">Popis repozitáře.</description>
+            <qualified_attribution>
+                <attributed_agent>
+                    <organization>
+                        <name>Univerzita Karlova</name>
+                    </organization>
+                </attributed_agent>
+                <role>
+                    <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher</iri>
+                    <label xml:lang="cs">Vydavatel</label>
+                    <label xml:lang="en">Publisher</label>
+                </role>
+            </qualified_attribution>
         </original_repository>
     </metadata_identification>
     <identifier>
@@ -70,7 +87,8 @@
         <value>10.45321/as36sl</value>
         <scheme>
             <iri>https://doi.org/</iri>
-            <label xml:lang="">DOI</label>
+            <label xml:lang="en">Digital Object Identifier</label>
+            <notation>DOI</notation>
         </scheme>
     </identifier>
     <identifier>
@@ -87,20 +105,21 @@
     <alternate_title>
         <title xml:lang="en">Air quality measurements in Central Bohemian Region in 2024.</title>
         <alternate_title_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/TranslatedTitle</iri>
+            <iri>https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle</iri>
             <label xml:lang="cs">Přeložený název</label>
             <label xml:lang="en">Translated Title</label>
         </alternate_title_type>
     </alternate_title>
-    <qualified_relation>
-        <relation>
+    <qualified_attribution>
+        <attributed_agent>
             <person>
                 <identifier>
                     <iri>https://orcid.org/0030-04X2-2030-4X26</iri>
                     <value>0030-04X2-2030-4X26</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>Novák</name>
@@ -119,28 +138,30 @@
                         <value>024d6js02</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <name>Univerzita Karlova</name>
                 </affiliation>
             </person>
-        </relation>
+        </attributed_agent>
         <role>
             <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
             <label xml:lang="en">Creator</label>
             <label xml:lang="cs">Autor</label>
         </role>
-    </qualified_relation>
-    <qualified_relation>
-        <relation>
+    </qualified_attribution>
+    <qualified_attribution>
+        <attributed_agent>
             <person>
                 <identifier>
                     <iri>https://orcid.org/0023-0802-44X6-26X0</iri>
                     <value>0023-0802-44X6-26X0</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>Ivan Janouch</name>
@@ -159,19 +180,20 @@
                         <value>02j46qs45</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <name>Masarykova Univerzita</name>
                 </affiliation>
             </person>
-        </relation>
+        </attributed_agent>
         <role>
             <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher</iri>
             <label xml:lang="en">Publisher</label>
             <label xml:lang="cs">Vydavatel</label>
         </role>
-    </qualified_relation>
+    </qualified_attribution>
     <publication_year>2025</publication_year>
     <time_reference>
         <temporal_representation>
@@ -180,9 +202,9 @@
             </time_instant>
         </temporal_representation>
         <date_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Collected</iri>
-            <label xml:lang="en">Date Collected</label>
-            <label xml:lang="cs">Datum sběru</label>
+            <iri>https://w3id.org/tib/datacite/vocab/dateType/Created</iri>
+            <label xml:lang="en">Date Created</label>
+            <label xml:lang="cs">Datum vytvoření</label>
         </date_type>
     </time_reference>
     <time_reference>
@@ -197,7 +219,7 @@
             </time_interval>
         </temporal_representation>
         <date_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Collected</iri>
+            <iri>https://w3id.org/tib/datacite/vocab/dateType/Collected</iri>
             <label xml:lang="en">Date Collected</label>
             <label xml:lang="cs">Datum sběru</label>
         </date_type>
@@ -209,33 +231,19 @@
     </resource_type>
     <primary_language>
         <iri>http://publications.europa.eu/resource/authority/language/CES</iri>
-    </primary_language>    
+        <label xml:lang="en">Czech</label>
+        <label xml:lang="cs">Čeština</label>
+    </primary_language>
     <other_language>
         <iri>http://publications.europa.eu/resource/authority/language/ENG</iri>
+        <label xml:lang="en">English</label>
+        <label xml:lang="cs">Angličtina</label>            
     </other_language>
-    <terms_of_use>
-        <access_rights>
-            <iri>http://purl.org/coar/access_right/c_abf2</iri>
-            <label xml:lang="en">open access</label>
-            <label xml:lang="cs">otevřený přístup</label>
-        </access_rights>
-        <license>            
-            <iri>https://creativecommons.org/licenses/by/4.0/</iri>
-            <label xml:lang="en">Attribution 4.0 International</label>
-        </license>
-        <description xml:lang="cs">Textový popis toho, jak je možné s datovou sadou
-            nakládat.</description>
-        <contact_point>
-            <!-- this contact point serves as contaxct to get more information aboutterms of use -->
-            <person>
-                <name>Pavlína Doležalová</name>
-                <contact_point>
-                    <email>pavlina.dolezalova@organizace.cz</email>
-                    <phone>+420784512963</phone>
-                </contact_point>
-            </person>
-        </contact_point>
-    </terms_of_use>
+    <access_rights>
+        <iri>http://purl.org/coar/access_right/c_abf2</iri>
+        <label xml:lang="en">open access</label>
+        <label xml:lang="cs">otevřený přístup</label>
+    </access_rights>
     <subject>
         <!-- Frascati Ford keyword is mandatory -->
         <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10500/10509</iri>
@@ -247,9 +255,6 @@
             <label xml:lang="en">OECD FORD Subject Category (Frascati)</label>
             <label xml:lang="cs">Oborové třídění OECD FORD (Frascati)</label>
         </subject_scheme>
-    </subject>
-    <subject>
-        <title xml:lang="cs">kvalita ovzduší</title>
     </subject>
     <subject>
         <iri>http://inspire.ec.europa.eu/theme/ef</iri>
@@ -264,11 +269,12 @@
             <label xml:lang="en">INSPIRE theme register</label>
         </subject_scheme>
     </subject>
+    <keyword xml:lang="cs">kvalita ovzduší</keyword>
     <description>
         <description_text xml:lang="cs">Tato datová sada obsahuje měření kvality ovzduší ve středních Čechách v
             roce 2024.</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Abstract</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/Abstract</iri>
             <label xml:lang="en">Abstract</label>
             <label xml:lang="cs">Abstrakt</label>
         </description_type>
@@ -276,29 +282,36 @@
     <location>
         <!-- this sample shows all ways of representing location -->
         <bounding_box>
-            <gml:lowerCorner>13.394972457505816 49.50127042751268</gml:lowerCorner>
-            <gml:upperCorner>15.585575400519133 50.61421606255462</gml:upperCorner>
+            <gml>
+                <gml:Envelope>
+                    <gml:lowerCorner>13.394972457505816 49.50127042751268</gml:lowerCorner>
+                    <gml:upperCorner>15.585575400519133 50.61421606255462</gml:upperCorner>
+                </gml:Envelope>
+            </gml>
         </bounding_box>
-        <name>Středočeský kraj</name>
+        <label xml:lang="cs">Středočeský kraj</label>
         <geometry>
-            <gml:MultiSurface gml:id="MS.AU.2.27"
-                srsName="http://www.opengis.net/def/crs/EPSG/0/5514" srsDimension="2">
-                <gml:surfaceMember>
-                    <gml:Polygon gml:id="S.AU.2.27.1">
-                        <gml:exterior>
-                            <gml:LinearRing>
-                                <gml:posList>-700345.18 -989088.81 -700397.4 -989124.72 -700413.72
-                                    -989135.06 -700460.36 -989161.37 -700464.2 -989163.4 -700499.66
-                                    -989177.78 -700543.38 -989185.44 -700547.56 -989186.17
-                                    -734005.2 -1034221.4 -734000.7 -1034206.55 -733990.88 -1034174.1
-                                    -733982.57 -1034166.93 -733980.5 -1034165.15 -733970.63
-                                    -1034131.76 -733969.44 -1034127.73 -733973.52 -1034126.34
-                                    -733972.62 -1034123.26</gml:posList>
-                            </gml:LinearRing>
-                        </gml:exterior>
-                    </gml:Polygon>
-                </gml:surfaceMember>
-            </gml:MultiSurface>
+            <gml>
+                <gml:MultiSurface gml:id="MS.AU.2.27"
+                    srsName="http://www.opengis.net/def/crs/EPSG/0/5514" srsDimension="2">
+                    <gml:surfaceMember>
+                        <gml:Polygon gml:id="S.AU.2.27.1">
+                            <gml:exterior>
+                                <gml:LinearRing>
+                                    <gml:posList>-700345.18 -989088.81 -700397.4 -989124.72
+                                        -700413.72 -989135.06 -700460.36 -989161.37 -700464.2
+                                        -989163.4 -700499.66 -989177.78 -700543.38 -989185.44
+                                        -700547.56 -989186.17 -734005.2 -1034221.4 -734000.7
+                                        -1034206.55 -733990.88 -1034174.1 -733982.57 -1034166.93
+                                        -733980.5 -1034165.15 -733970.63 -1034131.76 -733969.44
+                                        -1034127.73 -733973.52 -1034126.34 -733972.62
+                                        -1034123.26</gml:posList>
+                                </gml:LinearRing>
+                            </gml:exterior>
+                        </gml:Polygon>
+                    </gml:surfaceMember>
+                </gml:MultiSurface>
+            </gml>
             <wkt srsName="http://www.opengis.net/def/crs/EPSG/0/4326">POLYGON ((14.508682697577541
                 50.51144569678917, 14.477983995157558 50.518028235000116, 14.478035479185621
                 50.45555539736816, 14.43880488232486 50.421645176771875, 14.36581743554305
@@ -349,9 +362,10 @@
                     <value>01pv73b02</value>
                     <scheme>
                         <iri>https://ror.org/</iri>
-                        <label xml:lang="">ROR</label>
+                        <label xml:lang="en">Research Organization Registry</label>
+                        <notation>ROR</notation>
                     </scheme>
-                </identifier>                
+                </identifier>
                 <name>Grantová agentura České republiky</name>
             </organization>
         </funder>
@@ -369,7 +383,7 @@
             <label xml:lang="cs">text</label>
         </resource_type>
         <resource_relation_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/RelationType/IsReferencedBy</iri>
+            <iri>https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy</iri>
             <label xml:lang="cs">je na něj odkazováno z (čeho)</label>
         </resource_relation_type>
     </related_resource>
@@ -381,11 +395,11 @@
             <iri>http://purl.org/coar/resource_type/8KJG-QS0Y</iri>
             <label xml:lang="en">research instrument</label>
         </resource_type>
-        <resource_relation_type> 
-            <iri>https://vocabs.ccmm.cz/registry/codelist/RelationType/IsCollectedBy</iri> 
-            <label xml:lang="cs">je sbírán (čím)</label> 
-            <label xml:lang="en">is collected by</label> 
-        </resource_relation_type> 
+        <resource_relation_type>
+            <iri>https://w3id.org/tib/datacite/vocab/relationType/IsCollectedBy</iri>
+            <label xml:lang="cs">je sbírán (čím)</label>
+            <label xml:lang="en">is collected by</label>
+        </resource_relation_type>
     </related_resource>
     <!-- dataset -->
     <related_resource>
@@ -397,7 +411,7 @@
             <label xml:lang="en">observational data</label>
         </resource_type>
         <resource_relation_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/RelationType/IsDerivedFrom</iri>
+            <iri>https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom</iri>
             <label xml:lang="en">is derived from</label>
             <label xml:lang="cs">je odvozen od (čeho)</label>
         </resource_relation_type>
@@ -410,33 +424,39 @@
         <resource_url>https://data.gov.cz/zdroj/datové-sady/00020699/c724d055011d82189bbfc3766ffd1eb7</resource_url>
         <!-- coar does not contain resource type metadata -->
         <resource_relation_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/RelationType/HasMetadata</iri>
+            <iri>https://w3id.org/tib/datacite/vocab/relationType/HasMetadata</iri>
             <label xml:lang="cs">má metadata</label>
             <label xml:lang="en">has metadata</label>
         </resource_relation_type>
     </related_resource>
     <distribution>
-        <distribution_data_service>
-            <iri>https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi</iri>
-            <!-- persistent idenftifier of a service, usualy same as access point -->
+        <distribution_data_service access_url="https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi">
             <title>Služba WMS pro prohlížení dat o kvalitě ovzduší</title>
             <access_service>
                 <iri>https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi</iri>
+                <label xml:lang="en">Endpoint of WMS service Air quality</label>
                 <endpoint_url>
-                    <iri>https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi</iri>
                     <title>Endpoint of WMS service Air quality</title>
+                    <resource_url>https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi</resource_url>
                 </endpoint_url>
             </access_service>
-            <conforms_to_specification>
-                <iri/>
+            <conforms_to>
+                <iri>http://data.europa.eu/eli/reg/2010/1089</iri>
                 <label xml:lang="cs">NAŘÍZENÍ KOMISE (ES) č. 976/2009 ze dne 19. října 2009, kterým
                     se provádí směrnice Evropského parlamentu a Rady 2007/2/ES, pokud jde o síťové
                     služby</label>
-            </conforms_to_specification>
+            </conforms_to>
             <documentation>
                 <iri>https://geoportal.gov.cz/web/guest/catalogue-client;jsessionid=F54A364E040A9D2184E42D94D288851C/</iri>
                 <!-- human readable documentation of this one specific service instance -->
             </documentation>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>http://link-to-license-statement.com</iri>
+            </licence>
             <description xml:lang="cs">Prohlížecí služba (WMS)  byla vytvořena na základě dat ČHMÚ a
                 obsahuje vrstvy: 1) Zóny a aglomerace hodnocení a řízení kvality ovzduší; 2) Státní
                 síť imisního monitoringu; 3) Pole koncentrací látek znečišťující ovzduší v gridu 1x1
@@ -451,21 +471,18 @@
         <distribution_downloadable_file>
             <iri>http://portal.chmi.cz/AQ_DATA</iri>
             <title>Kvalita ovzduší</title>
-            <access_url>
-                <!-- shall contain information about how to download data -->
-                <iri>https://www.chmi.cz/o-nas/organizacni-struktura/usek-kvality-ovzdusi/oddeleni-informacniho-systemu-kvality-ovzdusi/odkazy</iri>
-                <label xml:lang="cs">Oddělení informačního systému kvality ovzduší - odkazy</label>
-            </access_url>
+            <!-- shall contain information about how to download data -->
+            <access_url>https://www.chmi.cz/o-nas/organizacni-struktura/usek-kvality-ovzdusi/oddeleni-informacniho-systemu-kvality-ovzdusi/odkazy</access_url>
             <download_url>
                 <!-- link to direct access data -->
                 <iri>https://geoportal.gov.cz/atom/CHMU/chmu_ovzdusi_AQ_data_epsg4258_2023.zip</iri>
                 <label xml:lang="cs">Datová sada ve formátu Geopackage</label>
                 <label xml:lang="en">Dataset in Geopackage format</label>
             </download_url>
-            <conforms_to_schema>
+            <conforms_to>
                 <iri>https://inspire.ec.europa.eu/schemas/ef/4.0/EnvironmentalMonitoringFacilities.xsd</iri>
                 <label xml:lang="en">Environmental monitoring facilities</label>
-            </conforms_to_schema>
+            </conforms_to>
             <format>
                 <iri>https://op.europa.eu/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/file-type/GPKG</iri>
                 <label xml:lang="en">GeoPackage</label>
@@ -477,12 +494,20 @@
             <byte_size>256</byte_size>
             <checksum>
                 <checksum_value>9c56cc51b374d3a94e096e3f5483c05c6e69e221ae5d62a5435c5f3a9fc84938</checksum_value>
-                <algorithm><iri>https://www.iana.org/go/rfc6920</iri></algorithm>
+                <algorithm>
+                    <iri>https://spdx.org/rdf/terms/#d4e4247</iri>
+                </algorithm>
             </checksum>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>http://link-to-license-statement.com</iri>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <validation_result/>
-    <!-- validation is in the current state a placeholdoer for extensions -->
-    <provenance/>
-    <!-- provenance is in the current state a placeholdoer for extensions -->
+    <!-- provenance activity allows pointing to json representation according to RO-Crate or CPM -->
+    <generated_by ro-crate_json_representation="https://link.to/ro-crate-json"/>
 </dataset>

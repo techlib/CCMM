@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Poznámka: Tento komentář je pouze informativní a není součástí metadat.
-CS: Převod z JSON → CCMM XML
-    Autor převodu: Pavel Kotlík
-    Datum převodu: 2025-09-26
-    Zdroj JSON/URI: https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951
-
-EN: Conversion JSON → CCMM XML
-    Converted by: Pavel Kotlík
-    Conversion date: 2025-09-26
-    Source JSON/URI: https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951
--->
-<!-- The schema.xsd location in xsi:schemaLocation was updated (the second URL after the namespace) -->
 <dataset
-    xsi:schemaLocation="https://schema.ccmm.cz/research-data/1.1 https://model.ccmm.cz/research-data/dataset/schema.xsd"
-    xmlns="https://schema.ccmm.cz/research-data/1.1" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xsi:schemaLocation="https://schema.ccmm.cz/research-data/2.0 https://model.ccmm.cz/research-data/dataset/schema.xsd"
+    xmlns="https://schema.ccmm.cz/research-data/2.0" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <!-- Landing IRI for this dataset -->
     <iri>https://doi.org/10.48700/datst.1m3t2-78951</iri>
     <metadata_identification>
         <!-- references the original metadata IRI -->
-        <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951</iri>
+        <iri>https://datarepo.eosc.cz/datasets/records/datst.1m3t2-78951</iri>
         <!-- This metadata record is bilingual (cs + en) -->
         <language>
             <iri>http://publications.europa.eu/resource/authority/language/CES</iri>
@@ -30,35 +18,49 @@ EN: Conversion JSON → CCMM XML
             <label xml:lang="en">English</label>
         </language>
         <!-- Qualified relation — Data Manager (placeholder for/if "unknown") -->
-        <qualified_relation>
-            <relation>
+        <qualified_attribution>
+            <attributed_agent>
                 <person>
                     <name>:unkn</name>
                     <given_name>:unkn</given_name>
                     <family_name>:unkn</family_name>
                     <!-- intentionally no identifier/contact_point/affiliation -->
                 </person>
-            </relation>
+            </attributed_agent>
             <role>
                 <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager</iri>
                 <label xml:lang="en">Data manager</label>
                 <label xml:lang="cs">Manažer dat</label>
             </role>
-        </qualified_relation>
+        </qualified_attribution>
         <!-- Metadata-level dates (from JSON created/updated) -->
         <date_updated>2025-09-28</date_updated>
         <date_created>2025-04-03</date_created>
         <!-- Standards the source record and this record conform to -->
         <conforms_to_standard>
-            <iri>https://model.ccmm.cz/research-data/1.1.0</iri>
-            <label xml:lang="">CCMM RD 1.1.0</label>
+            <iri>https://model.ccmm.cz/research-data/2.0.0</iri>
+            <label xml:lang="en">Czech Core Metadata Model for Research Data 2.0.0</label>
         </conforms_to_standard>
         <conforms_to_standard>
             <iri>https://data.narodni-repozitar.cz/schemas/nr_datasets/nr-datasets-v1.0.0.json</iri>
             <label xml:lang="en">NR Datasets JSON Schema v1.0.0</label>
         </conforms_to_standard>
         <original_repository>
-            <iri>https://data.narodni-repozitar.cz</iri>
+            <iri>https://datarepo.eosc.cz</iri>
+            <label xml:lang="en">Catch-all</label>
+            <description xml:lang="en">The Data Catch-all Repository is a general-purpose repository for research data for which no more suitable disciplinary, institutional, or community repository is available.</description>
+            <qualified_attribution>
+                <attributed_agent>
+                    <organization>
+                        <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
+                    </organization>
+                </attributed_agent>
+                <role>
+                    <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher</iri>
+                    <label xml:lang="cs">Vydavatel</label>
+                    <label xml:lang="en">Publisher</label>
+                </role>
+            </qualified_attribution>
         </original_repository>
     </metadata_identification>
     <!-- Identifier of dataset - removed the additional local/organizational identifier https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951 -->
@@ -68,7 +70,8 @@ EN: Conversion JSON → CCMM XML
         <scheme>
             <!-- IRI: DOI -->
             <iri>https://doi.org/</iri>
-            <label xml:lang="">DOI</label>
+            <label xml:lang="en">Digital Object Identifier</label>
+            <notation>DOI</notation>
         </scheme>
     </identifier>
     <!-- Titles -->
@@ -76,22 +79,23 @@ EN: Conversion JSON → CCMM XML
     <alternate_title>
         <title xml:lang="en">The Czech Science Foundation Grant Application Data Set</title>
         <alternate_title_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/TranslatedTitle</iri>
+            <iri>https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle</iri>
             <label xml:lang="cs">Přeložený název</label>
             <label xml:lang="en">Translated Title</label>
         </alternate_title_type>
     </alternate_title>
-    <!-- Qualified relations: Creators -->
+    <!-- Qualified attributions: Creators -->
     <!-- 1) Kateřina Paldusová — Creator -->
-    <qualified_relation>
-        <relation>
+    <qualified_attribution>
+        <attributed_agent>
             <person>
                 <identifier>
                     <iri>https://orcid.org/0009-0003-1158-1138</iri>
                     <value>0009-0003-1158-1138</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>Paldusová, Kateřina</name>
@@ -101,36 +105,39 @@ EN: Conversion JSON → CCMM XML
                         <value>02sat5y74</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <identifier>
                         <value>61388955</value>
                         <scheme>
                             <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                            <label xml:lang="cs">IČO</label>
+                            <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                            <notation>IČO</notation>
                         </scheme>
                     </identifier>
                     <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
                 </affiliation>
             </person>
-        </relation>
+        </attributed_agent>
         <role>
             <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
             <label xml:lang="en">Creator</label>
             <label xml:lang="cs">Autor</label>
         </role>
-    </qualified_relation>
+    </qualified_attribution>
     <!-- 2) José Alfredo González Navarro — Creator -->
-    <qualified_relation>
-        <relation>
+    <qualified_attribution>
+        <attributed_agent>
             <person>
                 <identifier>
                     <iri>https://orcid.org/0000-0003-1662-9092</iri>
                     <value>0000-0003-1662-9092</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>González Navarro, José Alfredo</name>
@@ -140,36 +147,39 @@ EN: Conversion JSON → CCMM XML
                         <value>02sat5y74</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <identifier>
                         <value>61388955</value>
                         <scheme>
                             <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                            <label xml:lang="cs">IČO</label>
+                            <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                            <notation>IČO</notation>
                         </scheme>
                     </identifier>
                     <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
                 </affiliation>
             </person>
-        </relation>
+        </attributed_agent>
         <role>
             <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
             <label xml:lang="en">Creator</label>
             <label xml:lang="cs">Autor</label>
         </role>
-    </qualified_relation>
+    </qualified_attribution>
     <!-- 3) Irene Echezarreta Mendicute — Creator -->
-    <qualified_relation>
-        <relation>
+    <qualified_attribution>
+        <attributed_agent>
             <person>
                 <identifier>
                     <iri>https://orcid.org/0009-0008-0140-2075</iri>
                     <value>0009-0008-0140-2075</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>Echezarreta Mendicute, Irene</name>
@@ -179,36 +189,39 @@ EN: Conversion JSON → CCMM XML
                         <value>02sat5y74</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <identifier>
                         <value>61388955</value>
                         <scheme>
                             <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                            <label xml:lang="cs">IČO</label>
+                            <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                            <notation>IČO</notation>
                         </scheme>
                     </identifier>
                     <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
                 </affiliation>
             </person>
-        </relation>
+        </attributed_agent>
         <role>
             <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
             <label xml:lang="en">Creator</label>
             <label xml:lang="cs">Autor</label>
         </role>
-    </qualified_relation>
+    </qualified_attribution>
     <!-- 4) Marek Cebecauer — Creator -->
-    <qualified_relation>
-        <relation>
+    <qualified_attribution>
+        <attributed_agent>
             <person>
                 <identifier>
                     <iri>https://orcid.org/0000-0002-4606-1218</iri>
                     <value>0000-0002-4606-1218</value>
                     <scheme>
                         <iri>https://orcid.org/</iri>
-                        <label xml:lang="">ORCID</label>
+                        <label xml:lang="en">Open Research and Contributor ID</label>
+                        <notation>ORCID</notation>
                     </scheme>
                 </identifier>
                 <name>Cebecauer, Marek</name>
@@ -218,54 +231,58 @@ EN: Conversion JSON → CCMM XML
                         <value>02sat5y74</value>
                         <scheme>
                             <iri>https://ror.org/</iri>
-                            <label xml:lang="">ROR</label>
+                            <label xml:lang="en">Research Organization Registry</label>
+                            <notation>ROR</notation>
                         </scheme>
                     </identifier>
                     <identifier>
                         <value>61388955</value>
                         <scheme>
                             <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                            <label xml:lang="cs">IČO</label>
+                            <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                            <notation>IČO</notation>
                         </scheme>
                     </identifier>
                     <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
                 </affiliation>
             </person>
-        </relation>
+        </attributed_agent>
         <role>
             <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
             <label xml:lang="en">Creator</label>
             <label xml:lang="cs">Autor</label>
         </role>
-    </qualified_relation>
+    </qualified_attribution>
     <!-- Publisher -->
-    <qualified_relation>
-        <relation>
+    <qualified_attribution>
+        <attributed_agent>
             <organization>
                 <identifier>
                     <iri>https://ror.org/02sat5y74</iri>
                     <value>02sat5y74</value>
                     <scheme>
                         <iri>https://ror.org/</iri>
-                        <label xml:lang="">ROR</label>
+                        <label xml:lang="en">Research Organization Registry</label>
+                        <notation>ROR</notation>
                     </scheme>
                 </identifier>
                 <identifier>
                     <value>61388955</value>
                     <scheme>
                         <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                        <label xml:lang="cs">IČO</label>
+                        <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                        <notation>IČO</notation>
                     </scheme>
                 </identifier>
                 <name>Ústav fyzikální chemie J. Heyrovského AV ČR</name>
             </organization>
-        </relation>
+        </attributed_agent>
         <role>
             <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher</iri>
             <label xml:lang="en">Publisher</label>
             <label xml:lang="cs">Vydavatel</label>
         </role>
-    </qualified_relation>
+    </qualified_attribution>
     <!-- Year derived from Date Available -->
     <publication_year>2025</publication_year>
     <!-- Time references (resource-level) -->
@@ -278,7 +295,7 @@ EN: Conversion JSON → CCMM XML
           </time_instant>
       </temporal_representation>
               <date_type>
-                  <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Issued</iri>
+                  <iri>https://w3id.org/tib/datacite/vocab/dateType/Issued</iri>
                   <label xml:lang="en">Date Issued</label>
                   <label xml:lang="cs">Datum vydání</label>
               </date_type>
@@ -295,7 +312,7 @@ EN: Conversion JSON → CCMM XML
         </time_interval>
         </temporal_representation>
             <date_type>
-                <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Created</iri>
+                <iri>https://w3id.org/tib/datacite/vocab/dateType/Created</iri>
                 <label xml:lang="en">Date Created</label>
                 <label xml:lang="cs">Datum vytvoření</label>
             </date_type>
@@ -312,7 +329,7 @@ EN: Conversion JSON → CCMM XML
         </time_interval>
         </temporal_representation>
             <date_type>
-                <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Collected</iri>
+                <iri>https://w3id.org/tib/datacite/vocab/dateType/Collected</iri>
                 <label xml:lang="en">Date Collected</label>
                 <label xml:lang="cs">Datum sběru</label>
             </date_type>
@@ -324,7 +341,7 @@ EN: Conversion JSON → CCMM XML
         </time_instant>
         </temporal_representation>
             <date_type>
-                <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Available</iri>
+                <iri>https://w3id.org/tib/datacite/vocab/dateType/Available</iri>
                 <label xml:lang="en">Date Available</label>
                 <label xml:lang="cs">Datum zveřejnění</label>
             </date_type>
@@ -340,19 +357,12 @@ EN: Conversion JSON → CCMM XML
         <iri>http://publications.europa.eu/resource/authority/language/ENG</iri>
         <label xml:lang="en">English</label>
     </primary_language>
-    <!-- Terms of Use -->
-    <terms_of_use>
-        <access_rights>
-            <iri>http://purl.org/coar/access_right/c_abf2</iri>
-            <label xml:lang="en">open access</label>
-            <label xml:lang="cs">otevřený přístup</label>
-        </access_rights>
-        <license>
-            <iri>https://creativecommons.org/licenses/by/4.0/</iri>
-            <label xml:lang="en">Creative Commons Attribution 4.0 International License</label>
-            <label xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</label>
-        </license>
-    </terms_of_use>
+    <!-- Access rights -->
+    <access_rights>
+        <iri>http://purl.org/coar/access_right/c_abf2</iri>
+        <label xml:lang="en">open access</label>
+        <label xml:lang="cs">otevřený přístup</label>
+    </access_rights>
     <!-- Subjects: Frascati SubjectCategory -->
     <subject>
         <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10601</iri>
@@ -387,28 +397,31 @@ EN: Conversion JSON → CCMM XML
             <label xml:lang="cs">Oborové třídění OECD FORD (Frascati)</label>
         </subject_scheme>
     </subject>
-    <!-- Subject keywords -->
+    <!-- Subject and keywords -->
     <subject>
-        <title xml:lang="cs">lidské neutrofily</title>
-        <title xml:lang="en">human neutrophils</title>
+        <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10606</iri>
+        <title xml:lang="cs">Mikrobiologie </title>
+        <title xml:lang="en">Biological sciences</title>
+        <classification_code>10606</classification_code>
+        <subject_scheme>
+            <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/</iri>
+            <label xml:lang="en">OECD FORD Subject Category (Frascati)</label>
+            <label xml:lang="cs">Oborové třídění OECD FORD (Frascati)</label>
+        </subject_scheme>
     </subject>
-    <subject>
-        <title xml:lang="cs">NETy</title>
-        <title xml:lang="en">NETs</title>
-    </subject>
-    <subject>
-        <title xml:lang="cs">NETóza</title>
-        <title xml:lang="en">NETosis</title>
-    </subject>
-    <subject>
-        <title xml:lang="cs">mikroskopie</title>
-        <title xml:lang="en">microscopy</title>
-    </subject>
+    <keyword xml:lang="cs">mikroskopie</keyword>
+    <keyword xml:lang="en">microscopy</keyword>
+    <keyword xml:lang="cs">NETóza</keyword>
+    <keyword xml:lang="en">NETosis</keyword>
+    <keyword xml:lang="cs">NETy</keyword>
+    <keyword xml:lang="en">NETs</keyword>
+    <keyword xml:lang="cs">lidské neutrofily</keyword>
+    <keyword xml:lang="en">human neutrophils</keyword>
     <!-- Description blocks -->
     <description>
         <description_text xml:lang="cs">Data podporující strukturu neutrofilových extracelulárních pastí pocházejících z lidských neutrofilů</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Abstract</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/Abstract</iri>
             <label xml:lang="cs">Abstrakt</label>
             <label xml:lang="en">Abstract</label>
         </description_type>
@@ -416,7 +429,7 @@ EN: Conversion JSON → CCMM XML
     <description>
         <description_text xml:lang="en">Data supporting the structure of neutrophil extracellular traps generated from human neutrophils</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Abstract</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/Abstract</iri>
             <label xml:lang="cs">Abstrakt</label>
             <label xml:lang="en">Abstract</label>
         </description_type>
@@ -424,7 +437,7 @@ EN: Conversion JSON → CCMM XML
     <description>
         <description_text xml:lang="cs">Doplňující mikroskopická data</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/TechnicalInfo</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo</iri>
             <label xml:lang="cs">Technická informace</label>
             <label xml:lang="en">Technical Info</label>
         </description_type>
@@ -432,7 +445,7 @@ EN: Conversion JSON → CCMM XML
     <description>
         <description_text xml:lang="en">Supplementary microscopy data</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/TechnicalInfo</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/TechnicalInfo</iri>
             <label xml:lang="cs">Technická informace</label>
             <label xml:lang="en">Technical Info</label>
         </description_type>
@@ -440,7 +453,7 @@ EN: Conversion JSON → CCMM XML
     <description>
         <description_text xml:lang="cs">Izolace neutrofilů ze vzorků lidské krve, stimulace neutrofilů pomocí agens indukujících NETózu, akvizice mikroskopických dat</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Methods</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/Methods</iri>
             <label xml:lang="cs">Metodologie</label>
             <label xml:lang="en">Methods</label>
         </description_type>
@@ -448,7 +461,7 @@ EN: Conversion JSON → CCMM XML
     <description>
         <description_text xml:lang="en">Isolation of neutrophils from human blood samples, neutrophil stimulation with NETosis-inducing agents, microscopy data acquisition</description_text>
         <description_type>
-            <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Methods</iri>
+            <iri>https://w3id.org/tib/datacite/property/descriptionType/Methods</iri>
             <label xml:lang="cs">Metodologie</label>
             <label xml:lang="en">Methods</label>
         </description_type>
@@ -457,15 +470,11 @@ EN: Conversion JSON → CCMM XML
     <!-- Distribution (each downloadable file from _files) -->
     <distribution>
         <distribution_downloadable_file>
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/CebecauerTkadlec_GACR2026_MindMap.pdf</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/CebecauerTkadlec_GACR2026_MindMap.pdf</iri>
             <title>CebecauerTkadlec_GACR2026_MindMap.pdf</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/CebecauerTkadlec_GACR2026_MindMap.pdf</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/CebecauerTkadlec_GACR2026_MindMap.pdf</iri>
                 <label xml:lang="en">CebecauerTkadlec_GACR2026_MindMap.pdf</label>
             </download_url>
             <format>
@@ -477,18 +486,24 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">application/pdf</label>
             </media_type>
             <byte_size>67587</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
             <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/ReadMe.txt</iri>
             <title>ReadMe.txt</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/ReadMe.txt</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/ReadMe.txt</iri>
                 <label xml:lang="en">ReadMe.txt</label>
             </download_url>
             <format>
@@ -500,19 +515,24 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">text/plain</label>
             </media_type>
             <byte_size>3889</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_DNAchannel.tif</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_DNAchannel.tif</iri>
             <title>Supp_Fig2A_NE_DNAchannel.tif</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_DNAchannel.tif</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_DNAchannel.tif</iri>
                 <label xml:lang="en">Supp_Fig2A_NE_DNAchannel.tif</label>
             </download_url>
             <format>
@@ -524,19 +544,24 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">image/tiff</label>
             </media_type>
             <byte_size>1049028</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_Merge_5um.tif</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_Merge_5um.tif</iri>
             <title>Supp_Fig2A_NE_Merge_5um.tif</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_Merge_5um.tif</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_Merge_5um.tif</iri>
                 <label xml:lang="en">Supp_Fig2A_NE_Merge_5um.tif</label>
             </download_url>
             <format>
@@ -548,19 +573,24 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">image/tiff</label>
             </media_type>
             <byte_size>786842</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_processedSMLM.tif</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_processedSMLM.tif</iri>
             <title>Supp_Fig2A_NE_processedSMLM.tif</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_processedSMLM.tif</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_processedSMLM.tif</iri>
                 <label xml:lang="en">Supp_Fig2A_NE_processedSMLM.tif</label>
             </download_url>
             <format>
@@ -572,19 +602,24 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">image/tiff</label>
             </media_type>
             <byte_size>26112432</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_DNAchannel.tif</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_DNAchannel.tif</iri>
             <title>Supp_Fig2B_citH3_DNAchannel.tif</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_DNAchannel.tif</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_DNAchannel.tif</iri>
                 <label xml:lang="en">Supp_Fig2B_citH3_DNAchannel.tif</label>
             </download_url>
             <format>
@@ -596,19 +631,24 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">image/tiff</label>
             </media_type>
             <byte_size>1049028</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_Merge_5um.tif</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_Merge_5um.tif</iri>
             <title>Supp_Fig2B_citH3_Merge_5um.tif</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_Merge_5um.tif</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_Merge_5um.tif</iri>
                 <label xml:lang="en">Supp_Fig2B_citH3_Merge_5um.tif</label>
             </download_url>
             <format>
@@ -620,19 +660,24 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">image/tiff</label>
             </media_type>
             <byte_size>786842</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_processedSMLM.tif</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_processedSMLM.tif</iri>
             <title>Supp_Fig2B_citH3_processedSMLM.tif</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_processedSMLM.tif</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_processedSMLM.tif</iri>
                 <label xml:lang="en">Supp_Fig2B_citH3_processedSMLM.tif</label>
             </download_url>
             <format>
@@ -644,19 +689,24 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">image/tiff</label>
             </media_type>
             <byte_size>26163532</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_DNAchannel.tif</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_DNAchannel.tif</iri>
             <title>Supp_Fig2C_MPO_DNAchannel.tif</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_DNAchannel.tif</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_DNAchannel.tif</iri>
                 <label xml:lang="en">Supp_Fig2C_MPO_DNAchannel.tif</label>
             </download_url>
             <format>
@@ -668,19 +718,24 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">image/tiff</label>
             </media_type>
             <byte_size>1049033</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_Merge_5um.tif</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_Merge_5um.tif</iri>
             <title>Supp_Fig2C_MPO_Merge_5um.tif</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_Merge_5um.tif</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_Merge_5um.tif</iri>
                 <label xml:lang="en">Supp_Fig2C_MPO_Merge_5um.tif</label>
             </download_url>
             <format>
@@ -692,19 +747,24 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">image/tiff</label>
             </media_type>
             <byte_size>786842</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_processedSMLM.tif</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_processedSMLM.tif</iri>
             <title>Supp_Fig2C_MPO_processedSMLM.tif</title>
-            <access_url>
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_processedSMLM.tif</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_processedSMLM.tif</iri>
                 <label xml:lang="en">Supp_Fig2C_MPO_processedSMLM.tif</label>
             </download_url>
             <format>
@@ -716,23 +776,27 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">image/tiff</label>
             </media_type>
             <byte_size>26112431</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <distribution>
         <distribution_downloadable_file>
             <!-- Identifier of this specific distribution within the dataset (ideally a persistent
             IRI) -->
-            <iri>
-                https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supplementary_Figures.pdf</iri>
+            <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supplementary_Figures.pdf</iri>
             <title>Supplementary_Figures.pdf</title>
-            <access_url>
-                <!-- Entry point / landing page listing the dataset’s files; it should include information on how to access/download files -->
-                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</iri>
-            </access_url>
+            <access_url>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/</access_url>
             <!-- Direct download link to the specific file -->
             <download_url>
-                <iri>
-                    https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supplementary_Figures.pdf</iri>
+                <iri>https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supplementary_Figures.pdf</iri>
                 <label xml:lang="en">Supplementary_Figures.pdf</label>
             </download_url>
             <format>
@@ -744,9 +808,17 @@ EN: Conversion JSON → CCMM XML
                 <label xml:lang="en">application/pdf</label>
             </media_type>
             <byte_size>895767</byte_size>
+            <rights>
+                <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+                <label xml:lang="en">open access</label>
+            </rights>
+            <licence>
+                <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+                <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+                <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+            </licence>
         </distribution_downloadable_file>
     </distribution>
     <!-- placeholders for model extensions (kept to preserve the xd12h-dfz24.xml pattern) -->
     <validation_result />
-    <provenance />
 </dataset>
