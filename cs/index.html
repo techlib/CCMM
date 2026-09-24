@@ -14483,7 +14483,7 @@
             </table>
           
               <p><strong>Vlastnosti</strong></p>
-              <p>Pro tento profil třídy jsou definovány následující vlastnosti: <a href="#Subject.classificationCode">classification code (@en)</a>, <a href="#Subject.definition">definition (@en)</a>, <a href="#Subject.inSubjectScheme">in subject scheme (@en)</a>, <a href="#Subject.title">title (@en)</a>.</p>
+              <p>Pro tento profil třídy jsou definovány následující vlastnosti: <a href="#Subject.classificationCode">classification code (@en)</a>, <a href="#Subject.definition">definition (@en)</a>, <a href="#Subject.inSubjectScheme">in subject scheme (@en)</a>, <a href="#Subject.label">label (@en)</a>.</p>
           
               <p><strong>Zpětné asociace</strong></p>
               <ul>
@@ -14691,28 +14691,28 @@
                     </tr>
               
                 </table>
-              </section>    <section id="Subject.title">
-                <h4>title (@en)</h4>
+              </section>    <section id="Subject.label">
+                <h4>label (@en)</h4>
               
                 <table class="def">
                   <tr>
                     <td>IRI profilovaných vztahů</td>
                     <td>
                         
-                        <a href="http://purl.org/dc/terms/title">dcterms:title</a>
+                        <a href="http://www.w3.org/2004/02/skos/core#prefLabel">skos:prefLabel</a>
                     </td>
                   </tr>
                   <tr>
                     <td>IRI</td>
-                    <td><a href="https://model.ccmm.cz/research-data/Subject.title">https://model.ccmm.cz/research-data/Subject.title</a></td>
+                    <td><a href="https://model.ccmm.cz/research-data/Subject.label">https://model.ccmm.cz/research-data/Subject.label</a></td>
                   </tr>
                   <tr>
                     <td>Název</td>
-                    <td>title (@en)</td>
+                    <td>label (@en)</td>
                   </tr>
                   <tr>
                     <td>Definice</td>
-                    <td>Title of the subject. (@en)</td>
+                    <td>Subject label. (@en)</td>
                   </tr>
                   <tr>
                     <td>Definiční obor</td>
@@ -14726,9 +14726,9 @@
                   <tr>
                     <td>Obor hodnot</td>
                     <td>
-                      <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a>
+                      <a href="https://ofn.gov.cz/základní-datové-typy/2020-07-01/#text">Text</a>
               
-                          [1..*]
+                          [1..1]
               
                   </td>
                   </tr>
@@ -14743,9 +14743,20 @@
                                         profiluje
                     vlastnost
                     
-                    <a href="http://purl.org/dc/terms/title">Title (@en)</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
-                      <br />Definice: <i>A name given to the resource.</i>
+                    <a href="http://www.w3.org/2004/02/skos/core#prefLabel">preferred label (@en)</a> (<a href="http://www.w3.org/2004/02/skos/core#prefLabel">skos:prefLabel</a>)
+                      <br />Definice: <i>skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+                    disjoint properties.</i>
                       <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                                      specializuje
+                    vlastnost
+                    
+                    <a href="http://www.w3.org/2000/01/rdf-schema#label">label (@en)</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
+                      <br />Definice: <i>A human-readable name for the subject.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
                       </ul>
               
                               </li>
@@ -14753,6 +14764,10 @@
                       </td>
                     </tr>
               
+                  <tr>
+                    <td>Popis použití v profilu</td>
+                    <td>Use a label of the corresponding value from the used code list. At least one subject must be a value from FRASCATI FORD vocabulary. This property may be repeated for parallel language versions of the label. (@en)</td>
+                  </tr>
                 </table>
               </section>
           </section>          <section id="SubjectScheme">
@@ -40209,21 +40224,19 @@
 
         </li>
         <li style="list-style-type: disclosure-closed;">
-          <code>title</code>:
-            (<a href="#Subject.title" label="Title of the subject.">title</a>)
+          <code>label</code>:
+            (<a href="#Subject.label" label="Subject label.">label</a>)
           povinná
           položka typu
 
-                
-  
-      pole hodnot <code>{1..*}</code> typu         <strong>
+                  <strong>
     objekt
   </strong>
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>@value</code>:
-          povinná
+          <code>cs</code>:
+          nepovinná
           položka typu
 
                 
@@ -40243,8 +40256,8 @@
 
         </li>
         <li style="list-style-type: disclosure-closed;">
-          <code>@language</code>:
-          povinná
+          <code>en</code>:
+          nepovinná
           položka typu
 
                 
@@ -40269,16 +40282,6 @@
 
 
   
-  
-  
-  
-  
-  
-  
-  
-
-
-          
   
   
   
@@ -40635,7 +40638,7 @@
           element <a href="#element-ccmm:subject-ccmm:iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-ccmm:subject-ccmm:title"><code>&lt;title&gt;</code></a> [1..*]
+          element <a href="#element-ccmm:subject-ccmm:label"><code>&lt;label&gt;</code></a> [1..*]
       </li>
       <li>
           element <a href="#element-ccmm:subject-ccmm:definition"><code>&lt;definition&gt;</code></a> [0..*]
@@ -40682,8 +40685,8 @@
     
   </dl>
 </section>
-<section id="element-ccmm:subject-ccmm:title">
-  <h4>Element <code>&lt;title&gt;</code></h4>
+<section id="element-ccmm:subject-ccmm:label">
+  <h4>Element <code>&lt;label&gt;</code></h4>
 
   <dl>
     <dt>Význam</dt>
@@ -40695,8 +40698,8 @@
           
         </i>
 
-          <a href="#Subject.title"><strong>title</strong></a>
-          (Title of the subject.)
+          <a href="#Subject.label"><strong>label</strong></a>
+          (Subject label.)
 
     </dd>
 
@@ -74677,21 +74680,19 @@
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>title</code>:
-            (<a href="#Subject.title" label="Title of the subject.">title</a>)
+          <code>label</code>:
+            (<a href="#Subject.label" label="Subject label.">label</a>)
           povinná
           položka typu
 
-                
-  
-      pole hodnot <code>{1..*}</code> typu         <strong>
+                  <strong>
     objekt
   </strong>
     s vlastnostmi (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>@value</code>:
-          povinná
+          <code>cs</code>:
+          nepovinná
           položka typu
 
                 
@@ -74711,8 +74712,8 @@
 
         </li>
         <li style="list-style-type: disclosure-closed;">
-          <code>@language</code>:
-          povinná
+          <code>en</code>:
+          nepovinná
           položka typu
 
                 
@@ -74737,16 +74738,6 @@
 
 
   
-  
-  
-  
-  
-  
-  
-  
-
-
-          
   
   
   

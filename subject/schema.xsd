@@ -11,10 +11,11 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element maxOccurs="unbounded" name="title" sawsdl:modelReference="http://purl.org/dc/terms/title">
+      <xs:element maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#prefLabel">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            title - Title of the subject.
+            label - Subject label.
+            Use a label of the corresponding value from the used code list. At least one subject must be a value from FRASCATI FORD vocabulary. This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

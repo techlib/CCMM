@@ -1597,15 +1597,16 @@
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
 
-<https://model.ccmm.cz/research-data/Subject.title> dct:isPartOf <https://model.ccmm.cz/research-data/>;
+<https://model.ccmm.cz/research-data/Subject.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
-    skos:prefLabel "title"@en;
-    skos:definition "Title of the subject."@en;
-    dsv:cardinality cardinality:1n;
-    dsv:property dct:title;
+    skos:prefLabel "label"@en;
+    skos:definition "Subject label."@en;
+    skos:scopeNote "Use a label of the corresponding value from the used code list. At least one subject must be a value from FRASCATI FORD vocabulary. This property may be repeated for parallel language versions of the label."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property skos:prefLabel;
     dsv:domain :Subject;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange rdf:langString.
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
 <https://model.ccmm.cz/research-data/Subject.definition> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;

@@ -5,7 +5,7 @@
   "description": "Subject, classification code, or key phrase describing the resource.",
   "type": "object",
   "required": [
-    "title",
+    "label",
     "classification_code",
     "subject_scheme"
   ],
@@ -30,27 +30,22 @@
         }
       ]
     },
-    "title": {
-      "title": "title",
-      "description": "Title of the subject.",
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "title": "Language tagged string",
-        "type": "object",
-        "required": [
-          "@value",
-          "@language"
-        ],
-        "properties": {
-          "@value": {
-            "title": "Text v daném jazyce",
-            "type": "string"
-          },
-          "@language": {
-            "title": "Jazyk textu",
-            "type": "string"
-          }
+    "label": {
+      "title": "label",
+      "description": "Subject label.",
+      "type": "object",
+      "additionalProperties": {
+        "title": "Hodnota v jiném jazyce",
+        "type": "string"
+      },
+      "properties": {
+        "cs": {
+          "title": "Hodnota v českém jazyce",
+          "type": "string"
+        },
+        "en": {
+          "title": "Hodnota v anglickém jazyce",
+          "type": "string"
         }
       }
     },

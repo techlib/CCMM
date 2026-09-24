@@ -19,6 +19,7 @@ CHANGELOG
 * codelist values now have skos:prefLabel
 * introduction and abstract texts added
 * classes are grouped and ordered into main and supportive
+* publisher is an organization and changed to recommended 
 
 ### 2026-02-27 - minor changes
 * added SHACL file

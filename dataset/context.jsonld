@@ -1192,9 +1192,9 @@
       "@id": "https://w3id.org/tib/datacite/property/subject",
       "@container": "@set",
       "@context": {
-        "title": {
-          "@id": "http://purl.org/dc/terms/title",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        "label": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@container": "@language"
         },
         "definition": {
           "@id": "http://www.w3.org/2004/02/skos/core#definition",
