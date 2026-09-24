@@ -2255,7 +2255,7 @@
         {
           "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10601",
           "type": "subject",
-          "http://purl.org/dc/terms/title": [
+          "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
               "@language": "cs",
               "@value": "Buněčná biologie"
@@ -2284,7 +2284,7 @@
         {
           "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10606",
           "type": "subject",
-          "http://purl.org/dc/terms/title": [
+          "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
               "@language": "cs",
               "@value": "Mikrobiologie"
@@ -2321,7 +2321,7 @@
         {
           "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30100/30102",
           "type": "subject",
-          "http://purl.org/dc/terms/title": [
+          "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
               "@language": "cs",
               "@value": "Imunologie"
@@ -4528,7 +4528,7 @@
     {
       "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10601",
       "type": "subject",
-      "http://purl.org/dc/terms/title": [
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
         {
           "@language": "cs",
           "@value": "Buněčná biologie"
@@ -4557,7 +4557,7 @@
     {
       "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10606",
       "type": "subject",
-      "http://purl.org/dc/terms/title": [
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
         {
           "@language": "cs",
           "@value": "Mikrobiologie"
@@ -4594,7 +4594,7 @@
     {
       "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30100/30102",
       "type": "subject",
-      "http://purl.org/dc/terms/title": [
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
         {
           "@language": "cs",
           "@value": "Imunologie"

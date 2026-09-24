@@ -87,13 +87,16 @@
         "human neutrophils"@en,
         "microscopy"@en ;
     prov:qualifiedAttribution [ a prov:Attribution ;
-            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
-            prov:agent [ a org:Organization ;
-                    ns1:identifier [ a ns1:Identifier ;
-                            skos:notation "61388955" ;
-                            ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
-                        <https://ror.org/02sat5y74> ;
-                    foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ],
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns1:identifier <https://orcid.org/0000-0003-1662-9092> ;
+                    foaf:name "González Navarro, José Alfredo" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "61388955" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/02sat5y74> ;
+                            foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ],
         [ a prov:Attribution ;
             dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
             prov:agent [ a prov:Person ;
@@ -106,21 +109,18 @@
                                 <https://ror.org/02sat5y74> ;
                             foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ],
         [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
+            prov:agent [ a org:Organization ;
+                    ns1:identifier [ a ns1:Identifier ;
+                            skos:notation "61388955" ;
+                            ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                        <https://ror.org/02sat5y74> ;
+                    foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ],
+        [ a prov:Attribution ;
             dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
             prov:agent [ a prov:Person ;
                     ns1:identifier <https://orcid.org/0009-0008-0140-2075> ;
                     foaf:name "Echezarreta Mendicute, Irene" ;
-                    ns0:hasAffiliation [ a org:Organization ;
-                            ns1:identifier [ a ns1:Identifier ;
-                                    skos:notation "61388955" ;
-                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
-                                <https://ror.org/02sat5y74> ;
-                            foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ],
-        [ a prov:Attribution ;
-            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
-            prov:agent [ a prov:Person ;
-                    ns1:identifier <https://orcid.org/0000-0003-1662-9092> ;
-                    foaf:name "González Navarro, José Alfredo" ;
                     ns0:hasAffiliation [ a org:Organization ;
                             ns1:identifier [ a ns1:Identifier ;
                                     skos:notation "61388955" ;
@@ -143,6 +143,10 @@
             ns0:hasType <https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle> ] ;
     ns0:hasPrimaryLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
     ns0:hasTimeReference [ a ns0:TimeReference ;
+            time:hasTime [ a time:Instant ;
+                    time:inXSDDate "2025-04-03"^^xsd:date ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Issued> ],
+        [ a ns0:TimeReference ;
             time:hasTime [ a time:Interval ;
                     time:hasBeginning [ a time:Instant ;
                             time:inXSDDate "2025-04-02"^^xsd:date ] ;
@@ -152,39 +156,35 @@
         [ a ns0:TimeReference ;
             time:hasTime [ a time:Instant ;
                     time:inXSDDate "2025-04-03"^^xsd:date ] ;
-            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Issued> ],
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Available> ],
         [ a ns0:TimeReference ;
             time:hasTime [ a time:Interval ;
                     time:hasBeginning [ a time:Instant ;
                             time:inXSDDate "2025-01-01"^^xsd:date ] ;
                     time:hasEnd [ a time:Instant ;
                             time:inXSDDate "2025-04-03"^^xsd:date ] ] ;
-            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Collected> ],
-        [ a ns0:TimeReference ;
-            time:hasTime [ a time:Instant ;
-                    time:inXSDDate "2025-04-03"^^xsd:date ] ;
-            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Available> ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Collected> ] ;
     ns0:hasValidationResult [ a ns0:ValidationResult ] ;
     ns0:inScheme <https://doi.org/> ;
     ns0:isDescribedBy <https://datarepo.eosc.cz/datasets/records/datst.1m3t2-78951> ;
     ns5:description [ a <https://w3id.org/tib/datacite/class/Description> ;
-            dcterms:description "Supplementary microscopy data"@en ;
-            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> ],
-        [ a <https://w3id.org/tib/datacite/class/Description> ;
             dcterms:description "Isolation of neutrophils from human blood samples, neutrophil stimulation with NETosis-inducing agents, microscopy data acquisition"@en ;
             ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Methods> ],
         [ a <https://w3id.org/tib/datacite/class/Description> ;
             dcterms:description "Data supporting the structure of neutrophil extracellular traps generated from human neutrophils"@en ;
             ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> ],
         [ a <https://w3id.org/tib/datacite/class/Description> ;
-            dcterms:description "Doplňující mikroskopická data"@cs ;
-            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> ],
-        [ a <https://w3id.org/tib/datacite/class/Description> ;
             dcterms:description "Izolace neutrofilů ze vzorků lidské krve, stimulace neutrofilů pomocí agens indukujících NETózu, akvizice mikroskopických dat"@cs ;
             ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Methods> ],
         [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Supplementary microscopy data"@en ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> ],
+        [ a <https://w3id.org/tib/datacite/class/Description> ;
             dcterms:description "Data podporující strukturu neutrofilových extracelulárních pastí pocházejících z lidských neutrofilů"@cs ;
-            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> ] ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> ],
+        [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Doplňující mikroskopická data"@cs ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> ] ;
     ns5:publicationYear "2025"^^xsd:gYear ;
     ns5:subject <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10601>,
         <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10606>,
@@ -218,13 +218,13 @@
         "Data manager"@en .
 
 <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10601> a <https://w3id.org/tib/datacite/class/Subject> ;
-    dcterms:title "Buněčná biologie"@cs,
+    skos:prefLabel "Buněčná biologie"@cs,
         "Cell biology"@en ;
     ns0:inSubjectScheme <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> ;
     ns5:classificationCode "10601" .
 
 <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10606> a <https://w3id.org/tib/datacite/class/Subject> ;
-    dcterms:title "Mikrobiologie"@cs,
+    skos:prefLabel "Mikrobiologie"@cs,
         "Mikrobiologie "@cs,
         "Biological sciences"@en,
         "Microbiology"@en ;
@@ -232,7 +232,7 @@
     ns5:classificationCode "10606" .
 
 <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30100/30102> a <https://w3id.org/tib/datacite/class/Subject> ;
-    dcterms:title "Imunologie"@cs,
+    skos:prefLabel "Imunologie"@cs,
         "Immunology"@en ;
     ns0:inSubjectScheme <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> ;
     ns5:classificationCode "30102" .

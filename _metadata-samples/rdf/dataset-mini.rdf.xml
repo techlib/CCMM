@@ -187,20 +187,19 @@
          </rdf:Description>
       </ns3:accessRights>
       <ns5:subject>
-         <rdf:Description xmlns:ns0="http://purl.org/dc/terms/"
-                          xmlns:ns1="http://www.w3.org/2004/02/skos/core#"
-                          xmlns:ns2="https://w3id.org/tib/datacite/property/"
-                          xmlns:ns3="https://model.ccmm.cz/vocabulary/ccmm#"
+         <rdf:Description xmlns:ns0="http://www.w3.org/2004/02/skos/core#"
+                          xmlns:ns1="https://w3id.org/tib/datacite/property/"
+                          xmlns:ns2="https://model.ccmm.cz/vocabulary/ccmm#"
                           rdf:about="https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30300/30304">
             <rdf:type rdf:resource="https://w3id.org/tib/datacite/class/Subject"/>
-            <ns0:title xml:lang="cs">Veřejné a environmentální zdraví</ns0:title>
-            <ns2:classificationCode>10509</ns2:classificationCode>
-            <ns3:inSubjectScheme>
+            <ns0:prefLabel xml:lang="cs">Veřejné a environmentální zdraví</ns0:prefLabel>
+            <ns1:classificationCode>10509</ns1:classificationCode>
+            <ns2:inSubjectScheme>
                <rdf:Description xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#"
                                 rdf:about="https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/">
                   <rdf:type rdf:resource="https://model.ccmm.cz/vocabulary/ccmm#SubjectScheme"/>
                </rdf:Description>
-            </ns3:inSubjectScheme>
+            </ns2:inSubjectScheme>
          </rdf:Description>
       </ns5:subject>
       <ns5:description>

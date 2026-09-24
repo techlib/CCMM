@@ -261,7 +261,7 @@
           },
           "endpoint_url": [
             {
-              "id": "_:b2",
+              "id": "_:b27",
               "type": "related_resource",
               "http://purl.org/dc/terms/title": "Endpoint of WMS service Air quality",
               "resource_url": "https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi"
@@ -278,7 +278,7 @@
             "@value": "Endpoint of WMS service Air quality"
           },
           "http://www.w3.org/ns/dcat#endpointURL": {
-            "id": "_:b2",
+            "id": "_:b27",
             "type": "http://www.w3.org/2000/01/rdf-schema#Resource",
             "http://purl.org/dc/terms/title": "Endpoint of WMS service Air quality",
             "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl": {
@@ -805,7 +805,7 @@
     {
       "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10500/10509",
       "type": "subject",
-      "http://purl.org/dc/terms/title": [
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
         {
           "@language": "cs",
           "@value": "Meteorologie, vědy o atmosféře"
@@ -834,13 +834,13 @@
     {
       "id": "http://inspire.ec.europa.eu/theme/ef",
       "type": "subject",
-      "http://purl.org/dc/terms/title": {
-        "@language": "en",
-        "@value": "Environmental monitoring facilities"
-      },
       "http://www.w3.org/2004/02/skos/core#definition": {
         "@language": "en",
         "@value": "Location and operation of environmental monitoring facilities\n            includes observation and measurement of emissions, of the state of environmental media\n            and of other ecosystem parameters (biodiversity, ecological conditions of vegetation,\n            etc.) by or on behalf of public authorities."
+      },
+      "http://www.w3.org/2004/02/skos/core#prefLabel": {
+        "@language": "en",
+        "@value": "Environmental monitoring facilities"
       },
       "https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme": {
         "id": "https://inspire.ec.europa.eu/theme/",

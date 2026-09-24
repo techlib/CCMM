@@ -151,7 +151,7 @@
     {
       "id": "https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30300/30304",
       "type": "subject",
-      "http://purl.org/dc/terms/title": {
+      "http://www.w3.org/2004/02/skos/core#prefLabel": {
         "@language": "cs",
         "@value": "Veřejné a environmentální zdraví"
       },

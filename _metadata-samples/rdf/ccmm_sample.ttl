@@ -108,6 +108,16 @@
     dcat:keyword "kvalita ovzduší"@cs ;
     dcat:version "1.0.23" ;
     prov:qualifiedAttribution [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
+            prov:agent [ a org:Organization ;
+                    ns1:identifier <https://ror.org/02j46qs45> ;
+                    dcat:contactPoint [ a ns2:Kind ;
+                            ns2:hasAddress [ a ns11:Address ;
+                                    ns11:fullAddress "Pražská 3, 60200, Brno" ] ;
+                            ns0:email "256384@muni.cz" ;
+                            ns0:phone "+420876543219" ] ;
+                    foaf:name "Masarykova Univerzita" ] ],
+        [ a prov:Attribution ;
             dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
             prov:agent [ a prov:Person ;
                     ns2:family-name "Novák" ;
@@ -121,17 +131,7 @@
                     foaf:name "Novák" ;
                     ns0:hasAffiliation [ a org:Organization ;
                             ns1:identifier <https://ror.org/024d6js02> ;
-                            foaf:name "Univerzita Karlova" ] ] ],
-        [ a prov:Attribution ;
-            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
-            prov:agent [ a org:Organization ;
-                    ns1:identifier <https://ror.org/02j46qs45> ;
-                    dcat:contactPoint [ a ns2:Kind ;
-                            ns2:hasAddress [ a ns11:Address ;
-                                    ns11:fullAddress "Pražská 3, 60200, Brno" ] ;
-                            ns0:email "256384@muni.cz" ;
-                            ns0:phone "+420876543219" ] ;
-                    foaf:name "Masarykova Univerzita" ] ] ;
+                            foaf:name "Univerzita Karlova" ] ] ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             ns0:hasRo-crateJsonRepresentation <https://link.to/ro-crate-json> ] ;
     ns0:hasAlternateTitle [ a ns0:AlternateTitle ;
@@ -174,11 +174,11 @@
                     služby"""@cs .
 
 <http://inspire.ec.europa.eu/theme/ef> a <https://w3id.org/tib/datacite/class/Subject> ;
-    dcterms:title "Environmental monitoring facilities"@en ;
     skos:definition """Location and operation of environmental monitoring facilities
             includes observation and measurement of emissions, of the state of environmental media
             and of other ecosystem parameters (biodiversity, ecological conditions of vegetation,
             etc.) by or on behalf of public authorities."""@en ;
+    skos:prefLabel "Environmental monitoring facilities"@en ;
     ns0:inSubjectScheme <https://inspire.ec.europa.eu/theme/> ;
     ns5:classificationCode "EF" .
 
@@ -339,7 +339,7 @@
         "OECD FORD Subject Category (Frascati)"@en .
 
 <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10500/10509> a <https://w3id.org/tib/datacite/class/Subject> ;
-    dcterms:title "Meteorologie, vědy o atmosféře"@cs,
+    skos:prefLabel "Meteorologie, vědy o atmosféře"@cs,
         "Meteorology and atmospheric sciences"@en ;
     ns0:inSubjectScheme <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> ;
     ns5:classificationCode "10509" .

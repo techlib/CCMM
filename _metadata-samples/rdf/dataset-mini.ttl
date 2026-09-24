@@ -41,7 +41,7 @@
 <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> a ns0:SubjectScheme .
 
 <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30300/30304> a <https://w3id.org/tib/datacite/class/Subject> ;
-    dcterms:title "Veřejné a environmentální zdraví"@cs ;
+    skos:prefLabel "Veřejné a environmentální zdraví"@cs ;
     ns0:inSubjectScheme <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> ;
     ns5:classificationCode "10509" .
 
