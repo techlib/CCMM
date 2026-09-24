@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:complexType name="common_provenance_model_json_representation" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#CPMJsonRepresentation">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Common provenance model JSON representation - Provides link to  the representation of provenance activity information in JSON format according to the Common provenance model specified in  ISO 23494-2 standard.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="common_provenance_model_json_representation" type="ccmm:common_provenance_model_json_representation"/>
+</xs:schema>

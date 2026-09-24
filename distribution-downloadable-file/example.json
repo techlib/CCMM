@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@context": {
+      "@version": 1.1,
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "id": "@id",
+      "type": "@type",
+      "title": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@type": "xsd:string"
+      },
+      "access_url": {
+        "@id": "http://www.w3.org/ns/dcat#accessURL",
+        "@type": "@id",
+        "@container": "@set"
+      },
+      "download_url": {
+        "@id": "http://www.w3.org/ns/dcat#downloadURL",
+        "@container": "@set",
+        "@context": {
+          "label": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+          },
+          "file": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
+            "@context": {}
+          }
+        }
+      },
+      "conforms_to": {
+        "@id": "http://purl.org/dc/terms/conformsTo",
+        "@container": "@set",
+        "@context": {
+          "label": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+          },
+          "application_profile": {
+            "@id": "http://purl.org/dc/terms/Standard",
+            "@context": {}
+          }
+        }
+      },
+      "format": {
+        "@id": "http://purl.org/dc/terms/format",
+        "@type": "@id",
+        "@context": {
+          "label": {
+            "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "@container": "@language"
+          },
+          "format": {
+            "@id": "http://purl.org/dc/terms/MediaTypeOrExtent",
+            "@context": {}
+          }
+        }
+      },
+      "media_type": {
+        "@id": "http://www.w3.org/ns/dcat#mediaType",
+        "@type": "@id",
+        "@context": {
+          "label": {
+            "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "@container": "@language"
+          },
+          "media_type": {
+            "@id": "http://purl.org/dc/terms/MediaType",
+            "@context": {}
+          }
+        }
+      },
+      "packaging_format": {
+        "@id": "http://www.w3.org/ns/dcat#packageFormat",
+        "@type": "@id",
+        "@context": {
+          "label": {
+            "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "@container": "@language"
+          },
+          "media_type": {
+            "@id": "http://purl.org/dc/terms/MediaType",
+            "@context": {}
+          }
+        }
+      },
+      "compression_format": {
+        "@id": "http://www.w3.org/ns/dcat#compressFormat",
+        "@type": "@id",
+        "@context": {
+          "label": {
+            "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "@container": "@language"
+          },
+          "media_type": {
+            "@id": "http://purl.org/dc/terms/MediaType",
+            "@context": {}
+          }
+        }
+      },
+      "byte_size": {
+        "@id": "http://www.w3.org/ns/dcat#byteSize",
+        "@type": "xsd:integer"
+      },
+      "checksum": {
+        "@id": "http://spdx.org/rdf/terms#checksum",
+        "@type": "@id",
+        "@context": {
+          "checksum_value": {
+            "@id": "http://spdx.org/rdf/terms#checksumValue",
+            "@type": "xsd:hexBinary"
+          },
+          "algorithm": {
+            "@id": "http://spdx.org/rdf/terms#algorithm",
+            "@type": "@id",
+            "@context": {
+              "label": {
+                "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+                "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+              },
+              "checksum_algorithm": {
+                "@id": "http://spdx.org/rdf/terms#ChecksumAlgorithm",
+                "@context": {}
+              }
+            }
+          },
+          "checksum": {
+            "@id": "http://spdx.org/rdf/terms#Checksum",
+            "@context": {}
+          }
+        }
+      },
+      "rights": {
+        "@id": "http://purl.org/dc/terms/rights",
+        "@container": "@set",
+        "@context": {
+          "label": {
+            "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "@container": "@language"
+          },
+          "access_rights": {
+            "@id": "http://purl.org/dc/terms/RightsStatement",
+            "@context": {}
+          }
+        }
+      },
+      "licence": {
+        "@id": "http://purl.org/dc/terms/license",
+        "@type": "@id",
+        "@context": {
+          "title": {
+            "@id": "http://purl.org/dc/terms/title",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+          },
+          "licence_document": {
+            "@id": "http://purl.org/dc/terms/LicenseDocument",
+            "@context": {}
+          }
+        }
+      },
+      "description": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "distribution_downloadable_file": {
+        "@id": "https://model.ccmm.cz/vocabulary/ccmm#Distribution-DownloadableFile",
+        "@context": {}
+      }
+    }
+  },
+  "title": [
+    "8rLSA9CEiz",
+    "jE"
+  ],
+  "access_url": [
+    "https://demo.net/v1"
+  ],
+  "format": {
+    "label": {}
+  },
+  "byte_size": 92,
+  "licence": {}
+}

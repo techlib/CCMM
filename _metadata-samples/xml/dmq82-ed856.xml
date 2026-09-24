@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-CS: Převod z JSON (dmq82-ed856) → CCMM XML
-    Autor převodu: Pavel Kotlík
-    Datum převodu: 2025-10-14
-    Zdroj JSON/URI: https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856
-
-EN: Conversion JSON (dmq82-ed856) → CCMM XML
-    Converted by: Pavel Kotlík
-    Conversion date: 2025-10-14
-    Source JSON/URI: https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856
--->
 <dataset
-  xsi:schemaLocation="https://schema.ccmm.cz/research-data/1.1  https://model.ccmm.cz/research-data/dataset/schema.xsd"
-  xmlns="https://schema.ccmm.cz/research-data/1.1"
+  xsi:schemaLocation="https://schema.ccmm.cz/research-data/2.0 https://model.ccmm.cz/research-data/dataset/schema.xsd"
+  xmlns="https://schema.ccmm.cz/research-data/2.0" xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <!-- IRI for Dataset should ideally be a DOI (if available) -->
   <iri>https://doi.org/10.48700/datst.dmq82-ed856</iri>
   <metadata_identification>
-    <iri>https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856</iri>
+    <iri>https://datarepo.eosc.cz/datasets/records/datst.dmq82-ed856</iri>
     <!-- Language(s) of this metadata record -->
     <language>
       <iri>http://publications.europa.eu/resource/authority/language/ENG</iri>
       <label xml:lang="en">English</label>
     </language>
-    <!-- Qualified relation — Data Manager placeholder (source JSON lacks this info) -->
-    <qualified_relation>
-      <relation>
+    <!-- Qualified attribution — Data Manager placeholder (source JSON lacks this info) -->
+    <qualified_attribution>
+      <attributed_agent>
         <person>
           <name>:unkn</name>
-          <given_name>:unkn</given_name>
-          <family_name>:unkn</family_name>
         </person>
-      </relation>
+      </attributed_agent>
       <role>
         <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager</iri>
         <label xml:lang="en">Data Manager</label>
-        <label xml:lang="cs">Manažer dat</label>
+        <label xml:lang="cs">Správce dat</label>
       </role>
-    </qualified_relation>
+    </qualified_attribution>
     <!-- Dates of this metadata record (best effort) -->
     <date_updated>2025-10-14</date_updated>
     <date_created>2025-06-16</date_created>
     <!-- Standards -->
     <conforms_to_standard>
-        <iri>https://model.ccmm.cz/research-data/1.1.0</iri>
-        <label xml:lang="">CCMM RD 1.1.0</label>
+        <iri>https://model.ccmm.cz/research-data/2.0.0</iri>
+      <label xml:lang="en">Czech Core Metadata Model for Research Data 2.0.0</label>
     </conforms_to_standard>
     <conforms_to_standard>
       <iri>https://data.narodni-repozitar.cz/schemas/nr_datasets/nr-datasets-v1.0.0.json</iri>
       <label xml:lang="en">NR Datasets JSON Schema v1.0.0</label>
     </conforms_to_standard>
     <original_repository>
-      <iri>https://data.narodni-repozitar.cz</iri>
+      <iri>https://datarepo.eosc.cz</iri>
+      <label xml:lang="en">Catch-all</label>
+      <description xml:lang="en">The Data Catch-all Repository is a general-purpose repository for research data for which no more suitable disciplinary, institutional, or community repository is available.</description>
+      <qualified_attribution>
+        <attributed_agent>
+          <organization>
+            <name>COMTES FHT</name>
+          </organization>
+        </attributed_agent>
+        <role>
+          <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher</iri>
+          <label xml:lang="cs">Vydavatel</label>
+          <label xml:lang="en">Publisher</label>
+        </role>
+      </qualified_attribution>
     </original_repository>
   </metadata_identification>
   <!-- Identifier (DOI) -->
@@ -60,7 +61,8 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
     <value>10.48700/datst.dmq82-ed856</value>
     <scheme>
       <iri>https://doi.org/</iri>
-      <label xml:lang="">DOI</label>
+      <label xml:lang="en">Digital Object Identifier</label>
+      <notation>DOI</notation>
     </scheme>
   </identifier>
   <!-- Titles -->
@@ -68,21 +70,22 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
   <alternate_title>
     <title xml:lang="en">Data to manuscript Influence of Deposition Parameters on the Building rate, In-Situ Formation of Austenite and Tensile Properties of SAF 2507 SDSS Fabricated by Directed Energy Deposition</title>
     <alternate_title_type>
-      <iri>https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/TranslatedTitle</iri>
+      <iri>https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle</iri>
       <label xml:lang="cs">Přeložený název</label>
-      <label xml:lang="en">Translated Title</label>
+      <label xml:lang="en">TranslatedTitle</label>
     </alternate_title_type>
   </alternate_title>
   <!-- 1) Pavel Salvetr — Creator -->
-  <qualified_relation>
-    <relation>
+  <qualified_attribution>
+    <attributed_agent>
       <person>
         <identifier>
           <iri>https://orcid.org/0000-0001-5717-267X</iri>
           <value>0000-0001-5717-267X</value>
           <scheme>
             <iri>https://orcid.org/</iri>
-            <label xml:lang="">ORCID</label>
+            <label xml:lang="en">Open Research and Contributor ID</label>
+            <notation>ORCID</notation>
           </scheme>
         </identifier>
         <name>Salvetr, Pavel</name>
@@ -94,36 +97,39 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
             <value>00hzjtg80</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>26316919</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="cs">Identifikační Číslo Osoby</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>COMTES FHT</name>
         </affiliation>
       </person>
-    </relation>
+    </attributed_agent>
     <role>
       <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
       <label xml:lang="en">Creator</label>
       <label xml:lang="cs">Autor</label>
     </role>
-  </qualified_relation>
+  </qualified_attribution>
   <!-- 2) Josef Hodek — Creator -->
-  <qualified_relation>
-    <relation>
+  <qualified_attribution>
+    <attributed_agent>
       <person>
         <identifier>
           <iri>https://orcid.org/0000-0003-4013-9819</iri>
           <value>0000-0003-4013-9819</value>
           <scheme>
             <iri>https://orcid.org/</iri>
-            <label xml:lang="">ORCID</label>
+            <label xml:lang="en">Open Research and Contributor ID</label>
+            <notation>ORCID</notation>
           </scheme>
         </identifier>
         <name>Hodek, Josef</name>
@@ -135,29 +141,31 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
             <value>00hzjtg80</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>26316919</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="en">Identification Number (IČO)</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>COMTES FHT</name>
         </affiliation>
       </person>
-    </relation>
+    </attributed_agent>
     <role>
       <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
       <label xml:lang="en">Creator</label>
       <label xml:lang="cs">Autor</label>
     </role>
-  </qualified_relation>
+  </qualified_attribution>
   <!-- 3) Matouš Uhlík — Creator -->
-  <qualified_relation>
-    <relation>
+  <qualified_attribution>
+    <attributed_agent>
       <person>
         <!-- JSON record for this creator doesnt contain ORCID identifier -->
         <name>Uhlík, Matouš</name>
@@ -169,36 +177,39 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
             <value>00hzjtg80</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>26316919</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="cs">Identifikační Číslo Osoby</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>COMTES FHT</name>
         </affiliation>
       </person>
-    </relation>
+    </attributed_agent>
     <role>
       <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
       <label xml:lang="en">Creator</label>
       <label xml:lang="cs">Autor</label>
     </role>
-  </qualified_relation>
+  </qualified_attribution>
   <!-- 4) Pavel Novák — Creator -->
-  <qualified_relation>
-    <relation>
+  <qualified_attribution>
+    <attributed_agent>
       <person>
         <identifier>
           <iri>https://orcid.org/0000-0001-9947-2566</iri>
           <value>0000-0001-9947-2566</value>
           <scheme>
             <iri>https://orcid.org/</iri>
-            <label xml:lang="">ORCID</label>
+            <label xml:lang="en">Open Research and Contributor ID</label>
+            <notation>ORCID</notation>
           </scheme>
         </identifier>
         <name>Novák, Pavel</name>
@@ -210,36 +221,39 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
             <value>05ggn0a85</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>60461373</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="cs">Identifikační Číslo Osoby</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>Vysoká škola chemicko-technologická v Praze</name>
         </affiliation>
       </person>
-    </relation>
+    </attributed_agent>
     <role>
       <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
       <label xml:lang="en">Creator</label>
       <label xml:lang="cs">Autor</label>
     </role>
-  </qualified_relation>
+  </qualified_attribution>
   <!-- 5) Jaromír Dlouhý — Creator -->
-  <qualified_relation>
-    <relation>
+  <qualified_attribution>
+    <attributed_agent>
       <person>
         <identifier>
           <iri>https://orcid.org/0000-0002-1241-6121</iri>
           <value>0000-0002-1241-6121</value>
           <scheme>
             <iri>https://orcid.org/</iri>
-            <label xml:lang="">ORCID</label>
+            <label xml:lang="en">Open Research and Contributor ID</label>
+            <notation>ORCID</notation>
           </scheme>
         </identifier>
         <name>Dlouhý, Jaromír</name>
@@ -251,36 +265,39 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
             <value>00hzjtg80</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>26316919</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="cs">Identifikační Číslo Osoby</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>COMTES FHT</name>
         </affiliation>
       </person>
-    </relation>
+    </attributed_agent>
     <role>
       <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
       <label xml:lang="en">Creator</label>
       <label xml:lang="cs">Autor</label>
     </role>
-  </qualified_relation>
+  </qualified_attribution>
   <!-- 6) Michal Brázda — Creator -->
-  <qualified_relation>
-    <relation>
+  <qualified_attribution>
+    <attributed_agent>
       <person>
         <identifier>
           <iri>https://orcid.org/0000-0002-4982-9114</iri>
           <value>0000-0002-4982-9114</value>
           <scheme>
             <iri>https://orcid.org/</iri>
-            <label xml:lang="">ORCID</label>
+            <label xml:lang="en">Open Research and Contributor ID</label>
+            <notation>ORCID</notation>
           </scheme>
         </identifier>
         <name>Brázda, Michal</name>
@@ -292,54 +309,58 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
             <value>00hzjtg80</value>
             <scheme>
               <iri>https://ror.org/</iri>
-              <label xml:lang="">ROR</label>
+              <label xml:lang="en">Research Organization Registry</label>
+              <notation>ROR</notation>
             </scheme>
           </identifier>
           <identifier>
             <value>26316919</value>
             <scheme>
               <iri>https://www.wikidata.org/entity/Q42302581</iri>
-              <label xml:lang="cs">IČO</label>
+              <label xml:lang="cs">Identifikační Číslo Osoby</label>
+              <notation>IČO</notation>
             </scheme>
           </identifier>
           <name>COMTES FHT</name>
         </affiliation>
       </person>
-    </relation>
+    </attributed_agent>
     <role>
       <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
       <label xml:lang="en">Creator</label>
       <label xml:lang="cs">Autor</label>
     </role>
-  </qualified_relation>
+  </qualified_attribution>
   <!-- Publisher (organization) -->
-  <qualified_relation>
-    <relation>
+  <qualified_attribution>
+    <attributed_agent>
       <organization>
           <identifier>
               <iri>https://ror.org/00hzjtg80</iri>
               <value>00hzjtg80</value>
               <scheme>
-                  <iri>https://ror.org/</iri>
-                  <label xml:lang="">ROR</label>
+                <iri>https://ror.org/</iri>
+                <label xml:lang="en">Research Organization Registry</label>
+                <notation>ROR</notation>
               </scheme>
           </identifier>
           <identifier>
               <value>26316919</value>
               <scheme>
-                  <iri>https://www.wikidata.org/entity/Q42302581</iri>
-                  <label xml:lang="cs">IČO</label>
+                <iri>https://www.wikidata.org/entity/Q42302581</iri>
+                <label xml:lang="cs">Identifikační Číslo Osoby</label>
+                <notation>IČO</notation>
               </scheme>
           </identifier>
         <name>COMTES FHT</name>
       </organization>
-    </relation>
+    </attributed_agent>
     <role>
       <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher</iri>
       <label xml:lang="en">Publisher</label>
       <label xml:lang="cs">Vydavatel</label>
     </role>
-  </qualified_relation>
+  </qualified_attribution>
   <!-- Year & Time references -->
   <publication_year>2025</publication_year>
   <!-- Date Issued is being inferred as in previous JSON to represent same as Date Available unless
@@ -351,8 +372,8 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
           </time_instant>
       </temporal_representation>
               <date_type>
-                  <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Issued</iri>
-                  <label xml:lang="en">Date Issued</label>
+                  <iri>https://w3id.org/tib/datacite/vocab/dateType/Issued</iri>
+                  <label xml:lang="en">Issued</label>
                   <label xml:lang="cs">Datum vydání</label>
               </date_type>
   </time_reference>
@@ -368,8 +389,8 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
           </time_interval>
       </temporal_representation>
       <date_type>
-        <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Created</iri>
-        <label xml:lang="en">Date Created</label>
+        <iri>https://w3id.org/tib/datacite/vocab/dateType/Created</iri>
+        <label xml:lang="en">Created</label>
         <label xml:lang="cs">Datum vytvoření</label>
       </date_type>
   </time_reference>
@@ -381,8 +402,8 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
           </time_instant>
       </temporal_representation>
               <date_type>
-                  <iri>https://vocabs.ccmm.cz/registry/codelist/TimeReference/Available</iri>
-                  <label xml:lang="en">Date Available</label>
+                  <iri>https://w3id.org/tib/datacite/vocab/dateType/Available</iri>
+                  <label xml:lang="en">Available</label>
                   <label xml:lang="cs">Datum zveřejnění</label>
               </date_type>
   </time_reference>
@@ -397,24 +418,17 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
       <iri>http://publications.europa.eu/resource/authority/language/ENG</iri>
       <label xml:lang="en">English</label>
   </primary_language>
-  <!-- Terms of use -->
-  <terms_of_use>
-    <access_rights>
-      <iri>http://purl.org/coar/access_right/c_abf2</iri>
-      <label xml:lang="en">open access</label>
-      <label xml:lang="cs">otevřený přístup</label>
-    </access_rights>
-    <license>
-      <iri>https://creativecommons.org/licenses/by/4.0/</iri>
-        <label xml:lang="en">Creative Commons Attribution 4.0 International License</label>
-        <label xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</label>
-    </license>
-  </terms_of_use>
+  <!-- Access Rights -->
+  <access_rights>
+    <iri>http://purl.org/coar/access_right/c_abf2</iri>
+    <label xml:lang="en">open access</label>
+    <label xml:lang="cs">otevřený přístup</label>
+  </access_rights>
   <!-- Subjects: Frascati SubjectCategory -->
   <subject>
     <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/20000/20500/20501</iri>
-    <title xml:lang="cs">Materiálové inženýrství</title>
-    <title xml:lang="en">Materials engineering</title>
+    <label xml:lang="cs">Materiálové inženýrství</label>
+    <label xml:lang="en">Materials engineering</label>
     <classification_code>20501</classification_code>
     <subject_scheme>
       <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/</iri>
@@ -424,29 +438,17 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
   </subject>
 
   <!-- Keywords (free terms) -->
-  <subject>
-    <title xml:lang="en">Super duplex stainless steel</title>
-  </subject>
-  <subject>
-    <title xml:lang="en">Microstructure</title>
-  </subject>
-  <subject>
-    <title xml:lang="en">Tensile properties</title>
-  </subject>
-  <subject>
-    <title xml:lang="en">Additive manufacturing</title>
-  </subject>
-  <subject>
-    <title xml:lang="en">Directed energy deposition</title>
-  </subject>
-  <subject>
-    <title xml:lang="en">Laser power</title>
-  </subject>
+  <keyword xml:lang="en">Super duplex stainless steel</keyword>
+  <keyword xml:lang="en">Microstructure</keyword>
+  <keyword xml:lang="en">Tensile properties</keyword>
+  <keyword xml:lang="en">Additive manufacturing</keyword>
+  <keyword xml:lang="en">Directed energy deposition</keyword>
+  <keyword xml:lang="en">Laser power</keyword>
   <!-- Descriptions -->
   <description>
     <description_text xml:lang="en">Industry applications of duplex stainless steels require a two-phase microstructure with a nearly balanced austenite-ferrite content to achieve good mechanical properties and good corrosion resistance. The most widespread additive manufacturing method such as laser powder bed fusion provides nearly fully ferritic microstructures due to the very high cooling rate, and the post-processing heat treatment must be performed. In contrast, other additive manufacturing methods, such as directed deposition methods, reach lower cooling rates and enable to obtain an equal ferrite–austenite ratio directly in the microstructure of the as-built state. In this work, the super duplex stainless steel SAF 2507 was deposited by directed energy deposition. The process parameters, namely, the laser power, laser beam spot, and powder feed rate, were varied to investigate the impact of the energy area density on the microstructure and tensile properties. A decrease in the energy area density caused an increase in the austenite content of 48 vol% and a numerical simulation of the sample temperature distribution inside the block during deposition, explaining the relationship between the amount of in situ formed austenite and the deposition parameters, was provided. Simultaneously, the deposition rate increased by more than five times. In contrast, the samples deposited at a higher building rate are characterized by greater porosity and lower elongation values in the vertical direction. The effect of the deposition parameters on the yield strength is low.</description_text>
     <description_type>
-      <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Abstract</iri>
+      <iri>https://w3id.org/tib/datacite/vocab/descriptionType/Abstract</iri>
       <label xml:lang="en">Abstract</label>
       <label xml:lang="cs">Abstrakt</label>
     </description_type>
@@ -454,7 +456,7 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
   <description>
     <description_text xml:lang="en">The data set is related to the investigation of the influence of deposition parameters on the microstructure, austenite formation, and tensile properties of SAF 2507 super duplex stainless steel fabricated using directed energy deposition (DED). The experiments were carried out at COMTES FHT (Czech Republic) using an INSSTEK MX-600 system equipped with a 2 kW Yttrium fiber laser. SAF 2507 powder (particle size 45–150 μm) was deposited under three different parameter sets, varying laser power, beam diameter, layer thickness, hatch distance, and powder feed rate, while maintaining constant scan speed. A zig-zag deposition strategy was applied under a protective argon atmosphere (5.0, 99.999%). For each parameter set, 20×20×20 mm cubes were built and used for analysis. Microstructure and phase composition were characterized using optical microscopy, scanning electron microscopy, EBSD analysis, X-ray diffraction. Tensile properties were evaluated using miniature tensile tests. Thermal simulations of the deposition process were carried out using Simufact Welding 2024.1 with the Advanced Thermal Cycle (ATC) method.</description_text>
     <description_type>
-      <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/Methods</iri>
+      <iri>https://w3id.org/tib/datacite/vocab/descriptionType/Methods</iri>
       <label xml:lang="en">Methods</label>
       <label xml:lang="cs">Metodologie</label>
     </description_type>
@@ -462,8 +464,8 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
   <description>
     <description_text xml:lang="en">The sets of experimental data were recorded on several instruments within COMTES FHT. In cases where possible (XRD, MTT, EBSD), the data are in xlsx format enabling any replotting.</description_text>
     <description_type>
-      <iri>https://vocabs.ccmm.cz/registry/codelist/DescriptionType/TechnicalInfo</iri>
-      <label xml:lang="en">Technical Info</label>
+      <iri>https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo</iri>
+      <label xml:lang="en">TechnicalInfo</label>
       <label xml:lang="cs">Technická informace</label>
     </description_type>
   </description>
@@ -479,7 +481,8 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
               <value>037n8p820</value>
           <scheme>
             <iri>https://ror.org/</iri>
-            <label xml:lang="">ROR</label>
+            <label xml:lang="en">Research Organization Registry</label>
+            <notation>ROR</notation>
           </scheme>
         </identifier>
         <identifier>
@@ -487,7 +490,8 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
           <value>10.13039/501100001823</value>
           <scheme>
             <iri>https://doi.org/</iri>
-            <label xml:lang="">DOI</label>
+            <label xml:lang="en">Digital Object Identifier</label>
+            <notation>DOI</notation>
           </scheme>
         </identifier>
         <name>Ministerstvo školství, mládeže a tělovýchovy</name>
@@ -503,91 +507,92 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
       <value>10.1007/s12540-025-01953-4</value>
       <scheme>
         <iri>https://doi.org/</iri>
-        <label xml:lang="">DOI</label>
+        <label xml:lang="en">Digital Object Identifier</label>
+        <notation>DOI</notation>
       </scheme>
     </identifier>
     <title>Influence of Deposition Parameters on the Building rate, In-Situ Formation of Austenite and Tensile Properties of SAF 2507 SDSS Fabricated by Directed Energy Deposition</title>
     <resource_url>https://doi.org/10.1007/s12540-025-01953-4</resource_url>
-    <qualified_relation>
-      <relation>
+    <qualified_attribution>
+      <attributed_agent>
         <person>
           <name>Salvetr, Pavel</name>
         </person>
-      </relation>
+      </attributed_agent>
       <role>
         <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
         <label xml:lang="en">Creator</label>
         <label xml:lang="cs">Autor</label>
       </role>
-    </qualified_relation>
-    <qualified_relation>
-      <relation>
+    </qualified_attribution>
+    <qualified_attribution>
+      <attributed_agent>
         <person>
           <name>Hodek, Josef</name>
         </person>
-      </relation>
+      </attributed_agent>
       <role>
         <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
         <label xml:lang="en">Creator</label>
         <label xml:lang="cs">Autor</label>
       </role>
-    </qualified_relation>
-    <qualified_relation>
-      <relation>
+    </qualified_attribution>
+    <qualified_attribution>
+      <attributed_agent>
         <person>
           <name>Uhlík, Matouš</name>
         </person>
-      </relation>
+      </attributed_agent>
       <role>
         <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
         <label xml:lang="en">Creator</label>
         <label xml:lang="cs">Autor</label>
       </role>
-    </qualified_relation>
-    <qualified_relation>
-      <relation>
+    </qualified_attribution>
+    <qualified_attribution>
+      <attributed_agent>
         <person>
           <name>Novák, Pavel</name>
         </person>
-      </relation>
+      </attributed_agent>
       <role>
         <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
         <label xml:lang="en">Creator</label>
         <label xml:lang="cs">Autor</label>
       </role>
-    </qualified_relation>
-    <qualified_relation>
-      <relation>
+    </qualified_attribution>
+    <qualified_attribution>
+      <attributed_agent>
         <person>
           <name>Dlouhý, Jaromír</name>
         </person>
-      </relation>
+      </attributed_agent>
       <role>
         <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
         <label xml:lang="en">Creator</label>
         <label xml:lang="cs">Autor</label>
       </role>
-    </qualified_relation>
-    <qualified_relation>
-      <relation>
+    </qualified_attribution>
+    <qualified_attribution>
+      <attributed_agent>
         <person>
           <name>Brázda, Michal</name>
         </person>
-      </relation>
+      </attributed_agent>
       <role>
         <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator</iri>
         <label xml:lang="en">Creator</label>
         <label xml:lang="cs">Autor</label>
       </role>
-    </qualified_relation>
+    </qualified_attribution>
     <resource_type>
       <iri>http://purl.org/coar/resource_type/c_6501</iri>
       <label xml:lang="en">journal article</label>
       <label xml:lang="cs">článek v odborném časopisu</label>
     </resource_type>
     <resource_relation_type>
-      <iri>https://vocabs.ccmm.cz/registry/codelist/RelationType/IsReferencedBy</iri>
-      <label xml:lang="en">is referenced by</label>
+      <iri>https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy</iri>
+      <label xml:lang="en">IsReferencedBy</label>
       <label xml:lang="cs">je na něj odkazováno z (čeho)</label>
     </resource_relation_type>
   </related_resource>
@@ -596,9 +601,7 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
     <distribution_downloadable_file>
       <iri>https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856/files/REPO.tar</iri>
       <title>REPO.tar</title>
-      <access_url>
-        <iri>https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856/files/</iri>
-      </access_url>
+      <access_url>https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856/files/</access_url>
       <download_url>
         <!-- Direct download link to the specific file -->
         <iri>https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856/files/REPO.tar</iri>
@@ -623,13 +626,20 @@ EN: Conversion JSON (dmq82-ed856) → CCMM XML
             exists (e.g., SHA-256), we can add checksum_value and algorithm, e.g. as shown:
             <checksum>
                 <checksum_value>…</checksum_value>
-                <algorithm>https://www.iana.org/go/rfc6920</algorithm>
+                <algorithm>https://spdx.org/rdf/terms/#d4e4247</algorithm>
             </checksum> -->
+      <rights>
+        <iri>https://vocabularies.coar-repositories.org/access_rights/c_abf2/</iri>
+        <label xml:lang="en">open access</label>
+      </rights>
+      <licence>
+        <iri>https://creativecommons.org/licenses/by/4.0/</iri>
+        <title xml:lang="en">Creative Commons Attribution 4.0 International License</title>
+        <title xml:lang="cs">Creative Commons Uveďte původ 4.0 Mezinárodní licence</title>
+      </licence>
     </distribution_downloadable_file>
   </distribution>
   <!-- "validation_result" is currently a placeholder for extensions; the model anticipates such
     extensions. Their placement is intended to keep validation passing, since the XSD accepts them -->
   <validation_result/>
-  <provenance/>
-  <!-- "provenance" is currently a placeholder for extensions -->
 </dataset>

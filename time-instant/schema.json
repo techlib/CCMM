@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/time-instant/schema.json",
+  "title": "Time instant",
+  "description": "A temporal entity with zero extent or duration.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "time_instant"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "time_instant"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "date_time"
+      ],
+      "properties": {
+        "date_time": {
+          "title": "Date and time",
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "date"
+      ],
+      "properties": {
+        "date": {
+          "title": "Date",
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  ]
+}

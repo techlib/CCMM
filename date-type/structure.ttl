@@ -8,7 +8,7 @@
     kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/date-type/class-1747684797448-9d6c-a945-a0af\",\"https://model.ccmm.cz/research-data/date-type/attribute-1747684814692-fa05-be26-858d\"]";
     kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/date-type/class-1747684797448-9d6c-a945-a0af\"]";
     kv:dataPsmTechnicalLabel "null";
-    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
     kv:iri "\"https://model.ccmm.cz/research-data/date-type/\"";
     kv:jsonEnforceContext "\"no\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
@@ -24,7 +24,7 @@
     kv:iri "\"https://model.ccmm.cz/research-data/date-type/class-1747684797448-9d6c-a945-a0af\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
 :attribute-1747684814692-fa05-be26-858d a dsvs:structure-entity;
-    kv:dataPsmDatatype "\"http://www.w3.org/1999/02/22-rdf-syntax-ns#langString\"";
+    kv:dataPsmDatatype "\"https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text\"";
     kv:dataPsmHumanDescription "null";
     kv:dataPsmHumanLabel "null";
     kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/DateType.label\"";

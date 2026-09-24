@@ -1,0 +1,80 @@
+{
+  "@context": {
+    "@context": {
+      "@version": 1.1,
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "id": "@id",
+      "type": "@type",
+      "data_box": {
+        "@id": "https://model.ccmm.cz/vocabulary/ccmm#dataBox",
+        "@type": "xsd:string"
+      },
+      "email": {
+        "@id": "https://model.ccmm.cz/vocabulary/ccmm#email",
+        "@type": "xsd:string"
+      },
+      "phone": {
+        "@id": "https://model.ccmm.cz/vocabulary/ccmm#phone",
+        "@type": "xsd:string"
+      },
+      "address": {
+        "@id": "http://www.w3.org/2006/vcard/ns#hasAddress",
+        "@container": "@set",
+        "@context": {
+          "label": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+          },
+          "full_address": {
+            "@id": "http://www.w3.org/ns/locn#fullAddress",
+            "@type": "xsd:string"
+          },
+          "po_box": {
+            "@id": "http://www.w3.org/ns/locn#poBox",
+            "@type": "xsd:string"
+          },
+          "thoroughfare": {
+            "@id": "http://www.w3.org/ns/locn#thoroughfare",
+            "@type": "xsd:string"
+          },
+          "locator_designator": {
+            "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+            "@type": "xsd:string"
+          },
+          "locator_name": {
+            "@id": "http://www.w3.org/ns/locn#locatorName",
+            "@type": "xsd:string"
+          },
+          "address_area": {
+            "@id": "http://www.w3.org/ns/locn#addressArea",
+            "@type": "xsd:string"
+          },
+          "post_name": {
+            "@id": "http://www.w3.org/ns/locn#postName",
+            "@type": "xsd:string"
+          },
+          "administrative_unit_level_1": {
+            "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+            "@type": "xsd:string"
+          },
+          "administrative_unit_level_2": {
+            "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+            "@type": "xsd:string"
+          },
+          "post_code": {
+            "@id": "http://www.w3.org/ns/locn#postCode",
+            "@type": "xsd:string"
+          },
+          "address": {
+            "@id": "http://www.w3.org/ns/locn#Address",
+            "@context": {}
+          }
+        }
+      },
+      "contact_details": {
+        "@id": "http://www.w3.org/2006/vcard/ns#Kind",
+        "@context": {}
+      }
+    }
+  }
+}

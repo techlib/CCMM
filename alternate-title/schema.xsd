@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
   <xs:include schemaLocation="../alternate-title-type/schema.xsd"/>
   <xs:complexType name="alternate_title" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#AlternateTitle">
@@ -10,16 +10,17 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element maxOccurs="unbounded" name="title" sawsdl:modelReference="http://purl.org/dc/terms/title">
+      <xs:element maxOccurs="unbounded" name="title" sawsdl:modelReference="http://purl.org/dc/terms/alternative">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            title - A human-readable name for the subject.
+            title - An alternative name for the resource.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>
           <xs:simpleContent>
             <xs:extension base="xs:string">
               <xs:attribute ref="xml:lang" use="required"/>
+              <xs:assert test="@xml:lang != ''"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
@@ -28,7 +29,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has alternate title type - Type of the alternate name relation.
-            References to the value from https://vocabs.ccmm.cz/registry/codelist/AlternateTitle/.
+            References to the value from the code list https://w3id.org/tib/datacite/vocab/titleType.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:include schemaLocation="../organization/schema.xsd"/>
+  <xs:include schemaLocation="../person/schema.xsd"/>
+  <xs:include schemaLocation="../attributed-agent-role-type/schema.xsd"/>
+  <xs:complexType name="resource_attribution" sawsdl:modelReference="http://www.w3.org/ns/prov#Attribution">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Resource attribution - Attribution is the ascribing of a Resource to an agent. It defines the responsibility of an agent to the resource in a given role.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
+      <xs:element name="attributed_agent" sawsdl:modelReference="http://www.w3.org/ns/prov#agent">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has attributed agent - The agent attributed to the resource.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/prov#agent">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+              has attributed agent - The agent attributed to the resource.
+            </xs:documentation>
+          </xs:annotation>
+          <xs:choice>
+            <xs:element name="organization" type="ccmm:organization"/>
+            <xs:element name="person" type="ccmm:person"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="role" type="ccmm:attributed_agent_role_type" sawsdl:modelReference="http://www.w3.org/ns/dcat#hadRole">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            sehraná role
+          </xs:documentation>
+          <xs:documentation xml:lang="da">
+            havde rolle
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            had role
+            May be used in a qualified-attribution to specify the role of an Agent with respect to an Resource. It is recommended that the value be taken from a controlled vocabulary of agent roles.
+          </xs:documentation>
+          <xs:documentation xml:lang="it">
+            tiene rol
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="resource_attribution" type="ccmm:resource_attribution"/>
+</xs:schema>

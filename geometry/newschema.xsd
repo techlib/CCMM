@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:gml="http://www.opengis.net/gml/3.2">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <xs:complexType name="geometry" sawsdl:modelReference="http://www.w3.org/ns/locn#Geometry">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                The Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed using coordinates in some coordinate reference system.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        label - Label of geometry object.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute ref="xml:lang" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="gml" type="gml:GeometryPropertyType" sawsdl:modelReference="http://www.opengis.net/ont/geosparql#asGML">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        geography markup language literal - Representation of geometry object as GML Literal.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="wkt" sawsdl:modelReference="http://www.opengis.net/ont/geosparql#asWKT">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">
+                        well known text literal - Representation of geometry object as WKT Literal.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="srsName" type="xs:anyURI"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="geometry" type="ccmm:geometry"/>
+</xs:schema>

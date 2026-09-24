@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../identifier-scheme/schema.xsd"/>
   <xs:complexType name="identifier" sawsdl:modelReference="http://www.w3.org/ns/adms#Identifier">
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Identifier - Unique and resolvable identifier containing the notation and identifier scheme in the form of URI.
+        An identifier in a particular context, consisting of the content string that is the identifier and the context in a form of base IRI.
+        - an optional identifier for the identifier scheme;
+        - an optional identifier for the version of the identifier scheme;
+        - an optional identifier for the agency that manages the identifier scheme.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -12,7 +16,7 @@
       <xs:element name="value" type="xs:string" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#notation">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            value - Value of the identifer within the given identifier scheme.
+            value - Value of the identifier within the given identifier scheme.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

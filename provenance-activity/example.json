@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "@context": {
+      "@version": 1.1,
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "id": "@id",
+      "type": "@type",
+      "label": {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      },
+      "common_provenance_model_json_representation": {
+        "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasCPMJsonRepresentation",
+        "@type": "@id",
+        "@container": "@set"
+      },
+      "ro-crate_json_representation": {
+        "@id": "https://model.ccmm.cz/vocabulary/ccmm#hasRo-crateJsonRepresentation",
+        "@type": "@id",
+        "@container": "@set"
+      },
+      "provenance_activity": {
+        "@id": "http://www.w3.org/ns/prov#Activity",
+        "@context": {}
+      }
+    }
+  }
+}

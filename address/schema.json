@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/address/schema.json",
+  "title": "Address",
+  "description": "A spatial object that in a human-readable way identifies a fixed location. ",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "address"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "address"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "label": {
+      "title": "label",
+      "description": "Address label",
+      "type": "array",
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "full_address": {
+      "title": "full address",
+      "description": "The complete address written as a string.",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    },
+    "po_box": {
+      "title": "post office box",
+      "description": "A location designator for a postal delivery point at a post office, usually a number.",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    },
+    "thoroughfare": {
+      "title": "thoroughfare",
+      "description": "The name of a passage or way through from one location to another.",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    },
+    "locator_designator": {
+      "title": "locator designator",
+      "description": "A number or sequence of characters that uniquely identifies the locator within the relevant scope.",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    },
+    "locator_name": {
+      "title": "locator name",
+      "description": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    },
+    "address_area": {
+      "title": "address area",
+      "description": "The name of a geographic area that groups Addresses.",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    },
+    "post_name": {
+      "title": "post name",
+      "description": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. ",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    },
+    "administrative_unit_level_1": {
+      "title": "administrative unit level 1",
+      "description": "The name of the uppermost level of the address, almost always a country.",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    },
+    "administrative_unit_level_2": {
+      "title": "administrative unit level 2",
+      "description": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    },
+    "post_code": {
+      "title": "post code",
+      "description": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.",
+      "type": "array",
+      "items": {
+        "title": "String",
+        "type": "string"
+      }
+    }
+  }
+}

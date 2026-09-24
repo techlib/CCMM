@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:c="https://schemas.dataspecer.com/xsd/core/" xmlns:ns0="http://www.w3.org/2006/time#" xmlns:ns1="https://model.ccmm.cz/vocabulary/ccmm#" xmlns:ns2="https://w3id.org/tib/datacite/property/">
+  <xsl:import href="../time-interval/lifting.xslt"/>
+  <xsl:import href="../time-instant/lifting.xslt"/>
+  <xsl:import href="../date-type/lifting.xslt"/>
+  <xsl:output method="xml" version="1.0" encoding="utf-8" media-type="application/rdf+xml" indent="yes"/>
+  <xsl:template match="/ccmm:time_reference">
+    <rdf:RDF>
+      <xsl:variable name="result" as="element()*">
+        <xsl:call-template name="_https_003a_002f_002fofn.gov.cz_002fclass_002f1762083331490-ea8b-4a3a-bd65"/>
+      </xsl:variable>
+      <xsl:for-each select="$result">
+        <xsl:copy>
+          <xsl:call-template name="remove-top"/>
+        </xsl:copy>
+      </xsl:for-each>
+      <xsl:for-each select="$result//top-level/node()">
+        <xsl:copy>
+          <xsl:call-template name="remove-top"/>
+        </xsl:copy>
+      </xsl:for-each>
+    </rdf:RDF>
+  </xsl:template>
+  <xsl:template match="@xml:lang">
+    <xsl:copy-of select="."/>
+  </xsl:template>
+  <xsl:template name="remove-top">
+    <xsl:for-each select="@*">
+      <xsl:copy/>
+    </xsl:for-each>
+    <xsl:for-each select="node()[not(. instance of element(top-level))]">
+      <xsl:copy>
+        <xsl:call-template name="remove-top"/>
+      </xsl:copy>
+    </xsl:for-each>
+  </xsl:template>
+  <xsl:template name="_https_003a_002f_002fofn.gov.cz_002fclass_002f1762083331490-ea8b-4a3a-bd65">
+    <xsl:param name="arc" select="()"/>
+    <xsl:param name="no_iri" select="false()"/>
+    <rdf:Description>
+      <xsl:apply-templates select="@*"/>
+      <xsl:variable name="id">
+        <id>
+          <xsl:choose>
+            <xsl:when test="ccmm:iri and not($no_iri)">
+              <xsl:attribute name="rdf:about">
+                <xsl:value-of select="ccmm:iri"/>
+              </xsl:attribute>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:attribute name="rdf:nodeID">
+                <xsl:value-of select="generate-id()"/>
+              </xsl:attribute>
+            </xsl:otherwise>
+          </xsl:choose>
+        </id>
+      </xsl:variable>
+      <xsl:copy-of select="$id//@*"/>
+      <rdf:type rdf:resource="https://model.ccmm.cz/vocabulary/ccmm#TimeReference"/>
+      <xsl:copy-of select="$arc"/>
+      <xsl:for-each select="ccmm:temporal_representation">
+        <ns0:hasTime>
+          <xsl:variable name="type" select="resolve-QName(@xsi:type,.)"/>
+          <xsl:variable name="types" as="element()*">
+            <ccmm:time_interval/>
+            <ccmm:time_instant/>
+          </xsl:variable>
+          <xsl:choose>
+            <xsl:when test="$type=node-name($types[1])">
+              <xsl:call-template name="_https_003a_002f_002fofn.gov.cz_002fclass_002f1750713556573-db1c-483c-bcb7"/>
+            </xsl:when>
+            <xsl:when test="*[node-name(.) = node-name($types[1])]">
+              <xsl:for-each select="*[node-name(.) = node-name($types[1])]">
+                <xsl:call-template name="_https_003a_002f_002fofn.gov.cz_002fclass_002f1750713556573-db1c-483c-bcb7"/>
+              </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="$type=node-name($types[2])">
+              <xsl:call-template name="_https_003a_002f_002fofn.gov.cz_002fclass_002f1750713474658-dd87-9fe9-a4ab"/>
+            </xsl:when>
+            <xsl:when test="*[node-name(.) = node-name($types[2])]">
+              <xsl:for-each select="*[node-name(.) = node-name($types[2])]">
+                <xsl:call-template name="_https_003a_002f_002fofn.gov.cz_002fclass_002f1750713474658-dd87-9fe9-a4ab"/>
+              </xsl:for-each>
+            </xsl:when>
+          </xsl:choose>
+        </ns0:hasTime>
+      </xsl:for-each>
+      <xsl:for-each select="ccmm:date_type">
+        <ns1:hasType>
+          <xsl:call-template name="_https_003a_002f_002fofn.gov.cz_002fclass_002f1747684797448-9d6c-a945-a0af"/>
+        </ns1:hasType>
+      </xsl:for-each>
+      <xsl:for-each select="ccmm:date_information">
+        <ns2:dateInformation>
+          <xsl:apply-templates select="@*"/>
+          <xsl:value-of select="."/>
+        </ns2:dateInformation>
+      </xsl:for-each>
+    </rdf:Description>
+  </xsl:template>
+  <xsl:template match="@*|*"/>
+</xsl:stylesheet>

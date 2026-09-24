@@ -1,0 +1,7 @@
+# Ignore all .bak files anywhere in the repository
+*.bak
+
+# Ignore common variations or temporary backup extensions (Optional but recommended)
+*.bak.*
+*~
+*.tmp

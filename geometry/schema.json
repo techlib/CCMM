@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/geometry/schema.json",
+  "title": "Geometry",
+  "description": "The Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed using coordinates in some coordinate reference system.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "geometry"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "geometry"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "label": {
+      "title": "label",
+      "description": "Label of geometry object.",
+      "type": "array",
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gml": {
+      "title": "geography markup language literal",
+      "description": "Representation of geometry object as GML Literal.",
+      "type": "string"
+    },
+    "wkt": {
+      "title": "well known text literal",
+      "description": "Representation of geometry object as WKT Literal.",
+      "type": "string"
+    }
+  }
+}

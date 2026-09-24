@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/identifier/schema.json",
+  "title": "Identifier",
+  "description": "Unique and resolvable identifier containing the notation and identifier scheme in the form of URI.",
+  "type": "object",
+  "required": [
+    "value",
+    "scheme"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "identifier"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "identifier"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "value": {
+      "title": "value",
+      "description": "Value of the identifier within the given identifier scheme.",
+      "type": "string"
+    },
+    "scheme": {
+      "title": "in scheme",
+      "description": "Relation between the identifier and scheme in which it is defined and unique.",
+      "type": "object",
+      "properties": {
+        "label": {
+          "title": "label",
+          "description": "Identifier scheme label.",
+          "type": "array",
+          "items": {
+            "title": "Language tagged string",
+            "type": "object",
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "properties": {
+              "@value": {
+                "title": "Text v daném jazyce",
+                "type": "string"
+              },
+              "@language": {
+                "title": "Jazyk textu",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "notation": {
+          "title": "notation",
+          "description": "Notation of the identifier scheme.",
+          "type": "array",
+          "items": {
+            "title": "String",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "authorized": {
+      "title": "authorized",
+      "description": "Specifies whether the identifier is authorized by the subject it represents.",
+      "type": "boolean"
+    }
+  }
+}

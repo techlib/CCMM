@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/time-reference/schema.json",
+  "title": "Time reference",
+  "description": "An object representing time reference relevant to some event related to the resource has happened.",
+  "type": "object",
+  "required": [
+    "temporal_representation",
+    "date_type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "time_reference"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "time_reference"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "temporal_representation": {
+      "title": "has temporal representation",
+      "anyOf": [
+        {
+          "title": "Time interval",
+          "description": "A temporal entity with an extent or duration",
+          "type": "object",
+          "required": [
+            "beginning",
+            "end"
+          ],
+          "properties": {
+            "beginning": {
+              "title": "has beginning",
+              "description": "Time instant representing the beginning of a temporal interval.",
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "object",
+                  "required": [
+                    "date_time"
+                  ],
+                  "properties": {
+                    "date_time": {
+                      "title": "Date and time",
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "required": [
+                    "date"
+                  ],
+                  "properties": {
+                    "date": {
+                      "title": "Date",
+                      "type": "string",
+                      "format": "date"
+                    }
+                  }
+                }
+              ]
+            },
+            "end": {
+              "title": "has end",
+              "description": "Time instant representing the end of a temporal interval.",
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "object",
+                  "required": [
+                    "date_time"
+                  ],
+                  "properties": {
+                    "date_time": {
+                      "title": "Date and time",
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "required": [
+                    "date"
+                  ],
+                  "properties": {
+                    "date": {
+                      "title": "Date",
+                      "type": "string",
+                      "format": "date"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Time instant",
+          "description": "A temporal entity with zero extent or duration.",
+          "type": "object",
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "date_time"
+              ],
+              "properties": {
+                "date_time": {
+                  "title": "Date and time",
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "date"
+              ],
+              "properties": {
+                "date": {
+                  "title": "Date",
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "date_type": {
+      "title": "has date type",
+      "description": "Reference to the codelist of date types.",
+      "type": "object",
+      "required": [
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "title": "label",
+          "description": "Date type label.",
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "date_information": {
+      "title": "date information",
+      "description": "Additional information to the date in text form.",
+      "type": "object",
+      "additionalProperties": {
+        "title": "Hodnota v jiném jazyce",
+        "type": "string"
+      },
+      "properties": {
+        "cs": {
+          "title": "Hodnota v českém jazyce",
+          "type": "string"
+        },
+        "en": {
+          "title": "Hodnota v anglickém jazyce",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

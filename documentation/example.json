@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@context": {
+      "@version": 1.1,
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "id": "@id",
+      "type": "@type",
+      "label": {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      },
+      "documentation": {
+        "@id": "http://xmlns.com/foaf/0.1/Document",
+        "@context": {}
+      }
+    }
+  },
+  "id": "https://example.com/resource/resource"
+}

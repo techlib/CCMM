@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../identifier/schema.xsd"/>
   <xs:include schemaLocation="../alternate-title/schema.xsd"/>
-  <xs:include schemaLocation="../resource-to-agent-relationship/schema.xsd"/>
+  <xs:include schemaLocation="../resource-attribution/schema.xsd"/>
   <xs:include schemaLocation="../time-reference/schema.xsd"/>
   <xs:include schemaLocation="../resource-type/schema.xsd"/>
   <xs:include schemaLocation="../resource-relation-type/schema.xsd"/>
   <xs:complexType name="related_resource" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#Resource">
     <xs:annotation>
       <xs:documentation xml:lang="en">
-        Related resource - Resource represents any resource, physical or digital, that is related to the described dataset. 
-        Class is used for description of the resource together with the type of relation, for which is used value from codelist https://vocabs.ccmm.cz/registry/codelist/RelationType/. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Use qualified resource property to link to the dataset class. 
-        Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc...
+        Related resource - Resource represents any resource, physical or digital, that is related to the described dataset.
+        Class is used for description of the resource together with the type of relation, for which is used value from code list https://w3id.org/tib/datacite/vocab/relationType. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="identifier" type="ccmm:identifier" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasIdentifier">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="identifier" type="ccmm:identifier" sawsdl:modelReference="http://www.w3.org/ns/adms#identifier">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            has identifier - has identifier
+            has identifier - A secondary identifier of the Dataset
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -33,7 +32,7 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="alternate_title" type="ccmm:alternate_title" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasAlternateTitle">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            has alternate title
+            has alternate title - References to the alternate title of the resource.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -45,11 +44,12 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="qualified_relation" type="ccmm:resource_to_agent_relationship" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#qualifiedRelation">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="qualified_attribution" type="ccmm:resource_attribution" sawsdl:modelReference="http://www.w3.org/ns/prov#qualifiedAttribution">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            qualified relation
-            Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship.
+            qualified attribution - An Agent having some form of responsibility for the resource. 
+            Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship. 
+            If the resource is Dataset, it has to have at least one qualified attribution relation with the role Creator, also, it is recommended to have other qualified relation to the organization with the role Publisher.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -72,7 +72,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has resource relation type - Relation to the relation type between dataset and resource.
-            Use value from https://vocabs.ccmm.cz/registry/codelist/RelationType/.
+            Use value from the code list https://w3id.org/tib/datacite/vocab/relationType.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

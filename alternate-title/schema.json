@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/alternate-title/schema.json",
+  "title": "Alternate title",
+  "description": "Alternate title of the resource.",
+  "type": "object",
+  "required": [
+    "title"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "alternate_title"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "alternate_title"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "title": {
+      "title": "title",
+      "description": "An alternative name for the resource.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "alternate_title_type": {
+      "title": "has alternate title type",
+      "description": "Type of the alternate name relation.",
+      "type": "object",
+      "required": [
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "title": "label",
+          "description": "Alternate title type label.",
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
+              "type": "string"
+            },
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

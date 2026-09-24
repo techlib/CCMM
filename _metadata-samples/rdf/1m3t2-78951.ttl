@@ -1,0 +1,461 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns0: <https://model.ccmm.cz/vocabulary/ccmm#> .
+@prefix ns1: <http://www.w3.org/ns/adms#> .
+@prefix ns2: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns5: <https://w3id.org/tib/datacite/property/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://publications.europa.eu/resource/authority/file-type/TXT> a dcterms:MediaTypeOrExtent ;
+    skos:prefLabel "Plain text"@en .
+
+<http://publications.europa.eu/resource/authority/language/CES> a dcterms:LinguisticSystem ;
+    skos:prefLabel "čeština"@cs .
+
+<http://purl.org/coar/access_right/c_abf2> a dcterms:RightsStatement ;
+    skos:prefLabel "otevřený přístup"@cs,
+        "open access"@en .
+
+<http://purl.org/coar/resource_type/c_ddb1> a skos:Concept ;
+    skos:prefLabel "datová sada"@cs,
+        "dataset"@en .
+
+<http://www.iana.org/assignments/media-types/text/plain> a dcterms:MediaType ;
+    skos:prefLabel "text/plain"@en .
+
+<https://data.narodni-repozitar.cz/schemas/nr_datasets/nr-datasets-v1.0.0.json> a dcterms:Standard ;
+    rdfs:label "NR Datasets JSON Schema v1.0.0"@en .
+
+<https://datarepo.eosc.cz> a dcat:Catalog ;
+    dcterms:description "The Data Catch-all Repository is a general-purpose repository for research data for which no more suitable disciplinary, institutional, or community repository is available."@en ;
+    dcterms:title "Catch-all"@en ;
+    prov:qualifiedAttribution [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
+            prov:agent [ a org:Organization ;
+                    foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] .
+
+<https://datarepo.eosc.cz/datasets/records/datst.1m3t2-78951> a dcat:CatalogRecord ;
+    dcterms:conformsTo <https://data.narodni-repozitar.cz/schemas/nr_datasets/nr-datasets-v1.0.0.json>,
+        <https://model.ccmm.cz/research-data/2.0.0> ;
+    dcterms:created "2025-04-03"^^xsd:date ;
+    dcterms:language <http://publications.europa.eu/resource/authority/language/CES>,
+        <http://publications.europa.eu/resource/authority/language/ENG> ;
+    dcterms:modified "2025-09-28"^^xsd:date ;
+    prov:qualifiedAttribution [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager> ;
+            prov:agent [ a prov:Person ;
+                    ns2:family-name ":unkn" ;
+                    ns2:given-name ":unkn" ;
+                    foaf:name ":unkn" ] ] ;
+    ns0:originalRepository <https://datarepo.eosc.cz> .
+
+<https://doi.org/> a ns0:IdentifierScheme ;
+    rdfs:label "Digital Object Identifier"@en ;
+    skos:notation "DOI" .
+
+<https://doi.org/10.48700/datst.1m3t2-78951> a ns1:Identifier,
+        dcat:Dataset ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    dcterms:title "Data set žádosti o grant Grantové agentury České republiky" ;
+    dcterms:type <http://purl.org/coar/resource_type/c_ddb1> ;
+    skos:notation "10.48700/datst.1m3t2-78951" ;
+    ns1:identifier <https://doi.org/10.48700/datst.1m3t2-78951> ;
+    dcat:distribution <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/CebecauerTkadlec_GACR2026_MindMap.pdf>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/ReadMe.txt>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_DNAchannel.tif>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_Merge_5um.tif>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_processedSMLM.tif>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_DNAchannel.tif>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_Merge_5um.tif>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_processedSMLM.tif>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_DNAchannel.tif>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_Merge_5um.tif>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_processedSMLM.tif>,
+        <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supplementary_Figures.pdf> ;
+    dcat:keyword "NETy"@cs,
+        "NETóza"@cs,
+        "lidské neutrofily"@cs,
+        "mikroskopie"@cs,
+        "NETosis"@en,
+        "NETs"@en,
+        "human neutrophils"@en,
+        "microscopy"@en ;
+    prov:qualifiedAttribution [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns1:identifier <https://orcid.org/0000-0003-1662-9092> ;
+                    foaf:name "González Navarro, José Alfredo" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "61388955" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/02sat5y74> ;
+                            foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns1:identifier <https://orcid.org/0009-0003-1158-1138> ;
+                    foaf:name "Paldusová, Kateřina" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "61388955" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/02sat5y74> ;
+                            foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
+            prov:agent [ a org:Organization ;
+                    ns1:identifier [ a ns1:Identifier ;
+                            skos:notation "61388955" ;
+                            ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                        <https://ror.org/02sat5y74> ;
+                    foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns1:identifier <https://orcid.org/0009-0008-0140-2075> ;
+                    foaf:name "Echezarreta Mendicute, Irene" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "61388955" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/02sat5y74> ;
+                            foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns1:identifier <https://orcid.org/0000-0002-4606-1218> ;
+                    foaf:name "Cebecauer, Marek" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "61388955" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/02sat5y74> ;
+                            foaf:name "Ústav fyzikální chemie J. Heyrovského AV ČR" ] ] ] ;
+    ns0:hasAlternateTitle [ a ns0:AlternateTitle ;
+            dcterms:alternative "The Czech Science Foundation Grant Application Data Set"@en ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle> ] ;
+    ns0:hasPrimaryLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    ns0:hasTimeReference [ a ns0:TimeReference ;
+            time:hasTime [ a time:Instant ;
+                    time:inXSDDate "2025-04-03"^^xsd:date ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Issued> ],
+        [ a ns0:TimeReference ;
+            time:hasTime [ a time:Interval ;
+                    time:hasBeginning [ a time:Instant ;
+                            time:inXSDDate "2025-04-02"^^xsd:date ] ;
+                    time:hasEnd [ a time:Instant ;
+                            time:inXSDDate "2025-04-03"^^xsd:date ] ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Created> ],
+        [ a ns0:TimeReference ;
+            time:hasTime [ a time:Instant ;
+                    time:inXSDDate "2025-04-03"^^xsd:date ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Available> ],
+        [ a ns0:TimeReference ;
+            time:hasTime [ a time:Interval ;
+                    time:hasBeginning [ a time:Instant ;
+                            time:inXSDDate "2025-01-01"^^xsd:date ] ;
+                    time:hasEnd [ a time:Instant ;
+                            time:inXSDDate "2025-04-03"^^xsd:date ] ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Collected> ] ;
+    ns0:hasValidationResult [ a ns0:ValidationResult ] ;
+    ns0:inScheme <https://doi.org/> ;
+    ns0:isDescribedBy <https://datarepo.eosc.cz/datasets/records/datst.1m3t2-78951> ;
+    ns5:description [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Isolation of neutrophils from human blood samples, neutrophil stimulation with NETosis-inducing agents, microscopy data acquisition"@en ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Methods> ],
+        [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Data supporting the structure of neutrophil extracellular traps generated from human neutrophils"@en ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> ],
+        [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Izolace neutrofilů ze vzorků lidské krve, stimulace neutrofilů pomocí agens indukujících NETózu, akvizice mikroskopických dat"@cs ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Methods> ],
+        [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Supplementary microscopy data"@en ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> ],
+        [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Data podporující strukturu neutrofilových extracelulárních pastí pocházejících z lidských neutrofilů"@cs ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> ],
+        [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Doplňující mikroskopická data"@cs ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> ] ;
+    ns5:publicationYear "2025"^^xsd:gYear ;
+    ns5:subject <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10601>,
+        <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10606>,
+        <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30100/30102> .
+
+<https://model.ccmm.cz/research-data/2.0.0> a dcterms:Standard ;
+    rdfs:label "Czech Core Metadata Model for Research Data 2.0.0"@en .
+
+<https://orcid.org/0000-0002-4606-1218> a ns1:Identifier ;
+    skos:notation "0000-0002-4606-1218" ;
+    ns0:inScheme <https://orcid.org/> .
+
+<https://orcid.org/0000-0003-1662-9092> a ns1:Identifier ;
+    skos:notation "0000-0003-1662-9092" ;
+    ns0:inScheme <https://orcid.org/> .
+
+<https://orcid.org/0009-0003-1158-1138> a ns1:Identifier ;
+    skos:notation "0009-0003-1158-1138" ;
+    ns0:inScheme <https://orcid.org/> .
+
+<https://orcid.org/0009-0008-0140-2075> a ns1:Identifier ;
+    skos:notation "0009-0008-0140-2075" ;
+    ns0:inScheme <https://orcid.org/> .
+
+<https://ror.org/> a ns0:IdentifierScheme ;
+    rdfs:label "Research Organization Registry"@en ;
+    skos:notation "ROR" .
+
+<https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager> a dcat:Role ;
+    skos:prefLabel "Manažer dat"@cs,
+        "Data manager"@en .
+
+<https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10601> a <https://w3id.org/tib/datacite/class/Subject> ;
+    skos:prefLabel "Buněčná biologie"@cs,
+        "Cell biology"@en ;
+    ns0:inSubjectScheme <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> ;
+    ns5:classificationCode "10601" .
+
+<https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10606> a <https://w3id.org/tib/datacite/class/Subject> ;
+    skos:prefLabel "Mikrobiologie"@cs,
+        "Mikrobiologie "@cs,
+        "Biological sciences"@en,
+        "Microbiology"@en ;
+    ns0:inSubjectScheme <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> ;
+    ns5:classificationCode "10606" .
+
+<https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30100/30102> a <https://w3id.org/tib/datacite/class/Subject> ;
+    skos:prefLabel "Imunologie"@cs,
+        "Immunology"@en ;
+    ns0:inSubjectScheme <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> ;
+    ns5:classificationCode "30102" .
+
+<https://w3id.org/tib/datacite/vocab/dateType/Available> a skos:Concept ;
+    skos:prefLabel "Datum zveřejnění"@cs,
+        "Available"@en .
+
+<https://w3id.org/tib/datacite/vocab/dateType/Collected> a skos:Concept ;
+    skos:prefLabel "Datum sběru"@cs,
+        "Collected"@en .
+
+<https://w3id.org/tib/datacite/vocab/dateType/Created> a skos:Concept ;
+    skos:prefLabel "Datum vytvoření"@cs,
+        "Created"@en .
+
+<https://w3id.org/tib/datacite/vocab/dateType/Issued> a skos:Concept ;
+    skos:prefLabel "Datum vydání"@cs,
+        "Issued"@en .
+
+<https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle> a skos:Concept ;
+    skos:prefLabel "Přeložený název"@cs,
+        "TranslatedTitle"@en .
+
+<http://publications.europa.eu/resource/authority/file-type/PDF> a dcterms:MediaTypeOrExtent ;
+    skos:prefLabel "PDF"@en .
+
+<http://publications.europa.eu/resource/authority/language/ENG> a dcterms:LinguisticSystem ;
+    skos:prefLabel "English"@en .
+
+<http://www.iana.org/assignments/media-types/application/pdf> a dcterms:MediaType ;
+    skos:prefLabel "application/pdf"@en .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/CebecauerTkadlec_GACR2026_MindMap.pdf> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "CebecauerTkadlec_GACR2026_MindMap.pdf"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "CebecauerTkadlec_GACR2026_MindMap.pdf" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 67587 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/CebecauerTkadlec_GACR2026_MindMap.pdf> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/application/pdf> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/ReadMe.txt> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "ReadMe.txt"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TXT> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "ReadMe.txt" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 3889 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/ReadMe.txt> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/text/plain> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_DNAchannel.tif> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "Supp_Fig2A_NE_DNAchannel.tif"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "Supp_Fig2A_NE_DNAchannel.tif" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 1049028 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_DNAchannel.tif> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/image/tiff> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_Merge_5um.tif> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "Supp_Fig2A_NE_Merge_5um.tif"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "Supp_Fig2A_NE_Merge_5um.tif" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 786842 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_Merge_5um.tif> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/image/tiff> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_processedSMLM.tif> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "Supp_Fig2A_NE_processedSMLM.tif"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "Supp_Fig2A_NE_processedSMLM.tif" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 26112432 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2A_NE_processedSMLM.tif> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/image/tiff> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_DNAchannel.tif> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "Supp_Fig2B_citH3_DNAchannel.tif"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "Supp_Fig2B_citH3_DNAchannel.tif" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 1049028 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_DNAchannel.tif> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/image/tiff> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_Merge_5um.tif> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "Supp_Fig2B_citH3_Merge_5um.tif"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "Supp_Fig2B_citH3_Merge_5um.tif" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 786842 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_Merge_5um.tif> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/image/tiff> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_processedSMLM.tif> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "Supp_Fig2B_citH3_processedSMLM.tif"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "Supp_Fig2B_citH3_processedSMLM.tif" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 26163532 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2B_citH3_processedSMLM.tif> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/image/tiff> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_DNAchannel.tif> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "Supp_Fig2C_MPO_DNAchannel.tif"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "Supp_Fig2C_MPO_DNAchannel.tif" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 1049033 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_DNAchannel.tif> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/image/tiff> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_Merge_5um.tif> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "Supp_Fig2C_MPO_Merge_5um.tif"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "Supp_Fig2C_MPO_Merge_5um.tif" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 786842 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_Merge_5um.tif> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/image/tiff> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_processedSMLM.tif> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "Supp_Fig2C_MPO_processedSMLM.tif"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "Supp_Fig2C_MPO_processedSMLM.tif" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 26112431 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supp_Fig2C_MPO_processedSMLM.tif> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/image/tiff> .
+
+<https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supplementary_Figures.pdf> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "Supplementary_Figures.pdf"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "Supplementary_Figures.pdf" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/> ;
+    dcat:byteSize 895767 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/heyrovsky/datasets/1m3t2-78951/files/Supplementary_Figures.pdf> ;
+    dcat:mediaType <http://www.iana.org/assignments/media-types/application/pdf> .
+
+<https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> a dcat:Role ;
+    skos:prefLabel "Vydavatel"@cs,
+        "Publisher"@en .
+
+<https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> a skos:Concept ;
+    skos:prefLabel "Abstrakt"@cs,
+        "Abstract"@en .
+
+<https://w3id.org/tib/datacite/vocab/descriptionType/Methods> a skos:Concept ;
+    skos:prefLabel "Metodologie"@cs,
+        "Methods"@en .
+
+<https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> a skos:Concept ;
+    skos:prefLabel "Technická informace"@cs,
+        "TechnicalInfo"@en .
+
+<https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> a ns0:SubjectScheme ;
+    rdfs:label "Oborové třídění OECD FORD (Frascati)"@cs,
+        "OECD FORD Subject Category (Frascati)"@en .
+
+<https://orcid.org/> a ns0:IdentifierScheme ;
+    rdfs:label "Open Research and Contributor ID"@en ;
+    skos:notation "ORCID" .
+
+<https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> a dcat:Role ;
+    skos:prefLabel "Autor"@cs,
+        "Creator"@en .
+
+<https://ror.org/02sat5y74> a ns1:Identifier ;
+    skos:notation "02sat5y74" ;
+    ns0:inScheme <https://ror.org/> .
+
+<https://www.wikidata.org/entity/Q42302581> a ns0:IdentifierScheme ;
+    rdfs:label "Identifikační Číslo Osoby"@cs ;
+    skos:notation "IČO" .
+
+<http://publications.europa.eu/resource/authority/file-type/TIFF> a dcterms:MediaTypeOrExtent ;
+    skos:prefLabel "TIFF"@en .
+
+<http://www.iana.org/assignments/media-types/image/tiff> a dcterms:MediaType ;
+    skos:prefLabel "image/tiff"@en .
+
+<https://creativecommons.org/licenses/by/4.0/> a dcterms:LicenseDocument ;
+    dcterms:title "Creative Commons Uveďte původ 4.0 Mezinárodní licence"@cs,
+        "Creative Commons Attribution 4.0 International License"@en .
+
+<https://vocabularies.coar-repositories.org/access_rights/c_abf2/> a dcterms:RightsStatement ;
+    skos:prefLabel "open access"@en .
+

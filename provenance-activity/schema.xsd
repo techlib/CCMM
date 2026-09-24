@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+  <xs:complexType name="provenance_activity" sawsdl:modelReference="http://www.w3.org/ns/prov#Activity">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Provenance activity - An activity is something that occurs over a period of time and acts upon or with the origin or life cycle of dataset; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            label - A human-readable name for the activity.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute ref="xml:lang" use="required"/>
+              <xs:assert test="@xml:lang != ''"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>
+    </xs:sequence>
+    <xs:attribute name="common_provenance_model_json_representation" type="xs:anyURI" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasCPMJsonRepresentation">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+          has common provenance model json representation - Link to the JSON representation of provenance activity according to the Common provenance model specified in ISO 23494-2 standard.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ro-crate_json_representation" type="xs:anyURI" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasRo-crateJsonRepresentation">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">
+          has RO-Crate JSON representation - Link to the JSON-LD representation of provenance activity according to the RO-Crate specification.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:element name="provenance_activity" type="ccmm:provenance_activity"/>
+</xs:schema>
