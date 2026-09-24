@@ -48,7 +48,8 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             qualified attribution - An Agent having some form of responsibility for the resource. 
-            Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship. If the resource is Dataset, it has to have at least two qualified attribution relations, the one with the role Creator, the second one with the role Publisher.
+            Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship. 
+            If the resource is Dataset, it has to have at least one qualified attribution relation with the role Creator, also, it is recommended to have other qualified relation to the organization with the role Publisher.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
