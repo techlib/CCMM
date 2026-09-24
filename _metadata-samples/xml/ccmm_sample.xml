@@ -233,8 +233,8 @@
     <subject>
         <!-- Frascati Ford keyword is mandatory -->
         <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10500/10509</iri>
-        <title xml:lang="cs">Meteorologie, vědy o atmosféře</title>
-        <title xml:lang="en">Meteorology and atmospheric sciences</title>
+        <label xml:lang="cs">Meteorologie, vědy o atmosféře</label>
+        <label xml:lang="en">Meteorology and atmospheric sciences</label>
         <classification_code>10509</classification_code>
         <subject_scheme>
             <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/</iri>
@@ -244,7 +244,7 @@
     </subject>
     <subject>
         <iri>http://inspire.ec.europa.eu/theme/ef</iri>
-        <title xml:lang="en">Environmental monitoring facilities</title>
+        <label xml:lang="en">Environmental monitoring facilities</label>
         <definition xml:lang="en">Location and operation of environmental monitoring facilities
             includes observation and measurement of emissions, of the state of environmental media
             and of other ecosystem parameters (biodiversity, ecological conditions of vegetation,

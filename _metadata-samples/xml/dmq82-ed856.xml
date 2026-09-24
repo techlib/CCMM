@@ -427,8 +427,8 @@
   <!-- Subjects: Frascati SubjectCategory -->
   <subject>
     <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/20000/20500/20501</iri>
-    <title xml:lang="cs">Materiálové inženýrství</title>
-    <title xml:lang="en">Materials engineering</title>
+    <label xml:lang="cs">Materiálové inženýrství</label>
+    <label xml:lang="en">Materials engineering</label>
     <classification_code>20501</classification_code>
     <subject_scheme>
       <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/</iri>

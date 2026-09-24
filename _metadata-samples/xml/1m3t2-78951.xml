@@ -366,8 +366,8 @@
     <!-- Subjects: Frascati SubjectCategory -->
     <subject>
         <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10601</iri>
-        <title xml:lang="cs">Buněčná biologie</title>
-        <title xml:lang="en">Cell biology</title>
+        <label xml:lang="cs">Buněčná biologie</label>
+        <label xml:lang="en">Cell biology</label>
         <classification_code>10601</classification_code>
         <subject_scheme>
             <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/</iri>
@@ -377,8 +377,8 @@
     </subject>
     <subject>
         <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10606</iri>
-        <title xml:lang="cs">Mikrobiologie</title>
-        <title xml:lang="en">Microbiology</title>
+        <label xml:lang="cs">Mikrobiologie</label>
+        <label xml:lang="en">Microbiology</label>
         <classification_code>10606</classification_code>
         <subject_scheme>
             <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/</iri>
@@ -388,8 +388,8 @@
     </subject>
     <subject>
         <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30100/30102</iri>
-        <title xml:lang="cs">Imunologie</title>
-        <title xml:lang="en">Immunology</title>
+        <label xml:lang="cs">Imunologie</label>
+        <label xml:lang="en">Immunology</label>
         <classification_code>30102</classification_code>
         <subject_scheme>
             <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/</iri>
@@ -400,8 +400,8 @@
     <!-- Subject and keywords -->
     <subject>
         <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/10000/10600/10606</iri>
-        <title xml:lang="cs">Mikrobiologie </title>
-        <title xml:lang="en">Biological sciences</title>
+        <label xml:lang="cs">Mikrobiologie </label>
+        <label xml:lang="en">Biological sciences</label>
         <classification_code>10606</classification_code>
         <subject_scheme>
             <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/</iri>

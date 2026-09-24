@@ -117,7 +117,7 @@
   <!-- (1-*) Specify at least one subject. At least one subject must be a value from FRASCATI FORD vocabulary. There must be title, classification_code and subject_scheme. -->
   <subject>
     <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/30000/30300/30304</iri>
-    <title xml:lang="cs">Veřejné a environmentální zdraví</title>
+    <label xml:lang="cs">Veřejné a environmentální zdraví</label>
     <classification_code>10509</classification_code>
     <subject_scheme>
       <iri>https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/</iri>
