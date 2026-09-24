@@ -261,7 +261,7 @@
           },
           "endpoint_url": [
             {
-              "id": "_:b32",
+              "id": "_:b2",
               "type": "related_resource",
               "http://purl.org/dc/terms/title": "Endpoint of WMS service Air quality",
               "resource_url": "https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi"
@@ -278,7 +278,7 @@
             "@value": "Endpoint of WMS service Air quality"
           },
           "http://www.w3.org/ns/dcat#endpointURL": {
-            "id": "_:b32",
+            "id": "_:b2",
             "type": "http://www.w3.org/2000/01/rdf-schema#Resource",
             "http://purl.org/dc/terms/title": "Endpoint of WMS service Air quality",
             "https://model.ccmm.cz/vocabulary/ccmm#resourceUrl": {
@@ -456,22 +456,20 @@
         }
       },
       "attributed_agent": {
-        "type": "person",
-        "http://www.w3.org/2006/vcard/ns#family-name": "Janouch",
-        "http://www.w3.org/2006/vcard/ns#given-name": "Ivan",
+        "type": "organization",
         "identifier": [
           {
-            "id": "https://orcid.org/0023-0802-44X6-26X0",
+            "id": "https://ror.org/02j46qs45",
             "type": "identifier",
-            "http://www.w3.org/2004/02/skos/core#notation": "0023-0802-44X6-26X0",
+            "http://www.w3.org/2004/02/skos/core#notation": "02j46qs45",
             "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
-              "id": "https://orcid.org/",
+              "id": "https://ror.org/",
               "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
               "http://www.w3.org/2000/01/rdf-schema#label": {
                 "@language": "en",
-                "@value": "Open Research and Contributor ID"
+                "@value": "Research Organization Registry"
               },
-              "http://www.w3.org/2004/02/skos/core#notation": "ORCID"
+              "http://www.w3.org/2004/02/skos/core#notation": "ROR"
             }
           }
         ],
@@ -488,29 +486,7 @@
             "https://model.ccmm.cz/vocabulary/ccmm#phone": "+420876543219"
           }
         ],
-        "http://xmlns.com/foaf/0.1/name": "Ivan Janouch",
-        "affiliation": [
-          {
-            "type": "organization",
-            "identifier": [
-              {
-                "id": "https://ror.org/02j46qs45",
-                "type": "identifier",
-                "http://www.w3.org/2004/02/skos/core#notation": "02j46qs45",
-                "https://model.ccmm.cz/vocabulary/ccmm#inScheme": {
-                  "id": "https://ror.org/",
-                  "type": "https://model.ccmm.cz/vocabulary/ccmm#IdentifierScheme",
-                  "http://www.w3.org/2000/01/rdf-schema#label": {
-                    "@language": "en",
-                    "@value": "Research Organization Registry"
-                  },
-                  "http://www.w3.org/2004/02/skos/core#notation": "ROR"
-                }
-              }
-            ],
-            "http://xmlns.com/foaf/0.1/name": "Masarykova Univerzita"
-          }
-        ]
+        "http://xmlns.com/foaf/0.1/name": "Masarykova Univerzita"
       }
     }
   ],
