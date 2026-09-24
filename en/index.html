@@ -1801,17 +1801,32 @@
     // All config options at https://respec.org/docs/
     var respecConfig = {
       specStatus: "base",
-      editors: [{ name: "Dataspecer", url: "https://dataspecer.com" }],
-      //github: "some-org/mySpec",
-      shortName: "todo",
+      editors: [
+        {
+          name: "Michal Med", 
+          orcid: "https://orcid.org/0000-0002-3844-426X", 
+          company: "CESNET", 
+          companyURL: "https://www.cesnet.cz/", 
+        }, {
+          name: "Martina Podsklanová",
+          orcid: "https://orcid.org/0009-0005-7763-4217",
+          company: "National Library of Technology",
+          companyURL: "https://www.techlib.cz/en/",
+        }, {
+          name: "Ondřej Zamazal",
+          orcid: "https://orcid.org/0000-0002-7442-9016",
+          company: "National Library of Technology",
+          companyURL: "https://www.techlib.cz/en/",
+        },
+      ],
+      github: "https://github.com/techlib/CCMM",
+      shortName: "CCMM",
       maxTocLevel: 2,
       historyURI: null,
-      //thisVersion: "https://xx.github.io/yy/",
-      //latestVersion: "https://xx.github.io/yy/",
-      //publishDate: "2025-09-29",
-      //github: "https://github.com/org/repo",
+      thisVersion: "https://odel.ccmm.cz/research-data/2.0.0/",
+      latestVersion: "https://odel.ccmm.cz/research-data/2.0.0/",
+      publishDate: "2026-10-01",
       //xref: "web-platform",
-      //group: "my-working-group",
       //otherLinks: [{
       //    key: "Repository",
       //    data: [{
@@ -10067,10 +10082,6 @@
                       </td>
                     </tr>
               
-                  <tr>
-                    <td>Usage note</td>
-                    <td>Version 2.2 of [[SPDX]] defines individuals for the following algorithms: MD2, MD4, MD5, MD6, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512.</td>
-                  </tr>
                 </table>
               </section>
           </section>          <section id="ChecksumAlgorithm">
