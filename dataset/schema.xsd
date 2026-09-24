@@ -84,7 +84,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="unbounded" name="qualified_attribution" type="ccmm:resource_attribution" sawsdl:modelReference="http://www.w3.org/ns/prov#qualifiedAttribution">
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="qualified_attribution" type="ccmm:resource_attribution" sawsdl:modelReference="http://www.w3.org/ns/prov#qualifiedAttribution">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             qualified attribution - An Agent having some form of responsibility for the resource. 
