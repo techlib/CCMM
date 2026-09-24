@@ -182,7 +182,7 @@
     kv:iri "\"https://model.ccmm.cz/research-data/dataset/associationEnd-1765909236580-4e62-d2d2-9ae3\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/AssociationEnd\"]".
 :associationEnd-1765909236769-d9e6-7561-87bd a dsvs:structure-entity;
-    kv:dataPsmCardinality "[2,null]";
+    kv:dataPsmCardinality "[1,null]";
     kv:dataPsmHumanDescription "null";
     kv:dataPsmHumanLabel "null";
     kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Resource.qualifiedAttribution\"";

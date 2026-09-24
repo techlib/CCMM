@@ -2091,7 +2091,7 @@
       "title": "qualified attribution",
       "description": "An Agent having some form of responsibility for the resource. ",
       "type": "array",
-      "minItems": 2,
+      "minItems": 1,
       "items": {
         "title": "Resource attribution",
         "description": "Attribution is the ascribing of a Resource to an agent. It defines the responsibility of an agent to the resource in a given role.",

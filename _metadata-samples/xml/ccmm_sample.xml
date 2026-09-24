@@ -154,19 +154,17 @@
     </qualified_attribution>
     <qualified_attribution>
         <attributed_agent>
-            <person>
+            <organization>
                 <identifier>
-                    <iri>https://orcid.org/0023-0802-44X6-26X0</iri>
-                    <value>0023-0802-44X6-26X0</value>
+                    <iri>https://ror.org/02j46qs45</iri>
+                    <value>02j46qs45</value>
                     <scheme>
-                        <iri>https://orcid.org/</iri>
-                        <label xml:lang="en">Open Research and Contributor ID</label>
-                        <notation>ORCID</notation>
+                        <iri>https://ror.org/</iri>
+                        <label xml:lang="en">Research Organization Registry</label>
+                        <notation>ROR</notation>
                     </scheme>
                 </identifier>
-                <name>Ivan Janouch</name>
-                <given_name>Ivan</given_name>
-                <family_name>Janouch</family_name>
+                <name>Masarykova Univerzita</name>
                 <contact_point>
                     <email>256384@muni.cz</email>
                     <phone>+420876543219</phone>
@@ -174,19 +172,7 @@
                         <full_address>Pražská 3, 60200, Brno</full_address>
                     </address>
                 </contact_point>
-                <affiliation>
-                    <identifier>
-                        <iri>https://ror.org/02j46qs45</iri>
-                        <value>02j46qs45</value>
-                        <scheme>
-                            <iri>https://ror.org/</iri>
-                            <label xml:lang="en">Research Organization Registry</label>
-                            <notation>ROR</notation>
-                        </scheme>
-                    </identifier>
-                    <name>Masarykova Univerzita</name>
-                </affiliation>
-            </person>
+            </organization>
         </attributed_agent>
         <role>
             <iri>https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher</iri>

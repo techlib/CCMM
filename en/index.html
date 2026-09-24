@@ -2441,7 +2441,8 @@
               
                   <tr>
                     <td>Usage note</td>
-                    <td>Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship. If the resource is Dataset, it has to have at least two qualified attribution relations, the one with the role Creator, the second one with the role Publisher.</td>
+                    <td>Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship. 
+              If the resource is Dataset, it has to have at least one qualified attribution relation with the role Creator, also, it is recommended to have other qualified relation to the organization with the role Publisher.</td>
                   </tr>
                 </table>
               </section>    <section id="Resource.title">
@@ -53714,7 +53715,7 @@
                 
   
   
-    array of values <code>{2..*}</code> of type     <a href="#json-object--dataset--resource-attribution"></a>
+    array of values <code>{1..*}</code> of type     <a href="#json-object--dataset--resource-attribution"></a>
 
           
 
@@ -88498,7 +88499,7 @@
           element <a href="#element-ccmm:dataset-ccmm:alternate_title"><code>&lt;alternate_title&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-ccmm:dataset-ccmm:qualified_attribution"><code>&lt;qualified_attribution&gt;</code></a> [2..*]
+          element <a href="#element-ccmm:dataset-ccmm:qualified_attribution"><code>&lt;qualified_attribution&gt;</code></a> [1..*]
       </li>
       <li>
           element <a href="#element-ccmm:dataset-ccmm:publication_year"><code>&lt;publication_year&gt;</code></a> [1..1]
@@ -88842,7 +88843,7 @@
     </dd>
 
       <dt>Effective cardinality of the element relative to its parent element</dt>
-      <dd>2..*</dd>
+      <dd>1..*</dd>
       <dt>Parent element</dt>
       <dd><a href="#type-ccmm:dataset"></a></dd>
 

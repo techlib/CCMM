@@ -3460,21 +3460,18 @@
       "role": {
         "label": {}
       }
-    },
-    {
-      "attributed_agent": {
-        "name": "GnXp9"
-      },
-      "role": {
-        "label": {}
-      }
     }
   ],
-  "publication_year": "",
+  "publication_year": "hFGnXp9",
   "time_reference": [
     {
       "temporal_representation": {
-        "date_time": "2026-02-08T20:47:47Z"
+        "beginning": {
+          "date": "2005-01-31"
+        },
+        "end": {
+          "date": "2022-11-03"
+        }
       },
       "date_type": {
         "label": {}
@@ -3482,7 +3479,12 @@
     },
     {
       "temporal_representation": {
-        "date_time": "2008-11-10T21:51:37Z"
+        "beginning": {
+          "date": "2002-02-12"
+        },
+        "end": {
+          "date_time": "2008-11-10T21:51:37Z"
+        }
       },
       "date_type": {
         "label": {}
