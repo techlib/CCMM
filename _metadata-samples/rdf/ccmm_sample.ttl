@@ -124,19 +124,14 @@
                             foaf:name "Univerzita Karlova" ] ] ],
         [ a prov:Attribution ;
             dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
-            prov:agent [ a prov:Person ;
-                    ns2:family-name "Janouch" ;
-                    ns2:given-name "Ivan" ;
-                    ns1:identifier <https://orcid.org/0023-0802-44X6-26X0> ;
+            prov:agent [ a org:Organization ;
+                    ns1:identifier <https://ror.org/02j46qs45> ;
                     dcat:contactPoint [ a ns2:Kind ;
                             ns2:hasAddress [ a ns11:Address ;
                                     ns11:fullAddress "Pražská 3, 60200, Brno" ] ;
                             ns0:email "256384@muni.cz" ;
                             ns0:phone "+420876543219" ] ;
-                    foaf:name "Ivan Janouch" ;
-                    ns0:hasAffiliation [ a org:Organization ;
-                            ns1:identifier <https://ror.org/02j46qs45> ;
-                            foaf:name "Masarykova Univerzita" ] ] ] ;
+                    foaf:name "Masarykova Univerzita" ] ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             ns0:hasRo-crateJsonRepresentation <https://link.to/ro-crate-json> ] ;
     ns0:hasAlternateTitle [ a ns0:AlternateTitle ;
@@ -270,9 +265,9 @@
     ns0:hasType <https://w3id.org/tib/datacite/vocab/relationType/IsDerivedFrom> ;
     ns0:resourceUrl "https://opendata.chmi.cz/air_quality/"^^xsd:anyURI .
 
-<https://orcid.org/0023-0802-44X6-26X0> a ns1:Identifier ;
-    skos:notation "0023-0802-44X6-26X0" ;
-    ns0:inScheme <https://orcid.org/> .
+<https://orcid.org/> a ns0:IdentifierScheme ;
+    rdfs:label "Open Research and Contributor ID"@en ;
+    skos:notation "ORCID" .
 
 <https://organization.cz/datasets/> a ns0:IdentifierScheme ;
     rdfs:label "Organizační identifikační schéma"@cs .
@@ -396,10 +391,6 @@
     dcat:endpointURL [ a rdfs:Resource ;
             dcterms:title "Endpoint of WMS service Air quality" ;
             ns0:resourceUrl "https://gis.cenia.gov.cz/id/service/wms/chmu_ovzdusi"^^xsd:anyURI ] .
-
-<https://orcid.org/> a ns0:IdentifierScheme ;
-    rdfs:label "Open Research and Contributor ID"@en ;
-    skos:notation "ORCID" .
 
 <https://orcid.org/0030-04X2-2030-4X26> a ns1:Identifier ;
     skos:notation "0030-04X2-2030-4X26" ;

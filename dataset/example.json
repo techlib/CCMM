@@ -1193,9 +1193,9 @@
         "@id": "https://w3id.org/tib/datacite/property/subject",
         "@container": "@set",
         "@context": {
-          "title": {
-            "@id": "http://purl.org/dc/terms/title",
-            "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+          "label": {
+            "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "@container": "@language"
           },
           "definition": {
             "@id": "http://www.w3.org/2004/02/skos/core#definition",
@@ -3504,55 +3504,38 @@
   },
   "subject": [
     {
-      "title": [
-        {
-          "@value": "GAQvpHVXd",
-          "@language": "NO"
-        }
-      ],
-      "classification_code": "A2O",
+      "label": {},
+      "classification_code": "QvpH",
       "subject_scheme": {}
     },
     {
-      "title": [
-        {
-          "@value": "a5HJNh",
-          "@language": ""
-        },
-        {
-          "@value": "iSrNsH5e",
-          "@language": "k"
-        }
-      ],
-      "classification_code": "",
+      "label": {},
+      "classification_code": "ObuA2O",
       "subject_scheme": {}
     },
     {
-      "title": [
-        {
-          "@value": "qf98a1gy",
-          "@language": "GxSir7"
-        },
-        {
-          "@value": "HckMoj",
-          "@language": "LbebyPO"
-        }
-      ],
-      "classification_code": "P7b15bZ",
+      "label": {},
+      "classification_code": "HJNheYiSrN",
       "subject_scheme": {}
     }
   ],
   "description": [
     {
       "description_text": {
-        "@value": "f",
-        "@language": "xaFIQ1E"
+        "@value": "",
+        "@language": "k"
       }
     },
     {
       "description_text": {
         "@value": "",
-        "@language": "Tm2W"
+        "@language": "xWqf9"
+      }
+    },
+    {
+      "description_text": {
+        "@value": "",
+        "@language": "gyLGxSir7"
       }
     }
   ]

@@ -14484,7 +14484,7 @@
             </table>
           
               <p><strong>Properties</strong></p>
-              <p>For this class profile the following properties are defined: <a href="#Subject.classificationCode">classification code</a>, <a href="#Subject.definition">definition</a>, <a href="#Subject.inSubjectScheme">in subject scheme</a>, <a href="#Subject.title">title</a>.</p>
+              <p>For this class profile the following properties are defined: <a href="#Subject.classificationCode">classification code</a>, <a href="#Subject.definition">definition</a>, <a href="#Subject.inSubjectScheme">in subject scheme</a>, <a href="#Subject.label">label</a>.</p>
           
               <p><strong>Backwards associations</strong></p>
               <ul>
@@ -14692,28 +14692,28 @@
                     </tr>
               
                 </table>
-              </section>    <section id="Subject.title">
-                <h4>title</h4>
+              </section>    <section id="Subject.label">
+                <h4>label</h4>
               
                 <table class="def">
                   <tr>
                     <td>Profiled relationship IRI(s)</td>
                     <td>
                         
-                        <a href="http://purl.org/dc/terms/title">dcterms:title</a>
+                        <a href="http://www.w3.org/2004/02/skos/core#prefLabel">skos:prefLabel</a>
                     </td>
                   </tr>
                   <tr>
                     <td>IRI</td>
-                    <td><a href="https://model.ccmm.cz/research-data/Subject.title">https://model.ccmm.cz/research-data/Subject.title</a></td>
+                    <td><a href="https://model.ccmm.cz/research-data/Subject.label">https://model.ccmm.cz/research-data/Subject.label</a></td>
                   </tr>
                   <tr>
                     <td>Label</td>
-                    <td>title</td>
+                    <td>label</td>
                   </tr>
                   <tr>
                     <td>Definition</td>
-                    <td>Title of the subject.</td>
+                    <td>Subject label.</td>
                   </tr>
                   <tr>
                     <td>Domain</td>
@@ -14727,9 +14727,9 @@
                   <tr>
                     <td>Range</td>
                     <td>
-                      <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a>
+                      <a href="https://ofn.gov.cz/základní-datové-typy/2020-07-01/#text">Text</a>
               
-                          [1..*]
+                          [1..1]
               
                   </td>
                   </tr>
@@ -14744,9 +14744,20 @@
                                         profiles
                     property
                     
-                    <a href="http://purl.org/dc/terms/title">Title</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
-                      <br />Definition: <i>A name given to the resource.</i>
+                    <a href="http://www.w3.org/2004/02/skos/core#prefLabel">preferred label</a> (<a href="http://www.w3.org/2004/02/skos/core#prefLabel">skos:prefLabel</a>)
+                      <br />Definition: <i>skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+                    disjoint properties.</i>
                       <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                                      specializes
+                    property
+                    
+                    <a href="http://www.w3.org/2000/01/rdf-schema#label">label</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
+                      <br />Definition: <i>A human-readable name for the subject.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
                       </ul>
               
                               </li>
@@ -14754,6 +14765,10 @@
                       </td>
                     </tr>
               
+                  <tr>
+                    <td>Usage note</td>
+                    <td>Use a label of the corresponding value from the used code list. At least one subject must be a value from FRASCATI FORD vocabulary. This property may be repeated for parallel language versions of the label.</td>
+                  </tr>
                 </table>
               </section>
           </section>          <section id="SubjectScheme">
@@ -40561,22 +40576,19 @@
 
         </li>
         <li style="list-style-type: disclosure-closed;">
-          <code>title</code>:
-            (<a href="#Subject.title" label="Title of the subject.">title</a>)
+          <code>label</code>:
+            (<a href="#Subject.label" label="Subject label.">label</a>)
           required
           item of type
 
-                
-  
-  
-    array of values <code>{1..*}</code> of type         <strong>
+                  <strong>
     object
   </strong>
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>@value</code>:
-          required
+          <code>cs</code>:
+          optional
           item of type
 
                 
@@ -40596,8 +40608,8 @@
 
         </li>
         <li style="list-style-type: disclosure-closed;">
-          <code>@language</code>:
-          required
+          <code>en</code>:
+          optional
           item of type
 
                 
@@ -40623,16 +40635,6 @@
 
   
   
-  
-  
-  
-  
-  
-  
-
-
-          
-
   
   
   
@@ -40990,7 +40992,7 @@
           element <a href="#element-ccmm:subject-ccmm:iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-ccmm:subject-ccmm:title"><code>&lt;title&gt;</code></a> [1..*]
+          element <a href="#element-ccmm:subject-ccmm:label"><code>&lt;label&gt;</code></a> [1..*]
       </li>
       <li>
           element <a href="#element-ccmm:subject-ccmm:definition"><code>&lt;definition&gt;</code></a> [0..*]
@@ -41037,8 +41039,8 @@
     
   </dl>
 </section>
-<section id="element-ccmm:subject-ccmm:title">
-  <h4>Element <code>&lt;title&gt;</code></h4>
+<section id="element-ccmm:subject-ccmm:label">
+  <h4>Element <code>&lt;label&gt;</code></h4>
 
   <dl>
     <dt>Meaning</dt>
@@ -41050,8 +41052,8 @@
           
         </i>
 
-          <a href="#Subject.title"><strong>title</strong></a>
-          (Title of the subject.)
+          <a href="#Subject.label"><strong>label</strong></a>
+          (Subject label.)
 
     </dd>
 
@@ -75558,22 +75560,19 @@
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>title</code>:
-            (<a href="#Subject.title" label="Title of the subject.">title</a>)
+          <code>label</code>:
+            (<a href="#Subject.label" label="Subject label.">label</a>)
           required
           item of type
 
-                
-  
-  
-    array of values <code>{1..*}</code> of type         <strong>
+                  <strong>
     object
   </strong>
     with properties (<code>properties</code>):
     <ul>
         <li style="list-style-type: disclosure-closed;">
-          <code>@value</code>:
-          required
+          <code>cs</code>:
+          optional
           item of type
 
                 
@@ -75593,8 +75592,8 @@
 
         </li>
         <li style="list-style-type: disclosure-closed;">
-          <code>@language</code>:
-          required
+          <code>en</code>:
+          optional
           item of type
 
                 
@@ -75620,16 +75619,6 @@
 
   
   
-  
-  
-  
-  
-  
-  
-
-
-          
-
   
   
   

@@ -435,14 +435,16 @@
 
 <https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/SubjectShape> sh:property <https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/SubjectShape/-3c550fcd>.
 
-<https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/SubjectShape/-21001754> a sh:PropertyShape;
-    sh:name "title"@en;
+<https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/SubjectShape/-47ec0eae> a sh:PropertyShape;
+    sh:name "label"@en;
+    sh:description "Use a label of the corresponding value from the used code list. At least one subject must be a value from FRASCATI FORD vocabulary. This property may be repeated for parallel language versions of the label."@en;
     sh:nodeKind sh:Literal;
-    sh:path <http://purl.org/dc/terms/title>;
+    sh:path <http://www.w3.org/2004/02/skos/core#prefLabel>;
+    sh:maxCount 1;
     sh:minCount 1;
     sh:datatype rdf:langString.
 
-<https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/SubjectShape> sh:property <https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/SubjectShape/-21001754>.
+<https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/SubjectShape> sh:property <https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/SubjectShape/-47ec0eae>.
 
 <https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/SubjectShape/-6f18364> a sh:PropertyShape;
     sh:name "definition"@en;
