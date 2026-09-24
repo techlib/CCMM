@@ -22,7 +22,6 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             uses algorithm - The algorithm used to produce the subject Checksum.
-            Version 2.2 of [[SPDX]] defines individuals for the following algorithms: MD2, MD4, MD5, MD6, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

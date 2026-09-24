@@ -899,11 +899,6 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Checksum.algorithm>
-], [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:scopeNote;
-  dsv:reusedAsProperty skos:scopeNote;
-  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Checksum.algorithm>
 ];
     dsv:cardinality cardinality:11;
     dsv:domain :Checksum;
