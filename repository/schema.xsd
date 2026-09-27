@@ -71,7 +71,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             qualified attribution - Link to a description of a relationship between repository and agent with the specification of the role of agent in this relationship.
-            Relationship shall contain at least one agent with role &#34;Publisher&#34; from codelist https://vocabs.ccmm.cz/registry/codelist/AgentRole/.
+            Relationship shall contain at least one agent with role &#34;Publisher&#34; from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

@@ -5,7 +5,7 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Format - Format of downloadable file.
-        Use IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable codelist representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type.
+        Use IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable code list representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
