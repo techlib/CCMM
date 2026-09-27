@@ -39,7 +39,7 @@
           </xs:documentation>
           <xs:documentation xml:lang="en">
             had role
-            May be used in a qualified-attribution to specify the role of an Agent with respect to an Resource. It is recommended that the value be taken from a controlled vocabulary of agent roles.
+            May be used in a qualified-attribution to specify the role of an Agent with respect to an Resource. It is recommended that the value be taken from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/.
           </xs:documentation>
           <xs:documentation xml:lang="it">
             tiene rol

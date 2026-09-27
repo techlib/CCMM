@@ -81,7 +81,7 @@
                   "properties": {
                     "identifier": {
                       "title": "has identifier",
-                      "description": "A secondary identifier of the Dataset",
+                      "description": "A secondary identifier of the Dataset.",
                       "type": "array",
                       "items": {
                         "title": "Identifier",
@@ -320,7 +320,7 @@
                                   },
                                   "alternate_name": {
                                     "title": "alternate name",
-                                    "description": "To specify the organizational name associated with the object",
+                                    "description": "Alternate organizational name associated with the object.",
                                     "type": "array",
                                     "items": {
                                       "title": "Text",
@@ -851,7 +851,7 @@
                                         },
                                         "alternate_name": {
                                           "title": "alternate name",
-                                          "description": "To specify the organizational name associated with the object",
+                                          "description": "Alternate organizational name associated with the object.",
                                           "type": "array",
                                           "items": {
                                             "title": "Text",
@@ -1205,7 +1205,7 @@
                           },
                           "date_type": {
                             "title": "has date type",
-                            "description": "Reference to the codelist of date types.",
+                            "description": "Reference to the code list of date types.",
                             "type": "object",
                             "required": [
                               "label"

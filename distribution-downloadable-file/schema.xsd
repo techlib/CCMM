@@ -92,7 +92,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             conforms to - An established schema to which the described Distribution conforms.
-            This property should be used to indicate the model, schema, ontology, view or profile that this representation of a dataset conforms to. This is (generally) a complementary concern to the media type, service standard or format.
+            This property should be used to indicate the model, schema, ontology, view, or profile that this representation of a dataset conforms to. This is (generally) a complementary concern to the media type, service standard, or format.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -100,7 +100,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has format - The file format of the distribution.
-            This property refers to the instance of format represented by IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable codelist representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type.
+            This property refers to the instance of format represented by IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable code list representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -108,7 +108,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has media type - The media type of the Distribution as defined in the official register of media types managed by IANA.
-            This property SHOULD be used when the media type of the distribution is defined in IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), otherwise Format MAY be used with values from Publication Office of the EU File type codelist http://publications.europa.eu/resource/dataset/file-type.
+            This property SHOULD be used when the media type of the distribution is defined in IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), otherwise Format MAY be used with values from Publication Office of the EU File type code list http://publications.europa.eu/resource/dataset/file-type.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -116,7 +116,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has packaging format - The format of the file in which one or more data files are grouped together, e.g., to enable a set of related files to be downloaded together.
-            This property to be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), if available.
+            This property SHOULD be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), if available.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -159,10 +159,10 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has rights - A statement that specifies rights associated with the Distribution.
-            Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:
-            embargoed access, metadata only access - :NON_PUBLIC,
-            open access - :PUBLIC,
-            restricted access - :RESTRICTED.
+            Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies:
+            embargoed access, metadata only access (:NON_PUBLIC),
+            open access (:PUBLIC),
+            restricted access (:RESTRICTED).
           </xs:documentation>
         </xs:annotation>
       </xs:element>

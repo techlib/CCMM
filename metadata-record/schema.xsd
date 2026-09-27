@@ -71,7 +71,7 @@
           </xs:documentation>
           <xs:documentation xml:lang="en">
             qualified attribution - Link to a description of a relationship between metadata record and agent with the specification of the role of agent in this relationship.
-            Relationship shall contain at least one agent with role &#34;Data Manager&#34; from codelist https://vocabs.ccmm.cz/registry/codelist/AgentRole/.
+            Relationship shall contain at least one agent with role &#34;Data Manager&#34; from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/.
           </xs:documentation>
           <xs:documentation xml:lang="es">
             Enlace a una descripción de la relación con otro recurso.
@@ -85,7 +85,6 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             date updated - The most recent date on which the resource was changed.
-            The date on which the metadata record was changed or modified.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -109,7 +108,7 @@
           <xs:documentation xml:lang="en">
             has original repository - Link to the repository in which the metadata were originally stored and curated.
             Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. 
-            If metadata record is harvested form other repository, make sure to include the first repository from which it was harvested.
+            If metadata record is harvested from other repository, make sure to include the first repository from which it was harvested.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

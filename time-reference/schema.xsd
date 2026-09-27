@@ -21,7 +21,7 @@
       <xs:element name="date_type" type="ccmm:date_type" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasType">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            has date type - Reference to the codelist of date types.
+            has date type - Reference to the code list of date types.
             References to the value from the code list https://w3id.org/tib/datacite/vocab/dateType.
           </xs:documentation>
         </xs:annotation>

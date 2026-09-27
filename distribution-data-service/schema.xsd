@@ -32,7 +32,7 @@
           </xs:documentation>
           <xs:documentation xml:lang="en">
             has access service - A data service that gives access to the distribution of the dataset.
-            Access service SHOULD be used to link to a description of Data service that can provide access to this distribution.
+            Access service SHOULD be used to link to a description of Data service that provides access to this distribution.
           </xs:documentation>
           <xs:documentation xml:lang="es">
             servicio de acceso de datos - Un sitio o end-point que da acceso a la distribución de un conjunto de datos.
@@ -46,7 +46,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             conforms to - An established schema to which the described Distribution conforms.
-            This property should be used to indicate the model, schema, ontology, view or profile that this representation of a dataset conforms to. This is (generally) a complementary concern to the media type, service standard or format.
+            This property should be used to indicate the model, schema, ontology, view, or profile that this representation of a dataset conforms to. This is (generally) a complementary concern to the media type, service standard, or format.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -61,10 +61,10 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has rights - A statement that specifies rights associated with the Distribution.
-            Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:
-            embargoed access, metadata only access - :NON_PUBLIC,
-            open access - :PUBLIC,
-            restricted access - :RESTRICTED.
+            Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies:
+            embargoed access, metadata only access (:NON_PUBLIC),
+            open access (:PUBLIC),
+            restricted access (:RESTRICTED).
           </xs:documentation>
         </xs:annotation>
       </xs:element>

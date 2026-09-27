@@ -146,7 +146,7 @@
     },
     "date_type": {
       "title": "has date type",
-      "description": "Reference to the codelist of date types.",
+      "description": "Reference to the code list of date types.",
       "type": "object",
       "required": [
         "label"

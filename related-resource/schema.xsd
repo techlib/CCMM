@@ -18,7 +18,7 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="identifier" type="ccmm:identifier" sawsdl:modelReference="http://www.w3.org/ns/adms#identifier">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            has identifier - A secondary identifier of the Dataset
+            has identifier - A secondary identifier of the Dataset.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -40,7 +40,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             resource URL - Human readable resolvable URL representing the resource.
-            Resource URL represents human readable resolvable representation of the resource. Same url must be aslo in c:iri.
+            Resource URL represents human readable resolvable representation of the resource, i.e. web page. Same url must be aslo in c:iri.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

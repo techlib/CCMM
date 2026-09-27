@@ -30,7 +30,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/4d77775c> a sh:PropertyShape;
     sh:name "publication year"@en;
-    sh:description "If TimeReference with dateType \"Issued\" is present, year in that date and publicationYear must be the same."@en;
+    sh:description "If TimeReference with dateType \"Issued\" is present, the year in that date and publicationYear must be the same."@en;
     sh:nodeKind sh:Literal;
     sh:path <https://w3id.org/tib/datacite/property/publicationYear>;
     sh:maxCount 1;
@@ -41,7 +41,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/6ca3a6c0> a sh:PropertyShape;
     sh:name "keyword"@en, "klíčové slovo"@cs, "mot-clés "@fr, "palabra clave"@es, "parola chiave"@it, "λέξη-κλειδί"@el, "كلمة  مفتاحية "@ar, "キーワード/タグ"@ja, "nøgleord"@da;
-    sh:description "Preferably use subjects as concepts from controlled vocabularies."@en;
+    sh:description "Preferably use terms from controlled vocabularies."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://www.w3.org/ns/dcat#keyword>;
     sh:datatype rdf:langString.
@@ -82,7 +82,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/e881620> a sh:PropertyShape;
     sh:name "has subject"@en;
-    sh:description "At least one subject must be a value from FRASCATI FORD vocabulary. For that subject use reference code list https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this code list as a subject."@en;
+    sh:description "At least one subject must be a value from the Frascati FORD vocabulary. For that subject use reference code list https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/ as the Subject scheme and select at least one value from this code list as a subject."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://w3id.org/tib/datacite/property/subject>;
     sh:minCount 1;
@@ -158,6 +158,7 @@
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/21b612ea>.
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/-2327f107> a sh:PropertyShape;
+    sh:description "The activity associated with generation of a dataset will typically be an initiative, project, mission, survey, or ongoing activity. Multiple prov:wasGeneratedBy properties can be used to indicate the dataset production context at various levels of granularity. Use prov:qualifiedGeneration to attach additional details about the relationship between the dataset and the activity, e.g., the exact time that the dataset was produced during the lifetime of a project."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/prov#wasGeneratedBy>;
     sh:class <http://www.w3.org/ns/prov#Activity>.
@@ -175,7 +176,7 @@
 
 <https://model.ccmm.cz/research-data/rdfs%3AResourceShape/69a57d1a> a sh:PropertyShape;
     sh:name "has location"@en;
-    sh:description "In the CCMM spatial coverage does not only cover the area of resource, it may be connected to the resource in some other way, e.g., the place from where the data were measured, administrative area to which the resource conforms or other."@en;
+    sh:description "In CCMM, spatial coverage does not only cover the area of resource, it may be connected to the resource in some other way, e.g., the place from where the data were measured or administrative area to which the resource conforms or other."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.org/dc/terms/spatial>;
     sh:class <http://purl.org/dc/terms/Location>.
@@ -367,7 +368,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/6bd413a6> a sh:PropertyShape;
     sh:name "conforms to"@en;
-    sh:description "This property should be used to indicate the model, schema, ontology, view or profile that this representation of a dataset conforms to. This is (generally) a complementary concern to the media type, service standard or format."@en;
+    sh:description "This property should be used to indicate the model, schema, ontology, view, or profile that this representation of a dataset conforms to. This is (generally) a complementary concern to the media type, service standard, or format."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.org/dc/terms/conformsTo>;
     sh:class <http://purl.org/dc/terms/Standard>.
@@ -400,7 +401,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/491c4920> a sh:PropertyShape;
     sh:name "has rights"@en;
-    sh:description "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:\nembargoed access, metadata only access - :NON_PUBLIC,\nopen access - :PUBLIC,\nrestricted access - :RESTRICTED."@en;
+    sh:description "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies:\nembargoed access, metadata only access (:NON_PUBLIC),\nopen access (:PUBLIC),\nrestricted access (:RESTRICTED)."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.org/dc/terms/rights>;
     sh:class <http://purl.org/dc/terms/RightsStatement>.
@@ -472,7 +473,7 @@
 
 <https://model.ccmm.cz/research-data/rdfs%3AResourceShape/ee67f04> a sh:PropertyShape;
     sh:name "resource URL"@en;
-    sh:description "Resource URL represents human readable resolvable representation of the resource. Same url must be aslo in c:iri."@en;
+    sh:description "Resource URL represents human readable resolvable representation of the resource, i.e. web page. Same url must be aslo in c:iri."@en;
     sh:nodeKind sh:Literal;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#resourceUrl>;
     sh:maxCount 1;
@@ -506,7 +507,7 @@
 <https://model.ccmm.cz/research-data/prov%3AAttributionShape> sh:property <https://model.ccmm.cz/research-data/prov%3AAttributionShape/19c32b47>.
 
 <https://model.ccmm.cz/research-data/prov%3AAttributionShape/79ec2ddf> a sh:PropertyShape;
-    sh:description "May be used in a qualified-attribution to specify the role of an Agent with respect to an Resource. It is recommended that the value be taken from a controlled vocabulary of agent roles."@en;
+    sh:description "May be used in a qualified-attribution to specify the role of an Agent with respect to an Resource. It is recommended that the value be taken from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/dcat#hadRole>;
     sh:maxCount 1;
@@ -689,7 +690,6 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogRecordShape/-1e5112b5> a sh:PropertyShape;
     sh:name "date updated"@en;
-    sh:description "The date on which the metadata record was changed or modified."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://purl.org/dc/terms/modified>;
     sh:maxCount 1;
@@ -715,7 +715,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogRecordShape/2dc92380> a sh:PropertyShape;
     sh:name "has original repository"@en;
-    sh:description "Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. \nIf metadata record is harvested form other repository, make sure to include the first repository from which it was harvested."@en;
+    sh:description "Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. \nIf metadata record is harvested from other repository, make sure to include the first repository from which it was harvested."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#originalRepository>;
     sh:maxCount 1;
@@ -735,7 +735,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogRecordShape/50a8ec11> a sh:PropertyShape;
     sh:name "qualified attribution"@en;
-    sh:description "Relationship shall contain at least one agent with role \"Data Manager\" from codelist https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
+    sh:description "Relationship shall contain at least one agent with role \"Data Manager\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/prov#qualifiedAttribution>;
     sh:class <http://www.w3.org/ns/prov#Attribution>.
@@ -786,7 +786,7 @@
 <https://model.ccmm.cz/research-data/dcat%3ACatalogShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ACatalogShape/548e8df0>.
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogShape/-4b7d5519> a sh:PropertyShape;
-    sh:description "Relationship shall contain at least one agent with role \"Publisher\" from codelist https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
+    sh:description "Relationship shall contain at least one agent with role \"Publisher\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/prov#qualifiedAttribution>;
     sh:class <http://www.w3.org/ns/prov#Attribution>.
@@ -832,7 +832,7 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape/-32d9aab7> a sh:PropertyShape;
     sh:name "has media type"@en;
-    sh:description "This property SHOULD be used when the media type of the distribution is defined in IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), otherwise Format MAY be used with values from Publication Office of the EU File type codelist http://publications.europa.eu/resource/dataset/file-type."@en;
+    sh:description "This property SHOULD be used when the media type of the distribution is defined in IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), otherwise Format MAY be used with values from Publication Office of the EU File type code list http://publications.europa.eu/resource/dataset/file-type."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/dcat#mediaType>;
     sh:maxCount 1;
@@ -851,7 +851,7 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape/3ce68812> a sh:PropertyShape;
     sh:name "has format"@en;
-    sh:description "This property refers to the instance of format represented by IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable codelist representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type."@en;
+    sh:description "This property refers to the instance of format represented by IRI identifier from the register http://publications.europa.eu/resource/dataset/file-type. Human readable code list representation is here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.org/dc/terms/format>;
     sh:maxCount 1;
@@ -871,7 +871,7 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape/-592ae936> a sh:PropertyShape;
     sh:name "has packaging format"@en;
-    sh:description "This property to be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), if available."@en;
+    sh:description "This property SHOULD be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), if available."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/dcat#packageFormat>;
     sh:maxCount 1;
@@ -886,7 +886,7 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DataServiceShape/2dfa4aa5> a sh:PropertyShape;
     sh:name "has access service"@en, "servicio de acceso de datos"@es, "servizio di accesso ai dati"@it, "služba pro přístup k datům"@cs, "dataadgangstjeneste"@da;
-    sh:description "Access service SHOULD be used to link to a description of Data service that can provide access to this distribution."@en;
+    sh:description "Access service SHOULD be used to link to a description of Data service that provides access to this distribution."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/dcat#accessService>;
     sh:class <http://www.w3.org/ns/dcat#DataService>.

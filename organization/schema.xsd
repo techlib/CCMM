@@ -30,7 +30,7 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="alternate_name" sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#organization-name">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            alternate name - To specify the organizational name associated with the object
+            alternate name - Alternate organizational name associated with the object.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>
