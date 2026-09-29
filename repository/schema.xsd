@@ -39,7 +39,7 @@
       <xs:element maxOccurs="unbounded" name="label" sawsdl:modelReference="http://purl.org/dc/terms/title">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            label - Human readable name of the repository.
+            label - A human-readable name of the repository.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>
@@ -70,8 +70,8 @@
       <xs:element maxOccurs="unbounded" name="qualified_attribution" type="ccmm:resource_attribution" sawsdl:modelReference="http://www.w3.org/ns/prov#qualifiedAttribution">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            qualified attribution - Link to a description of a relationship between repository and agent with the specification of the role of agent in this relationship.
-            Relationship shall contain at least one agent with role &#34;Publisher&#34; from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/.
+            qualified attribution - A link to a description of a relationship between repository and agent with the specification of the role of agent in this relationship.
+            The relationship shall contain at least one agent with the role &#34;Publisher&#34; from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

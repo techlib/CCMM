@@ -113,7 +113,7 @@
             },
             "alternate_name": {
               "title": "alternate name",
-              "description": "Alternate organizational name associated with the object.",
+              "description": "An alternate organizational name associated with the object.",
               "type": "array",
               "items": {
                 "title": "Text",
@@ -644,7 +644,7 @@
                   },
                   "alternate_name": {
                     "title": "alternate name",
-                    "description": "Alternate organizational name associated with the object.",
+                    "description": "An alternate organizational name associated with the object.",
                     "type": "array",
                     "items": {
                       "title": "Text",

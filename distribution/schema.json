@@ -225,7 +225,7 @@
                     },
                     "qualified_attribution": {
                       "title": "qualified attribution",
-                      "description": "An Agent having some form of responsibility for the resource. ",
+                      "description": "A link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship.",
                       "type": "array",
                       "items": {
                         "title": "Resource attribution",
@@ -320,7 +320,7 @@
                                   },
                                   "alternate_name": {
                                     "title": "alternate name",
-                                    "description": "Alternate organizational name associated with the object.",
+                                    "description": "An alternate organizational name associated with the object.",
                                     "type": "array",
                                     "items": {
                                       "title": "Text",
@@ -851,7 +851,7 @@
                                         },
                                         "alternate_name": {
                                           "title": "alternate name",
-                                          "description": "Alternate organizational name associated with the object.",
+                                          "description": "An alternate organizational name associated with the object.",
                                           "type": "array",
                                           "items": {
                                             "title": "Text",

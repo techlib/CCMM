@@ -21,7 +21,7 @@
       </xs:documentation>
       <xs:documentation xml:lang="en">
         Metadata Record - Description of the metadata record of the dataset. 
-        In case metadata is harvested from external catalogue, metadata record IRI shall be the same as IRI of the metadata record in original repository.
+        In case metadata is harvested from an external catalogue, the metadata record IRI shall be the same as IRI of the metadata record in the original repository.
       </xs:documentation>
       <xs:documentation xml:lang="es">
         Registro del catálogo - Un registro en un catálogo de datos que describe un solo conjunto de datos o un servicio de datos.
@@ -70,8 +70,8 @@
             Reference til en beskrivelse af en relation til en anden ressource.
           </xs:documentation>
           <xs:documentation xml:lang="en">
-            qualified attribution - Link to a description of a relationship between metadata record and agent with the specification of the role of agent in this relationship.
-            Relationship shall contain at least one agent with role &#34;Data Manager&#34; from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/.
+            qualified attribution - A link to a description of a relationship between metadata record and agent with the specification of the role of agent in this relationship.
+            The relationship shall contain at least one agent with role &#34;Data Manager&#34; from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/.
           </xs:documentation>
           <xs:documentation xml:lang="es">
             Enlace a una descripción de la relación con otro recurso.
@@ -99,7 +99,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             conforms to - An established standard to which the metadata record conforms.
-            This property should be used to indicate the metadata model, schema, ontology or profile that the metadata record conforms to.
+            This property should be used to indicate the metadata model, schema, ontology, or profile that the metadata record conforms to.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -108,7 +108,7 @@
           <xs:documentation xml:lang="en">
             has original repository - Link to the repository in which the metadata were originally stored and curated.
             Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. 
-            If metadata record is harvested from other repository, make sure to include the first repository from which it was harvested.
+            If metadata record is harvested from another repository, make sure to include the first repository from which it was harvested.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
