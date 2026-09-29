@@ -158,7 +158,7 @@
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/21b612ea>.
 
 <https://model.ccmm.cz/research-data/dcat%3ADatasetShape/-2327f107> a sh:PropertyShape;
-    sh:description "The activity associated with generation of a dataset will typically be an initiative, project, mission, survey, or ongoing activity. Multiple prov:wasGeneratedBy properties can be used to indicate the dataset production context at various levels of granularity. Use prov:qualifiedGeneration to attach additional details about the relationship between the dataset and the activity, e.g., the exact time that the dataset was produced during the lifetime of a project."@en;
+    sh:description "The activity associated with generation of a dataset will be typically an initiative, project, mission, survey, or ongoing activity. Multiple prov:wasGeneratedBy properties can be used to indicate the dataset production context at various levels of granularity. Use prov:qualifiedGeneration to attach additional details about the relationship between the dataset and the activity, e.g., the exact time that the dataset was produced during the lifetime of a project."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/prov#wasGeneratedBy>;
     sh:class <http://www.w3.org/ns/prov#Activity>.
@@ -193,7 +193,7 @@
 
 <https://model.ccmm.cz/research-data/rdfs%3AResourceShape/-689b939d> a sh:PropertyShape;
     sh:name "qualified attribution"@en;
-    sh:description "Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship. \nIf the resource is Dataset, it has to have at least one qualified attribution relation with the role Creator, also, it is recommended to have other qualified relation to the organization with the role Publisher."@en;
+    sh:description "If the resource is Dataset, it has to have at least one qualified attribution relation with the role Creator, also, it is recommended to have other qualified relation to the organization with the role Publisher."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/prov#qualifiedAttribution>;
     sh:class <http://www.w3.org/ns/prov#Attribution>.
@@ -234,7 +234,7 @@
 
 <https://model.ccmm.cz/research-data/foaf%3AAgentShape/291051fa> a sh:PropertyShape;
     sh:name "name"@en;
-    sh:description "It is used for the official name of the agent. For Persons it is combination of first and family names. Recommended format is \"family names, first names\"."@en;
+    sh:description "The official name of an agent. For Person, it is a combination of first and family names. Recommended format is \"family names, first names\", e.g., \"Smith, John\"."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://xmlns.com/foaf/0.1/name>;
     sh:maxCount 1;
@@ -401,7 +401,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/491c4920> a sh:PropertyShape;
     sh:name "has rights"@en;
-    sh:description "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies:\nembargoed access, metadata only access (:NON_PUBLIC),\nopen access (:PUBLIC),\nrestricted access (:RESTRICTED)."@en;
+    sh:description "Use an IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is: \n- embargoed access, metadata only access mapped to :NON_PUBLIC,\n- open access mapped to :PUBLIC,\n- restricted access mapped to :RESTRICTED."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.org/dc/terms/rights>;
     sh:class <http://purl.org/dc/terms/RightsStatement>.
@@ -473,7 +473,7 @@
 
 <https://model.ccmm.cz/research-data/rdfs%3AResourceShape/ee67f04> a sh:PropertyShape;
     sh:name "resource URL"@en;
-    sh:description "Resource URL represents human readable resolvable representation of the resource, i.e. web page. Same url must be aslo in c:iri."@en;
+    sh:description "The resource URL is a resolvable representation human-readable representation of the resource, i.e. web page. The same url must be also recorded in c:iri."@en;
     sh:nodeKind sh:Literal;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#resourceUrl>;
     sh:maxCount 1;
@@ -706,7 +706,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogRecordShape/79ead442> a sh:PropertyShape;
     sh:name "conforms to"@en;
-    sh:description "This property should be used to indicate the metadata model, schema, ontology or profile that the metadata record conforms to."@en;
+    sh:description "This property should be used to indicate the metadata model, schema, ontology, or profile that the metadata record conforms to."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.org/dc/terms/conformsTo>;
     sh:class <http://purl.org/dc/terms/Standard>.
@@ -715,7 +715,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogRecordShape/2dc92380> a sh:PropertyShape;
     sh:name "has original repository"@en;
-    sh:description "Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. \nIf metadata record is harvested from other repository, make sure to include the first repository from which it was harvested."@en;
+    sh:description "Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. \nIf metadata record is harvested from another repository, make sure to include the first repository from which it was harvested."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#originalRepository>;
     sh:maxCount 1;
@@ -735,7 +735,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogRecordShape/50a8ec11> a sh:PropertyShape;
     sh:name "qualified attribution"@en;
-    sh:description "Relationship shall contain at least one agent with role \"Data Manager\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
+    sh:description "The relationship shall contain at least one agent with role \"Data Manager\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/prov#qualifiedAttribution>;
     sh:class <http://www.w3.org/ns/prov#Attribution>.
@@ -786,7 +786,7 @@
 <https://model.ccmm.cz/research-data/dcat%3ACatalogShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ACatalogShape/548e8df0>.
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogShape/-4b7d5519> a sh:PropertyShape;
-    sh:description "Relationship shall contain at least one agent with role \"Publisher\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
+    sh:description "The relationship shall contain at least one agent with the role \"Publisher\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/prov#qualifiedAttribution>;
     sh:class <http://www.w3.org/ns/prov#Attribution>.
@@ -824,7 +824,7 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape/-6be48927> a sh:PropertyShape;
     sh:name "download URL"@en;
-    sh:description "Download URL SHOULD be used for the URL at which this distribution is available directly, typically through a HTTP Get request."@en;
+    sh:description "A download URL SHOULD BE used for the URL at which this distribution is available directly, typically through an HTTP Get request."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/dcat#downloadURL>.
 
@@ -871,7 +871,7 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3ADistribution-DownloadableFileShape/-592ae936> a sh:PropertyShape;
     sh:name "has packaging format"@en;
-    sh:description "This property SHOULD be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), if available."@en;
+    sh:description "This property SHOULD be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. If available, record the media type as a value from the IANA registry (using value from https://www.iana.org/assignments/media-types/media-types.xhtml)."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/dcat#packageFormat>;
     sh:maxCount 1;

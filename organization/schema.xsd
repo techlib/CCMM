@@ -23,14 +23,14 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             name - Name of the agent.
-            It is used for the official name of the agent. For Persons it is combination of first and family names. Recommended format is &#34;family names, first names&#34;.
+            The official name of an agent. For Person, it is a combination of first and family names. Recommended format is &#34;family names, first names&#34;, e.g., &#34;Smith, John&#34;.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="alternate_name" sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#organization-name">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            alternate name - Alternate organizational name associated with the object.
+            alternate name - An alternate organizational name associated with the object.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

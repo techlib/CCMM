@@ -99,7 +99,7 @@
     a dsv:TermProfile;
     skos:prefLabel "Related resource"@en;
     skos:definition "Resource represents any resource, physical or digital, that is related to the described dataset."@en;
-    skos:scopeNote "Class is used for description of the resource together with the type of relation, for which is used value from code list https://w3id.org/tib/datacite/vocab/relationType. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc."@en;
+    skos:scopeNote "The class is used for description of the resource together with the type of relation, for which is used value from the code list https://w3id.org/tib/datacite/vocab/relationType. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper, etc."@en;
     dsv:specializes :Resource;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#rdfs-Resource>;
     a dsv:ClassProfile;
@@ -144,7 +144,7 @@
     a dsv:TermProfile;
     skos:prefLabel "Metadata Record"@en, "Katalogizační záznam"@cs, "Record di catalogo"@it, "Registre du catalogue"@fr, "Registro del catálogo"@es, "Καταγραφή καταλόγου"@el, "سجل"@ar, "カタログ・レコード"@ja, "Katalogpost"@da;
     skos:definition "1つのデータセットを記述したデータ・カタログ内のレコード。"@ja, "Description of the metadata record of the dataset. "@en, "Un record in un catalogo di dati che descrive un singolo dataset o servizio di dati."@it, "Un registre du catalogue ou une entrée du catalogue, décrivant un seul jeu de données."@fr, "Un registro en un catálogo de datos que describe un solo conjunto de datos o un servicio de datos."@es, "Záznam v datovém katalogu popisující jednu datovou sadu či datovou službu."@cs, "Μία καταγραφή ενός καταλόγου, η οποία περιγράφει ένα συγκεκριμένο σύνολο δεδομένων."@el, "En post i et datakatalog der beskriver registreringen af et enkelt datasæt eller en datatjeneste."@da;
-    skos:scopeNote "In case metadata is harvested from external catalogue, metadata record IRI shall be the same as IRI of the metadata record in original repository."@en;
+    skos:scopeNote "In case metadata is harvested from an external catalogue, the metadata record IRI shall be the same as IRI of the metadata record in the original repository."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#CatalogueRecord>;
     a dsv:ClassProfile;
     dsv:classRole role:main.
@@ -665,7 +665,7 @@
     a dsv:TermProfile;
     skos:prefLabel "conforms to"@en;
     skos:definition "An established standard to which the metadata record conforms."@en;
-    skos:scopeNote "This property should be used to indicate the metadata model, schema, ontology or profile that the metadata record conforms to."@en;
+    skos:scopeNote "This property should be used to indicate the metadata model, schema, ontology, or profile that the metadata record conforms to."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#CatalogueRecord.applicationProfile>;
     dsv:cardinality cardinality:1n;
     dsv:domain :MetadataRecord;
@@ -676,7 +676,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has original repository"@en;
     skos:definition "Link to the repository in which the metadata were originally stored and curated."@en;
-    skos:scopeNote "Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. \nIf metadata record is harvested from other repository, make sure to include the first repository from which it was harvested."@en;
+    skos:scopeNote "Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. \nIf metadata record is harvested from another repository, make sure to include the first repository from which it was harvested."@en;
     dsv:cardinality cardinality:11;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#originalRepository>;
     dsv:domain :MetadataRecord;
@@ -696,7 +696,7 @@
 <https://model.ccmm.cz/research-data/Distribution-DownloadableFile.downloadUrl> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "download URL"@en;
-    skos:scopeNote "Download URL SHOULD be used for the URL at which this distribution is available directly, typically through a HTTP Get request."@en;
+    skos:scopeNote "A download URL SHOULD BE used for the URL at which this distribution is available directly, typically through an HTTP Get request."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Distribution.downloadUrl>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -877,8 +877,8 @@
 <https://model.ccmm.cz/research-data/MetadataRecord.qualifiedAttribution> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "qualified attribution"@en;
-    skos:definition "Enlace a una descripción de la relación con otro recurso."@es, "Link a una descrizione di una relazione con un'altra risorsa."@it, "Link to a description of a relationship between metadata record and agent with the specification of the role of agent in this relationship."@en, "Odkaz na popis vztahu s jiným zdrojem."@cs, "Reference til en beskrivelse af en relation til en anden ressource."@da;
-    skos:scopeNote "Relationship shall contain at least one agent with role \"Data Manager\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
+    skos:definition "Enlace a una descripción de la relación con otro recurso."@es, "Link a una descrizione di una relazione con un'altra risorsa."@it, "A link to a description of a relationship between metadata record and agent with the specification of the role of agent in this relationship."@en, "Odkaz na popis vztahu s jiným zdrojem."@cs, "Reference til en beskrivelse af en relation til en anden ressource."@da;
+    skos:scopeNote "The relationship shall contain at least one agent with role \"Data Manager\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset.qualifiedAttribution>;
     dsv:cardinality cardinality:1n;
     dsv:domain :MetadataRecord;
@@ -1116,8 +1116,8 @@
 <https://model.ccmm.cz/research-data/Resource.qualifiedAttribution> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "qualified attribution"@en;
-    skos:definition "An Agent having some form of responsibility for the resource. "@en;
-    skos:scopeNote "Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship. \nIf the resource is Dataset, it has to have at least one qualified attribution relation with the role Creator, also, it is recommended to have other qualified relation to the organization with the role Publisher."@en;
+    skos:definition "A link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship."@en;
+    skos:scopeNote "If the resource is Dataset, it has to have at least one qualified attribution relation with the role Creator, also, it is recommended to have other qualified relation to the organization with the role Publisher."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset.qualifiedAttribution>;
     dsv:cardinality cardinality:0n;
     dsv:domain :Resource;
@@ -1205,7 +1205,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has packaging format"@en;
     skos:definition "The format of the file in which one or more data files are grouped together, e.g., to enable a set of related files to be downloaded together."@en;
-    skos:scopeNote "This property SHOULD be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), if available."@en;
+    skos:scopeNote "This property SHOULD be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. If available, record the media type as a value from the IANA registry (using value from https://www.iana.org/assignments/media-types/media-types.xhtml)."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Distribution.packagingFormat>;
     dsv:cardinality cardinality:01;
     dsv:domain :Distribution-DownloadableFile;
@@ -1260,7 +1260,7 @@
 <https://model.ccmm.cz/research-data/Distribution.rights> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "has rights"@en;
-    skos:scopeNote "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies:\nembargoed access, metadata only access (:NON_PUBLIC),\nopen access (:PUBLIC),\nrestricted access (:RESTRICTED)."@en;
+    skos:scopeNote "Use an IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is: \n- embargoed access, metadata only access mapped to :NON_PUBLIC,\n- open access mapped to :PUBLIC,\n- restricted access mapped to :RESTRICTED."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Distribution.rights>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -1275,8 +1275,8 @@
 
 <https://model.ccmm.cz/research-data/Repository.qualifiedAttribution> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
-    skos:definition "Link to a description of a relationship between repository and agent with the specification of the role of agent in this relationship."@en;
-    skos:scopeNote "Relationship shall contain at least one agent with role \"Publisher\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
+    skos:definition "A link to a description of a relationship between repository and agent with the specification of the role of agent in this relationship."@en;
+    skos:scopeNote "The relationship shall contain at least one agent with the role \"Publisher\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset.qualifiedAttribution>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -1292,7 +1292,7 @@
 <https://model.ccmm.cz/research-data/Dataset.wasGeneratedBy> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:definition " An activity that generated, or provides the business context for, the creation of the dataset. "@en;
-    skos:scopeNote "The activity associated with generation of a dataset will typically be an initiative, project, mission, survey, or ongoing activity. Multiple prov:wasGeneratedBy properties can be used to indicate the dataset production context at various levels of granularity. Use prov:qualifiedGeneration to attach additional details about the relationship between the dataset and the activity, e.g., the exact time that the dataset was produced during the lifetime of a project."@en;
+    skos:scopeNote "The activity associated with generation of a dataset will be typically an initiative, project, mission, survey, or ongoing activity. Multiple prov:wasGeneratedBy properties can be used to indicate the dataset production context at various levels of granularity. Use prov:qualifiedGeneration to attach additional details about the relationship between the dataset and the activity, e.g., the exact time that the dataset was produced during the lifetime of a project."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset.wasGeneratedBy>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -1514,7 +1514,7 @@
 <https://model.ccmm.cz/research-data/Organization.alternateName> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "alternate name"@en;
-    skos:definition "Alternate organizational name associated with the object."@en;
+    skos:definition "An alternate organizational name associated with the object."@en;
     dsv:cardinality cardinality:0n;
     dsv:property <http://www.w3.org/2006/vcard/ns#organization-name>;
     dsv:domain :Organization;
@@ -1608,7 +1608,7 @@
 <https://model.ccmm.cz/research-data/Repository.label> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
-    skos:definition "Human readable name of the repository."@en;
+    skos:definition "A human-readable name of the repository."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Catalogue.title>;
     dsv:cardinality cardinality:1n;
     dsv:domain :Repository;
@@ -1721,7 +1721,7 @@
     a dsv:TermProfile;
     skos:prefLabel "resource URL"@en;
     skos:definition "Human readable resolvable URL representing the resource."@en;
-    skos:scopeNote "Resource URL represents human readable resolvable representation of the resource, i.e. web page. Same url must be aslo in c:iri."@en;
+    skos:scopeNote "The resource URL is a resolvable representation human-readable representation of the resource, i.e. web page. The same url must be also recorded in c:iri."@en;
     dsv:cardinality cardinality:01;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#resourceUrl>;
     dsv:domain :RelatedResource;
@@ -1743,7 +1743,7 @@
     a dsv:TermProfile;
     skos:prefLabel "name"@en;
     skos:definition "Name of the agent."@en;
-    skos:scopeNote "It is used for the official name of the agent. For Persons it is combination of first and family names. Recommended format is \"family names, first names\"."@en;
+    skos:scopeNote "The official name of an agent. For Person, it is a combination of first and family names. Recommended format is \"family names, first names\", e.g., \"Smith, John\"."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Agent.name>;
     dsv:cardinality cardinality:11;
     dsv:domain :Agent;

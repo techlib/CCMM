@@ -72,7 +72,7 @@
           </xs:documentation>
           <xs:documentation xml:lang="en">
             download URL - A URL that is a direct link to a downloadable file in a given format.
-            Download URL SHOULD be used for the URL at which this distribution is available directly, typically through a HTTP Get request.
+            A download URL SHOULD BE used for the URL at which this distribution is available directly, typically through an HTTP Get request.
           </xs:documentation>
           <xs:documentation xml:lang="es">
             La URL de un archivo descargable en el formato dato. Por ejemplo, archivo CSV o archivo RDF. El formato se describe con las propiedades de la distribución dcterms:format y/o dcat:mediaType.
@@ -116,7 +116,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has packaging format - The format of the file in which one or more data files are grouped together, e.g., to enable a set of related files to be downloaded together.
-            This property SHOULD be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA (using value from https://www.iana.org/assignments/media-types/media-types.xhtml), if available.
+            This property SHOULD be used when the files in the distribution are packaged, e.g., in a TAR file, a ZIP file, a Frictionless Data Package or a Bagit file. If available, record the media type as a value from the IANA registry (using value from https://www.iana.org/assignments/media-types/media-types.xhtml).
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -159,10 +159,10 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has rights - A statement that specifies rights associated with the Distribution.
-            Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies:
-            embargoed access, metadata only access (:NON_PUBLIC),
-            open access (:PUBLIC),
-            restricted access (:RESTRICTED).
+            Use an IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is: 
+            - embargoed access, metadata only access mapped to :NON_PUBLIC,
+            - open access mapped to :PUBLIC,
+            - restricted access mapped to :RESTRICTED.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

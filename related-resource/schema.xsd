@@ -10,7 +10,7 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Related resource - Resource represents any resource, physical or digital, that is related to the described dataset.
-        Class is used for description of the resource together with the type of relation, for which is used value from code list https://w3id.org/tib/datacite/vocab/relationType. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper etc.
+        The class is used for description of the resource together with the type of relation, for which is used value from the code list https://w3id.org/tib/datacite/vocab/relationType. Distributions of the datasets SHALL NOT be modeled as related resource, but as a distribution. Examples of resources: other related dataset, used methodology, instrument used for measurement, conference or conference paper, etc.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -40,15 +40,14 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             resource URL - Human readable resolvable URL representing the resource.
-            Resource URL represents human readable resolvable representation of the resource, i.e. web page. Same url must be aslo in c:iri.
+            The resource URL is a resolvable representation human-readable representation of the resource, i.e. web page. The same url must be also recorded in c:iri.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="qualified_attribution" type="ccmm:resource_attribution" sawsdl:modelReference="http://www.w3.org/ns/prov#qualifiedAttribution">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            qualified attribution - An Agent having some form of responsibility for the resource. 
-            Link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship. 
+            qualified attribution - A link to a description of a relationship between resource and an agent with the specification of the role of agent in this relationship.
             If the resource is Dataset, it has to have at least one qualified attribution relation with the role Creator, also, it is recommended to have other qualified relation to the organization with the role Publisher.
           </xs:documentation>
         </xs:annotation>
