@@ -7,7 +7,7 @@ CHANGELOG
 * reprofiling of distributions according to the DCAT-AP
 * attaching licenses and access rights directly to specific classes (and removing terms of use class)
 * changed relationship to attribution (between resource and agent)
-* creator and publisher roles are mandatory for dataset attribution (bugfix)
+* creator role is mandatory and publisher is highly recommended and attributed always to the organization
 * new language properties for primary/other language
 * namespaces changed to version 1.2
 * repository has mandatory attribution with publisher role
