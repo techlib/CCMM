@@ -45,7 +45,6 @@
 :Person dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:definition "Physical person. "@en;
-    skos:scopeNote ""@en;
     dsv:specializes :Agent;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -144,7 +143,7 @@
     a dsv:TermProfile;
     skos:prefLabel "Metadata Record"@en, "Katalogizační záznam"@cs, "Record di catalogo"@it, "Registre du catalogue"@fr, "Registro del catálogo"@es, "Καταγραφή καταλόγου"@el, "سجل"@ar, "カタログ・レコード"@ja, "Katalogpost"@da;
     skos:definition "1つのデータセットを記述したデータ・カタログ内のレコード。"@ja, "Description of the metadata record of the dataset. "@en, "Un record in un catalogo di dati che descrive un singolo dataset o servizio di dati."@it, "Un registre du catalogue ou une entrée du catalogue, décrivant un seul jeu de données."@fr, "Un registro en un catálogo de datos que describe un solo conjunto de datos o un servicio de datos."@es, "Záznam v datovém katalogu popisující jednu datovou sadu či datovou službu."@cs, "Μία καταγραφή ενός καταλόγου, η οποία περιγράφει ένα συγκεκριμένο σύνολο δεδομένων."@el, "En post i et datakatalog der beskriver registreringen af et enkelt datasæt eller en datatjeneste."@da;
-    skos:scopeNote "In case metadata is harvested from an external catalogue, the metadata record IRI shall be the same as IRI of the metadata record in the original repository."@en;
+    skos:scopeNote "In case metadata is harvested from an external catalogue, the metadata record IRI shall be the same as the IRI of the metadata record in the original repository."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#CatalogueRecord>;
     a dsv:ClassProfile;
     dsv:classRole role:main.
@@ -431,8 +430,8 @@
 :Description dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "Description"@en;
-    skos:definition "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument."@en;
-    skos:scopeNote "Description of the resource may have also a description type."@en;
+    skos:definition "All additional information to the resource. "@en;
+    skos:scopeNote "May be used for technical information or detailed information associated with a scientific instrument. Description of the resource may have also a description type. At least one description with a free-text account of the Dataset is mandatory."@en;
     a dsv:ClassProfile;
     dsv:class <https://w3id.org/tib/datacite/class/Description>;
     dsv:classRole role:supportive.
@@ -676,7 +675,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has original repository"@en;
     skos:definition "Link to the repository in which the metadata were originally stored and curated."@en;
-    skos:scopeNote "Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. \nIf metadata record is harvested from another repository, make sure to include the first repository from which it was harvested."@en;
+    skos:scopeNote "Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. \nIf a metadata record is harvested from another repository, make sure to include the first repository from which it was harvested."@en;
     dsv:cardinality cardinality:11;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#originalRepository>;
     dsv:domain :MetadataRecord;
@@ -867,7 +866,8 @@
 <https://model.ccmm.cz/research-data/Agent.hasIdentifier> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "has identifier"@en;
-    skos:definition "has identifier"@en;
+    skos:definition "Identifier of an Agent."@en;
+    skos:scopeNote "Recommended identifier scheme for Organization is ROR; recommended identifier scheme for Person is ORCID."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset.otherIdentifier>;
     dsv:cardinality cardinality:0n;
     dsv:domain :Agent;
@@ -878,7 +878,7 @@
     a dsv:TermProfile;
     skos:prefLabel "qualified attribution"@en;
     skos:definition "Enlace a una descripción de la relación con otro recurso."@es, "Link a una descrizione di una relazione con un'altra risorsa."@it, "A link to a description of a relationship between metadata record and agent with the specification of the role of agent in this relationship."@en, "Odkaz na popis vztahu s jiným zdrojem."@cs, "Reference til en beskrivelse af en relation til en anden ressource."@da;
-    skos:scopeNote "The relationship shall contain at least one agent with role \"Data Manager\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
+    skos:scopeNote "The relationship shall contain at least one agent with the role \"Data Manager\" from the code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset.qualifiedAttribution>;
     dsv:cardinality cardinality:1n;
     dsv:domain :MetadataRecord;
@@ -1092,6 +1092,7 @@
 <https://model.ccmm.cz/research-data/TimeReference.hasTemporalRepresentation> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "has temporal representation"@en;
+    skos:definition "Represents the representation of a temporal entity (instant or interval)."@en;
     dsv:cardinality cardinality:11;
     dsv:property <http://www.w3.org/2006/time#hasTime>;
     dsv:domain :TimeReference;
@@ -1164,7 +1165,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has identifier"@en;
     skos:definition "A secondary identifier of the Dataset."@en;
-    skos:scopeNote ""@en;
+    skos:scopeNote "List all available identifiers referring to the same resource (e.g., DOI, Handle, etc.)."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset.otherIdentifier>;
     dsv:domain :Resource;
     a dsv:ObjectPropertyProfile;
@@ -1268,7 +1269,7 @@
   dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-ap#Distribution.rights>
 ];
-    dsv:cardinality cardinality:0n;
+    dsv:cardinality cardinality:01;
     dsv:domain :Distribution;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :AccessRights.
@@ -1484,7 +1485,6 @@
     a dsv:TermProfile;
     skos:prefLabel "data box"@en;
     skos:definition "Code of the data box."@en;
-    skos:scopeNote ""@en;
     dsv:cardinality cardinality:0n;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#dataBox>;
     dsv:domain :ContactDetails;
@@ -1721,7 +1721,7 @@
     a dsv:TermProfile;
     skos:prefLabel "resource URL"@en;
     skos:definition "Human readable resolvable URL representing the resource."@en;
-    skos:scopeNote "The resource URL is a resolvable representation human-readable representation of the resource, i.e. web page. The same url must be also recorded in c:iri."@en;
+    skos:scopeNote "The resource URL is a resolvable and human-readable representation of the resource, i.e. web page. The same URL must be also recorded as c:iri."@en;
     dsv:cardinality cardinality:01;
     dsv:property <https://model.ccmm.cz/vocabulary/ccmm#resourceUrl>;
     dsv:domain :RelatedResource;
@@ -1743,7 +1743,7 @@
     a dsv:TermProfile;
     skos:prefLabel "name"@en;
     skos:definition "Name of the agent."@en;
-    skos:scopeNote "The official name of an agent. For Person, it is a combination of first and family names. Recommended format is \"family names, first names\", e.g., \"Smith, John\"."@en;
+    skos:scopeNote "The official name of an agent. For Person, it is a combination of the first and family names. The recommended format is \"family names, first names\", e.g., \"Smith, John\"."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Agent.name>;
     dsv:cardinality cardinality:11;
     dsv:domain :Agent;
@@ -1961,7 +1961,7 @@
     a dsv:TermProfile;
     skos:prefLabel "label"@en;
     skos:definition "Identifier scheme label."@en;
-    skos:scopeNote "For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID melongs to the notation."@en;
+    skos:scopeNote "For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID belongs to the notation."@en;
     dsv:property rdfs:label;
     dsv:domain :IdentifierScheme;
     a dsv:DatatypePropertyProfile;
@@ -2002,7 +2002,7 @@
     a dsv:TermProfile;
     skos:prefLabel "description text"@en;
     skos:definition "A free-text account of the Data Service."@en;
-    skos:scopeNote "description [DCAT-AP 3.0.1 based on DCAT 3 DAP] (https://mff-uk.github.io/specifications/dcat-ap#DataService.description)"@en;
+    skos:scopeNote " This property can be repeated for parallel language versions of the description."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset.description>;
     dsv:cardinality cardinality:11;
     dsv:domain :Description;

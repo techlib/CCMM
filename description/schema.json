@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://model.ccmm.cz/research-data/description/schema.json",
   "title": "Description",
-  "description": "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.",
+  "description": "All additional information to the resource. ",
   "type": "object",
   "required": [
     "description_text"

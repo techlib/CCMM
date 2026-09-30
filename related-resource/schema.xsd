@@ -19,6 +19,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has identifier - A secondary identifier of the Dataset.
+            List all available identifiers referring to the same resource (e.g., DOI, Handle, etc.).
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -40,7 +41,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             resource URL - Human readable resolvable URL representing the resource.
-            The resource URL is a resolvable representation human-readable representation of the resource, i.e. web page. The same url must be also recorded in c:iri.
+            The resource URL is a resolvable and human-readable representation of the resource, i.e. web page. The same URL must be also recorded as c:iri.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

@@ -268,7 +268,7 @@
                             "properties": {
                               "identifier": {
                                 "title": "has identifier",
-                                "description": "has identifier",
+                                "description": "Identifier of an Agent.",
                                 "type": "array",
                                 "items": {
                                   "title": "Identifier",
@@ -535,7 +535,7 @@
                             "properties": {
                               "identifier": {
                                 "title": "has identifier",
-                                "description": "has identifier",
+                                "description": "Identifier of an Agent.",
                                 "type": "array",
                                 "items": {
                                   "title": "Identifier",
@@ -799,7 +799,7 @@
                                   "properties": {
                                     "identifier": {
                                       "title": "has identifier",
-                                      "description": "has identifier",
+                                      "description": "Identifier of an Agent.",
                                       "type": "array",
                                       "items": {
                                         "title": "Identifier",
@@ -1108,6 +1108,7 @@
                     "properties": {
                       "temporal_representation": {
                         "title": "has temporal representation",
+                        "description": "Represents the representation of a temporal entity (instant or interval).",
                         "anyOf": [
                           {
                             "title": "Time interval",
@@ -1439,32 +1440,27 @@
     "rights": {
       "title": "has rights",
       "description": "A statement that specifies rights associated with the Distribution.",
-      "type": "array",
-      "items": {
-        "title": "Access rights",
-        "description": "A statement about the access rights to the resource.",
-        "type": "object",
-        "required": [
-          "label"
-        ],
-        "properties": {
-          "label": {
-            "title": "label",
-            "description": "A human-readable name for the subject.",
-            "type": "object",
-            "additionalProperties": {
-              "title": "Hodnota v jiném jazyce",
+      "type": "object",
+      "required": [
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "title": "label",
+          "description": "A human-readable name for the subject.",
+          "type": "object",
+          "additionalProperties": {
+            "title": "Hodnota v jiném jazyce",
+            "type": "string"
+          },
+          "properties": {
+            "cs": {
+              "title": "Hodnota v českém jazyce",
               "type": "string"
             },
-            "properties": {
-              "cs": {
-                "title": "Hodnota v českém jazyce",
-                "type": "string"
-              },
-              "en": {
-                "title": "Hodnota v anglickém jazyce",
-                "type": "string"
-              }
+            "en": {
+              "title": "Hodnota v anglickém jazyce",
+              "type": "string"
             }
           }
         }

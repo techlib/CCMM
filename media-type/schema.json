@@ -5,6 +5,7 @@
   "description": "A file format or physical medium.",
   "type": "object",
   "required": [
+    "id",
     "label"
   ],
   "properties": {

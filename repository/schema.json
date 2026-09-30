@@ -107,7 +107,7 @@
                 "properties": {
                   "identifier": {
                     "title": "has identifier",
-                    "description": "has identifier",
+                    "description": "Identifier of an Agent.",
                     "type": "array",
                     "items": {
                       "title": "Identifier",
@@ -374,7 +374,7 @@
                 "properties": {
                   "identifier": {
                     "title": "has identifier",
-                    "description": "has identifier",
+                    "description": "Identifier of an Agent.",
                     "type": "array",
                     "items": {
                       "title": "Identifier",
@@ -638,7 +638,7 @@
                       "properties": {
                         "identifier": {
                           "title": "has identifier",
-                          "description": "has identifier",
+                          "description": "Identifier of an Agent.",
                           "type": "array",
                           "items": {
                             "title": "Identifier",

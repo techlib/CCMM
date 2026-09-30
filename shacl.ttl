@@ -220,7 +220,7 @@
 
 <https://model.ccmm.cz/research-data/rdfs%3AResourceShape/3f7f5edf> a sh:PropertyShape;
     sh:name "has identifier"@en;
-    sh:description ""@en;
+    sh:description "List all available identifiers referring to the same resource (e.g., DOI, Handle, etc.)."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/adms#identifier>;
     sh:class <http://www.w3.org/ns/adms#Identifier>.
@@ -234,7 +234,7 @@
 
 <https://model.ccmm.cz/research-data/foaf%3AAgentShape/291051fa> a sh:PropertyShape;
     sh:name "name"@en;
-    sh:description "The official name of an agent. For Person, it is a combination of first and family names. Recommended format is \"family names, first names\", e.g., \"Smith, John\"."@en;
+    sh:description "The official name of an agent. For Person, it is a combination of the first and family names. The recommended format is \"family names, first names\", e.g., \"Smith, John\"."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://xmlns.com/foaf/0.1/name>;
     sh:maxCount 1;
@@ -253,6 +253,7 @@
 
 <https://model.ccmm.cz/research-data/foaf%3AAgentShape/6e02b714> a sh:PropertyShape;
     sh:name "has identifier"@en;
+    sh:description "Recommended identifier scheme for Organization is ROR; recommended identifier scheme for Person is ORCID."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/adms#identifier>;
     sh:class <http://www.w3.org/ns/adms#Identifier>.
@@ -404,6 +405,7 @@
     sh:description "Use an IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is: \n- embargoed access, metadata only access mapped to :NON_PUBLIC,\n- open access mapped to :PUBLIC,\n- restricted access mapped to :RESTRICTED."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.org/dc/terms/rights>;
+    sh:maxCount 1;
     sh:class <http://purl.org/dc/terms/RightsStatement>.
 
 <https://model.ccmm.cz/research-data/dcat%3ADistributionShape> sh:property <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/491c4920>.
@@ -473,7 +475,7 @@
 
 <https://model.ccmm.cz/research-data/rdfs%3AResourceShape/ee67f04> a sh:PropertyShape;
     sh:name "resource URL"@en;
-    sh:description "The resource URL is a resolvable representation human-readable representation of the resource, i.e. web page. The same url must be also recorded in c:iri."@en;
+    sh:description "The resource URL is a resolvable and human-readable representation of the resource, i.e. web page. The same URL must be also recorded as c:iri."@en;
     sh:nodeKind sh:Literal;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#resourceUrl>;
     sh:maxCount 1;
@@ -556,7 +558,6 @@
 
 <https://model.ccmm.cz/research-data/vcard%3AKindShape/-516081a0> a sh:PropertyShape;
     sh:name "data box"@en;
-    sh:description ""@en;
     sh:nodeKind sh:Literal;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#dataBox>;
     sh:datatype xsd:string.
@@ -715,7 +716,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogRecordShape/2dc92380> a sh:PropertyShape;
     sh:name "has original repository"@en;
-    sh:description "Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. \nIf metadata record is harvested from another repository, make sure to include the first repository from which it was harvested."@en;
+    sh:description "Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. \nIf a metadata record is harvested from another repository, make sure to include the first repository from which it was harvested."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <https://model.ccmm.cz/vocabulary/ccmm#originalRepository>;
     sh:maxCount 1;
@@ -735,7 +736,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ACatalogRecordShape/50a8ec11> a sh:PropertyShape;
     sh:name "qualified attribution"@en;
-    sh:description "The relationship shall contain at least one agent with role \"Data Manager\" from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
+    sh:description "The relationship shall contain at least one agent with the role \"Data Manager\" from the code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/prov#qualifiedAttribution>;
     sh:class <http://www.w3.org/ns/prov#Attribution>.
@@ -1294,7 +1295,7 @@
 
 <https://model.ccmm.cz/research-data/ccmm%3AIdentifierSchemeShape/-717362e4> a sh:PropertyShape;
     sh:name "label"@en;
-    sh:description "For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID melongs to the notation."@en;
+    sh:description "For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID belongs to the notation."@en;
     sh:nodeKind sh:Literal;
     sh:path rdfs:label;
     sh:datatype rdf:langString.
@@ -1317,7 +1318,7 @@
 
 <https://model.ccmm.cz/research-data/https://w3id.org/tib/datacite/class/DescriptionShape/-5a86c140> a sh:PropertyShape;
     sh:name "description text"@en;
-    sh:description "description [DCAT-AP 3.0.1 based on DCAT 3 DAP] (https://mff-uk.github.io/specifications/dcat-ap#DataService.description)"@en;
+    sh:description " This property can be repeated for parallel language versions of the description."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://purl.org/dc/terms/description>;
     sh:maxCount 1;

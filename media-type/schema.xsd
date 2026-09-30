@@ -9,7 +9,7 @@
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
+      <xs:element name="iri" type="xs:anyURI"/>
       <xs:element maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#prefLabel">
         <xs:annotation>
           <xs:documentation xml:lang="en">
