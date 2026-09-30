@@ -155,7 +155,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="rights" type="ccmm:access_rights" sawsdl:modelReference="http://purl.org/dc/terms/rights">
+      <xs:element minOccurs="0" name="rights" type="ccmm:access_rights" sawsdl:modelReference="http://purl.org/dc/terms/rights">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has rights - A statement that specifies rights associated with the Distribution.

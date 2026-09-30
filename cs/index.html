@@ -1823,8 +1823,8 @@
       shortName: "CCMM",
       maxTocLevel: 2,
       historyURI: null,
-      thisVersion: "https://odel.ccmm.cz/research-data/2.0.0/",
-      latestVersion: "https://odel.ccmm.cz/research-data/2.0.0/",
+      thisVersion: "https://model.ccmm.cz/research-data/2.0.0/",
+      latestVersion: "https://model.ccmm.cz/research-data/2.0.0/",
       publishDate: "2026-10-01",
       //xref: "web-platform",
       //otherLinks: [{
@@ -2137,7 +2137,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td> (@en)</td>
+                    <td>List all available identifiers referring to the same resource (e.g., DOI, Handle, etc.). (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="Resource.hasLocation">
@@ -4038,7 +4038,7 @@
           
               <tr>
                 <td>Popis použití v profilu</td>
-                <td>In case metadata is harvested from an external catalogue, the metadata record IRI shall be the same as IRI of the metadata record in the original repository. (@en)</td>
+                <td>In case metadata is harvested from an external catalogue, the metadata record IRI shall be the same as the IRI of the metadata record in the original repository. (@en)</td>
               </tr>
             </table>
           
@@ -4458,7 +4458,7 @@
                   <tr>
                     <td>Popis použití v profilu</td>
                     <td>Original repository is a repository where the original metadata was harvested from or where it was created and/or published. There is always exactly one original repository. 
-              If metadata record is harvested from another repository, make sure to include the first repository from which it was harvested. (@en)</td>
+              If a metadata record is harvested from another repository, make sure to include the first repository from which it was harvested. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="MetadataRecord.hasLanguage">
@@ -4630,7 +4630,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>The relationship shall contain at least one agent with role &quot;Data Manager&quot; from code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. (@en)</td>
+                    <td>The relationship shall contain at least one agent with the role &quot;Data Manager&quot; from the code list https://vocabs.ccmm.cz/registry/codelist/AgentRole/. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="MetadataRecord.title">
@@ -5564,7 +5564,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>The resource URL is a resolvable representation human-readable representation of the resource, i.e. web page. The same url must be also recorded in c:iri. (@en)</td>
+                    <td>The resource URL is a resolvable and human-readable representation of the resource, i.e. web page. The same URL must be also recorded as c:iri. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -5665,7 +5665,7 @@
                   </tr>
                   <tr>
                     <td>Definice</td>
-                    <td>has identifier (@en)</td>
+                    <td>Identifier of an Agent. (@en)</td>
                   </tr>
                   <tr>
                     <td>Definiční obor</td>
@@ -5715,6 +5715,10 @@
                       </td>
                     </tr>
               
+                  <tr>
+                    <td>Popis použití v profilu</td>
+                    <td>Recommended identifier scheme for Organization is ROR; recommended identifier scheme for Person is ORCID. (@en)</td>
+                  </tr>
                 </table>
               </section>    <section id="Agent.contactPoint">
                 <h4>má kontaktní bod</h4>
@@ -5861,7 +5865,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>The official name of an agent. For Person, it is a combination of first and family names. Recommended format is &quot;family names, first names&quot;, e.g., &quot;Smith, John&quot;. (@en)</td>
+                    <td>The official name of an agent. For Person, it is a combination of the first and family names. The recommended format is &quot;family names, first names&quot;, e.g., &quot;Smith, John&quot;. (@en)</td>
                   </tr>
                 </table>
               </section>
@@ -5953,10 +5957,6 @@
                   </td>
                 </tr>
           
-              <tr>
-                <td>Popis použití v profilu</td>
-                <td> (@en)</td>
-              </tr>
             </table>
           
               <p><strong>Vlastnosti</strong></p>
@@ -6775,7 +6775,7 @@
                     <td>
                       <a href="#AccessRights">Access rights (@en)</a>
               
-                          [0..*]
+                          [0..1]
               
                   </td>
                   </tr>
@@ -10417,10 +10417,6 @@
                       </td>
                     </tr>
               
-                  <tr>
-                    <td>Popis použití v profilu</td>
-                    <td> (@en)</td>
-                  </tr>
                 </table>
               </section>    <section id="ContactDetails.email">
                 <h4>email (@en)</h4>
@@ -10788,7 +10784,7 @@
               </tr>
               <tr>
                 <td>Definice</td>
-                <td>All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument. (@en)</td>
+                <td>All additional information to the resource.  (@en)</td>
               </tr>
           
                 <tr>
@@ -10811,7 +10807,7 @@
           
               <tr>
                 <td>Popis použití v profilu</td>
-                <td>Description of the resource may have also a description type. (@en)</td>
+                <td>May be used for technical information or detailed information associated with a scientific instrument. Description of the resource may have also a description type. At least one description with a free-text account of the Dataset is mandatory. (@en)</td>
               </tr>
             </table>
           
@@ -10907,7 +10903,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>description [DCAT-AP 3.0.1 based on DCAT 3 DAP] (https://mff-uk.github.io/specifications/dcat-ap#DataService.description) (@en)</td>
+                    <td> This property can be repeated for parallel language versions of the description. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="Description.hasDescriptionType">
@@ -12488,7 +12484,7 @@
               
                   <tr>
                     <td>Popis použití v profilu</td>
-                    <td>For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID melongs to the notation. (@en)</td>
+                    <td>For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID belongs to the notation. (@en)</td>
                   </tr>
                 </table>
               </section>    <section id="IdentifierScheme.notation">
@@ -15555,6 +15551,10 @@
                     <td>has temporal representation (@en)</td>
                   </tr>
                   <tr>
+                    <td>Definice</td>
+                    <td>Represents the representation of a temporal entity (instant or interval). (@en)</td>
+                  </tr>
+                  <tr>
                     <td>Definiční obor</td>
                     <td>
                       <a href="#TimeReference">Time reference (@en)</a>
@@ -15847,7 +15847,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -16037,7 +16037,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -17931,7 +17931,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -19382,19 +19382,7 @@
           nepovinná
           položka typu
 
-                
-  
-      pole hodnot <code>{0..*}</code> typu     <a href="#json-object--distribution--access-rights"></a>
-
-          
-  
-  
-  
-  
-  
-  
-  
-
+              <a href="#json-object--distribution--access-rights"></a>
 
         </li>
         <li style="list-style-type: disclosure-closed;">
@@ -20731,19 +20719,7 @@
           nepovinná
           položka typu
 
-                
-  
-      pole hodnot <code>{0..*}</code> typu     <a href="#json-object--distribution--access-rights"></a>
-
-          
-  
-  
-  
-  
-  
-  
-  
-
+              <a href="#json-object--distribution--access-rights"></a>
 
         </li>
         <li style="list-style-type: disclosure-closed;">
@@ -21996,7 +21972,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>temporal_representation</code>:
-            (<a href="#TimeReference.hasTemporalRepresentation" label="">has temporal representation</a>)
+            (<a href="#TimeReference.hasTemporalRepresentation" label="Represents the representation of a temporal entity (instant or interval).">has temporal representation</a>)
           povinná
           položka typu
 
@@ -22837,7 +22813,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -23027,7 +23003,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -24921,7 +24897,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -28464,7 +28440,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>temporal_representation</code>:
-            (<a href="#TimeReference.hasTemporalRepresentation" label="">has temporal representation</a>)
+            (<a href="#TimeReference.hasTemporalRepresentation" label="Represents the representation of a temporal entity (instant or interval).">has temporal representation</a>)
           povinná
           položka typu
 
@@ -29305,7 +29281,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -29495,7 +29471,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -31389,7 +31365,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -33817,7 +33793,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -34007,7 +33983,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -35901,7 +35877,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -41715,7 +41691,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -41905,7 +41881,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -43799,7 +43775,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -45135,7 +45111,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -45325,7 +45301,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -47219,7 +47195,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -49438,7 +49414,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -49628,7 +49604,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -51522,7 +51498,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -54052,19 +54028,7 @@
           nepovinná
           položka typu
 
-                
-  
-      pole hodnot <code>{0..*}</code> typu     <a href="#json-object--dataset--access-rights"></a>
-
-          
-  
-  
-  
-  
-  
-  
-  
-
+              <a href="#json-object--dataset--access-rights"></a>
 
         </li>
         <li style="list-style-type: disclosure-closed;">
@@ -55401,19 +55365,7 @@
           nepovinná
           položka typu
 
-                
-  
-      pole hodnot <code>{0..*}</code> typu     <a href="#json-object--dataset--access-rights"></a>
-
-          
-  
-  
-  
-  
-  
-  
-  
-
+              <a href="#json-object--dataset--access-rights"></a>
 
         </li>
         <li style="list-style-type: disclosure-closed;">
@@ -56666,7 +56618,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>temporal_representation</code>:
-            (<a href="#TimeReference.hasTemporalRepresentation" label="">has temporal representation</a>)
+            (<a href="#TimeReference.hasTemporalRepresentation" label="Represents the representation of a temporal entity (instant or interval).">has temporal representation</a>)
           povinná
           položka typu
 
@@ -57507,7 +57459,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -57697,7 +57649,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -59591,7 +59543,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -61495,7 +61447,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>temporal_representation</code>:
-            (<a href="#TimeReference.hasTemporalRepresentation" label="">has temporal representation</a>)
+            (<a href="#TimeReference.hasTemporalRepresentation" label="Represents the representation of a temporal entity (instant or interval).">has temporal representation</a>)
           povinná
           položka typu
 
@@ -62336,7 +62288,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -62526,7 +62478,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -64420,7 +64372,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -66072,7 +66024,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -66262,7 +66214,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -68156,7 +68108,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -69874,7 +69826,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>temporal_representation</code>:
-            (<a href="#TimeReference.hasTemporalRepresentation" label="">has temporal representation</a>)
+            (<a href="#TimeReference.hasTemporalRepresentation" label="Represents the representation of a temporal entity (instant or interval).">has temporal representation</a>)
           povinná
           položka typu
 
@@ -70715,7 +70667,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -70905,7 +70857,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -72799,7 +72751,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -74454,7 +74406,7 @@
       <table class="def">
           <tr>
             <th>Popis</th>
-            <td>All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.</td>
+            <td>All additional information to the resource. </td>
           </tr>
 
           <tr>
@@ -75451,7 +75403,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>temporal_representation</code>:
-            (<a href="#TimeReference.hasTemporalRepresentation" label="">has temporal representation</a>)
+            (<a href="#TimeReference.hasTemporalRepresentation" label="Represents the representation of a temporal entity (instant or interval).">has temporal representation</a>)
           povinná
           položka typu
 
@@ -76292,7 +76244,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -76482,7 +76434,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -78376,7 +78328,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -80587,7 +80539,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -80777,7 +80729,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -82671,7 +82623,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -84007,7 +83959,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -84197,7 +84149,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -86091,7 +86043,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -88192,7 +88144,7 @@
         <dt>Význam</dt>
       <dd>
         <a href="#Description">Description</a>
-        (All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.)
+        (All additional information to the resource. )
       </dd>
 
 
@@ -90850,7 +90802,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>temporal_representation</code>:
-            (<a href="#TimeReference.hasTemporalRepresentation" label="">has temporal representation</a>)
+            (<a href="#TimeReference.hasTemporalRepresentation" label="Represents the representation of a temporal entity (instant or interval).">has temporal representation</a>)
           povinná
           položka typu
 
@@ -91691,7 +91643,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -91881,7 +91833,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -93775,7 +93727,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -96227,7 +96179,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -97420,7 +97372,7 @@
         </i>
 
           <a href="#Agent.hasIdentifier"><strong>has identifier</strong></a>
-          (has identifier)
+          (Identifier of an Agent.)
 
     </dd>
 
@@ -103290,7 +103242,7 @@
       <table class="def">
           <tr>
             <th>Popis</th>
-            <td>All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.</td>
+            <td>All additional information to the resource. </td>
           </tr>
 
           <tr>
@@ -103676,7 +103628,7 @@
         <dt>Význam</dt>
       <dd>
         <a href="#Description">Description</a>
-        (All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.)
+        (All additional information to the resource. )
       </dd>
 
 
@@ -104100,19 +104052,7 @@
           nepovinná
           položka typu
 
-                
-  
-      pole hodnot <code>{0..*}</code> typu     <a href="#json-object--distribution-data-service--access-rights"></a>
-
-          
-  
-  
-  
-  
-  
-  
-  
-
+              <a href="#json-object--distribution-data-service--access-rights"></a>
 
         </li>
         <li style="list-style-type: disclosure-closed;">
@@ -105365,7 +105305,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>temporal_representation</code>:
-            (<a href="#TimeReference.hasTemporalRepresentation" label="">has temporal representation</a>)
+            (<a href="#TimeReference.hasTemporalRepresentation" label="Represents the representation of a temporal entity (instant or interval).">has temporal representation</a>)
           povinná
           položka typu
 
@@ -106206,7 +106146,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -106396,7 +106336,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -108290,7 +108230,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -109912,7 +109852,7 @@
           element <a href="#element-ccmm:distribution_data_service-ccmm:documentation"><code>&lt;documentation&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-ccmm:distribution_data_service-ccmm:rights"><code>&lt;rights&gt;</code></a> [0..*]
+          element <a href="#element-ccmm:distribution_data_service-ccmm:rights"><code>&lt;rights&gt;</code></a> [0..1]
       </li>
       <li>
           element <a href="#element-ccmm:distribution_data_service-ccmm:licence"><code>&lt;licence&gt;</code></a> [1..1]
@@ -110198,7 +110138,7 @@
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
+      <dd>0..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-ccmm:distribution_data_service"></a></dd>
 
@@ -110483,7 +110423,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -110673,7 +110613,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -112728,7 +112668,7 @@
         </i>
 
           <a href="#Agent.hasIdentifier"><strong>has identifier</strong></a>
-          (has identifier)
+          (Identifier of an Agent.)
 
     </dd>
 
@@ -113324,19 +113264,7 @@
           nepovinná
           položka typu
 
-                
-  
-      pole hodnot <code>{0..*}</code> typu     <a href="#json-object--distribution-downloadable-file--access-rights"></a>
-
-          
-  
-  
-  
-  
-  
-  
-  
-
+              <a href="#json-object--distribution-downloadable-file--access-rights"></a>
 
         </li>
         <li style="list-style-type: disclosure-closed;">
@@ -114681,7 +114609,7 @@
           element <a href="#element-ccmm:distribution_downloadable_file-ccmm:checksum"><code>&lt;checksum&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-ccmm:distribution_downloadable_file-ccmm:rights"><code>&lt;rights&gt;</code></a> [0..*]
+          element <a href="#element-ccmm:distribution_downloadable_file-ccmm:rights"><code>&lt;rights&gt;</code></a> [0..1]
       </li>
       <li>
           element <a href="#element-ccmm:distribution_downloadable_file-ccmm:licence"><code>&lt;licence&gt;</code></a> [1..1]
@@ -115233,7 +115161,7 @@
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
+      <dd>0..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-ccmm:distribution_downloadable_file"></a></dd>
 
@@ -116165,7 +116093,7 @@
         </li>
         <li style="list-style-type: disclosure-closed;">
           <code>temporal_representation</code>:
-            (<a href="#TimeReference.hasTemporalRepresentation" label="">has temporal representation</a>)
+            (<a href="#TimeReference.hasTemporalRepresentation" label="Represents the representation of a temporal entity (instant or interval).">has temporal representation</a>)
           povinná
           položka typu
 
@@ -116967,7 +116895,7 @@
         </i>
 
           <a href="#TimeReference.hasTemporalRepresentation"><strong>has temporal representation</strong></a>
-          
+          (Represents the representation of a temporal entity (instant or interval).)
 
     </dd>
 
@@ -117625,7 +117553,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>temporal_representation</code>:
-            (<a href="#TimeReference.hasTemporalRepresentation" label="">has temporal representation</a>)
+            (<a href="#TimeReference.hasTemporalRepresentation" label="Represents the representation of a temporal entity (instant or interval).">has temporal representation</a>)
           povinná
           položka typu
 
@@ -118466,7 +118394,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -118656,7 +118584,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -120550,7 +120478,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -123339,7 +123267,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>id</code>:
-          nepovinná
+          povinná
           položka typu
 
                 
@@ -123597,7 +123525,7 @@
 </dt>
       <ul style="margin-top: 0;">
       <li>
-          element <a href="#element-ccmm:media_type-ccmm:iri"><code>&lt;iri&gt;</code></a> [0..1]
+          element <a href="#element-ccmm:media_type-ccmm:iri"><code>&lt;iri&gt;</code></a> [1..1]
       </li>
       <li>
           element <a href="#element-ccmm:media_type-ccmm:label"><code>&lt;label&gt;</code></a> [1..*]
@@ -123616,7 +123544,7 @@
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..1</dd>
+      <dd>1..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-ccmm:media_type"></a></dd>
 
@@ -124008,7 +123936,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -124198,7 +124126,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 
@@ -126092,7 +126020,7 @@
     <ul>
         <li style="list-style-type: disclosure-closed;">
           <code>identifier</code>:
-            (<a href="#Agent.hasIdentifier" label="has identifier">has identifier</a>)
+            (<a href="#Agent.hasIdentifier" label="Identifier of an Agent.">has identifier</a>)
           nepovinná
           položka typu
 

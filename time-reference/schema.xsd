@@ -14,7 +14,7 @@
       <xs:element name="temporal_representation" type="ccmm:time_representation" sawsdl:modelReference="http://www.w3.org/2006/time#hasTime">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            has temporal representation
+            has temporal representation - Represents the representation of a temporal entity (instant or interval).
           </xs:documentation>
         </xs:annotation>
       </xs:element>

@@ -137,7 +137,7 @@
                       "properties": {
                         "identifier": {
                           "title": "has identifier",
-                          "description": "has identifier",
+                          "description": "Identifier of an Agent.",
                           "type": "array",
                           "items": {
                             "title": "Identifier",
@@ -404,7 +404,7 @@
                       "properties": {
                         "identifier": {
                           "title": "has identifier",
-                          "description": "has identifier",
+                          "description": "Identifier of an Agent.",
                           "type": "array",
                           "items": {
                             "title": "Identifier",
@@ -668,7 +668,7 @@
                             "properties": {
                               "identifier": {
                                 "title": "has identifier",
-                                "description": "has identifier",
+                                "description": "Identifier of an Agent.",
                                 "type": "array",
                                 "items": {
                                   "title": "Identifier",
@@ -1096,7 +1096,7 @@
                           "properties": {
                             "identifier": {
                               "title": "has identifier",
-                              "description": "has identifier",
+                              "description": "Identifier of an Agent.",
                               "type": "array",
                               "items": {
                                 "title": "Identifier",
@@ -1363,7 +1363,7 @@
                           "properties": {
                             "identifier": {
                               "title": "has identifier",
-                              "description": "has identifier",
+                              "description": "Identifier of an Agent.",
                               "type": "array",
                               "items": {
                                 "title": "Identifier",
@@ -1627,7 +1627,7 @@
                                 "properties": {
                                   "identifier": {
                                     "title": "has identifier",
-                                    "description": "has identifier",
+                                    "description": "Identifier of an Agent.",
                                     "type": "array",
                                     "items": {
                                       "title": "Identifier",
@@ -2115,7 +2115,7 @@
                 "properties": {
                   "identifier": {
                     "title": "has identifier",
-                    "description": "has identifier",
+                    "description": "Identifier of an Agent.",
                     "type": "array",
                     "items": {
                       "title": "Identifier",
@@ -2382,7 +2382,7 @@
                 "properties": {
                   "identifier": {
                     "title": "has identifier",
-                    "description": "has identifier",
+                    "description": "Identifier of an Agent.",
                     "type": "array",
                     "items": {
                       "title": "Identifier",
@@ -2646,7 +2646,7 @@
                       "properties": {
                         "identifier": {
                           "title": "has identifier",
-                          "description": "has identifier",
+                          "description": "Identifier of an Agent.",
                           "type": "array",
                           "items": {
                             "title": "Identifier",
@@ -2961,6 +2961,7 @@
         "properties": {
           "temporal_representation": {
             "title": "has temporal representation",
+            "description": "Represents the representation of a temporal entity (instant or interval).",
             "anyOf": [
               {
                 "title": "Time interval",
@@ -3371,7 +3372,7 @@
       "minItems": 1,
       "items": {
         "title": "Description",
-        "description": "All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.",
+        "description": "All additional information to the resource. ",
         "type": "object",
         "required": [
           "description_text"
@@ -3688,7 +3689,7 @@
                             "properties": {
                               "identifier": {
                                 "title": "has identifier",
-                                "description": "has identifier",
+                                "description": "Identifier of an Agent.",
                                 "type": "array",
                                 "items": {
                                   "title": "Identifier",
@@ -3955,7 +3956,7 @@
                             "properties": {
                               "identifier": {
                                 "title": "has identifier",
-                                "description": "has identifier",
+                                "description": "Identifier of an Agent.",
                                 "type": "array",
                                 "items": {
                                   "title": "Identifier",
@@ -4219,7 +4220,7 @@
                                   "properties": {
                                     "identifier": {
                                       "title": "has identifier",
-                                      "description": "has identifier",
+                                      "description": "Identifier of an Agent.",
                                       "type": "array",
                                       "items": {
                                         "title": "Identifier",
@@ -4528,6 +4529,7 @@
                     "properties": {
                       "temporal_representation": {
                         "title": "has temporal representation",
+                        "description": "Represents the representation of a temporal entity (instant or interval).",
                         "anyOf": [
                           {
                             "title": "Time interval",
@@ -4829,7 +4831,7 @@
                   "properties": {
                     "identifier": {
                       "title": "has identifier",
-                      "description": "has identifier",
+                      "description": "Identifier of an Agent.",
                       "type": "array",
                       "items": {
                         "title": "Identifier",
@@ -5096,7 +5098,7 @@
                   "properties": {
                     "identifier": {
                       "title": "has identifier",
-                      "description": "has identifier",
+                      "description": "Identifier of an Agent.",
                       "type": "array",
                       "items": {
                         "title": "Identifier",
@@ -5360,7 +5362,7 @@
                         "properties": {
                           "identifier": {
                             "title": "has identifier",
-                            "description": "has identifier",
+                            "description": "Identifier of an Agent.",
                             "type": "array",
                             "items": {
                               "title": "Identifier",
@@ -5806,7 +5808,7 @@
                       "properties": {
                         "identifier": {
                           "title": "has identifier",
-                          "description": "has identifier",
+                          "description": "Identifier of an Agent.",
                           "type": "array",
                           "items": {
                             "title": "Identifier",
@@ -6073,7 +6075,7 @@
                       "properties": {
                         "identifier": {
                           "title": "has identifier",
-                          "description": "has identifier",
+                          "description": "Identifier of an Agent.",
                           "type": "array",
                           "items": {
                             "title": "Identifier",
@@ -6337,7 +6339,7 @@
                             "properties": {
                               "identifier": {
                                 "title": "has identifier",
-                                "description": "has identifier",
+                                "description": "Identifier of an Agent.",
                                 "type": "array",
                                 "items": {
                                   "title": "Identifier",
@@ -6646,6 +6648,7 @@
               "properties": {
                 "temporal_representation": {
                   "title": "has temporal representation",
+                  "description": "Represents the representation of a temporal entity (instant or interval).",
                   "anyOf": [
                     {
                       "title": "Time interval",
@@ -7125,7 +7128,7 @@
                                       "properties": {
                                         "identifier": {
                                           "title": "has identifier",
-                                          "description": "has identifier",
+                                          "description": "Identifier of an Agent.",
                                           "type": "array",
                                           "items": {
                                             "title": "Identifier",
@@ -7392,7 +7395,7 @@
                                       "properties": {
                                         "identifier": {
                                           "title": "has identifier",
-                                          "description": "has identifier",
+                                          "description": "Identifier of an Agent.",
                                           "type": "array",
                                           "items": {
                                             "title": "Identifier",
@@ -7656,7 +7659,7 @@
                                             "properties": {
                                               "identifier": {
                                                 "title": "has identifier",
-                                                "description": "has identifier",
+                                                "description": "Identifier of an Agent.",
                                                 "type": "array",
                                                 "items": {
                                                   "title": "Identifier",
@@ -7965,6 +7968,7 @@
                               "properties": {
                                 "temporal_representation": {
                                   "title": "has temporal representation",
+                                  "description": "Represents the representation of a temporal entity (instant or interval).",
                                   "anyOf": [
                                     {
                                       "title": "Time interval",
@@ -8296,32 +8300,27 @@
               "rights": {
                 "title": "has rights",
                 "description": "A statement that specifies rights associated with the Distribution.",
-                "type": "array",
-                "items": {
-                  "title": "Access rights",
-                  "description": "A statement about the access rights to the resource.",
-                  "type": "object",
-                  "required": [
-                    "label"
-                  ],
-                  "properties": {
-                    "label": {
-                      "title": "label",
-                      "description": "A human-readable name for the subject.",
-                      "type": "object",
-                      "additionalProperties": {
-                        "title": "Hodnota v jiném jazyce",
+                "type": "object",
+                "required": [
+                  "label"
+                ],
+                "properties": {
+                  "label": {
+                    "title": "label",
+                    "description": "A human-readable name for the subject.",
+                    "type": "object",
+                    "additionalProperties": {
+                      "title": "Hodnota v jiném jazyce",
+                      "type": "string"
+                    },
+                    "properties": {
+                      "cs": {
+                        "title": "Hodnota v českém jazyce",
                         "type": "string"
                       },
-                      "properties": {
-                        "cs": {
-                          "title": "Hodnota v českém jazyce",
-                          "type": "string"
-                        },
-                        "en": {
-                          "title": "Hodnota v anglickém jazyce",
-                          "type": "string"
-                        }
+                      "en": {
+                        "title": "Hodnota v anglickém jazyce",
+                        "type": "string"
                       }
                     }
                   }
@@ -8654,32 +8653,27 @@
               "rights": {
                 "title": "has rights",
                 "description": "A statement that specifies rights associated with the Distribution.",
-                "type": "array",
-                "items": {
-                  "title": "Access rights",
-                  "description": "A statement about the access rights to the resource.",
-                  "type": "object",
-                  "required": [
-                    "label"
-                  ],
-                  "properties": {
-                    "label": {
-                      "title": "label",
-                      "description": "A human-readable name for the subject.",
-                      "type": "object",
-                      "additionalProperties": {
-                        "title": "Hodnota v jiném jazyce",
+                "type": "object",
+                "required": [
+                  "label"
+                ],
+                "properties": {
+                  "label": {
+                    "title": "label",
+                    "description": "A human-readable name for the subject.",
+                    "type": "object",
+                    "additionalProperties": {
+                      "title": "Hodnota v jiném jazyce",
+                      "type": "string"
+                    },
+                    "properties": {
+                      "cs": {
+                        "title": "Hodnota v českém jazyce",
                         "type": "string"
                       },
-                      "properties": {
-                        "cs": {
-                          "title": "Hodnota v českém jazyce",
-                          "type": "string"
-                        },
-                        "en": {
-                          "title": "Hodnota v anglickém jazyce",
-                          "type": "string"
-                        }
+                      "en": {
+                        "title": "Hodnota v anglickém jazyce",
+                        "type": "string"
                       }
                     }
                   }

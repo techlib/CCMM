@@ -196,7 +196,7 @@
                 "properties": {
                   "identifier": {
                     "title": "has identifier",
-                    "description": "has identifier",
+                    "description": "Identifier of an Agent.",
                     "type": "array",
                     "items": {
                       "title": "Identifier",
@@ -463,7 +463,7 @@
                 "properties": {
                   "identifier": {
                     "title": "has identifier",
-                    "description": "has identifier",
+                    "description": "Identifier of an Agent.",
                     "type": "array",
                     "items": {
                       "title": "Identifier",
@@ -727,7 +727,7 @@
                       "properties": {
                         "identifier": {
                           "title": "has identifier",
-                          "description": "has identifier",
+                          "description": "Identifier of an Agent.",
                           "type": "array",
                           "items": {
                             "title": "Identifier",
@@ -1036,6 +1036,7 @@
         "properties": {
           "temporal_representation": {
             "title": "has temporal representation",
+            "description": "Represents the representation of a temporal entity (instant or interval).",
             "anyOf": [
               {
                 "title": "Time interval",

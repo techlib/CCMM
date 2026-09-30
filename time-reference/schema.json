@@ -31,6 +31,7 @@
     },
     "temporal_representation": {
       "title": "has temporal representation",
+      "description": "Represents the representation of a temporal entity (instant or interval).",
       "anyOf": [
         {
           "title": "Time interval",

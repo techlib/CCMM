@@ -5,8 +5,8 @@
   <xs:complexType name="description" sawsdl:modelReference="https://w3id.org/tib/datacite/class/Description">
     <xs:annotation>
       <xs:documentation xml:lang="en">
-        Description - All additional information that does not fit in any of the other categories. May be used for technical information or detailed information associated with a scientific instrument.
-        Description of the resource may have also a description type.
+        Description - All additional information to the resource. 
+        May be used for technical information or detailed information associated with a scientific instrument. Description of the resource may have also a description type. At least one description with a free-text account of the Dataset is mandatory.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -15,7 +15,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             description text - A free-text account of the Data Service.
-            description [DCAT-AP 3.0.1 based on DCAT 3 DAP] (https://mff-uk.github.io/specifications/dcat-ap#DataService.description)
+             This property can be repeated for parallel language versions of the description.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>

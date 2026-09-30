@@ -14,7 +14,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             label - Identifier scheme label.
-            For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID melongs to the notation.
+            For example, Digital Object Identifier, Open Research and Contributor ID etc. Shorts like DOI or ORCID belongs to the notation.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>
