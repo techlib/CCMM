@@ -16,7 +16,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has identifier - Identifier of an Agent.
-            Recommended identifier scheme for Organization is ROR; recommended identifier scheme for Person is ORCID.
+            The recommended identifier scheme for an organization is https://ror.org; the recommended identifier scheme for a person is https://orcid.org. Provide other identifiers if available.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -24,7 +24,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             name - Name of the agent.
-            The official name of an agent. For Person, it is a combination of the first and family names. The recommended format is &#34;family names, first names&#34;, e.g., &#34;Smith, John&#34;.
+            The official name of an agent. For Person, it is a combination of the first and family names. The recommended format is &#34;family name(s), first name(s)&#34;, e.g., &#34;Smith, John&#34;.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

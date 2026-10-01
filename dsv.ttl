@@ -867,7 +867,7 @@
     a dsv:TermProfile;
     skos:prefLabel "has identifier"@en;
     skos:definition "Identifier of an Agent."@en;
-    skos:scopeNote "Recommended identifier scheme for Organization is ROR; recommended identifier scheme for Person is ORCID."@en;
+    skos:scopeNote "The recommended identifier scheme for an organization is https://ror.org; the recommended identifier scheme for a person is https://orcid.org. Provide other identifiers if available."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Dataset.otherIdentifier>;
     dsv:cardinality cardinality:0n;
     dsv:domain :Agent;
@@ -1261,7 +1261,7 @@
 <https://model.ccmm.cz/research-data/Distribution.rights> dct:isPartOf <https://model.ccmm.cz/research-data/>;
     a dsv:TermProfile;
     skos:prefLabel "has rights"@en;
-    skos:scopeNote "Use an IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is: \n- embargoed access, metadata only access mapped to :NON_PUBLIC,\n- open access mapped to :PUBLIC,\n- restricted access mapped to :RESTRICTED."@en;
+    skos:scopeNote "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:\nembargoed access, metadata only access - :NON_PUBLIC,\nopen access - :PUBLIC,\nrestricted access - :RESTRICTED."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Distribution.rights>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -1743,7 +1743,7 @@
     a dsv:TermProfile;
     skos:prefLabel "name"@en;
     skos:definition "Name of the agent."@en;
-    skos:scopeNote "The official name of an agent. For Person, it is a combination of the first and family names. The recommended format is \"family names, first names\", e.g., \"Smith, John\"."@en;
+    skos:scopeNote "The official name of an agent. For Person, it is a combination of the first and family names. The recommended format is \"family name(s), first name(s)\", e.g., \"Smith, John\"."@en;
     dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap#Agent.name>;
     dsv:cardinality cardinality:11;
     dsv:domain :Agent;

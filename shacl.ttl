@@ -234,7 +234,7 @@
 
 <https://model.ccmm.cz/research-data/foaf%3AAgentShape/291051fa> a sh:PropertyShape;
     sh:name "name"@en;
-    sh:description "The official name of an agent. For Person, it is a combination of the first and family names. The recommended format is \"family names, first names\", e.g., \"Smith, John\"."@en;
+    sh:description "The official name of an agent. For Person, it is a combination of the first and family names. The recommended format is \"family name(s), first name(s)\", e.g., \"Smith, John\"."@en;
     sh:nodeKind sh:Literal;
     sh:path <http://xmlns.com/foaf/0.1/name>;
     sh:maxCount 1;
@@ -253,7 +253,7 @@
 
 <https://model.ccmm.cz/research-data/foaf%3AAgentShape/6e02b714> a sh:PropertyShape;
     sh:name "has identifier"@en;
-    sh:description "Recommended identifier scheme for Organization is ROR; recommended identifier scheme for Person is ORCID."@en;
+    sh:description "The recommended identifier scheme for an organization is https://ror.org; the recommended identifier scheme for a person is https://orcid.org. Provide other identifiers if available."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://www.w3.org/ns/adms#identifier>;
     sh:class <http://www.w3.org/ns/adms#Identifier>.
@@ -402,7 +402,7 @@
 
 <https://model.ccmm.cz/research-data/dcat%3ADistributionShape/491c4920> a sh:PropertyShape;
     sh:name "has rights"@en;
-    sh:description "Use an IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is: \n- embargoed access, metadata only access mapped to :NON_PUBLIC,\n- open access mapped to :PUBLIC,\n- restricted access mapped to :RESTRICTED."@en;
+    sh:description "Use IRI identifier from the register http://purl.org/coar/access_right/. Recommended mapping of values from COAR to https://semiceu.github.io/DCAT-AP/drafts/latest/#properties-with-a-recommended-use-of-controlled-vocabularies is:\nembargoed access, metadata only access - :NON_PUBLIC,\nopen access - :PUBLIC,\nrestricted access - :RESTRICTED."@en;
     sh:nodeKind sh:BlankNodeOrIRI;
     sh:path <http://purl.org/dc/terms/rights>;
     sh:maxCount 1;
