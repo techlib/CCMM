@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/file/schema.json",
+  "title": "File",
+  "description": "Digital resource representing collection of data.",
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "file"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "file"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "label": {
+      "title": "label",
+      "description": "File label",
+      "type": "array",
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

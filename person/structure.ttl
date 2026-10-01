@@ -5,11 +5,12 @@
 <https://model.ccmm.cz/research-data/person/> a dsvs:structure-entity;
     kv:dataPsmHumanDescription "{\"en\":\"Data structure for Person. Physical person. \",\"cs\":\"Datová struktura pro Person. Physical person. \"}";
     kv:dataPsmHumanLabel "{\"en\":\"Person\",\"cs\":\"Person\"}";
-    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/person/class-1762017242451-3954-d430-aa66\",\"https://model.ccmm.cz/research-data/person/associationEnd-1762017273518-6289-88f5-a192\",\"https://model.ccmm.cz/research-data/person/attribute-1762017273543-057a-e690-aede\",\"https://model.ccmm.cz/research-data/person/associationEnd-1762017273587-4c1a-c002-ba81\",\"https://model.ccmm.cz/research-data/person/attribute-1762017281684-c96d-bcf7-92db\",\"https://model.ccmm.cz/research-data/person/attribute-1762017281709-c1b7-e887-85fb\",\"https://model.ccmm.cz/research-data/person/associationEnd-1762017281766-615e-87e4-a974\",\"https://model.ccmm.cz/research-data/person/classReference-1762017299027-c8f6-f5a9-b40d\",\"https://model.ccmm.cz/research-data/person/classReference-1762017303903-7323-a808-b100\",\"https://model.ccmm.cz/research-data/person/classReference-1762017323328-4813-6c5d-b3d3\"]";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/person/class-1762017242451-3954-d430-aa66\",\"https://model.ccmm.cz/research-data/person/associationEnd-1762017273518-6289-88f5-a192\",\"https://model.ccmm.cz/research-data/person/attribute-1762017273543-057a-e690-aede\",\"https://model.ccmm.cz/research-data/person/associationEnd-1762017273587-4c1a-c002-ba81\",\"https://model.ccmm.cz/research-data/person/attribute-1762017281684-c96d-bcf7-92db\",\"https://model.ccmm.cz/research-data/person/attribute-1762017281709-c1b7-e887-85fb\",\"https://model.ccmm.cz/research-data/person/associationEnd-1762017281766-615e-87e4-a974\",\"https://model.ccmm.cz/research-data/person/classReference-1762017303903-7323-a808-b100\",\"https://model.ccmm.cz/research-data/person/classReference-1762017323328-4813-6c5d-b3d3\",\"https://model.ccmm.cz/research-data/person/classReference-1779980058324-9a8c-f08b-a591\"]";
     kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/person/class-1762017242451-3954-d430-aa66\"]";
     kv:dataPsmTechnicalLabel "null";
-    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
     kv:iri "\"https://model.ccmm.cz/research-data/person/\"";
+    kv:jsonEnforceContext "\"no\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
 :class-1762017242451-3954-d430-aa66 a dsvs:structure-entity;
     kv:dataPsmExtends "[]";
@@ -27,7 +28,7 @@
     kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Agent.hasIdentifier\"";
     kv:dataPsmIsDematerialize "null";
     kv:dataPsmIsReverse "false";
-    kv:dataPsmPart "\"https://model.ccmm.cz/research-data/person/classReference-1762017299027-c8f6-f5a9-b40d\"";
+    kv:dataPsmPart "\"https://model.ccmm.cz/research-data/person/classReference-1779980058324-9a8c-f08b-a591\"";
     kv:dataPsmTechnicalLabel "\"identifier\"";
     kv:iri "\"https://model.ccmm.cz/research-data/person/associationEnd-1762017273518-6289-88f5-a192\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/AssociationEnd\"]".
@@ -75,11 +76,6 @@
     kv:dataPsmTechnicalLabel "\"affiliation\"";
     kv:iri "\"https://model.ccmm.cz/research-data/person/associationEnd-1762017281766-615e-87e4-a974\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/AssociationEnd\"]".
-:classReference-1762017299027-c8f6-f5a9-b40d a dsvs:structure-entity;
-    kv:dataPsmClass "\"https://model.ccmm.cz/research-data/identifier/class-1742340169817-84a9-ded1-a656\"";
-    kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/identifier/\"";
-    kv:iri "\"https://model.ccmm.cz/research-data/person/classReference-1762017299027-c8f6-f5a9-b40d\"";
-    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
 :classReference-1762017303903-7323-a808-b100 a dsvs:structure-entity;
     kv:dataPsmClass "\"https://model.ccmm.cz/research-data/contact-details/class-1742234373952-7a86-df18-a582\"";
     kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/contact-details/\"";
@@ -89,4 +85,9 @@
     kv:dataPsmClass "\"https://model.ccmm.cz/research-data/organization/class-1744871355397-62d0-acf0-af09\"";
     kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/organization/\"";
     kv:iri "\"https://model.ccmm.cz/research-data/person/classReference-1762017323328-4813-6c5d-b3d3\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
+:classReference-1779980058324-9a8c-f08b-a591 a dsvs:structure-entity;
+    kv:dataPsmClass "\"https://model.ccmm.cz/research-data/identifier/class-1779978617597-db2c-0cbc-9b17\"";
+    kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/identifier/\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/person/classReference-1779980058324-9a8c-f08b-a591\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".

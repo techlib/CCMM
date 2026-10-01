@@ -1,77 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
-    elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1"
-    xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:gml="http://www.opengis.net/gml/3.2"
-    xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
-    <xs:include schemaLocation="../geometry/schema.xsd"/>
-    <xs:include schemaLocation="../related-resource/schema.xsd"/>
-    <xs:include schemaLocation="../location-relation-type/schema.xsd"/>
-    <xs:import namespace="http://www.opengis.net/gml/3.2"
-        schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-    <xs:complexType name="location"
-        sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#Geolocation http://purl.org/dc/terms/Location">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:gml="http://www.opengis.net/gml/3.2">
+  <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="https://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+  <xs:include schemaLocation="../geometry/schema.xsd"/>
+  <xs:include schemaLocation="../related-resource/schema.xsd"/>
+  <xs:include schemaLocation="../location-relation-type/schema.xsd"/>
+  <xs:complexType name="location" sawsdl:modelReference="http://purl.org/dc/terms/Location">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Location - Spatial region or named place where the data was gathered or about which the data is focused.
+        Location is represented according to the Open Formal Standard for Spatial Data. Locations are represented as a reference to the named place, geographic region or specific geometry according to the standardized geometry object representation. 
+        Every Location instance must have at least one of the following attributes/relations: bbox, location name, geometry and/or related object identifier.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
+      <xs:element minOccurs="0" name="bounding_box" sawsdl:modelReference="http://www.w3.org/ns/dcat#bbox">
         <xs:annotation>
-            <xs:documentation xml:lang="en"> Location - Spatial region, named place or geometry
-                representation of a place related to the resource. Location is represented according
-                to the Open Formal Standard for Spatial Data. Locations are represented as a
-                reference to the named place, geographic region or specific geometry according to
-                the standardized geometry object representation. Every Location instance must have
-                at least one of the following attributes/relations: bbox, location name, geometry
-                and/or related object identifier. </xs:documentation>
+          <xs:documentation xml:lang="en">
+            bounding box - Bounding box of the location geometry.
+            Typically defined by top-left and bottom-right corners.
+          </xs:documentation>
         </xs:annotation>
-        <xs:sequence>
+        <xs:complexType sawsdl:modelReference="http://www.opengis.net/ont/sf#Envelope">
+          <xs:sequence>
             <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="bounding_box"
-                type="gml:EnvelopeType" sawsdl:modelReference="http://www.w3.org/ns/dcat#bbox">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en"> bounding box - Bounding box of the location
-                        geometry. Typically defined by top-left and bottom-right corners.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="name" type="xs:string"
-                sawsdl:modelReference="http://purl.org/dc/terms/title">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en"> name - Name of the spatial location. Name of
-                        the place. Examples: Prague Castle, Tour d'Eiffel, Šumava National Park
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element minOccurs="0" name="geometry" type="ccmm:geometry"
-                sawsdl:modelReference="http://www.w3.org/ns/locn#geometry">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en"> has geometry - The corresponding geometry for a
-                        resource. The range of this property allows for any type of geometry
-                        specification. E.g., the geometry could be encoded by a literal, as WKT
-                        (geosparql:wktLiteral), or represented by a class, as geosparql:Geometry (or
-                        any of its subclasses). </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="related_object"
-                type="ccmm:related_resource"
-                sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasRelatedResource">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en"> has related object - Relation to the spatial
-                        object. The relation is provided by the identifier of the related object. It
-                        shall be identifier of an existing spatial object in a registry, such as
-                        Place Named Authority List
-                        (http://publications.europa.eu/resource/authority/place), Register of
-                        Territorial Identification, Addresses and Real Estates or others.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="relation_type" type="ccmm:relation_type"
-                sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasType">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en"> has location relation type - Relation of the
-                        location to the dataset. Use values from codelist
-                        https://vocabs.ccmm.cz/registry/codelist/LocationRelation/.
-                    </xs:documentation>
-                </xs:annotation>
+            <xs:element minOccurs="0" name="gml" type="gml:BoundingShapeType" sawsdl:modelReference="http://www.opengis.net/ont/geosparql#asGML"/>
+            <xs:element minOccurs="0" name="wkt" sawsdl:modelReference="http://www.opengis.net/ont/geosparql#asWKT">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:string">
+                    <xs:attribute name="srsName" type="xs:anyURI"/>
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
             </xs:element>
             <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:element name="location" type="ccmm:location"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            label - A human-readable name for the location object.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute ref="xml:lang" use="required"/>
+              <xs:assert test="@xml:lang != ''"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="geometry" type="ccmm:geometry" sawsdl:modelReference="http://www.w3.org/ns/locn#geometry">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has geometry - The corresponding geometry for a resource.
+            The range of this property allows for any type of geometry specification. For example, the geometry could be encoded by a literal, as WKT (geosparql:wktLiteral), or represented by a class, as geosparql:Geometry (or any of its subclasses).
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="related_object" type="ccmm:related_resource" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasRelatedResource">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has related object - Relation to the spatial object.
+            The relation is provided by the identifier of the related object. It shall be identifier of an existing spatial object in a registry, such as Place Named Authority List (http://publications.europa.eu/resource/authority/place), Register of Territorial Identification, Addresses and Real Estates or others.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="relation_type" type="ccmm:relation_type" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasType">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            has location relation type - Relation of the location to the dataset.
+            Use values from the code list https://vocabs.ccmm.cz/registry/codelist/LocationRelation/.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##other"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="location" type="ccmm:location"/>
 </xs:schema>

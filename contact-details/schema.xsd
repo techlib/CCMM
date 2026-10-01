@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../address/schema.xsd"/>
-  <xs:complexType name="contact_details" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#ContactDetails">
+  <xs:complexType name="contact_details" sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#Kind">
     <xs:annotation>
       <xs:documentation xml:lang="en">
-        Contact details - Details to contact the agent in a relationship to the resource.
+        Contact details - Contact details such as telephone, e-mail address etc.
         Describes contact details, such as telephone, e--mail address etc.
       </xs:documentation>
     </xs:annotation>
@@ -21,7 +21,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             email - Email address.
-            Email address in standard format, e.g. john.doe@domain.com
+            Email address in standard format, e.g., john.doe@domain.com
           </xs:documentation>
         </xs:annotation>
       </xs:element>

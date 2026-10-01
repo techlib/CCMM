@@ -1,0 +1,363 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns0: <https://model.ccmm.cz/vocabulary/ccmm#> .
+@prefix ns1: <http://www.w3.org/ns/adms#> .
+@prefix ns2: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns5: <https://w3id.org/tib/datacite/property/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dx.doi.org/10.13039/501100001823> a ns1:Identifier ;
+    skos:notation "10.13039/501100001823" ;
+    ns0:inScheme <https://doi.org/> .
+
+<http://purl.org/coar/access_right/c_abf2> a dcterms:RightsStatement ;
+    skos:prefLabel "otevřený přístup"@cs,
+        "open access"@en .
+
+<http://purl.org/coar/resource_type/c_6501> a skos:Concept ;
+    skos:prefLabel "článek v odborném časopisu"@cs,
+        "journal article"@en .
+
+<http://purl.org/coar/resource_type/c_ddb1> a skos:Concept ;
+    skos:prefLabel "datová sada"@cs,
+        "dataset"@en .
+
+<https://creativecommons.org/licenses/by/4.0/> a dcterms:LicenseDocument ;
+    dcterms:title "Creative Commons Uveďte původ 4.0 Mezinárodní licence"@cs,
+        "Creative Commons Attribution 4.0 International License"@en .
+
+<https://data.narodni-repozitar.cz/schemas/nr_datasets/nr-datasets-v1.0.0.json> a dcterms:Standard ;
+    rdfs:label "NR Datasets JSON Schema v1.0.0"@en .
+
+<https://datarepo.eosc.cz> a dcat:Catalog ;
+    dcterms:description "The Data Catch-all Repository is a general-purpose repository for research data for which no more suitable disciplinary, institutional, or community repository is available."@en ;
+    dcterms:title "Catch-all"@en ;
+    prov:qualifiedAttribution [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
+            prov:agent [ a org:Organization ;
+                    foaf:name "COMTES FHT" ] ] .
+
+<https://datarepo.eosc.cz/datasets/records/datst.dmq82-ed856> a dcat:CatalogRecord ;
+    dcterms:conformsTo <https://data.narodni-repozitar.cz/schemas/nr_datasets/nr-datasets-v1.0.0.json>,
+        <https://model.ccmm.cz/research-data/2.0.0> ;
+    dcterms:created "2025-06-16"^^xsd:date ;
+    dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+    dcterms:modified "2025-10-14"^^xsd:date ;
+    prov:qualifiedAttribution [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager> ;
+            prov:agent [ a prov:Person ;
+                    foaf:name ":unkn" ] ] ;
+    ns0:originalRepository <https://datarepo.eosc.cz> .
+
+<https://doi.org/10.48700/datst.dmq82-ed856> a ns1:Identifier,
+        dcat:Dataset ;
+    dcterms:accessRights <http://purl.org/coar/access_right/c_abf2> ;
+    dcterms:relation <https://doi.org/10.1007/s12540-025-01953-4> ;
+    dcterms:title "Data k rukopisu - Vliv podmínek depozice na rychlost tisku, množství in-situ vzniklého austenitu a mechanické vlastnosti oceli SAF2507 připravené metodou přímé depozice" ;
+    dcterms:type <http://purl.org/coar/resource_type/c_ddb1> ;
+    skos:notation "10.48700/datst.dmq82-ed856" ;
+    ns1:identifier <https://doi.org/10.48700/datst.dmq82-ed856> ;
+    dcat:distribution <https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856/files/REPO.tar> ;
+    dcat:keyword "Additive manufacturing"@en,
+        "Directed energy deposition"@en,
+        "Laser power"@en,
+        "Microstructure"@en,
+        "Super duplex stainless steel"@en,
+        "Tensile properties"@en ;
+    prov:qualifiedAttribution [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns2:family-name "Salvetr" ;
+                    ns2:given-name "Pavel" ;
+                    ns1:identifier <https://orcid.org/0000-0001-5717-267X> ;
+                    foaf:name "Salvetr, Pavel" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "26316919" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/00hzjtg80> ;
+                            foaf:name "COMTES FHT" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns2:family-name "Dlouhý" ;
+                    ns2:given-name "Jaromír" ;
+                    ns1:identifier <https://orcid.org/0000-0002-1241-6121> ;
+                    foaf:name "Dlouhý, Jaromír" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "26316919" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/00hzjtg80> ;
+                            foaf:name "COMTES FHT" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns2:family-name "Brázda" ;
+                    ns2:given-name "Michal" ;
+                    ns1:identifier <https://orcid.org/0000-0002-4982-9114> ;
+                    foaf:name "Brázda, Michal" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "26316919" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/00hzjtg80> ;
+                            foaf:name "COMTES FHT" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> ;
+            prov:agent [ a org:Organization ;
+                    ns1:identifier [ a ns1:Identifier ;
+                            skos:notation "26316919" ;
+                            ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                        <https://ror.org/00hzjtg80> ;
+                    foaf:name "COMTES FHT" ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns2:family-name "Hodek" ;
+                    ns2:given-name "Josef" ;
+                    ns1:identifier <https://orcid.org/0000-0003-4013-9819> ;
+                    foaf:name "Hodek, Josef" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "26316919" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/00hzjtg80> ;
+                            foaf:name "COMTES FHT" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns2:family-name "Novák" ;
+                    ns2:given-name "Pavel" ;
+                    ns1:identifier <https://orcid.org/0000-0001-9947-2566> ;
+                    foaf:name "Novák, Pavel" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "60461373" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/05ggn0a85> ;
+                            foaf:name "Vysoká škola chemicko-technologická v Praze" ] ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    ns2:family-name "Uhlík" ;
+                    ns2:given-name "Matouš" ;
+                    foaf:name "Uhlík, Matouš" ;
+                    ns0:hasAffiliation [ a org:Organization ;
+                            ns1:identifier [ a ns1:Identifier ;
+                                    skos:notation "26316919" ;
+                                    ns0:inScheme <https://www.wikidata.org/entity/Q42302581> ],
+                                <https://ror.org/00hzjtg80> ;
+                            foaf:name "COMTES FHT" ] ] ] ;
+    ns0:hasAlternateTitle [ a ns0:AlternateTitle ;
+            dcterms:alternative "Data to manuscript Influence of Deposition Parameters on the Building rate, In-Situ Formation of Austenite and Tensile Properties of SAF 2507 SDSS Fabricated by Directed Energy Deposition"@en ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle> ] ;
+    ns0:hasPrimaryLanguage <http://publications.europa.eu/resource/authority/language/ENG> ;
+    ns0:hasTimeReference [ a ns0:TimeReference ;
+            time:hasTime [ a time:Instant ;
+                    time:inXSDDate "2025-06-16"^^xsd:date ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Issued> ],
+        [ a ns0:TimeReference ;
+            time:hasTime [ a time:Interval ;
+                    time:hasBeginning [ a time:Instant ;
+                            time:inXSDDate "2025-02-25"^^xsd:date ] ;
+                    time:hasEnd [ a time:Instant ;
+                            time:inXSDDate "2025-06-11"^^xsd:date ] ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Created> ],
+        [ a ns0:TimeReference ;
+            time:hasTime [ a time:Instant ;
+                    time:inXSDDate "2025-06-16"^^xsd:date ] ;
+            ns0:hasType <https://w3id.org/tib/datacite/vocab/dateType/Available> ] ;
+    ns0:hasValidationResult [ a ns0:ValidationResult ] ;
+    ns0:inScheme <https://doi.org/> ;
+    ns0:isDescribedBy <https://datarepo.eosc.cz/datasets/records/datst.dmq82-ed856> ;
+    ns5:description [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "The data set is related to the investigation of the influence of deposition parameters on the microstructure, austenite formation, and tensile properties of SAF 2507 super duplex stainless steel fabricated using directed energy deposition (DED). The experiments were carried out at COMTES FHT (Czech Republic) using an INSSTEK MX-600 system equipped with a 2 kW Yttrium fiber laser. SAF 2507 powder (particle size 45–150 μm) was deposited under three different parameter sets, varying laser power, beam diameter, layer thickness, hatch distance, and powder feed rate, while maintaining constant scan speed. A zig-zag deposition strategy was applied under a protective argon atmosphere (5.0, 99.999%). For each parameter set, 20×20×20 mm cubes were built and used for analysis. Microstructure and phase composition were characterized using optical microscopy, scanning electron microscopy, EBSD analysis, X-ray diffraction. Tensile properties were evaluated using miniature tensile tests. Thermal simulations of the deposition process were carried out using Simufact Welding 2024.1 with the Advanced Thermal Cycle (ATC) method."@en ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Methods> ],
+        [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "Industry applications of duplex stainless steels require a two-phase microstructure with a nearly balanced austenite-ferrite content to achieve good mechanical properties and good corrosion resistance. The most widespread additive manufacturing method such as laser powder bed fusion provides nearly fully ferritic microstructures due to the very high cooling rate, and the post-processing heat treatment must be performed. In contrast, other additive manufacturing methods, such as directed deposition methods, reach lower cooling rates and enable to obtain an equal ferrite–austenite ratio directly in the microstructure of the as-built state. In this work, the super duplex stainless steel SAF 2507 was deposited by directed energy deposition. The process parameters, namely, the laser power, laser beam spot, and powder feed rate, were varied to investigate the impact of the energy area density on the microstructure and tensile properties. A decrease in the energy area density caused an increase in the austenite content of 48 vol% and a numerical simulation of the sample temperature distribution inside the block during deposition, explaining the relationship between the amount of in situ formed austenite and the deposition parameters, was provided. Simultaneously, the deposition rate increased by more than five times. In contrast, the samples deposited at a higher building rate are characterized by greater porosity and lower elongation values in the vertical direction. The effect of the deposition parameters on the yield strength is low."@en ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> ],
+        [ a <https://w3id.org/tib/datacite/class/Description> ;
+            dcterms:description "The sets of experimental data were recorded on several instruments within COMTES FHT. In cases where possible (XRD, MTT, EBSD), the data are in xlsx format enabling any replotting."@en ;
+            ns5:descriptionType <https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> ] ;
+    ns5:fundingReference [ a <https://w3id.org/tib/datacite/class/FundingReference> ;
+            ns0:fundingProgram "Operační program Jan Amos Komenský"^^xsd:anyURI ;
+            ns5:awardNumber "EH23_021/0008433" ;
+            ns5:awardTitle "Development of special wire semiproducts for welding and 3D printing" ;
+            ns5:funderIdentifier [ a org:Organization ;
+                    ns2:organization-name "Ministry of Education, Youth and Sports of the Czech Republic"@en ;
+                    ns1:identifier <http://dx.doi.org/10.13039/501100001823>,
+                        <https://ror.org/037n8p820> ;
+                    foaf:name "Ministerstvo školství, mládeže a tělovýchovy" ] ] ;
+    ns5:publicationYear "2025"^^xsd:gYear ;
+    ns5:subject <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/20000/20500/20501> .
+
+<https://model.ccmm.cz/research-data/2.0.0> a dcterms:Standard ;
+    rdfs:label "Czech Core Metadata Model for Research Data 2.0.0"@en .
+
+<https://orcid.org/0000-0001-5717-267X> a ns1:Identifier ;
+    skos:notation "0000-0001-5717-267X" ;
+    ns0:inScheme <https://orcid.org/> .
+
+<https://orcid.org/0000-0001-9947-2566> a ns1:Identifier ;
+    skos:notation "0000-0001-9947-2566" ;
+    ns0:inScheme <https://orcid.org/> .
+
+<https://orcid.org/0000-0002-1241-6121> a ns1:Identifier ;
+    skos:notation "0000-0002-1241-6121" ;
+    ns0:inScheme <https://orcid.org/> .
+
+<https://orcid.org/0000-0002-4982-9114> a ns1:Identifier ;
+    skos:notation "0000-0002-4982-9114" ;
+    ns0:inScheme <https://orcid.org/> .
+
+<https://orcid.org/0000-0003-4013-9819> a ns1:Identifier ;
+    skos:notation "0000-0003-4013-9819" ;
+    ns0:inScheme <https://orcid.org/> .
+
+<https://ror.org/037n8p820> a ns1:Identifier ;
+    skos:notation "037n8p820" ;
+    ns0:inScheme <https://ror.org/> .
+
+<https://ror.org/05ggn0a85> a ns1:Identifier ;
+    skos:notation "05ggn0a85" ;
+    ns0:inScheme <https://ror.org/> .
+
+<https://vocabs.ccmm.cz/registry/codelist/AgentRole/Contributor/DataManager> a dcat:Role ;
+    skos:prefLabel "Správce dat"@cs,
+        "Data Manager"@en .
+
+<https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> a ns0:SubjectScheme ;
+    rdfs:label "Oborové třídění OECD FORD (Frascati)"@cs,
+        "OECD FORD Subject Category (Frascati)"@en .
+
+<https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/20000/20500/20501> a <https://w3id.org/tib/datacite/class/Subject> ;
+    skos:prefLabel "Materiálové inženýrství"@cs,
+        "Materials engineering"@en ;
+    ns0:inSubjectScheme <https://vocabs.ccmm.cz/registry/codelist/SubjectCategory/> ;
+    ns5:classificationCode "20501" .
+
+<https://vocabularies.coar-repositories.org/access_rights/c_abf2/> a dcterms:RightsStatement ;
+    skos:prefLabel "open access"@en .
+
+<https://w3id.org/tib/datacite/vocab/dateType/Available> a skos:Concept ;
+    skos:prefLabel "Datum zveřejnění"@cs,
+        "Available"@en .
+
+<https://w3id.org/tib/datacite/vocab/dateType/Created> a skos:Concept ;
+    skos:prefLabel "Datum vytvoření"@cs,
+        "Created"@en .
+
+<https://w3id.org/tib/datacite/vocab/dateType/Issued> a skos:Concept ;
+    skos:prefLabel "Datum vydání"@cs,
+        "Issued"@en .
+
+<https://w3id.org/tib/datacite/vocab/descriptionType/Abstract> a skos:Concept ;
+    skos:prefLabel "Abstrakt"@cs,
+        "Abstract"@en .
+
+<https://w3id.org/tib/datacite/vocab/descriptionType/Methods> a skos:Concept ;
+    skos:prefLabel "Metodologie"@cs,
+        "Methods"@en .
+
+<https://w3id.org/tib/datacite/vocab/descriptionType/TechnicalInfo> a skos:Concept ;
+    skos:prefLabel "Technická informace"@cs,
+        "TechnicalInfo"@en .
+
+<https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy> a skos:Concept ;
+    skos:prefLabel "je na něj odkazováno z (čeho)"@cs,
+        "IsReferencedBy"@en .
+
+<https://w3id.org/tib/datacite/vocab/titleType/TranslatedTitle> a skos:Concept ;
+    skos:prefLabel "Přeložený název"@cs,
+        "TranslatedTitle"@en .
+
+<http://publications.europa.eu/resource/authority/file-type/TAR> a dcterms:MediaType,
+        dcterms:MediaTypeOrExtent ;
+    skos:prefLabel "TAR"@en .
+
+<http://publications.europa.eu/resource/authority/language/ENG> a dcterms:LinguisticSystem ;
+    skos:prefLabel "English"@en .
+
+<https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856/files/REPO.tar> a rdfs:Resource,
+        ns0:Distribution-DownloadableFile ;
+    rdfs:label "REPO.tar"@cs,
+        "REPO.tar"@en ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/TAR> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> ;
+    dcterms:title "REPO.tar" ;
+    dcat:accessURL <https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856/files/> ;
+    dcat:byteSize 294809088 ;
+    dcat:downloadURL <https://data.narodni-repozitar.cz/general/datasets/dmq82-ed856/files/REPO.tar> ;
+    dcat:mediaType <http://publications.europa.eu/resource/authority/file-type/TAR> .
+
+<https://doi.org/10.1007/s12540-025-01953-4> a rdfs:Resource,
+        ns1:Identifier ;
+    dcterms:title "Influence of Deposition Parameters on the Building rate, In-Situ Formation of Austenite and Tensile Properties of SAF 2507 SDSS Fabricated by Directed Energy Deposition" ;
+    dcterms:type <http://purl.org/coar/resource_type/c_6501> ;
+    skos:notation "10.1007/s12540-025-01953-4" ;
+    ns1:identifier <https://doi.org/10.1007/s12540-025-01953-4> ;
+    prov:qualifiedAttribution [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    foaf:name "Hodek, Josef" ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    foaf:name "Novák, Pavel" ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    foaf:name "Brázda, Michal" ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    foaf:name "Uhlík, Matouš" ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    foaf:name "Dlouhý, Jaromír" ] ],
+        [ a prov:Attribution ;
+            dcat:hadRole <https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> ;
+            prov:agent [ a prov:Person ;
+                    foaf:name "Salvetr, Pavel" ] ] ;
+    ns0:hasType <https://w3id.org/tib/datacite/vocab/relationType/IsReferencedBy> ;
+    ns0:inScheme <https://doi.org/> ;
+    ns0:resourceUrl "https://doi.org/10.1007/s12540-025-01953-4"^^xsd:anyURI .
+
+<https://vocabs.ccmm.cz/registry/codelist/AgentRole/Publisher> a dcat:Role ;
+    skos:prefLabel "Vydavatel"@cs,
+        "Publisher"@en .
+
+<https://doi.org/> a ns0:IdentifierScheme ;
+    rdfs:label "Digital Object Identifier"@en ;
+    skos:notation "DOI" .
+
+<https://ror.org/> a ns0:IdentifierScheme ;
+    rdfs:label "Research Organization Registry"@en ;
+    skos:notation "ROR" .
+
+<https://orcid.org/> a ns0:IdentifierScheme ;
+    rdfs:label "Open Research and Contributor ID"@en ;
+    skos:notation "ORCID" .
+
+<https://ror.org/00hzjtg80> a ns1:Identifier ;
+    skos:notation "00hzjtg80" ;
+    ns0:inScheme <https://ror.org/> .
+
+<https://www.wikidata.org/entity/Q42302581> a ns0:IdentifierScheme ;
+    rdfs:label "Identifikační Číslo Osoby"@cs,
+        "Identification Number (IČO)"@en ;
+    skos:notation "IČO" .
+
+<https://vocabs.ccmm.cz/registry/codelist/AgentRole/Creator> a dcat:Role ;
+    skos:prefLabel "Autor"@cs,
+        "Creator"@en .
+

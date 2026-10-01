@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../agent/schema.xsd"/>
-  <xs:complexType name="funding_reference" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#FundingReference">
+  <xs:complexType name="funding_reference" sawsdl:modelReference="https://w3id.org/tib/datacite/class/FundingReference">
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Funding reference - Information about financial support (funding) for the resource being registered.
@@ -9,7 +9,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element minOccurs="0" name="local_identifier" type="xs:string" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#awardNumber">
+      <xs:element minOccurs="0" name="local_identifier" type="xs:string" sawsdl:modelReference="https://w3id.org/tib/datacite/property/awardNumber">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             local identifier - The code assigned by the funder to a sponsored award (grant).
@@ -17,10 +17,10 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="award_title" type="xs:string" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#awardTitle">
+      <xs:element minOccurs="0" name="award_title" type="xs:string" sawsdl:modelReference="https://w3id.org/tib/datacite/property/awardTitle">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            award title -  The human readable title or name of the award (grant).
+            award title - The human readable title or name of the award (grant).
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -31,10 +31,10 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="unbounded" name="funder" type="ccmm:agent" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#hasFunderIdentifier">
+      <xs:element maxOccurs="unbounded" name="funder" type="ccmm:agent" sawsdl:modelReference="https://w3id.org/tib/datacite/property/funderIdentifier">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            has funder - Relation to the agent entity of a funder.
+            has funder
           </xs:documentation>
         </xs:annotation>
       </xs:element>

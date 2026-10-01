@@ -1,0 +1,3317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://www.isotc211.org/2005/gmd"
+    version="2012-07-13" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gsr="http://www.isotc211.org/2005/gsr"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This
+            metadataApplication.xsd schema implements the UML conceptual schema defined in A.2.12 of
+            ISO 19115:2003. It contains the implementation of the class:
+            MD_ApplicationSchemaInformation.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="gco.xsd"/>
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This
+            metadataEntity.xsd schema implements the UML conceptual schema defined in A.2.1 of ISO
+            19115:2003. It contains the implementation of the class MD_Metadata.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This
+            portrayalCatalogue.xsd schema implements the UML conceptual schema defined in A.2.6 of
+            ISO 19115:2003. It contains the implementation of the following classes:
+            MD_GridSpatialRepresentation, MD_VectorSpatialRepresentation, MD_SpatialRepresentation,
+            MD_Georeferenceable, MD_Dimension, MD_Georectified, MD_GeometricObjects,
+            MD_TopologyLevelCode, MD_GeometricObjectTypeCode, MD_CellGeometryCode,
+            MD_DimensionNameTypeCode, MD_PixelOrientationCode.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <xs:import namespace="http://www.isotc211.org/2005/gss" schemaLocation="gss.xsd"/>
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This citation.xsd
+            schema implements the UML conceptual schema defined in A.3.2 of ISO 19115:2003. It
+            contains the implementation of the following classes: CI_ResponsibleParty, CI_Citation,
+            CI_Address, CI_OnlineResource, CI_Contact, CI_Telephone, URL, CI_Date, CI_Series,
+            CI_RoleCode, CI_PresentationFormCode, CI_OnLineFunctionCode,
+            CI_DateTypeCode.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This
+            referenceSystem.xsd schema implements the UML conceptual schema defined in A.2.7 of ISO
+            19115:2003 and ISO 19115:2003/Cor. 1:2006. It contains the implementation of the
+            following classes: RS_Identifier, MD_ReferenceSystem, MD_Identifier and RS_Reference
+            System.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This extent.xsd
+            schema implements the UML conceptual schema defined in A.3.1 of ISO 19115:2003 and the
+            associated corrigendum. It contains the implementation of the following classes:
+            EX_TemporalExtent, EX_VerticalExtent, EX_BoundingPolygon, EX_Extent,
+            EX_GeographicExtent, EX_GeographicBoundingBox, EX_SpatialTemporalExtent,
+            EX_GeographicDescription.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <xs:import namespace="http://www.isotc211.org/2005/gts" schemaLocation="gts.xsd"/>
+    <xs:import namespace="http://www.isotc211.org/2005/gsr" schemaLocation="gsr.xsd"/>
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="EX_TemporalExtent_Type">
+        <xs:annotation>
+            <xs:documentation>Time period covered by the content of the dataset</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="extent" type="gts:TM_Primitive_PropertyType"
+                    />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="EX_TemporalExtent" type="gmd:EX_TemporalExtent_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="EX_TemporalExtent_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:EX_TemporalExtent"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="EX_VerticalExtent_Type">
+        <xs:annotation>
+            <xs:documentation>Vertical domain of dataset</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="minimumValue" type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" name="maximumValue" type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" name="verticalCRS" type="gsr:SC_CRS_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="EX_VerticalExtent" type="gmd:EX_VerticalExtent_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="EX_VerticalExtent_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:EX_VerticalExtent"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="EX_BoundingPolygon_Type">
+        <xs:annotation>
+            <xs:documentation>Boundary enclosing the dataset expressed as the closed set of (x,y)
+                coordinates of the polygon (last point replicates first point)</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractEX_GeographicExtent_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="polygon"
+                        type="gss:GM_Object_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="EX_BoundingPolygon" substitutionGroup="gmd:AbstractEX_GeographicExtent"
+        type="gmd:EX_BoundingPolygon_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="EX_BoundingPolygon_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:EX_BoundingPolygon"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="EX_Extent_Type">
+        <xs:annotation>
+            <xs:documentation>Information about spatial, vertical, and temporal
+                extent</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="description"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="geographicElement" type="gmd:EX_GeographicExtent_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="temporalElement" type="gmd:EX_TemporalExtent_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="verticalElement" type="gmd:EX_VerticalExtent_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="EX_Extent" type="gmd:EX_Extent_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="EX_Extent_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:EX_Extent"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractEX_GeographicExtent_Type">
+        <xs:annotation>
+            <xs:documentation>Geographic area of the dataset</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="extentTypeCode"
+                        type="gco:Boolean_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractEX_GeographicExtent"
+        type="gmd:AbstractEX_GeographicExtent_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="EX_GeographicExtent_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractEX_GeographicExtent"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="EX_GeographicBoundingBox_Type">
+        <xs:annotation>
+            <xs:documentation>Geographic area of the entire dataset referenced to WGS
+                84</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractEX_GeographicExtent_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="westBoundLongitude"
+                        type="gco:Decimal_PropertyType"/>
+                    <xs:element form="qualified" name="eastBoundLongitude"
+                        type="gco:Decimal_PropertyType"/>
+                    <xs:element form="qualified" name="southBoundLatitude"
+                        type="gco:Decimal_PropertyType"/>
+                    <xs:element form="qualified" name="northBoundLatitude"
+                        type="gco:Decimal_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="EX_GeographicBoundingBox" substitutionGroup="gmd:AbstractEX_GeographicExtent"
+        type="gmd:EX_GeographicBoundingBox_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="EX_GeographicBoundingBox_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:EX_GeographicBoundingBox"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="EX_SpatialTemporalExtent_Type">
+        <xs:annotation>
+            <xs:documentation>Extent with respect to date and time</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:EX_TemporalExtent_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="spatialExtent"
+                        type="gmd:EX_GeographicExtent_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="EX_SpatialTemporalExtent" substitutionGroup="gmd:EX_TemporalExtent"
+        type="gmd:EX_SpatialTemporalExtent_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="EX_SpatialTemporalExtent_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:EX_SpatialTemporalExtent"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="EX_GeographicDescription_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractEX_GeographicExtent_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="geographicIdentifier"
+                        type="gmd:MD_Identifier_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="EX_GeographicDescription" substitutionGroup="gmd:AbstractEX_GeographicExtent"
+        type="gmd:EX_GeographicDescription_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="EX_GeographicDescription_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:EX_GeographicDescription"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="RS_Identifier_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:MD_Identifier_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="codeSpace"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="version"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="RS_Identifier" substitutionGroup="gmd:MD_Identifier"
+        type="gmd:RS_Identifier_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="RS_Identifier_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:RS_Identifier"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_ReferenceSystem_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="referenceSystemIdentifier"
+                        type="gmd:RS_Identifier_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ReferenceSystem" type="gmd:MD_ReferenceSystem_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ReferenceSystem_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ReferenceSystem"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Identifier_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="authority"
+                        type="gmd:CI_Citation_PropertyType"/>
+                    <xs:element form="qualified" name="code" type="gco:CharacterString_PropertyType"
+                    />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Identifier" type="gmd:MD_Identifier_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Identifier_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Identifier"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractRS_ReferenceSystem_Type">
+        <xs:annotation>
+            <xs:documentation>Description of the spatial and temporal reference systems used in the
+                dataset</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="name" type="gmd:RS_Identifier_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="domainOfValidity" type="gmd:EX_Extent_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractRS_ReferenceSystem"
+        type="gmd:AbstractRS_ReferenceSystem_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="RS_ReferenceSystem_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractRS_ReferenceSystem"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="CI_ResponsibleParty_Type">
+        <xs:annotation>
+            <xs:documentation>Identification of, and means of communication with, person(s) and
+                organisations associated with the dataset</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="individualName"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="organisationName"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="positionName"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="contactInfo"
+                        type="gmd:CI_Contact_PropertyType"/>
+                    <xs:element form="qualified" name="role" type="gmd:CI_RoleCode_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="CI_ResponsibleParty" type="gmd:CI_ResponsibleParty_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_ResponsibleParty_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_ResponsibleParty"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="CI_Citation_Type">
+        <xs:annotation>
+            <xs:documentation>Standardized resource reference</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="title"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="alternateTitle" type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="date"
+                        type="gmd:CI_Date_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="edition"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="editionDate"
+                        type="gco:Date_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="identifier" type="gmd:MD_Identifier_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="citedResponsibleParty" type="gmd:CI_ResponsibleParty_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="presentationForm" type="gmd:CI_PresentationFormCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="series"
+                        type="gmd:CI_Series_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="otherCitationDetails"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="collectiveTitle"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="ISBN"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="ISSN"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="CI_Citation" type="gmd:CI_Citation_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_Citation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_Citation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="CI_Address_Type">
+        <xs:annotation>
+            <xs:documentation>Location of the responsible individual or
+                organisation</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="deliveryPoint" type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="city"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="administrativeArea"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="postalCode"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="country"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="electronicMailAddress" type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="CI_Address" type="gmd:CI_Address_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_Address_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_Address"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="CI_OnlineResource_Type">
+        <xs:annotation>
+            <xs:documentation>Information about online sources from which the dataset,
+                specification, or community profile name and extended metadata elements can be
+                obtained.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="linkage" type="gmd:URL_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="protocol"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="applicationProfile"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="name"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="description"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="function"
+                        type="gmd:CI_OnLineFunctionCode_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="CI_OnlineResource" type="gmd:CI_OnlineResource_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_OnlineResource_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_OnlineResource"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="CI_Contact_Type">
+        <xs:annotation>
+            <xs:documentation>Information required enabling contact with the  responsible person
+                and/or organisation</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="phone"
+                        type="gmd:CI_Telephone_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="address"
+                        type="gmd:CI_Address_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="onlineResource"
+                        type="gmd:CI_OnlineResource_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="hoursOfService"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="contactInstructions"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="CI_Contact" type="gmd:CI_Contact_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_Contact_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_Contact"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="CI_Telephone_Type">
+        <xs:annotation>
+            <xs:documentation>Telephone numbers for contacting the responsible individual or
+                organisation</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="voice"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="facsimile" type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="CI_Telephone" type="gmd:CI_Telephone_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_Telephone_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_Telephone"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="CI_Date_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="date" type="gco:Date_PropertyType"/>
+                    <xs:element form="qualified" name="dateType"
+                        type="gmd:CI_DateTypeCode_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="CI_Date" type="gmd:CI_Date_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_Date_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_Date"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="CI_Series_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="name"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="issueIdentification"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="page"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="CI_Series" type="gmd:CI_Series_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_Series_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_Series"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="URL" type="xs:anyURI"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="URL_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:URL"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="CI_RoleCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_RoleCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_RoleCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="CI_PresentationFormCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_PresentationFormCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_PresentationFormCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="CI_OnLineFunctionCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_OnLineFunctionCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_OnLineFunctionCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="CI_DateTypeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="CI_DateTypeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:CI_DateTypeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="MD_GridSpatialRepresentation_Type">
+        <xs:annotation>
+            <xs:documentation>Types and numbers of raster spatial objects in the
+                dataset</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractMD_SpatialRepresentation_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="numberOfDimensions"
+                        type="gco:Integer_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="axisDimensionProperties" type="gmd:MD_Dimension_PropertyType"/>
+                    <xs:element form="qualified" name="cellGeometry"
+                        type="gmd:MD_CellGeometryCode_PropertyType"/>
+                    <xs:element form="qualified" name="transformationParameterAvailability"
+                        type="gco:Boolean_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_GridSpatialRepresentation"
+        substitutionGroup="gmd:AbstractMD_SpatialRepresentation"
+        type="gmd:MD_GridSpatialRepresentation_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_GridSpatialRepresentation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_GridSpatialRepresentation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_VectorSpatialRepresentation_Type">
+        <xs:annotation>
+            <xs:documentation>Information about the vector spatial objects in the
+                dataset</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractMD_SpatialRepresentation_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="topologyLevel"
+                        type="gmd:MD_TopologyLevelCode_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="geometricObjects" type="gmd:MD_GeometricObjects_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_VectorSpatialRepresentation"
+        substitutionGroup="gmd:AbstractMD_SpatialRepresentation"
+        type="gmd:MD_VectorSpatialRepresentation_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_VectorSpatialRepresentation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_VectorSpatialRepresentation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractMD_SpatialRepresentation_Type">
+        <xs:annotation>
+            <xs:documentation>Digital mechanism used to represent spatial
+                information</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractMD_SpatialRepresentation"
+        type="gmd:AbstractMD_SpatialRepresentation_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_SpatialRepresentation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractMD_SpatialRepresentation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Georeferenceable_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:MD_GridSpatialRepresentation_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="controlPointAvailability"
+                        type="gco:Boolean_PropertyType"/>
+                    <xs:element form="qualified" name="orientationParameterAvailability"
+                        type="gco:Boolean_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0"
+                        name="orientationParameterDescription"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" name="georeferencedParameters"
+                        type="gco:Record_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="parameterCitation" type="gmd:CI_Citation_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Georeferenceable" substitutionGroup="gmd:MD_GridSpatialRepresentation"
+        type="gmd:MD_Georeferenceable_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Georeferenceable_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Georeferenceable"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Dimension_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="dimensionName"
+                        type="gmd:MD_DimensionNameTypeCode_PropertyType"/>
+                    <xs:element form="qualified" name="dimensionSize"
+                        type="gco:Integer_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="resolution"
+                        type="gco:Measure_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Dimension" type="gmd:MD_Dimension_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Dimension_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Dimension"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Georectified_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:MD_GridSpatialRepresentation_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="checkPointAvailability"
+                        type="gco:Boolean_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="checkPointDescription"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="cornerPoints" type="gss:GM_Point_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="centerPoint"
+                        type="gss:GM_Point_PropertyType"/>
+                    <xs:element form="qualified" name="pointInPixel"
+                        type="gmd:MD_PixelOrientationCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0"
+                        name="transformationDimensionDescription"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="2" minOccurs="0"
+                        name="transformationDimensionMapping"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Georectified" substitutionGroup="gmd:MD_GridSpatialRepresentation"
+        type="gmd:MD_Georectified_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Georectified_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Georectified"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_GeometricObjects_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="geometricObjectType"
+                        type="gmd:MD_GeometricObjectTypeCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="geometricObjectCount"
+                        type="gco:Integer_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_GeometricObjects" type="gmd:MD_GeometricObjects_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_GeometricObjects_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_GeometricObjects"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:simpleType name="MD_PixelOrientationCode_Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="center"/>
+            <xs:enumeration value="lowerLeft"/>
+            <xs:enumeration value="lowerRight"/>
+            <xs:enumeration value="upperRight"/>
+            <xs:enumeration value="upperLeft"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_PixelOrientationCode" substitutionGroup="gco:CharacterString"
+        type="gmd:MD_PixelOrientationCode_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_PixelOrientationCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_PixelOrientationCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_TopologyLevelCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_TopologyLevelCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_TopologyLevelCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_GeometricObjectTypeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_GeometricObjectTypeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_GeometricObjectTypeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_CellGeometryCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_CellGeometryCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_CellGeometryCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_DimensionNameTypeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_DimensionNameTypeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_DimensionNameTypeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This
+            metadataExtension.xsd schema implements the UML conceptual schema defined in A.2.11 of
+            ISO 19115:2003. It contains the implementation of the following classes:
+            MD_ExtendedElementInformation, MD_MetadataExtensionInformation, MD_ObligationCode,
+            MD_DatatypeCode.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="MD_ExtendedElementInformation_Type">
+        <xs:annotation>
+            <xs:documentation>New metadata element, not found in ISO 19115, which is required to
+                describe geographic data</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="name" type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="shortName"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="domainCode"
+                        type="gco:Integer_PropertyType"/>
+                    <xs:element form="qualified" name="definition"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="obligation"
+                        type="gmd:MD_ObligationCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="condition"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" name="dataType"
+                        type="gmd:MD_DatatypeCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="maximumOccurrence"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="domainValue"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="parentEntity"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" name="rule" type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="rationale" type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="source"
+                        type="gmd:CI_ResponsibleParty_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ExtendedElementInformation" type="gmd:MD_ExtendedElementInformation_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ExtendedElementInformation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ExtendedElementInformation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_MetadataExtensionInformation_Type">
+        <xs:annotation>
+            <xs:documentation>Information describing metadata extensions.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="extensionOnLineResource"
+                        type="gmd:CI_OnlineResource_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="extendedElementInformation"
+                        type="gmd:MD_ExtendedElementInformation_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_MetadataExtensionInformation"
+        type="gmd:MD_MetadataExtensionInformation_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_MetadataExtensionInformation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_MetadataExtensionInformation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:simpleType name="MD_ObligationCode_Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="mandatory"/>
+            <xs:enumeration value="optional"/>
+            <xs:enumeration value="conditional"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ObligationCode" substitutionGroup="gco:CharacterString"
+        type="gmd:MD_ObligationCode_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ObligationCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ObligationCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_DatatypeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_DatatypeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_DatatypeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This content.xsd
+            schema implements the UML conceptual schema defined in ISO 19115:2003, A.2.8. It
+            contains the implementation of the following classes: MD_FeatureCatalogueDescription,
+            MD_CoverageDescription, MD_ImageDescription, MD_ContentInformation, MD_RangeDimension,
+            MD_Band, MD_CoverageContentTypeCode, MD_ImagingConditionCode.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="MD_FeatureCatalogueDescription_Type">
+        <xs:annotation>
+            <xs:documentation>Information identifing the feature catalogue</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractMD_ContentInformation_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="complianceCode"
+                        type="gco:Boolean_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="language"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" name="includedWithDataset"
+                        type="gco:Boolean_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="featureTypes" type="gco:GenericName_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded"
+                        name="featureCatalogueCitation" type="gmd:CI_Citation_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_FeatureCatalogueDescription"
+        substitutionGroup="gmd:AbstractMD_ContentInformation"
+        type="gmd:MD_FeatureCatalogueDescription_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_FeatureCatalogueDescription_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_FeatureCatalogueDescription"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_CoverageDescription_Type">
+        <xs:annotation>
+            <xs:documentation>Information about the domain of the raster cell</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractMD_ContentInformation_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="attributeDescription"
+                        type="gco:RecordType_PropertyType"/>
+                    <xs:element form="qualified" name="contentType"
+                        type="gmd:MD_CoverageContentTypeCode_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="dimension" type="gmd:MD_RangeDimension_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_CoverageDescription" substitutionGroup="gmd:AbstractMD_ContentInformation"
+        type="gmd:MD_CoverageDescription_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_CoverageDescription_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_CoverageDescription"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_ImageDescription_Type">
+        <xs:annotation>
+            <xs:documentation>Information about an image's suitability for use</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:MD_CoverageDescription_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="illuminationElevationAngle"
+                        type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="illuminationAzimuthAngle"
+                        type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="imagingCondition"
+                        type="gmd:MD_ImagingConditionCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="imageQualityCode"
+                        type="gmd:MD_Identifier_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="cloudCoverPercentage"
+                        type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="processingLevelCode"
+                        type="gmd:MD_Identifier_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="compressionGenerationQuantity"
+                        type="gco:Integer_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="triangulationIndicator"
+                        type="gco:Boolean_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0"
+                        name="radiometricCalibrationDataAvailability"
+                        type="gco:Boolean_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0"
+                        name="cameraCalibrationInformationAvailability"
+                        type="gco:Boolean_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0"
+                        name="filmDistortionInformationAvailability" type="gco:Boolean_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0"
+                        name="lensDistortionInformationAvailability" type="gco:Boolean_PropertyType"
+                    />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ImageDescription" substitutionGroup="gmd:MD_CoverageDescription"
+        type="gmd:MD_ImageDescription_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ImageDescription_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ImageDescription"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractMD_ContentInformation_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractMD_ContentInformation"
+        type="gmd:AbstractMD_ContentInformation_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ContentInformation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractMD_ContentInformation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_RangeDimension_Type">
+        <xs:annotation>
+            <xs:documentation>Set of adjacent wavelengths in the electro-magnetic spectrum with a
+                common characteristic, such as the visible band</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="sequenceIdentifier"
+                        type="gco:MemberName_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="descriptor"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_RangeDimension" type="gmd:MD_RangeDimension_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_RangeDimension_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_RangeDimension"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Band_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:MD_RangeDimension_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="maxValue"
+                        type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="minValue"
+                        type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="units"
+                        type="gco:UomLength_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="peakResponse"
+                        type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="bitsPerValue"
+                        type="gco:Integer_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="toneGradation"
+                        type="gco:Integer_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="scaleFactor"
+                        type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="offset"
+                        type="gco:Real_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Band" substitutionGroup="gmd:MD_RangeDimension" type="gmd:MD_Band_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Band_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Band"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_CoverageContentTypeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_CoverageContentTypeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_CoverageContentTypeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ImagingConditionCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ImagingConditionCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ImagingConditionCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This
+            applicationSchema.xsd schema implements the UML conceptual schema defined in A.2.12 of
+            ISO 19115:2003. It contains the implementation of the class
+            MD_ApplicationSchemaInformation.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="MD_ApplicationSchemaInformation_Type">
+        <xs:annotation>
+            <xs:documentation>Information about the application schema used to build the
+                dataset</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="name" type="gmd:CI_Citation_PropertyType"/>
+                    <xs:element form="qualified" name="schemaLanguage"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" name="constraintLanguage"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="schemaAscii"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="graphicsFile"
+                        type="gco:Binary_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="softwareDevelopmentFile"
+                        type="gco:Binary_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="softwareDevelopmentFileFormat"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ApplicationSchemaInformation"
+        type="gmd:MD_ApplicationSchemaInformation_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ApplicationSchemaInformation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ApplicationSchemaInformation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This
+            portrayalCatalogue.xsd schema implements the UML conceptual schema defined in A.2.9 of
+            ISO 19115:2003. It contains the implementation of the class
+            MD_PortrayalCatalogueReference.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="MD_PortrayalCatalogueReference_Type">
+        <xs:annotation>
+            <xs:documentation>Information identifing the portrayal catalogue used</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded"
+                        name="portrayalCatalogueCitation" type="gmd:CI_Citation_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_PortrayalCatalogueReference" type="gmd:MD_PortrayalCatalogueReference_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_PortrayalCatalogueReference_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_PortrayalCatalogueReference"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This dataQuality.xsd
+            schema implements the UML conceptual schema defined in A.2.4 of ISO 19115:2003. It
+            contains the implementation of the following classes: LI_ProcessStep, LI_Source,
+            LI_Lineage, DQ_ConformanceResult, DQ_QuantitativeResult, DQ_Result, DQ_TemporalValidity,
+            DQ_AccuracyOfATimeMeasurement, DQ_QuantitativeAttributeAccuracy,
+            DQ_NonQuantitativeAttributeAccuracy, DQ_ThematicClassificationCorrectness,
+            DQ_RelativeInternalPositionalAccuracy, DQ_GriddedDataPositionalAccuracy,
+            DQ_AbsoluteExternalPositionalAccuracy, DQ_TopologicalConsistency, DQ_FormatConsistency,
+            DQ_DomainConsistency, DQ_ConceptualConsistency, DQ_CompletenessOmission,
+            DQ_CompletenessCommission, DQ_TemporalAccuracy, DQ_ThematicAccuracy,
+            DQ_PositionalAccuracy, DQ_LogicalConsistency, DQ_Completeness, DQ_Element,
+            DQ_DataQuality.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This
+            identification.xsd schema implements the UML conceptual schema defined in A.2.2 of ISO
+            19115:2003. It contains the implementation of the following classes: MD_Identification,
+            MD_BrowseGraphic, MD_DataIdentification, MD_ServiceIdentification,
+            MD_RepresentativeFraction, MD_Usage, MD_Keywords, DS_Association,
+            MD_AggregateInformation, MD_CharacterSetCode, MD_SpatialRepresentationTypeCode,
+            MD_TopicCategoryCode, MD_ProgressCode, MD_KeywordTypeCode, DS_AssociationTypeCode,
+            DS_InitiativeTypeCode, MD_ResolutionType.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This constraints.xsd
+            schema implements the UML conceptual schema defined in A.2.3 of ISO 19115:2003. It
+            contains the implementation of the following classes: MD_Constraints,
+            MD_LegalConstraints, MD_SecurityConstraints, MD_ClassificationCode,
+            MD_RestrictionCode.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="MD_Constraints_Type">
+        <xs:annotation>
+            <xs:documentation>Restrictions on the access and use of a dataset or
+                metadata</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="useLimitation" type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Constraints" type="gmd:MD_Constraints_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Constraints_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Constraints"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_LegalConstraints_Type">
+        <xs:annotation>
+            <xs:documentation>Restrictions and legal prerequisites for accessing and using the
+                dataset.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:MD_Constraints_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="accessConstraints" type="gmd:MD_RestrictionCode_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="useConstraints" type="gmd:MD_RestrictionCode_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="otherConstraints" type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_LegalConstraints" substitutionGroup="gmd:MD_Constraints"
+        type="gmd:MD_LegalConstraints_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_LegalConstraints_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_LegalConstraints"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_SecurityConstraints_Type">
+        <xs:annotation>
+            <xs:documentation>Handling restrictions imposed on the dataset because of national
+                security, privacy, or other concerns</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:MD_Constraints_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="classification"
+                        type="gmd:MD_ClassificationCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="userNote"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="classificationSystem"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="handlingDescription"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_SecurityConstraints" substitutionGroup="gmd:MD_Constraints"
+        type="gmd:MD_SecurityConstraints_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_SecurityConstraints_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_SecurityConstraints"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ClassificationCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ClassificationCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ClassificationCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_RestrictionCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_RestrictionCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_RestrictionCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This
+            distribution.xsd schema implements the UML conceptual schema defined in A.2.10 of ISO
+            19115:2003. It contains the implementation of the following classes: MD_Medium,
+            MD_DigitalTransferOptions, MD_StandardOrderProcess, MD_Distributor, MD_Distribution,
+            MD_Format, MD_MediumFormatCode, MD_MediumNameCode.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="MD_Medium_Type">
+        <xs:annotation>
+            <xs:documentation>Information about the media on which the data can be
+                distributed</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="name"
+                        type="gmd:MD_MediumNameCode_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="density"
+                        type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="densityUnits"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="volumes"
+                        type="gco:Integer_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="mediumFormat" type="gmd:MD_MediumFormatCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="mediumNote"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Medium" type="gmd:MD_Medium_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Medium_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Medium"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_DigitalTransferOptions_Type">
+        <xs:annotation>
+            <xs:documentation>Technical means and media by which a dataset is obtained from the
+                distributor</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="unitsOfDistribution"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="transferSize"
+                        type="gco:Real_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="onLine"
+                        type="gmd:CI_OnlineResource_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="offLine"
+                        type="gmd:MD_Medium_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_DigitalTransferOptions" type="gmd:MD_DigitalTransferOptions_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_DigitalTransferOptions_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_DigitalTransferOptions"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_StandardOrderProcess_Type">
+        <xs:annotation>
+            <xs:documentation>Common ways in which the dataset may be obtained or received, and
+                related instructions and fee information</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="fees"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="plannedAvailableDateTime"
+                        type="gco:DateTime_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="orderingInstructions"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="turnaround"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_StandardOrderProcess" type="gmd:MD_StandardOrderProcess_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_StandardOrderProcess_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_StandardOrderProcess"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Distributor_Type">
+        <xs:annotation>
+            <xs:documentation>Information about the distributor</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="distributorContact"
+                        type="gmd:CI_ResponsibleParty_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="distributionOrderProcess"
+                        type="gmd:MD_StandardOrderProcess_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="distributorFormat" type="gmd:MD_Format_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="distributorTransferOptions"
+                        type="gmd:MD_DigitalTransferOptions_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Distributor" type="gmd:MD_Distributor_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Distributor_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Distributor"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Distribution_Type">
+        <xs:annotation>
+            <xs:documentation>Information about the distributor of and options for obtaining the
+                dataset</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="distributionFormat" type="gmd:MD_Format_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="distributor" type="gmd:MD_Distributor_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="transferOptions" type="gmd:MD_DigitalTransferOptions_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Distribution" type="gmd:MD_Distribution_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Distribution_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Distribution"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Format_Type">
+        <xs:annotation>
+            <xs:documentation>Description of the form of the data to be
+                distributed</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="name" type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" name="version"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="amendmentNumber"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="specification"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="fileDecompressionTechnique"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="formatDistributor" type="gmd:MD_Distributor_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Format" type="gmd:MD_Format_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Format_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Format"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_DistributionUnits" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_DistributionUnits_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_DistributionUnits"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_MediumFormatCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_MediumFormatCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_MediumFormatCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_MediumNameCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_MediumNameCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_MediumNameCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This maintenance.xsd
+            schema implements the UML conceptual schema defined in A.2.5 of ISO 19115:2003. It
+            contains the implementation of the following classes: MD_MaintenanceInformation,
+            MD_MaintenanceFrequencyCode, MD_ScopeCode, MD_ScopeDescription.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="MD_MaintenanceInformation_Type">
+        <xs:annotation>
+            <xs:documentation>Information about the scope and frequency of
+                updating</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="maintenanceAndUpdateFrequency"
+                        type="gmd:MD_MaintenanceFrequencyCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="dateOfNextUpdate"
+                        type="gco:Date_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0"
+                        name="userDefinedMaintenanceFrequency"
+                        type="gts:TM_PeriodDuration_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="updateScope" type="gmd:MD_ScopeCode_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="updateScopeDescription" type="gmd:MD_ScopeDescription_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="maintenanceNote" type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="contact"
+                        type="gmd:CI_ResponsibleParty_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_MaintenanceInformation" type="gmd:MD_MaintenanceInformation_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_MaintenanceInformation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_MaintenanceInformation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_ScopeDescription_Type">
+        <xs:annotation>
+            <xs:documentation>Description of the class of information covered by the
+                information</xs:documentation>
+        </xs:annotation>
+        <xs:choice>
+            <xs:element form="qualified" maxOccurs="unbounded" name="attributes"
+                type="gco:ObjectReference_PropertyType"/>
+            <xs:element form="qualified" maxOccurs="unbounded" name="features"
+                type="gco:ObjectReference_PropertyType"/>
+            <xs:element form="qualified" maxOccurs="unbounded" name="featureInstances"
+                type="gco:ObjectReference_PropertyType"/>
+            <xs:element form="qualified" maxOccurs="unbounded" name="attributeInstances"
+                type="gco:ObjectReference_PropertyType"/>
+            <xs:element form="qualified" name="dataset" type="gco:CharacterString_PropertyType"/>
+            <xs:element form="qualified" name="other" type="gco:CharacterString_PropertyType"/>
+        </xs:choice>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ScopeDescription" type="gmd:MD_ScopeDescription_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ScopeDescription_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ScopeDescription"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_MaintenanceFrequencyCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_MaintenanceFrequencyCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_MaintenanceFrequencyCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ScopeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ScopeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ScopeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType abstract="true" name="AbstractMD_Identification_Type">
+        <xs:annotation>
+            <xs:documentation>Basic information about data</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="citation" type="gmd:CI_Citation_PropertyType"/>
+                    <xs:element form="qualified" name="abstract"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="purpose"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="credit"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="status"
+                        type="gmd:MD_ProgressCode_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="pointOfContact" type="gmd:CI_ResponsibleParty_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="resourceMaintenance" type="gmd:MD_MaintenanceInformation_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="graphicOverview" type="gmd:MD_BrowseGraphic_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="resourceFormat" type="gmd:MD_Format_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="descriptiveKeywords" type="gmd:MD_Keywords_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="resourceSpecificUsage" type="gmd:MD_Usage_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="resourceConstraints" type="gmd:MD_Constraints_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="aggregationInfo" type="gmd:MD_AggregateInformation_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractMD_Identification"
+        type="gmd:AbstractMD_Identification_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Identification_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractMD_Identification"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_BrowseGraphic_Type">
+        <xs:annotation>
+            <xs:documentation>Graphic that provides an illustration of the dataset (should include a
+                legend for the graphic)</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="fileName"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="fileDescription"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="fileType"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_BrowseGraphic" type="gmd:MD_BrowseGraphic_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_BrowseGraphic_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_BrowseGraphic"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_DataIdentification_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractMD_Identification_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="spatialRepresentationType"
+                        type="gmd:MD_SpatialRepresentationTypeCode_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="spatialResolution" type="gmd:MD_Resolution_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="language"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="characterSet" type="gmd:MD_CharacterSetCode_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="topicCategory" type="gmd:MD_TopicCategoryCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="environmentDescription"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="extent"
+                        type="gmd:EX_Extent_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="supplementalInformation"
+                        type="gco:CharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_DataIdentification" substitutionGroup="gmd:AbstractMD_Identification"
+        type="gmd:MD_DataIdentification_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_DataIdentification_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_DataIdentification"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_ServiceIdentification_Type">
+        <xs:annotation>
+            <xs:documentation>See 19119 for further info</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractMD_Identification_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ServiceIdentification" substitutionGroup="gmd:AbstractMD_Identification"
+        type="gmd:MD_ServiceIdentification_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ServiceIdentification_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ServiceIdentification"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_RepresentativeFraction_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="denominator" type="gco:Integer_PropertyType"
+                    />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_RepresentativeFraction" type="gmd:MD_RepresentativeFraction_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_RepresentativeFraction_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_RepresentativeFraction"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Usage_Type">
+        <xs:annotation>
+            <xs:documentation>Brief description of ways in which the dataset is currently
+                used.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="specificUsage"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="usageDateTime"
+                        type="gco:DateTime_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="userDeterminedLimitations"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="userContactInfo"
+                        type="gmd:CI_ResponsibleParty_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Usage" type="gmd:MD_Usage_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Usage_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Usage"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Keywords_Type">
+        <xs:annotation>
+            <xs:documentation>Keywords, their type and reference source</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="keyword"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="type"
+                        type="gmd:MD_KeywordTypeCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="thesaurusName"
+                        type="gmd:CI_Citation_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Keywords" type="gmd:MD_Keywords_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Keywords_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Keywords"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DS_Association_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DS_Association" type="gmd:DS_Association_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_Association_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_Association"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_AggregateInformation_Type">
+        <xs:annotation>
+            <xs:documentation>Encapsulates the dataset aggregation information</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="aggregateDataSetName"
+                        type="gmd:CI_Citation_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="aggregateDataSetIdentifier"
+                        type="gmd:MD_Identifier_PropertyType"/>
+                    <xs:element form="qualified" name="associationType"
+                        type="gmd:DS_AssociationTypeCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="initiativeType"
+                        type="gmd:DS_InitiativeTypeCode_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_AggregateInformation" type="gmd:MD_AggregateInformation_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_AggregateInformation_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_AggregateInformation"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="MD_Resolution_Type">
+        <xs:choice>
+            <xs:element form="qualified" name="equivalentScale"
+                type="gmd:MD_RepresentativeFraction_PropertyType"/>
+            <xs:element form="qualified" name="distance" type="gco:Distance_PropertyType"/>
+        </xs:choice>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Resolution" type="gmd:MD_Resolution_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Resolution_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Resolution"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:simpleType name="MD_TopicCategoryCode_Type">
+        <xs:annotation>
+            <xs:documentation>High-level geospatial data thematic classification to assist in the
+                grouping and search of available geospatial datasets</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="farming"/>
+            <xs:enumeration value="biota"/>
+            <xs:enumeration value="boundaries"/>
+            <xs:enumeration value="climatologyMeteorologyAtmosphere"/>
+            <xs:enumeration value="economy"/>
+            <xs:enumeration value="elevation"/>
+            <xs:enumeration value="environment"/>
+            <xs:enumeration value="geoscientificInformation"/>
+            <xs:enumeration value="health"/>
+            <xs:enumeration value="imageryBaseMapsEarthCover"/>
+            <xs:enumeration value="intelligenceMilitary"/>
+            <xs:enumeration value="inlandWaters"/>
+            <xs:enumeration value="location"/>
+            <xs:enumeration value="oceans"/>
+            <xs:enumeration value="planningCadastre"/>
+            <xs:enumeration value="society"/>
+            <xs:enumeration value="structure"/>
+            <xs:enumeration value="transportation"/>
+            <xs:enumeration value="utilitiesCommunication"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_TopicCategoryCode" substitutionGroup="gco:CharacterString"
+        type="gmd:MD_TopicCategoryCode_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_TopicCategoryCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_TopicCategoryCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_CharacterSetCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_CharacterSetCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_CharacterSetCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_SpatialRepresentationTypeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_SpatialRepresentationTypeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_SpatialRepresentationTypeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_ProgressCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_ProgressCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_ProgressCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="MD_KeywordTypeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_KeywordTypeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_KeywordTypeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="DS_AssociationTypeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_AssociationTypeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_AssociationTypeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="DS_InitiativeTypeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_InitiativeTypeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_InitiativeTypeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="LI_ProcessStep_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="description"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="rationale"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="dateTime"
+                        type="gco:DateTime_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="processor" type="gmd:CI_ResponsibleParty_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="source"
+                        type="gmd:LI_Source_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="LI_ProcessStep" type="gmd:LI_ProcessStep_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="LI_ProcessStep_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:LI_ProcessStep"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="LI_Source_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="description"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="scaleDenominator"
+                        type="gmd:MD_RepresentativeFraction_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="sourceReferenceSystem"
+                        type="gmd:MD_ReferenceSystem_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="sourceCitation"
+                        type="gmd:CI_Citation_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="sourceExtent" type="gmd:EX_Extent_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="sourceStep" type="gmd:LI_ProcessStep_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="LI_Source" type="gmd:LI_Source_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="LI_Source_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:LI_Source"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="LI_Lineage_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="statement"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="processStep" type="gmd:LI_ProcessStep_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="source"
+                        type="gmd:LI_Source_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="LI_Lineage" type="gmd:LI_Lineage_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="LI_Lineage_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:LI_Lineage"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_ConformanceResult_Type">
+        <xs:annotation>
+            <xs:documentation>quantitative_result from Quality Procedures -  - renamed to remove
+                implied use limitiation.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_Result_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="specification"
+                        type="gmd:CI_Citation_PropertyType"/>
+                    <xs:element form="qualified" name="explanation"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" name="pass" type="gco:Boolean_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_ConformanceResult" substitutionGroup="gmd:AbstractDQ_Result"
+        type="gmd:DQ_ConformanceResult_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_ConformanceResult_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_ConformanceResult"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_QuantitativeResult_Type">
+        <xs:annotation>
+            <xs:documentation>Quantitative_conformance_measure from Quality Procedures.  -  -
+                Renamed to remove implied use limitation -  - OCL - -- result is type specified by
+                valueDomain - result.tupleType = valueDomain</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_Result_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="valueType"
+                        type="gco:RecordType_PropertyType"/>
+                    <xs:element form="qualified" name="valueUnit"
+                        type="gco:UnitOfMeasure_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="errorStatistic"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="value"
+                        type="gco:Record_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_QuantitativeResult" substitutionGroup="gmd:AbstractDQ_Result"
+        type="gmd:DQ_QuantitativeResult_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_QuantitativeResult_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_QuantitativeResult"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractDQ_Result_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractDQ_Result" type="gmd:AbstractDQ_Result_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_Result_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractDQ_Result"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_TemporalValidity_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_TemporalAccuracy_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_TemporalValidity" substitutionGroup="gmd:AbstractDQ_TemporalAccuracy"
+        type="gmd:DQ_TemporalValidity_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_TemporalValidity_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_TemporalValidity"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_TemporalConsistency_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_TemporalAccuracy_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_TemporalConsistency" substitutionGroup="gmd:AbstractDQ_TemporalAccuracy"
+        type="gmd:DQ_TemporalConsistency_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_TemporalConsistency_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_TemporalConsistency"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_AccuracyOfATimeMeasurement_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_TemporalAccuracy_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_AccuracyOfATimeMeasurement"
+        substitutionGroup="gmd:AbstractDQ_TemporalAccuracy"
+        type="gmd:DQ_AccuracyOfATimeMeasurement_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_AccuracyOfATimeMeasurement_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_AccuracyOfATimeMeasurement"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_QuantitativeAttributeAccuracy_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_ThematicAccuracy_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_QuantitativeAttributeAccuracy"
+        substitutionGroup="gmd:AbstractDQ_ThematicAccuracy"
+        type="gmd:DQ_QuantitativeAttributeAccuracy_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_QuantitativeAttributeAccuracy_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_QuantitativeAttributeAccuracy"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_NonQuantitativeAttributeAccuracy_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_ThematicAccuracy_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_NonQuantitativeAttributeAccuracy"
+        substitutionGroup="gmd:AbstractDQ_ThematicAccuracy"
+        type="gmd:DQ_NonQuantitativeAttributeAccuracy_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_NonQuantitativeAttributeAccuracy_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_NonQuantitativeAttributeAccuracy"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_ThematicClassificationCorrectness_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_ThematicAccuracy_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_ThematicClassificationCorrectness"
+        substitutionGroup="gmd:AbstractDQ_ThematicAccuracy"
+        type="gmd:DQ_ThematicClassificationCorrectness_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_ThematicClassificationCorrectness_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_ThematicClassificationCorrectness"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_RelativeInternalPositionalAccuracy_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_PositionalAccuracy_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_RelativeInternalPositionalAccuracy"
+        substitutionGroup="gmd:AbstractDQ_PositionalAccuracy"
+        type="gmd:DQ_RelativeInternalPositionalAccuracy_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_RelativeInternalPositionalAccuracy_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_RelativeInternalPositionalAccuracy"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_GriddedDataPositionalAccuracy_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_PositionalAccuracy_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_GriddedDataPositionalAccuracy"
+        substitutionGroup="gmd:AbstractDQ_PositionalAccuracy"
+        type="gmd:DQ_GriddedDataPositionalAccuracy_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_GriddedDataPositionalAccuracy_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_GriddedDataPositionalAccuracy"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_AbsoluteExternalPositionalAccuracy_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_PositionalAccuracy_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_AbsoluteExternalPositionalAccuracy"
+        substitutionGroup="gmd:AbstractDQ_PositionalAccuracy"
+        type="gmd:DQ_AbsoluteExternalPositionalAccuracy_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_AbsoluteExternalPositionalAccuracy_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_AbsoluteExternalPositionalAccuracy"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_TopologicalConsistency_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_LogicalConsistency_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_TopologicalConsistency"
+        substitutionGroup="gmd:AbstractDQ_LogicalConsistency"
+        type="gmd:DQ_TopologicalConsistency_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_TopologicalConsistency_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_TopologicalConsistency"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_FormatConsistency_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_LogicalConsistency_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_FormatConsistency" substitutionGroup="gmd:AbstractDQ_LogicalConsistency"
+        type="gmd:DQ_FormatConsistency_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_FormatConsistency_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_FormatConsistency"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_DomainConsistency_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_LogicalConsistency_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_DomainConsistency" substitutionGroup="gmd:AbstractDQ_LogicalConsistency"
+        type="gmd:DQ_DomainConsistency_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_DomainConsistency_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_DomainConsistency"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_ConceptualConsistency_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_LogicalConsistency_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_ConceptualConsistency"
+        substitutionGroup="gmd:AbstractDQ_LogicalConsistency"
+        type="gmd:DQ_ConceptualConsistency_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_ConceptualConsistency_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_ConceptualConsistency"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_CompletenessOmission_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_Completeness_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_CompletenessOmission" substitutionGroup="gmd:AbstractDQ_Completeness"
+        type="gmd:DQ_CompletenessOmission_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_CompletenessOmission_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_CompletenessOmission"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_CompletenessCommission_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_Completeness_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_CompletenessCommission" substitutionGroup="gmd:AbstractDQ_Completeness"
+        type="gmd:DQ_CompletenessCommission_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_CompletenessCommission_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_CompletenessCommission"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractDQ_TemporalAccuracy_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_Element_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractDQ_TemporalAccuracy"
+        substitutionGroup="gmd:AbstractDQ_Element" type="gmd:AbstractDQ_TemporalAccuracy_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_TemporalAccuracy_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractDQ_TemporalAccuracy"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractDQ_ThematicAccuracy_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_Element_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractDQ_ThematicAccuracy"
+        substitutionGroup="gmd:AbstractDQ_Element" type="gmd:AbstractDQ_ThematicAccuracy_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_ThematicAccuracy_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractDQ_ThematicAccuracy"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractDQ_PositionalAccuracy_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_Element_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractDQ_PositionalAccuracy"
+        substitutionGroup="gmd:AbstractDQ_Element" type="gmd:AbstractDQ_PositionalAccuracy_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_PositionalAccuracy_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractDQ_PositionalAccuracy"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractDQ_LogicalConsistency_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_Element_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractDQ_LogicalConsistency"
+        substitutionGroup="gmd:AbstractDQ_Element" type="gmd:AbstractDQ_LogicalConsistency_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_LogicalConsistency_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractDQ_LogicalConsistency"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractDQ_Completeness_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDQ_Element_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractDQ_Completeness"
+        substitutionGroup="gmd:AbstractDQ_Element" type="gmd:AbstractDQ_Completeness_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_Completeness_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractDQ_Completeness"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType abstract="true" name="AbstractDQ_Element_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="nameOfMeasure" type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="measureIdentification"
+                        type="gmd:MD_Identifier_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="measureDescription"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="evaluationMethodType"
+                        type="gmd:DQ_EvaluationMethodTypeCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="evaluationMethodDescription"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="evaluationProcedure"
+                        type="gmd:CI_Citation_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="dateTime"
+                        type="gco:DateTime_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="2" name="result"
+                        type="gmd:DQ_Result_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractDQ_Element" type="gmd:AbstractDQ_Element_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_Element_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractDQ_Element"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_DataQuality_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="scope" type="gmd:DQ_Scope_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="report"
+                        type="gmd:DQ_Element_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="lineage"
+                        type="gmd:LI_Lineage_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_DataQuality" type="gmd:DQ_DataQuality_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_DataQuality_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_DataQuality"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DQ_Scope_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="level" type="gmd:MD_ScopeCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="extent"
+                        type="gmd:EX_Extent_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="levelDescription" type="gmd:MD_ScopeDescription_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_Scope" type="gmd:DQ_Scope_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_Scope_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_Scope"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="DQ_EvaluationMethodTypeCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DQ_EvaluationMethodTypeCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DQ_EvaluationMethodTypeCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ================================= Annotation ================================ -->
+    <xs:annotation>
+        <xs:documentation>Geographic MetaData (GMD) extensible markup language is a component of the
+            XML Schema Implementation of Geographic Information Metadata documented in ISO/TS
+            19139:2007. GMD includes all the definitions of http://www.isotc211.org/2005/gmd
+            namespace. The root document of this namespace is the file gmd.xsd. This freeText.xsd
+            schema implements cultural and linguistic adaptability extensions defined in 7.3 of
+            ISO/TS 19139:2007. This extension essentially formalizes the free text concept described
+            in Annex J of ISO 19115:2003. For this reason, and in order to simplify the organization
+            of overall geographic metadata XML schema, this schema has been included as part of the
+            gmd namespace instead of the gmx namespace.</xs:documentation>
+    </xs:annotation>
+    <!-- ================================== Imports ================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="PT_FreeText_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="textGroup"
+                        type="gmd:LocalisedCharacterString_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="PT_FreeText" type="gmd:PT_FreeText_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="PT_FreeText_PropertyType">
+        <xs:complexContent>
+            <xs:extension base="gco:CharacterString_PropertyType">
+                <xs:sequence minOccurs="0">
+                    <xs:element ref="gmd:PT_FreeText"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="PT_Locale_Type">
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" name="languageCode"
+                        type="gmd:LanguageCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="country"
+                        type="gmd:Country_PropertyType"/>
+                    <xs:element form="qualified" name="characterEncoding"
+                        type="gmd:MD_CharacterSetCode_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="PT_Locale" type="gmd:PT_Locale_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="PT_Locale_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:PT_Locale"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="LocalisedCharacterString_Type">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="id" type="xs:ID"/>
+                <xs:attribute name="locale" type="xs:anyURI"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="LocalisedCharacterString" substitutionGroup="gco:CharacterString"
+        type="gmd:LocalisedCharacterString_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="LocalisedCharacterString_PropertyType">
+        <xs:complexContent>
+            <xs:extension base="gco:ObjectReference_PropertyType">
+                <xs:sequence minOccurs="0">
+                    <xs:element ref="gmd:LocalisedCharacterString"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="PT_LocaleContainer_Type">
+        <xs:sequence>
+            <xs:element form="qualified" name="description" type="gco:CharacterString_PropertyType"/>
+            <xs:element form="qualified" name="locale" type="gmd:PT_Locale_PropertyType"/>
+            <xs:element form="qualified" maxOccurs="unbounded" name="date"
+                type="gmd:CI_Date_PropertyType"/>
+            <xs:element form="qualified" maxOccurs="unbounded" name="responsibleParty"
+                type="gmd:CI_ResponsibleParty_PropertyType"/>
+            <xs:element form="qualified" maxOccurs="unbounded" name="localisedString"
+                type="gmd:LocalisedCharacterString_PropertyType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="PT_LocaleContainer" type="gmd:PT_LocaleContainer_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="PT_LocaleContainer_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:PT_LocaleContainer"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- =========================================================================== -->
+    <!-- =========================================================================== -->
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="LanguageCode" substitutionGroup="gco:CharacterString"
+        type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="LanguageCode_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:LanguageCode"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ........................................................................ -->
+    <xs:element name="Country" substitutionGroup="gco:CharacterString" type="gco:CodeListValue_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="Country_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:Country"/>
+        </xs:sequence>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!--====EOF====-->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType name="MD_Metadata_Type">
+        <xs:annotation>
+            <xs:documentation>Information about the metadata</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" minOccurs="0" name="fileIdentifier"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="language"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="characterSet"
+                        type="gmd:MD_CharacterSetCode_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="parentIdentifier"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="hierarchyLevel" type="gmd:MD_ScopeCode_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="hierarchyLevelName" type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="contact"
+                        type="gmd:CI_ResponsibleParty_PropertyType"/>
+                    <xs:element form="qualified" name="dateStamp" type="gco:Date_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="metadataStandardName"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="metadataStandardVersion"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="dataSetURI"
+                        type="gco:CharacterString_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="locale"
+                        type="gmd:PT_Locale_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="spatialRepresentationInfo"
+                        type="gmd:MD_SpatialRepresentation_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="referenceSystemInfo" type="gmd:MD_ReferenceSystem_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="metadataExtensionInfo"
+                        type="gmd:MD_MetadataExtensionInformation_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="identificationInfo"
+                        type="gmd:MD_Identification_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="contentInfo" type="gmd:MD_ContentInformation_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="distributionInfo"
+                        type="gmd:MD_Distribution_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="dataQualityInfo" type="gmd:DQ_DataQuality_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="portrayalCatalogueInfo"
+                        type="gmd:MD_PortrayalCatalogueReference_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="metadataConstraints" type="gmd:MD_Constraints_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="applicationSchemaInfo"
+                        type="gmd:MD_ApplicationSchemaInformation_PropertyType"/>
+                    <xs:element form="qualified" minOccurs="0" name="metadataMaintenance"
+                        type="gmd:MD_MaintenanceInformation_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="series"
+                        type="gmd:DS_Aggregate_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="describes" type="gmd:DS_DataSet_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="propertyType" type="gco:ObjectReference_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="featureType" type="gco:ObjectReference_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0"
+                        name="featureAttribute" type="gco:ObjectReference_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="MD_Metadata" type="gmd:MD_Metadata_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="MD_Metadata_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:MD_Metadata"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+    <xs:complexType abstract="true" name="AbstractDS_Aggregate_Type">
+        <xs:annotation>
+            <xs:documentation>Identifiable collection of datasets</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="composedOf"
+                        type="gmd:DS_DataSet_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="seriesMetadata"
+                        type="gmd:MD_Metadata_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="subset"
+                        type="gmd:DS_Aggregate_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="superset"
+                        type="gmd:DS_Aggregate_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element abstract="true" name="AbstractDS_Aggregate" type="gmd:AbstractDS_Aggregate_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_Aggregate_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:AbstractDS_Aggregate"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DS_DataSet_Type">
+        <xs:annotation>
+            <xs:documentation>Identifiable collection of data</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gco:AbstractObject_Type">
+                <xs:sequence>
+                    <xs:element form="qualified" maxOccurs="unbounded" name="has"
+                        type="gmd:MD_Metadata_PropertyType"/>
+                    <xs:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="partOf"
+                        type="gmd:DS_Aggregate_PropertyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DS_DataSet" type="gmd:DS_DataSet_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_DataSet_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_DataSet"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DS_OtherAggregate_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDS_Aggregate_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DS_OtherAggregate" substitutionGroup="gmd:AbstractDS_Aggregate"
+        type="gmd:DS_OtherAggregate_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_OtherAggregate_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_OtherAggregate"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DS_Series_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDS_Aggregate_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DS_Series" substitutionGroup="gmd:AbstractDS_Aggregate"
+        type="gmd:DS_Series_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_Series_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_Series"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DS_Initiative_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:AbstractDS_Aggregate_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DS_Initiative" substitutionGroup="gmd:AbstractDS_Aggregate"
+        type="gmd:DS_Initiative_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_Initiative_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_Initiative"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DS_Platform_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:DS_Series_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DS_Platform" substitutionGroup="gmd:DS_Series" type="gmd:DS_Platform_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_Platform_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_Platform"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DS_Sensor_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:DS_Series_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DS_Sensor" substitutionGroup="gmd:DS_Series" type="gmd:DS_Sensor_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_Sensor_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_Sensor"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DS_ProductionSeries_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:DS_Series_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DS_ProductionSeries" substitutionGroup="gmd:DS_Series"
+        type="gmd:DS_ProductionSeries_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_ProductionSeries_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_ProductionSeries"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <xs:complexType name="DS_StereoMate_Type">
+        <xs:complexContent>
+            <xs:extension base="gmd:DS_OtherAggregate_Type"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ........................................................................ -->
+    <xs:element name="DS_StereoMate" substitutionGroup="gmd:DS_OtherAggregate"
+        type="gmd:DS_StereoMate_Type"/>
+    <!-- ........................................................................ -->
+    <xs:complexType name="DS_StereoMate_PropertyType">
+        <xs:sequence minOccurs="0">
+            <xs:element ref="gmd:DS_StereoMate"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="gco:ObjectReference"/>
+        <xs:attribute ref="gco:nilReason"/>
+    </xs:complexType>
+    <!-- =========================================================================== -->
+    <!-- ########################################################################### -->
+    <!-- ########################################################################### -->
+    <!-- ================================== Classes ================================= -->
+</xs:schema>

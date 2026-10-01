@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/licence-document/schema.json",
+  "title": "Licence document",
+  "description": "A legal document giving official permission to do something with a resource and describing conditions under which it may be done.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "licence_document"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "licence_document"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "title": {
+      "title": "title",
+      "description": "Title of the licence document.",
+      "type": "array",
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

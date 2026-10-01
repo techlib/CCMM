@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/validation-result/schema.json",
+  "title": "Validation result",
+  "description": "Class describing the result of validation testing. It may include validation of metadata, data and/or web services accessing the data.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "validation_result"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "validation_result"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "label": {
+      "title": "label",
+      "description": "Label of the validation result.",
+      "type": "array",
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

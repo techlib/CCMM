@@ -5,10 +5,10 @@
 <https://model.ccmm.cz/research-data/related-resource/> a dsvs:structure-entity;
     kv:dataPsmHumanDescription "{\"en\":\"Data structure for Related resource. Resource represents any resource, physical or digital, that is related to the described dataset. \",\"cs\":\"Datová struktura pro Related resource. Resource represents any resource, physical or digital, that is related to the described dataset. \"}";
     kv:dataPsmHumanLabel "{\"en\":\"Related resource\",\"cs\":\"Related resource\"}";
-    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/related-resource/class-1765909420903-5abd-5a0e-810e\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909462935-12ef-133f-b09f\",\"https://model.ccmm.cz/research-data/related-resource/attribute-1765909462967-c77f-d314-88a2\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463011-2597-6df3-a1e9\",\"https://model.ccmm.cz/research-data/related-resource/attribute-1765909463042-332f-00c3-a5a1\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463080-db67-6b40-a645\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463123-87a6-d6f0-924d\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463176-e787-08bc-8d31\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463228-8b33-7fb5-b829\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909467724-450f-f266-b3ee\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909486482-e0c2-f86a-ad32\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909508687-7993-c317-8321\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909512821-64c8-69c5-ac86\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909525394-4340-b831-9b07\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909538945-7d67-cf96-a58f\"]";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/related-resource/class-1765909420903-5abd-5a0e-810e\",\"https://model.ccmm.cz/research-data/related-resource/attribute-1765909462967-c77f-d314-88a2\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463011-2597-6df3-a1e9\",\"https://model.ccmm.cz/research-data/related-resource/attribute-1765909463042-332f-00c3-a5a1\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463080-db67-6b40-a645\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463123-87a6-d6f0-924d\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463176-e787-08bc-8d31\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463228-8b33-7fb5-b829\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909486482-e0c2-f86a-ad32\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909512821-64c8-69c5-ac86\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909525394-4340-b831-9b07\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909538945-7d67-cf96-a58f\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1779981058716-ed5b-a8db-8a38\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1779981064477-3d51-1b4c-964f\",\"https://model.ccmm.cz/research-data/related-resource/classReference-1783940276399-a82c-e9a3-b35f\"]";
     kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/related-resource/class-1765909420903-5abd-5a0e-810e\"]";
     kv:dataPsmTechnicalLabel "null";
-    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/1.1\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
     kv:iri "\"https://model.ccmm.cz/research-data/related-resource/\"";
     kv:jsonEnforceContext "\"no\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
@@ -18,20 +18,10 @@
     kv:dataPsmHumanLabel "null";
     kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/RelatedResource\"";
     kv:dataPsmIsClosed "null";
-    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909462935-12ef-133f-b09f\",\"https://model.ccmm.cz/research-data/related-resource/attribute-1765909462967-c77f-d314-88a2\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463011-2597-6df3-a1e9\",\"https://model.ccmm.cz/research-data/related-resource/attribute-1765909463042-332f-00c3-a5a1\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463080-db67-6b40-a645\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463123-87a6-d6f0-924d\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463176-e787-08bc-8d31\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463228-8b33-7fb5-b829\"]";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1779981058716-ed5b-a8db-8a38\",\"https://model.ccmm.cz/research-data/related-resource/attribute-1765909462967-c77f-d314-88a2\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463011-2597-6df3-a1e9\",\"https://model.ccmm.cz/research-data/related-resource/attribute-1765909463042-332f-00c3-a5a1\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463080-db67-6b40-a645\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463123-87a6-d6f0-924d\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463176-e787-08bc-8d31\",\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463228-8b33-7fb5-b829\"]";
     kv:dataPsmTechnicalLabel "\"related_resource\"";
     kv:iri "\"https://model.ccmm.cz/research-data/related-resource/class-1765909420903-5abd-5a0e-810e\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
-:associationEnd-1765909462935-12ef-133f-b09f a dsvs:structure-entity;
-    kv:dataPsmHumanDescription "null";
-    kv:dataPsmHumanLabel "null";
-    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Resource.hasIdentifier\"";
-    kv:dataPsmIsDematerialize "null";
-    kv:dataPsmIsReverse "false";
-    kv:dataPsmPart "\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909467724-450f-f266-b3ee\"";
-    kv:dataPsmTechnicalLabel "\"identifier\"";
-    kv:iri "\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909462935-12ef-133f-b09f\"";
-    kv:types "[\"https://ofn.gov.cz/slovník/psm/AssociationEnd\"]".
 :attribute-1765909462967-c77f-d314-88a2 a dsvs:structure-entity;
     kv:dataPsmDatatype "\"http://www.w3.org/2001/XMLSchema#string\"";
     kv:dataPsmHumanDescription "null";
@@ -61,11 +51,11 @@
 :associationEnd-1765909463080-db67-6b40-a645 a dsvs:structure-entity;
     kv:dataPsmHumanDescription "null";
     kv:dataPsmHumanLabel "null";
-    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Resource.qualifiedRelation\"";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Resource.qualifiedAttribution\"";
     kv:dataPsmIsDematerialize "null";
     kv:dataPsmIsReverse "false";
-    kv:dataPsmPart "\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909508687-7993-c317-8321\"";
-    kv:dataPsmTechnicalLabel "\"qualified_relation\"";
+    kv:dataPsmPart "\"https://model.ccmm.cz/research-data/related-resource/classReference-1783940276399-a82c-e9a3-b35f\"";
+    kv:dataPsmTechnicalLabel "\"qualified_attribution\"";
     kv:iri "\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463080-db67-6b40-a645\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/AssociationEnd\"]".
 :associationEnd-1765909463123-87a6-d6f0-924d a dsvs:structure-entity;
@@ -98,20 +88,10 @@
     kv:dataPsmTechnicalLabel "\"resource_relation_type\"";
     kv:iri "\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1765909463228-8b33-7fb5-b829\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/AssociationEnd\"]".
-:classReference-1765909467724-450f-f266-b3ee a dsvs:structure-entity;
-    kv:dataPsmClass "\"https://model.ccmm.cz/research-data/identifier/class-1742340169817-84a9-ded1-a656\"";
-    kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/identifier/\"";
-    kv:iri "\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909467724-450f-f266-b3ee\"";
-    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
 :classReference-1765909486482-e0c2-f86a-ad32 a dsvs:structure-entity;
     kv:dataPsmClass "\"https://model.ccmm.cz/research-data/alternate-title/class-1742340187136-c36a-9f4c-b745\"";
     kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/alternate-title/\"";
     kv:iri "\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909486482-e0c2-f86a-ad32\"";
-    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
-:classReference-1765909508687-7993-c317-8321 a dsvs:structure-entity;
-    kv:dataPsmClass "\"https://model.ccmm.cz/research-data/resource-to-agent-relationship/class-1742235557653-64a2-513a-97fe\"";
-    kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/resource-to-agent-relationship/\"";
-    kv:iri "\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909508687-7993-c317-8321\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
 :classReference-1765909512821-64c8-69c5-ac86 a dsvs:structure-entity;
     kv:dataPsmClass "\"https://model.ccmm.cz/research-data/time-reference/class-1762083331490-ea8b-4a3a-bd65\"";
@@ -127,4 +107,24 @@
     kv:dataPsmClass "\"https://model.ccmm.cz/research-data/resource-relation-type/class-1747685037448-1c9b-f7fc-b4be\"";
     kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/resource-relation-type/\"";
     kv:iri "\"https://model.ccmm.cz/research-data/related-resource/classReference-1765909538945-7d67-cf96-a58f\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
+:associationEnd-1779981058716-ed5b-a8db-8a38 a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Resource.hasIdentifier\"";
+    kv:dataPsmIsDematerialize "null";
+    kv:dataPsmIsReverse "false";
+    kv:dataPsmPart "\"https://model.ccmm.cz/research-data/related-resource/classReference-1779981064477-3d51-1b4c-964f\"";
+    kv:dataPsmTechnicalLabel "\"identifier\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/related-resource/associationEnd-1779981058716-ed5b-a8db-8a38\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/AssociationEnd\"]".
+:classReference-1779981064477-3d51-1b4c-964f a dsvs:structure-entity;
+    kv:dataPsmClass "\"https://model.ccmm.cz/research-data/identifier/class-1779978617597-db2c-0cbc-9b17\"";
+    kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/identifier/\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/related-resource/classReference-1779981064477-3d51-1b4c-964f\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".
+:classReference-1783940276399-a82c-e9a3-b35f a dsvs:structure-entity;
+    kv:dataPsmClass "\"https://model.ccmm.cz/research-data/resource-attribution/class-1782311692513-fbfd-95df-9c5a\"";
+    kv:dataPsmSpecification "\"https://model.ccmm.cz/research-data/resource-attribution/\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/related-resource/classReference-1783940276399-a82c-e9a3-b35f\"";
     kv:types "[\"https://ofn.gov.cz/slovník/psm/ClassReference\"]".

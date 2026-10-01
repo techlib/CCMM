@@ -1,0 +1,24 @@
+@prefix : <https://model.ccmm.cz/research-data/common-provenance-model-json-representation/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://model.ccmm.cz/research-data/common-provenance-model-json-representation/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for Common provenance model JSON representation. Provides link to  the representation of provenance activity information in JSON format according to the Common provenance model specified in  ISO 23494-2 standard.\",\"cs\":\"Datová struktura pro Common provenance model JSON representation. Provides link to  the representation of provenance activity information in JSON format according to the Common provenance model specified in  ISO 23494-2 standard.\"}";
+    kv:dataPsmHumanLabel "{\"en\":\"Common provenance model JSON representation\",\"cs\":\"Common provenance model JSON representation\"}";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/common-provenance-model-json-representation/class-1785999961149-3305-94dd-9b25\"]";
+    kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/common-provenance-model-json-representation/class-1785999961149-3305-94dd-9b25\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://model.ccmm.cz/research-data/common-provenance-model-json-representation/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1785999961149-3305-94dd-9b25 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/CommonProvenanceModelJsonRepresentation\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[]";
+    kv:dataPsmTechnicalLabel "\"common_provenance_model_json_representation\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/common-provenance-model-json-representation/class-1785999961149-3305-94dd-9b25\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".

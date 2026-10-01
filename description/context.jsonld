@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "description_text": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "description_type": {
+      "@id": "https://w3id.org/tib/datacite/property/descriptionType",
+      "@type": "@id",
+      "@context": {
+        "label": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@container": "@language"
+        },
+        "description_type": {
+          "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+          "@context": {}
+        }
+      }
+    },
+    "description": {
+      "@id": "https://w3id.org/tib/datacite/class/Description",
+      "@context": {}
+    }
+  }
+}

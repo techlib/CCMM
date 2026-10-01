@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/documentation/schema.json",
+  "title": "Documentation",
+  "description": "A textual resource intended for human consumption that contains information about the data service.",
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "documentation"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "documentation"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "label": {
+      "title": "label",
+      "description": "Documentation label",
+      "type": "array",
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

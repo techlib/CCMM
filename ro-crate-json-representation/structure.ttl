@@ -1,0 +1,25 @@
+@prefix : <https://model.ccmm.cz/research-data/ro-crate-json-representation/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://model.ccmm.cz/research-data/ro-crate-json-representation/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for RO-Crate JSON representation. Representation of provenance activity in JSON-LD format corresponding to the RO-Crate specification.\",\"cs\":\"Datová struktura pro RO-Crate JSON representation. Representation of provenance activity in JSON-LD format corresponding to the RO-Crate specification.\"}";
+    kv:dataPsmHumanLabel "{\"en\":\"RO-Crate JSON representation\",\"cs\":\"RO-Crate JSON representation\"}";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/ro-crate-json-representation/class-1785759055371-faf1-1bb6-8592\"]";
+    kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/ro-crate-json-representation/class-1785759055371-faf1-1bb6-8592\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://model.ccmm.cz/research-data/ro-crate-json-representation/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1785759055371-faf1-1bb6-8592 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/Ro-crateJsonRepresentation\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[]";
+    kv:dataPsmTechnicalLabel "\"ro-crate_json_representation\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/ro-crate-json-representation/class-1785759055371-faf1-1bb6-8592\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".

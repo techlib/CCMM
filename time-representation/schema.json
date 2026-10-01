@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/time-representation/schema.json",
+  "anyOf": [
+    {
+      "title": "Time interval",
+      "description": "A temporal entity with an extent or duration",
+      "type": "object",
+      "required": [
+        "beginning",
+        "end"
+      ],
+      "properties": {
+        "beginning": {
+          "title": "has beginning",
+          "description": "Time instant representing the beginning of a temporal interval.",
+          "type": "object",
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "date_time"
+              ],
+              "properties": {
+                "date_time": {
+                  "title": "Date and time",
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "date"
+              ],
+              "properties": {
+                "date": {
+                  "title": "Date",
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          ]
+        },
+        "end": {
+          "title": "has end",
+          "description": "Time instant representing the end of a temporal interval.",
+          "type": "object",
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "date_time"
+              ],
+              "properties": {
+                "date_time": {
+                  "title": "Date and time",
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "date"
+              ],
+              "properties": {
+                "date": {
+                  "title": "Date",
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "title": "Time instant",
+      "description": "A temporal entity with zero extent or duration.",
+      "type": "object",
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "date_time"
+          ],
+          "properties": {
+            "date_time": {
+              "title": "Date and time",
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "date"
+          ],
+          "properties": {
+            "date": {
+              "title": "Date",
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

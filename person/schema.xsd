@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../identifier/schema.xsd"/>
   <xs:include schemaLocation="../contact-details/schema.xsd"/>
   <xs:include schemaLocation="../organization/schema.xsd"/>
@@ -11,10 +11,11 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="identifier" type="ccmm:identifier" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#hasIdentifier">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="identifier" type="ccmm:identifier" sawsdl:modelReference="http://www.w3.org/ns/adms#identifier">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            has identifier - has identifier
+            has identifier - Identifier of an Agent.
+            The recommended identifier scheme for an organization is https://ror.org; the recommended identifier scheme for a person is https://orcid.org. Provide other identifiers if available.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -22,7 +23,7 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             name - Name of the agent.
-            It is used for the official name of the agent. For Persons it is combination of first and family names. Recommended format is &#34;family names, first names&#34;.
+            The official name of an agent. For Person, it is a combination of the first and family names. The recommended format is &#34;family name(s), first name(s)&#34;, e.g., &#34;Smith, John&#34;.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

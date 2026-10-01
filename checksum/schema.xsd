@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../checksum-algorithm/schema.xsd"/>
   <xs:complexType name="checksum" sawsdl:modelReference="http://spdx.org/rdf/terms#Checksum">
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Checksum - A value that allows the contents of a file to be authenticated.
-        This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented.
+        This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented. It is related to the download URL.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -22,7 +22,6 @@
         <xs:annotation>
           <xs:documentation xml:lang="en">
             uses algorithm - The algorithm used to produce the subject Checksum.
-            Version 2.2 of [SPDX] defines individuals for the following algorithms: MD2, MD4, MD5, MD6, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512.
           </xs:documentation>
         </xs:annotation>
       </xs:element>

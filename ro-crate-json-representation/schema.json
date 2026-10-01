@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/ro-crate-json-representation/schema.json",
+  "type": "string",
+  "format": "iri"
+}

@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "date_time": {
+      "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+      "@type": "xsd:dateTime"
+    },
+    "date": {
+      "@id": "http://www.w3.org/2006/time#inXSDDate",
+      "@type": "xsd:date"
+    },
+    "time_instant": {
+      "@id": "http://www.w3.org/2006/time#Instant",
+      "@context": {}
+    }
+  }
+}

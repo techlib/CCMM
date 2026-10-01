@@ -1,0 +1,33 @@
+@prefix : <https://model.ccmm.cz/research-data/attributed-agent-role-type/>.
+@prefix dsvs: <https://dataspecer.com/work-in-progress/>.
+@prefix kv: <https://dataspecer.com/work-in-progress/key-value/>.
+
+<https://model.ccmm.cz/research-data/attributed-agent-role-type/> a dsvs:structure-entity;
+    kv:dataPsmHumanDescription "{\"en\":\"Data structure for Attributed agent role type. Role of the agent in the attribution to the resource. \",\"cs\":\"Datová struktura pro Attributed agent role type. Role of the agent in the attribution to the resource. \"}";
+    kv:dataPsmHumanLabel "{\"en\":\"Attributed agent role type\",\"cs\":\"Attributed agent role type\"}";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/attributed-agent-role-type/class-1782312422764-790c-7c4c-9803\",\"https://model.ccmm.cz/research-data/attributed-agent-role-type/attribute-1782312428997-5605-18a9-95a8\"]";
+    kv:dataPsmRoots "[\"https://model.ccmm.cz/research-data/attributed-agent-role-type/class-1782312422764-790c-7c4c-9803\"]";
+    kv:dataPsmTechnicalLabel "null";
+    kv:extensions "{\"https://ofn.gov.cz/slovník/psm/extensions/xml\":{\"namespace\":\"https://schema.ccmm.cz/research-data/2.0\",\"namespacePrefix\":\"ccmm\"}}";
+    kv:iri "\"https://model.ccmm.cz/research-data/attributed-agent-role-type/\"";
+    kv:jsonEnforceContext "\"no\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Schema\"]".
+:class-1782312422764-790c-7c4c-9803 a dsvs:structure-entity;
+    kv:dataPsmExtends "[]";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/AttributedAgentRoleType\"";
+    kv:dataPsmIsClosed "null";
+    kv:dataPsmParts "[\"https://model.ccmm.cz/research-data/attributed-agent-role-type/attribute-1782312428997-5605-18a9-95a8\"]";
+    kv:dataPsmTechnicalLabel "\"attributed_agent_role_type\"";
+    kv:instancesHaveIdentity "\"ALWAYS\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/attributed-agent-role-type/class-1782312422764-790c-7c4c-9803\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Class\"]".
+:attribute-1782312428997-5605-18a9-95a8 a dsvs:structure-entity;
+    kv:dataPsmDatatype "\"https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text\"";
+    kv:dataPsmHumanDescription "null";
+    kv:dataPsmHumanLabel "null";
+    kv:dataPsmInterpretation "\"https://model.ccmm.cz/research-data/ResourceAgentRoleType.label\"";
+    kv:dataPsmTechnicalLabel "\"label\"";
+    kv:iri "\"https://model.ccmm.cz/research-data/attributed-agent-role-type/attribute-1782312428997-5605-18a9-95a8\"";
+    kv:types "[\"https://ofn.gov.cz/slovník/psm/Attribute\"]".

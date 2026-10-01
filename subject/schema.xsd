@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/1.1" xmlns:ccmm="https://schema.ccmm.cz/research-data/1.1" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="qualified" targetNamespace="https://schema.ccmm.cz/research-data/2.0" xmlns:ccmm="https://schema.ccmm.cz/research-data/2.0" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
   <xs:include schemaLocation="../subject-scheme/schema.xsd"/>
-  <xs:complexType name="subject" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#Subject">
+  <xs:complexType name="subject" sawsdl:modelReference="https://w3id.org/tib/datacite/class/Subject">
     <xs:annotation>
       <xs:documentation xml:lang="en">
-        Subject - Subject, keyword, classification code, or key phrase describing the resource.
-        Recommended approach is to use controlled list values, preferably in the form of IRI. 
+        Subject - Subject, classification code, or key phrase describing the resource.
+        Subjects are always concepts identified by IRI belonging to a vocabulary (subject scheme). For free-text keywords use a keyword.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="iri" type="xs:anyURI"/>
-      <xs:element maxOccurs="unbounded" name="title" sawsdl:modelReference="http://purl.org/dc/terms/title">
+      <xs:element maxOccurs="unbounded" name="label" sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#prefLabel">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            title - Title of the subject.
+            label - Subject label.
+            Use a label of the corresponding value from the used code list. At least one subject must be a value from FRASCATI FORD vocabulary. This property may be repeated for parallel language versions of the label.
           </xs:documentation>
         </xs:annotation>
         <xs:complexType>
           <xs:simpleContent>
             <xs:extension base="xs:string">
               <xs:attribute ref="xml:lang" use="required"/>
+              <xs:assert test="@xml:lang != ''"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
@@ -36,18 +38,19 @@
           <xs:simpleContent>
             <xs:extension base="xs:string">
               <xs:attribute ref="xml:lang" use="required"/>
+              <xs:assert test="@xml:lang != ''"/>
             </xs:extension>
           </xs:simpleContent>
         </xs:complexType>
       </xs:element>
-      <xs:element minOccurs="0" name="classification_code" type="xs:string" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/datacite#subjectClassificationCode">
+      <xs:element name="classification_code" type="xs:string" sawsdl:modelReference="https://w3id.org/tib/datacite/property/classificationCode">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             classification code - The classification code used for notation of the subject term in the subject scheme.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="subject_scheme" type="ccmm:subject_scheme" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme">
+      <xs:element name="subject_scheme" type="ccmm:subject_scheme" sawsdl:modelReference="https://model.ccmm.cz/vocabulary/ccmm#inSubjectScheme">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             in subject scheme - Belonging of the subject to the subject scheme.

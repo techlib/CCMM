@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@context": {
+      "@version": 1.1,
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "id": "@id",
+      "type": "@type",
+      "label": {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      },
+      "gml": {
+        "@id": "http://www.opengis.net/ont/geosparql#asGML",
+        "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral"
+      },
+      "wkt": {
+        "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+        "@type": "http://www.opengis.net/ont/geosparql#wktLiteral"
+      },
+      "geometry": {
+        "@id": "http://www.w3.org/ns/locn#Geometry",
+        "@context": {}
+      }
+    }
+  }
+}

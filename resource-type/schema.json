@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/resource-type/schema.json",
+  "title": "Resource type",
+  "description": "Type of the resource.",
+  "type": "object",
+  "required": [
+    "id",
+    "label"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "resource_type"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "resource_type"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "label": {
+      "title": "label",
+      "description": "Label of the resource type.",
+      "type": "object",
+      "additionalProperties": {
+        "title": "Hodnota v jiném jazyce",
+        "type": "string"
+      },
+      "properties": {
+        "cs": {
+          "title": "Hodnota v českém jazyce",
+          "type": "string"
+        },
+        "en": {
+          "title": "Hodnota v anglickém jazyce",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

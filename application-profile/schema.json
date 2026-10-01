@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://model.ccmm.cz/research-data/application-profile/schema.json",
+  "title": "Application profile",
+  "description": "A standard or other specification to which a resource conforms.",
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "const": "application_profile"
+        },
+        {
+          "type": "array",
+          "contains": {
+            "const": "application_profile"
+          },
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "label": {
+      "title": "label",
+      "description": "Label of application profile",
+      "type": "array",
+      "items": {
+        "title": "Language tagged string",
+        "type": "object",
+        "required": [
+          "@value",
+          "@language"
+        ],
+        "properties": {
+          "@value": {
+            "title": "Text v daném jazyce",
+            "type": "string"
+          },
+          "@language": {
+            "title": "Jazyk textu",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
