@@ -1,25 +1,24 @@
 CHANGELOG
 ---------------------------------------
 ### 2026-10-01 - Major release 2.0.0
+
 * profiling properties through DCAT-AP (instead of final resources)
 * respecting cardinalities of DCAT-AP
 * dividing subjects to subjects (from controlled vocabulary) and keyword (plain string)
 * reprofiling of distributions according to the DCAT-AP
 * attaching licenses and access rights directly to specific classes (and removing terms of use class)
 * changed relationship to attribution (between resource and agent)
-* creator role is mandatory and publisher is highly recommended and attributed always to the organization
+* creator role is mandatory, publisher role is highly recommended and attributed to the organization, if possible
 * new language properties for primary/other language
-* namespaces changed to version 1.2
+* namespaces changed to version 2.0
 * repository has mandatory attribution with publisher role
-* added provenance activity to describe origin of dataset, removed provenance statement
+* origin of the dataset is described by provenance activity
 * datacite was reprofiled to official datacite linked data representation
-* added JSON schema and JSON-LD contexts
+* pofile represented also with JSON schema and JSON-LD contexts
 * added abstract and introduction into the specification
 * added identifier scheme notation
-* codelist values now have skos:prefLabel
-* introduction and abstract texts added
+* codelist values with skos:prefLabel
 * classes are grouped and ordered into main and supportive
-* publisher is an organization and changed to recommended 
 
 ### 2026-02-27 - minor changes
 * added SHACL file
