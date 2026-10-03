@@ -35,7 +35,7 @@ The file [`dataset-mini.xml`](https://github.com/techlib/CCMM/blob/main/_metadat
 
 ## Lifting and lowering
 
-Each class folder ocntains lifting and lowering files, that may be used to enrich the xml data based on the XSD schema by the semantics.
+Each class folder contains lifting and lowering files, that may be used to enrich the xml data based on the XSD schema by the semantics.
 
 ## JSON schema
 
