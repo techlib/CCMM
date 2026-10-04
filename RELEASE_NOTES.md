@@ -14,7 +14,7 @@ CHANGELOG
 * repository has mandatory attribution with publisher role
 * origin of the dataset is described by provenance activity
 * datacite was reprofiled to official datacite linked data representation
-* pofile represented also with JSON schema and JSON-LD contexts
+* profile represented also with JSON schema and JSON-LD contexts
 * added abstract and introduction into the specification
 * added identifier scheme notation
 * codelist values with skos:prefLabel
