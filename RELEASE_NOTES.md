@@ -7,32 +7,34 @@ CHANGELOG
 * reprofiling of distributions according to the DCAT-AP
 * attaching licenses and access rights directly to specific classes (and removing terms of use class)
 * changed relationship to attribution (between resource and agent)
-* creator role is mandatory and publisher is highly recommended and attributed always to the organization
+* creator role is mandatory and publisher is highly recommended and attributed to the organization, if possible
 * new language properties for primary/other language
-* namespaces changed to version 1.2
+* namespaces changed to version 2.0 (XSD: https://schema.ccmm.cz/research-data/2.0, model: https://model.ccmm.cz/research-data/2.0.0)
 * repository has mandatory attribution with publisher role
 * added provenance activity to describe origin of dataset, removed provenance statement
 * datacite was reprofiled to official datacite linked data representation
 * added JSON schema and JSON-LD contexts
 * added abstract and introduction into the specification
 * added identifier scheme notation
-* codelist values now have skos:prefLabel
-* introduction and abstract texts added
+* codelist values now have skos:prefLabel (subject titles changed to labels)
+* DataCite controlled vocabularies now referenced via TIB (https://w3id.org/tib/datacite/vocab/) (#200)
+* licence label renamed to title
 * classes are grouped and ordered into main and supportive
-* publisher is an organization and changed to recommended 
+* metadata samples updated to 2.0 in XML and newly added in RDF
+* definitions, usage notes and specification texts revised
 
 ### 2026-02-27 - minor changes
 * added SHACL file
 * added configuration for generating structure in extensions
 * added ttl representation of classes
-* cleaning deprecated artifactsa from older versions of Dataspecer
+* cleaning deprecated artifacts from older versions of Dataspecer
 
 ### 2025-12-18 - Official release 1.1.0
 * minor changes in definitions, cardinalities and profiled classes of multiple CCMM classes,
 * added more samples,
 * enhanced extensibility,
 * changes in hierarchy of abstract classes in XSD,
-* removing anonynous types from XSD,
+* removing anonymous types from XSD,
 * handling multilinguality.
 
 ### 2025-12-12 - Minor changes
@@ -70,7 +72,7 @@ CHANGELOG
 
 ### 2025-05-20 - Major release
 * probably last publication before official release
-* compact use of indentifiers and agents
+* compact use of identifiers and agents
 * codelists as separate classes
 * detailed attributes for address (according to INSPIRE core location ontology)
 * minor bug fixes
