@@ -44,3 +44,11 @@ From the version 2.0.0, JSON schemas and JSON-LD contexts are generated for each
 ## Dataspecer project
 
 [Project to open in DataSpecer](https://github.com/techlib/CCMM/blob/main/Czech%20Core%20Metadata%20Model-backup.zip) is also part of the repository. You may import it into your instance of Dataspecer.
+
+## CCMM Utilities
+
+[GitHub repository CCMM-utils](https://github.com/techlib/CCMM-utils) contains helpful tools that significantly simplify work with the CCMM metadata model. It contains following utilities:
+* flattenCCMM - flattens XSDs into one XSD file with dataset at the root,
+* ceCCMM - vizualizes CCMM strucutres,
+* ccmm2rdf - ransformation of xml CCMM metadata into RDF,
+* version-transformation - XSLT templates for transformation of XML metadata between versions 1.1.0 and 2.0.0.
